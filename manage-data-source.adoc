@@ -1,0 +1,77 @@
+---
+sidebar: sidebar 
+permalink: manage-data-source.html 
+keywords: ai, chatbot, creating, knowledge base, data source 
+summary: Nachdem Sie eine Wissensdatenbank mit Datenquellen auf Ihrem FSX für ONTAP-Dateisystem erstellt haben, können Sie die Details der Datenquelle anzeigen, den Inhalt der Datenquelle aktualisieren oder ändern, die Einstellungen der Datenquelle bearbeiten oder die Datenquelle löschen. 
+---
+= Managen von Datenquellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie eine Wissensdatenbank mit Datenquellen auf Ihrem FSX für ONTAP-Dateisystem erstellt haben, können Sie die Details der Datenquelle anzeigen, den Inhalt der Datenquelle aktualisieren oder ändern, die Einstellungen der Datenquelle bearbeiten oder die Datenquelle löschen.
+
+
+
+== Informationen zu einer Datenquelle anzeigen
+
+Sie können Informationen über den Inhalt einer Datenquelle anzeigen und deren Einbettungsstatus mit der Wissensdatenbank anzeigen. Da eine Datenquelle Teil einer Wissensdatenbank ist, müssen Sie zunächst die Wissensdatenbank öffnen, bevor Sie die Details der Datenquelle anzeigen können.
+
+.Schritte
+. Wählen Sie im Navigationsmenü *AI*.
+. Wählen Sie die Wissensdatenbank aus, in der sich die Datenquelle befindet, und wählen Sie dann image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten* aus.
++
+Im unteren Teil der Seite werden die Datenquellen aufgelistet, die Teil dieser Wissensdatenbank sind.
+
+. Erweitern Sie jede Zeile, indem Sie die auswählen image:button-down-caret.png["Die nach-unten-Taste"] , um detaillierte Informationen zu jeder Datenquelle anzuzeigen, z. B. das FSX für ONTAP-Dateisystem, das Volume und den Pfad, in dem sich die Datenquelle befindet.
++
+Außerdem werden die Einbettungsdaten aufgelistet, und es wird angegeben, ob diese Datenquelle derzeit in die Wissensdatenbank eingebettet ist.
+
+
+
+
+
+== Bearbeiten Sie die Einstellungen für die Datenquelle
+
+Sie können Informationen zu einer Datenquelle bearbeiten, die Sie in eine Wissensdatenbank integriert haben. Die meisten Informationen werden behoben, nachdem Sie einer Wissensdatenbank eine Datenquelle hinzugefügt haben. Sie können jedoch Änderungen an der Chunking-Definition und an der Berechtigungskennung vornehmen (wenn Sie das SMB-Protokoll auf dem Datenquellen-Volume verwenden).
+
+.Schritte
+. Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, in der sich die Datenquelle befindet, und wählen Sie dann *Wissensdatenbank verwalten* aus image:icon-action.png["Die Optionsschaltfläche"] .
++
+Im unteren Teil der Seite werden die Datenquellen aufgelistet, die Teil dieser Wissensdatenbank sind.
+
+. Wählen Sie in der Zeile der Datenquelle, die Sie bearbeiten möchten, *Datenquelle bearbeiten* aus image:icon-action.png["Die Optionsschaltfläche"] .
+. Wählen Sie auf der Seite Datenquelle bearbeiten die Option aus image:button-down-caret.png["Die nach-unten-Taste"] , um die Zeile für die Chunk-Definition zu erweitern.
+. Aktualisieren Sie die Einstellungen für die Chunking-Strategie und Chunk-Größe sowie Berechtigungssicherung (für SMB-Volumes), und wählen Sie *Speichern*.
+
+
+.Ergebnis
+Die Einstellungen der Datenquelle werden aktualisiert und das KI-System synchronisiert die Datenquelle, sodass sie erneut mit der Wissensdatenbank indiziert wird.
+
+
+
+== Aktualisieren Sie den Inhalt einer vorhandenen Datenquelle
+
+Sie können den Inhalt einer Datenquelle jederzeit ändern, um Ihre Unternehmensdaten hinzuzufügen oder zu aktualisieren. Wenn diese Datenquelle aktiv in einer Wissensdatenbank verwendet wird, müssen Sie die Datenquelle synchronisieren, damit sie mit der Wissensdatenbank neu indiziert wird. Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Bedrock nur die Objekte in Ihrem FSX für ONTAP-Volume, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
+
+Datenquellen werden automatisch einmal täglich mit der Wissensdatenbank synchronisiert, sodass Änderungen der Datenquelle im Chatbot berücksichtigt werden. Wenn Sie Änderungen an einer Datenquelle vornehmen und die Daten sofort synchronisieren möchten, können Sie link:manage-knowledgebase.html#synchronize-your-data-sources-with-the-knowledge-base["Führen Sie eine On-Demand-Synchronisierung durch"].
+
+
+
+== Löschen einer Datenquelle
+
+Wenn Sie keine Datenquelle mehr benötigen, um Teil Ihrer Wissensdatenbank zu sein, können Sie sie löschen.
+
+.Schritte
+. Wählen Sie auf der Bestandsseite der Wissensdatenbank die Wissensdatenbank aus, in der sich die Datenquelle befindet, und wählen Sie dann *Wissensdatenbank verwalten* aus image:icon-action.png["Die Optionsschaltfläche"] .
++
+Im unteren Teil der Seite werden die Datenquellen aufgelistet, die Teil dieser Wissensdatenbank sind.
+
+. Wählen Sie in der Zeile der Datenquelle, die Sie löschen möchten, *Datenquelle löschen* aus image:icon-action.png["Die Optionsschaltfläche"] .
+. Bestätigen Sie im Dialogfeld Datenquelle löschen, dass Sie es löschen möchten, und wählen Sie *Bestätigen*.
+
+
+.Ergebnis
+Die Datenquelle wird aus der Wissensdatenbank entfernt, und das KI-System entfernt die indizierten Informationen zu dieser Datenquelle aus der Wissensdatenbank. Alle Informationen aus dieser Datenquelle werden Chatbots, die die Wissensdatenbank nutzen, nicht mehr zur Verfügung stehen.

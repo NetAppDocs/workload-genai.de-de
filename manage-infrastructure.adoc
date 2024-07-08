@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: manage-infrastructure.html 
+keywords: ai, chatbot, creating, knowledge base 
+summary: Sie können Details zu Ihrer bereitgestellten GenAI RAG-Infrastruktur anzeigen oder die Chatbot-Infrastruktur entfernen, wenn Sie sie nicht mehr benötigen. 
+---
+= Management der GenAI-Infrastruktur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Details zu Ihrer bereitgestellten GenAI RAG-Infrastruktur anzeigen oder die Chatbot-Infrastruktur entfernen, wenn Sie sie nicht mehr benötigen.
+
+
+
+== Zeigen Sie Informationen zur Infrastruktur an
+
+Sie können Informationen über die Chatbot-Infrastruktur anzeigen.
+
+.Schritte
+. Wählen Sie im Navigationsmenü *AI*.
+. Wählen Sie die Registerkarte *Infrastruktur* aus.
+. Hier finden Sie Informationen zur Infrastruktur mit Details zu den folgenden Komponenten:
++
+** AWS-Einstellungen
+** Das Dateisystem FSX für ONTAP
+** Die KI-Engine
+** Die Vektordatenbank
+
+
+
+
+
+
+== Entfernen Sie die Infrastruktur
+
+Wenn Sie die Chatbot-Infrastruktur, die Sie für ein oder mehrere Chatbots bereitgestellt haben, nicht mehr benötigen, können Sie sie aus Workload Factory entfernen.
+
+
+NOTE: Alle Chatbots, die in dieser Infrastruktur bereitgestellt wurden, werden deaktiviert und der gesamte Chatverlauf wird gelöscht.
+
+Bei diesem Vorgang werden nur die Links zur KI-Infrastruktur aus Workload Factory entfernt – es werden nicht alle Komponenten aus AWS entfernt. Folgende Infrastrukturkomponenten müssen manuell aus AWS gelöscht werden:
+
+* Die VM-Instanz
+* Private Endpunkte
+* Das Volumen des FSX für ONTAP-Filesystems mit den AI-Datenbanken
+* Die Rolle des IAM
+* Richtlinie
+* Die Sicherheitsgruppe
+
+
+.Schritte
+. Wählen Sie im Navigationsmenü *AI*.
+. Wählen Sie die Registerkarte *Infrastruktur* aus.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] und wählen Sie *Chatbot-Infrastruktur entfernen*.
+. Bestätigen Sie, dass Sie die Infrastruktur löschen möchten, und wählen Sie *Entfernen*.
+
+
+.Ergebnis
+Die Chatbot-Infrastrukturkomponenten werden aus Workload Factory entfernt.

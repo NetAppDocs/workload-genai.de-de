@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: create-knowledgebase.html 
+keywords: ai, chatbot, creating, knowledge base 
+summary: Nachdem Sie die KI-Infrastruktur bereitgestellt und die Datenquellen ermittelt haben, die Sie aus Ihren FSX für ONTAP-Datastores in Ihre Wissensdatenbank integrieren möchten, können Sie mithilfe von Workload Factory die Knowledge Base aufbauen. In diesem Schritt definieren Sie auch die KI-Merkmale und beginnen Sie mit dem Gespräch. 
+---
+= Erstellen einer Wissensdatenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie die KI-Infrastruktur bereitgestellt und die Datenquellen ermittelt haben, die Sie aus Ihren FSX für ONTAP-Datastores in Ihre Wissensdatenbank integrieren möchten, können Sie mithilfe von Workload Factory die Knowledge Base aufbauen. In diesem Schritt definieren Sie auch die Merkmale von KI und stellen den Gesprächseinstieg her.
+
+Eine Wissensdatenbank kann verwendet werden, ohne Datenquellen aus Ihrem Unternehmen zu integrieren. In diesem Fall liefert eine mit der Wissensdatenbank integrierte Anwendung nur Ergebnisse aus öffentlich zugänglichen Informationen im Internet. Dies wird als „_public Mode_“-Integration bezeichnet.
+
+In den meisten Fällen möchten Sie Datenquellen aus Ihrem Unternehmen in die Wissensdatenbank integrieren. Dies wird als _Enterprise Mode_ Integration bezeichnet, da es Wissen aus Ihrem Unternehmen liefert.
+
+
+
+== Erstellen und Konfigurieren der Wissensdatenbank
+
+Die Wissensdatenbank definiert Eigenschaften wie die Bedrock-KI-Modelle und das Embedding-Format, mit denen Sie Ihre Wissensdatenbank erstellen möchten.
+
+.Schritte
+. Melden Sie sich bei Workload Factory an.
+. Wählen Sie im Kachel AI Workloads *Create Chatbot* aus.
+. Wählen Sie auf der Registerkarte Wissensdatenbanken die Option *Wissensdatenbank hinzufügen* aus.
+. Konfigurieren Sie auf der Seite „Define Knowledge Base“ die Knowledge Base-Einstellungen:
++
+.. *Name*: Geben Sie den Namen ein, den Sie für die Wissensdatenbank verwenden möchten.
+.. *Beschreibung*: Geben Sie eine detaillierte Beschreibung für die Wissensdatenbank ein.
+.. *Einbettungsmodell*: Das Einbettungsmodell definiert, wie Ihre Daten in Vektoreinbettungen für die Wissensdatenbank umgewandelt werden. Workload Factory unterstützt die folgenden Modelle:
++
+*** Titan-Einbauteile G1 - Text
+*** Titan Einbettung Text v2
+*** Titan Multimodal Embeddings G1
++
+Beachten Sie, dass Sie das Einbettungsmodell von Amazon Bedrock bereits aktiviert haben müssen.
+
++
+https://aws.amazon.com/bedrock/titan/["Erfahren Sie mehr über Amazon Titan"^]
+
+
+
+.. *Chat-Modell*: Wählen Sie aus Claude-Chat-Modellen, die in Amazon Bedrock integriert sind. Beachten Sie, dass Sie das Chatmodell von Amazon Bedrock bereits aktiviert haben müssen.
++
+Erfahren Sie mehr über die verfügbaren Modelle, die Ihnen bei der Auswahl helfen: https://aws.amazon.com/bedrock/claude/["Anthropic's Claude in Amazon Bedrock"^]
+
+.. *Gesprächseinstieg*: Wählen Sie aus, ob Sie bis zu vier Gesprächseinstiegstelefonate bereitstellen möchten, die Benutzern angezeigt werden, die mit einem Chatbot interagieren, der diese Wissensdatenbank nutzt. Wir empfehlen, diese Einstellung zu aktivieren.
++
+Wenn Sie Konversationsstarter aktivieren, ist standardmäßig „Automatischer Modus“ ausgewählt. Der „manuelle Modus“ kann erst aktiviert werden, nachdem Sie Datenquellen zu Ihrer Wissensdatenbank hinzugefügt haben. link:manage-knowledgebase.html["Erfahren Sie, wie Sie die Einstellungen der Wissensdatenbank ändern"].
+
+
+
+. Wählen Sie *Create Knowledge Base*, um die Wissensdatenbank zu GenAI hinzuzufügen.
+. Auf der nächsten Seite des Assistenten haben Sie die Möglichkeit, eine Datenquelle zu Ihrer neuen Wissensdatenbank hinzuzufügen oder den Prozess hier zu beenden, ohne eine Datenquelle hinzuzufügen. Wir empfehlen Ihnen, *Add Data source* auszuwählen und jetzt eine oder mehrere Datenquellen hinzuzufügen.
+
+
+
+
+== Fügen Sie der Wissensdatenbank Datenquellen hinzu
+
+Sie können eine oder mehrere Datenquellen hinzufügen, um die Wissensdatenbank mit den Daten Ihres Unternehmens zu füllen.
+
+.Über diese Aufgabe
+Die maximale Anzahl unterstützter Datenquellen beträgt 10.
+
+.Schritte
+. Nachdem Sie *Datenquelle hinzufügen* ausgewählt haben, wird die Seite *Dateisystem auswählen* angezeigt.
+. *Wählen Sie ein Dateisystem*: Wählen Sie das FSX für ONTAP Dateisystem, in dem sich Ihre Datenquelldateien befinden, und wählen Sie *Weiter*.
+. *Wählen Sie ein Volume*: Wählen Sie das Volume aus, auf dem sich Ihre Quelldateien befinden, und wählen Sie *Weiter*.
++
+Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, einschließlich Domäne, IP-Adresse, Benutzername und Passwort.
+
+. *Wählen Sie eine Datenquelle*: Wählen Sie den Speicherort der Datenquelle basierend darauf, wo Sie die Dateien gespeichert haben. Dies kann ein ganzes Volume sein, oder nur ein bestimmter Ordner oder Unterordner im Volume, und wählen Sie *Weiter*.
+. *Define AI-Parameter*: Definieren Sie im Abschnitt *Chunk-Definition*, wie der Amazon Bedrock-Dienst den Inhalt der Datenquelle in Blöcke teilt, wenn die Wissensdatenbank abgefragt wird, zu der er gehört. Derzeit können Sie nur Sätze auswählen.
+. Im Abschnitt *permission aware*, der nur verfügbar ist, wenn sich die von Ihnen ausgewählte Datenquelle auf einem Volume befindet, das das SMB-Protokoll verwendet, können Sie die Auswahl aktivieren oder deaktivieren:
++
+** *Enabled*: Benutzer des Chatbot, die auf diese Wissensdatenbank zugreifen, erhalten nur Antworten auf Abfragen aus Datenquellen, auf die sie zugreifen können.
+** *Disabled*: Benutzer des Chatbot erhalten Antworten über Inhalte aus allen integrierten Datenquellen.
+
+
+. Wählen Sie *Hinzufügen*, um diese Datenquelle zu Ihrer Wissensdatenbank hinzuzufügen.
+
+
+.Ergebnis
+Die Datenquelle wird in Ihre Wissensdatenbank eingebettet. Der Status ändert sich von „Einbetten“ in „eingebettet“, wenn die Datenquelle vollständig eingebettet ist.
+
+Nachdem Sie eine einzelne Datenquelle zur Wissensdatenbank hinzugefügt haben, können Sie sie lokal im Chatbot Simulator-Fenster testen und alle erforderlichen Änderungen vornehmen, bevor Sie den Chatbot Ihren Benutzern zur Verfügung stellen. Sie können die gleichen Schritte ausführen, um der Wissensdatenbank zusätzliche Datenquellen hinzuzufügen.

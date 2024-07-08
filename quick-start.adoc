@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: quick-start.html 
+keywords: quick start, knowledge base, chatbot 
+summary: Beginnen Sie mit der Erstellung einer Wissensdatenbank unter Verwendung der Daten Ihres Unternehmens, die auf Amazon FSX für NetApp ONTAP-Dateisystemen vorhanden sind. Eine Anwendung wie ein Chatbot greift auf diese Wissensdatenbank zu, um den Endbenutzern organisationsbezogene Antworten bereitzustellen. 
+---
+= Schneller Start für GenAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Beginnen Sie mit der Erstellung einer Wissensdatenbank unter Verwendung der Daten Ihres Unternehmens, die auf Amazon FSX für NetApp ONTAP-Dateisystemen vorhanden sind. Eine Anwendung wie ein Chatbot greift auf diese Wissensdatenbank zu, um den Endbenutzern organisationsbezogene Antworten bereitzustellen.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] link:requirements.html["Richten Sie Ihre Umgebung so ein, dass sie die GenAI-Anforderungen erfüllt"]
+[role="quick-margin-para"]
+Für die Implementierung der AWS-Infrastruktur benötigen Sie Zugangsdaten von AWS, ein implementiertes und erkannter FSX for ONTAP-Filesystem, die Liste der Datenquellen, die Sie in Ihre Wissensdatenbank integrieren möchten, Zugriff auf den Amazon Bedrock-KI-Service und vieles mehr.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] link:identify-data-sources.html["Ermitteln Sie das FSX für ONTAP-Dateisystem, das die Datenquellen enthält"]
+[role="quick-margin-para"]
+Die Datenquellen, die Sie in Ihre Wissensdatenbank integrieren, können auf einem einzigen FSX für ONTAP-Dateisystem oder auf mehreren FSX für ONTAP-Dateisystemen abgelegt werden. Diese Systeme können in verschiedenen VPCs verwendet werden, müssen aber innerhalb desselben Netzwerks zugänglich sein.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drittens"] link:deploy-infrastructure.html["Implementierung der Knowledge Base Infrastruktur"]
+[role="quick-margin-para"]
+Starten Sie den Infrastrukturimplementierungs-Assistenten, um die Knowledge Base Infrastruktur in Ihrer AWS Umgebung zu implementieren. Bei diesem Prozess werden eine EC2-Instanz für die NetApp-GenAI-Engine und ein Volume auf einem FSX für ONTAP-Filesystem implementiert, das die Datenbanken der NetApp AI Engine enthält. Das Volume dient zum Speichern der von der Wissensdatenbank verwendeten Vektordatenbank.
+
+.Wie es weiter geht
+Sie können jetzt eine Wissensdatenbank aufbauen, um Endbenutzern organisationsbezogene Antworten zu bieten.

@@ -1,0 +1,165 @@
+---
+sidebar: sidebar 
+permalink: manage-knowledgebase.html 
+keywords: ai, chatbot, managing, knowledge base 
+summary: Nachdem Sie eine Wissensdatenbank erstellt haben, können Sie die Details der Wissensdatenbank anzeigen, die Wissensdatenbank ändern, zusätzliche Datenquellen integrieren oder die Wissensdatenbank löschen. 
+---
+= Management von Wissensdatenbanken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie eine Wissensdatenbank erstellt haben, können Sie die Details der Wissensdatenbank anzeigen, die Wissensdatenbank ändern, zusätzliche Datenquellen integrieren oder die Wissensdatenbank löschen.
+
+
+
+== Informationen zu einer Wissensdatenbank anzeigen
+
+Sie können Informationen zu den Einstellungen für eine Wissensdatenbank und die integrierte Datenquelle anzeigen.
+
+.Schritte
+. Wählen Sie im Navigationsmenü *AI*.
+. Wählen Sie die Wissensdatenbank aus, die Sie anzeigen möchten.
++
+Falls definiert, werden die derzeit verwendeten Gesprächseinstiege im rechten Fensterbereich angezeigt.
+
+. Um Details zur Wissensdatenbank anzuzeigen, wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
++
+Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus, die Liste aller eingebetteten Datenquellen und vieles mehr angezeigt.
+
++
+Über das Menü *Aktionen* können Sie die Wissensdatenbank verwalten, wenn Sie Änderungen vornehmen möchten.
+
+
+
+
+
+== Wissensdatenbank bearbeiten
+
+Sie können eine Wissensdatenbank aktualisieren, indem Sie einige Einstellungen ändern, oder Sie können Datenquellen hinzufügen oder entfernen.
+
+Jedes Mal, wenn Sie Datenquellen in der Wissensdatenbank hinzufügen, ändern oder entfernen, müssen Sie die Datenquelle synchronisieren, damit sie mit der Wissensdatenbank neu indiziert wird. Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Bedrock nur die Objekte in Ihrem FSX für ONTAP-Volume, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
+
+.Schritte
+. Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie aktualisieren möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
++
+Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus, die Liste aller eingebetteten Datenquellen und vieles mehr angezeigt.
+
+. Wählen Sie das Menü *Aktionen* und dann *Wissensdatenbank bearbeiten*.
+. Auf der Seite „Wissensdatenbank bearbeiten“ können Sie den Namen der Wissensdatenbank, die Beschreibung, das Einbettungsmodell und das Chatmodell ändern und festlegen, ob Gesprächseinstiege automatisch oder manuell erstellt werden.
++
+Wenn Sie den manuellen Modus für Gesprächseinstieg verwenden, können Sie hier auch den Gesprächseinstieg ändern.
+
+. Wählen Sie *Speichern*, nachdem Sie Ihre Änderungen vorgenommen haben.
+
+
+
+
+== Fügen Sie einer Wissensdatenbank zusätzliche Datenquellen hinzu
+
+Sie können zusätzliche Datenquellen in Ihre Wissensdatenbank einbetten, um diese mit zusätzlichen Unternehmensdaten zu füllen.
+
+.Schritte
+. Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, in die Sie die Datenquelle hinzufügen möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Datenquelle hinzufügen*.
+. *Wählen Sie ein Dateisystem*: Wählen Sie das FSX für ONTAP Dateisystem, in dem sich Ihre Datenquelldateien befinden, und wählen Sie *Weiter*.
+. *Wählen Sie ein Volume*: Wählen Sie das Volume aus, auf dem sich Ihre Quelldateien befinden, und wählen Sie *Weiter*.
++
+Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, einschließlich Domäne, IP-Adresse, Benutzername und Passwort.
+
+. *Wählen Sie eine Datenquelle*: Wählen Sie den Speicherort der Datenquelle basierend darauf, wo Sie die Dateien gespeichert haben. Dies kann ein ganzes Volume sein, oder nur ein bestimmter Ordner oder Unterordner im Volume, und wählen Sie *Weiter*.
+. *Define AI-Parameter*: Definieren Sie im Abschnitt *Chunk-Definition*, wie der Amazon Bedrock-Dienst den Inhalt der Datenquelle in Blöcke teilt, wenn die Wissensdatenbank abgefragt wird, zu der er gehört. Derzeit können Sie nur Sätze auswählen.
+. Im Abschnitt *permission aware*, der nur verfügbar ist, wenn sich die von Ihnen ausgewählte Datenquelle auf einem Volume befindet, das das SMB-Protokoll verwendet, können Sie die Auswahl aktivieren oder deaktivieren:
++
+** *Enabled*: Benutzer des Chatbot, die auf diese Wissensdatenbank zugreifen, erhalten nur Antworten auf Abfragen aus Datenquellen, auf die sie zugreifen können.
+** *Disabled*: Benutzer des Chatbot erhalten Antworten über Inhalte aus allen integrierten Datenquellen.
+
+
+. Wählen Sie *Hinzufügen*, um diese Datenquelle zu Ihrer Wissensdatenbank hinzuzufügen.
+
+
+.Ergebnis
+Die Datenquelle ist in Ihre Wissensdatenbank integriert.
+
+
+
+== Synchronisieren Sie Ihre Datenquellen mit der Wissensdatenbank
+
+Datenquellen werden automatisch einmal täglich mit der Wissensdatenbank synchronisiert, sodass Änderungen der Datenquelle im Chatbot berücksichtigt werden. Wenn Sie Änderungen an einer Ihrer Datenquellen vornehmen und die Daten sofort synchronisieren möchten, können Sie eine On-Demand-Synchronisierung durchführen.
+
+Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Bedrock nur die Objekte in Ihren Datenquellen, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
+
+.Schritte
+. Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie synchronisieren möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
+. Wählen Sie das Menü *Aktionen* und dann *Jetzt scannen*.
++
+Sie sehen eine Meldung, dass Ihre Datenquellen gescannt werden, und eine abschließende Meldung, wenn der Scan abgeschlossen ist.
+
+
+
+.Ergebnis
+Die Wissensdatenbank wird mit den angehängten Datenquellen synchronisiert und jeder aktive Chatbot verwendet die neuesten Informationen aus Ihren Datenquellen.
+
+
+
+== Bewerten Sie Chatmodelle, bevor Sie eine Wissensdatenbank erstellen
+
+Sie können die verfügbaren grundlegenden Chatmodelle bewerten, bevor Sie eine Wissensdatenbank erstellen, damit Sie sehen können, welches Modell für Ihre Implementierung am besten geeignet ist. Da der Modellsupport je nach AWS-Region variiert, finden Sie unter https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["Dieser AWS Dokumentationsseite"^] Informationen dazu, welche Modelle in den Regionen verwendet werden können, in denen Sie Ihre Knowledge Base bereitstellen möchten.
+
+
+NOTE: Diese Funktion ist nur verfügbar, wenn keine Wissensdatenbanken erstellt wurden -- wenn auf der Bestandsseite der Wissensdatenbanken keine Wissensdatenbanken vorhanden sind.
+
+.Schritte
+. Auf der Bestandsseite der Wissensbasen sehen Sie die Option, das Chatmodell auf der rechten Seite der Seite für den Chatbot auszuwählen.
+. Wählen Sie das Chatmodell aus der Liste aus, und geben Sie eine Reihe von Fragen in den Eingabebereich ein, um zu sehen, wie der Chatbot reagiert.
+. Testen Sie mehrere Modelle, um herauszufinden, welches Modell sich am besten für Ihre Implementierung eignet.
+
+
+.Ergebnis
+Verwenden Sie dieses Chatmodell, wenn Sie Ihre Wissensdatenbank erstellen.
+
+
+
+== Heben Sie die Veröffentlichung Ihrer Wissensdatenbank auf
+
+Nachdem Sie Ihre Wissensdatenbank veröffentlicht haben, damit sie in eine Chatbot-Anwendung integriert werden kann, können Sie die Veröffentlichung aufheben, wenn Sie den Zugriff der Chatbot-Anwendung auf die Wissensdatenbank deaktivieren möchten.
+
+Durch das Aufheben der Veröffentlichung der Wissensdatenbank werden alle Chat-Anwendungen nicht mehr funktionsfähig. Der eindeutige API-Endpunkt, auf den die Wissensdatenbank zugegriffen werden konnte, ist deaktiviert.
+
+.Schritte
+. Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie für die Veröffentlichung aufheben möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
++
+Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus und die Liste aller eingebetteten Datenquellen angezeigt.
+
+. Wählen Sie das Menü *actions* und dann *Unpublish*.
+
+
+.Ergebnis
+Die Wissensdatenbank ist deaktiviert und kann nicht mehr von einer Chatbot-Anwendung aufgerufen werden.
+
+
+
+== Löschen einer Wissensdatenbank
+
+Wenn Sie keine Wissensdatenbank mehr benötigen, können Sie sie löschen. Wenn Sie die Wissensdatenbank löschen, wird sie aus Workload Factory entfernt und alle Anwendungen oder Chatbots, die die Wissensdatenbank verwenden, funktionieren nicht mehr. Diese Aktion ist nicht umkehrbar.
+
+Wenn Sie eine Wissensdatenbank löschen, sollten Sie auch die folgenden Aktionen ausführen, um alle Ressourcen, die der Wissensdatenbank zugeordnet sind, vollständig zu löschen:
+
+* Distanzieren Sie die Wissensdatenbank von allen Agenten, mit denen sie verknüpft ist.
+* Die zugrunde liegenden Daten, die aus Ihrer Wissensdatenbank indiziert wurden, bleiben im von Ihnen festgelegten Vektorspeicher und können weiterhin abgerufen werden. Um die Daten zu löschen, müssen Sie auch den Vektorindex löschen, der die Dateneinbettungen enthält.
+
+
+.Schritte
+. Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie löschen möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
+. Wählen Sie das Menü *Aktionen* und dann *Wissensdatenbank löschen*.
+. Bestätigen Sie im Dialogfeld Wissensdatenbank löschen, dass Sie löschen möchten, und wählen Sie *Löschen*.
+
+
+.Ergebnis
+Die Wissensdatenbank wird aus Workload Factory gelöscht.

@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: requirements.html 
+keywords: ai, chatbot, prerequisites, bedrock, fsx for ontap, prerequisites, requirements 
+summary: Stellen Sie sicher, dass Workload Factory und AWS ordnungsgemäß eingerichtet sind, bevor Sie Ihre Wissensdatenbank aufbauen. Dazu gehören die Zugangsdaten für die AWS-Anmeldung, ein bereitgestelltes FSX für ONTAP-Filesystem mit den Datenquellen, die Sie in Ihre Wissensdatenbank integrieren möchten, Zugriff auf den Amazon Bedrock KI-Service und vieles mehr. 
+---
+= GenAI-Anforderungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Stellen Sie sicher, dass Workload Factory und AWS ordnungsgemäß eingerichtet sind, bevor Sie Ihre Wissensdatenbank aufbauen. Dazu gehören die Zugangsdaten für die AWS-Anmeldung, ein bereitgestelltes FSX für ONTAP-Filesystem mit den Datenquellen, die Sie in Ihre Wissensdatenbank integrieren möchten, Zugriff auf den Amazon Bedrock KI-Service und vieles mehr.
+
+Workload Factory Anmeldung und Konto:: Sie müssen sich bei Workload Factory anmelden und ein Konto erstellen.
++
+--
+https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Erfahren Sie mehr über die Anmeldung und das Erstellen eines Kontos"^]
+
+--
+AWS Zugangsdaten und Berechtigungen:: Sie müssen AWS-Anmeldeinformationen in Workload Factory mit Automatisierungsberechtigungen hinzufügen, was bedeutet, dass Sie Workload Factory im _Automate_-Modus für GenAI verwenden werden.
++
+--
+_Basic_ Mode und _Read_ Mode Berechtigungen werden derzeit nicht unterstützt.
+
+Wenn Sie Ihre Anmeldedaten einrichten, erhalten Sie durch die Auswahl der unten aufgeführten Berechtigungen vollständigen Zugriff auf das Management von FSX für ONTAP-Dateisysteme sowie auf die Bereitstellung und das Management der GenAI EC2-Instanz und anderer AWS-Ressourcen, die für Ihre Knowledge Base und Ihren Chatbot benötigt werden.
+
+image:screenshot-ai-permissions.png["Ein Screenshot mit den Berechtigungseinstellungen für das vollständige Management von KI-Ressourcen."]
+
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie den Workload Factory Zugangsdaten für AWS hinzufügen"^]
+
+--
+Amazonas-Grundgestein:: Mit Amazon Bedrock können Sie Grundmodelle verwenden und es bietet die Möglichkeiten, generative KI-Anwendungen zu erstellen.
++
+--
+Bevor Sie mit Workload Factory für GenAI beginnen, müssen Sie Amazon Bedrock einrichten. Ihre GenAI-Implementierung muss sich in einer AWS-Region mit aktiviertem Amazon Bedrock befinden.
+
+* https://docs.aws.amazon.com/bedrock/latest/userguide/setting-up.html["AWS-Dokumentation: Einrichten von Amazon Bedrock"^]
+* https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["AWS-Dokumentation: Unterstützte Regionen und Modelle für Knowledge Basen für Amazon Bedrock"^]
+
+
+--
+Einbettungsmodell:: Sie müssen das einzubetende Modell aktivieren, das Sie verwenden möchten, bevor Sie Ihre Wissensdatenbank erstellen. Die folgenden Einbettungsmodelle werden unterstützt:
++
+--
+* Titan-Einbauteile G1 - Text
+* Titan Einbettung Text v2
+* Titan Multimodal Embeddings G1
++
+https://aws.amazon.com/bedrock/titan/["Erfahren Sie mehr über Amazon Titan"^]
+
+
+
+--
+Chat-Modell:: Sie müssen das grundlegende Chatmodell aktivieren, das Sie verwenden möchten, bevor Sie Ihre Wissensdatenbank erstellen. Die folgenden Claude-Chat-Modelle werden unterstützt:
++
+--
+* Claude 3.5 Sonnet
+* Claude 3 Opus
+* Claude 3 Haiku
+* Claude 3 Sonnet
+* Claude 2.1
+* Claude 2.0
++
+Da der Modellsupport je nach AWS-Region variiert, finden Sie unter https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["Dieser AWS Dokumentationsseite"^] Informationen dazu, welche Modelle in den Regionen verwendet werden können, in denen Sie Ihre Knowledge Base bereitstellen möchten.
+
++
+Erfahren Sie mehr über die verfügbaren Modelle, die Ihnen bei der Auswahl helfen: https://aws.amazon.com/bedrock/claude/["Anthropic's Claude in Amazon Bedrock"^]
+
+
+
+--
+FSX für ONTAP-Dateisystem:: Sie benötigen mindestens ein FSX für ONTAP-Dateisystem:
++
+--
+* Ein Dateisystem wird von der NetApp GenAI Engine verwendet, um die von der Wissensdatenbank verwendete Vektordatenbank zu speichern.
++
+Dieses Dateisystem FSX für ONTAP muss FlexVol-Volumen verwenden. FlexGroup Volumes werden nicht unterstützt.
+
+* Ein oder mehrere Dateisysteme enthalten die Datenquellen, die Sie in Ihre Wissensdatenbank integrieren werden.
++
+Ein FSX für ONTAP-Dateisystem kann für beide dieser Zwecke verwendet werden, oder Sie können mehrere FSX für ONTAP-Dateisysteme verwenden.
+
+* Sie müssen die AWS-Region, VPC und das Subnetz kennen, in der sich das AWS FSX für ONTAP-Filesystem befindet. Das Filesystem muss sich in einer AWS-Region befinden, für die Amazon Bedrock aktiviert ist.
+* Sie müssen die Tag-Schlüssel-/Wertpaare berücksichtigen, die Sie auf die AWS Ressourcen anwenden möchten, die Teil dieser Implementierung sind (optional).
+* Dabei sind die wichtigsten Paar-Informationen wichtig, die eine sichere Verbindung zur NetApp AI Engine-Instanz ermöglichen.
+
+
+https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["Erfahren Sie, wie Sie FSX für ONTAP-Dateisysteme implementieren und managen"^]
+
+--
+

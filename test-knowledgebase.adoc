@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: test-knowledgebase.html 
+keywords: ai, chatbot, creating, knowledge base 
+summary: Nachdem Sie die Wissensdatenbank erstellt haben, können Sie sie mithilfe des Chatbot-Simulators lokal testen und erforderliche Änderungen vornehmen, bevor Sie die Wissensdatenbank Ihren Benutzern über eine Chatbot-Anwendung zur Verfügung stellen. 
+---
+= Testen Sie eine Wissensdatenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie die Wissensdatenbank erstellt haben, können Sie sie mithilfe des Chatbot-Simulators lokal testen und erforderliche Änderungen vornehmen, bevor Sie die Wissensdatenbank Ihren Benutzern über eine Chatbot-Anwendung zur Verfügung stellen.
+
+.Über diese Aufgabe
+Sie testen Ihre Wissensdatenbank, um sicherzustellen, dass sie funktioniert, wie Sie es erwarten, und Sie können die Konversationsstarter anpassen, die Sie standardmäßig für Chatbot-Benutzer dieser Wissensdatenbank verfügbar sein möchten. Der Chatbot-Simulator läuft gegen alle Datenquellen, die in die Wissensdatenbank eingebettet wurden.
+
+Sie können eine Wissensdatenbank testen, indem Sie mit Ihren eingebetteten Datenquellen im Chatbot-Simulator chatten. Beachten Sie, dass beim lokalen Testen der Wissensdatenbank keine der Interaktionen oder Erkenntnisse in der GenAI-Vektordatenbank erfasst werden.
+
+Sie führen die meisten Tests in Workload Factory durch, bevor Sie die Wissensdatenbank in einer Anwendung für Ihre Benutzer bereitstellen. Wenn Sie Änderungen an Ihrer Datenquelle oder dem Chatbot-Vorgang vornehmen müssen, sollten Sie dies jetzt tun, bevor Sie Ihre Wissensdatenbank veröffentlichen.
+
+Einige der Aufgaben, die Sie durchführen möchten, um Ihren Chatbot zu testen, sind:
+
+* Geben Sie eine große Anzahl von Fragen ein, die für Ihr Unternehmen relevant sind, um sicherzustellen, dass die Antworten den Erwartungen entsprechen.
+* Passen Sie die Gesprächseinstiege an, die Sie standardmäßig für Ihre Benutzer in der Chatbot-Anwendung zur Verfügung stellen möchten.
+* Stellen Sie sicher, dass der zugeschriebene Inhalt, der unten in den Chatbot-Antworten angegeben wird, die richtigen Referenzen enthält.
+
+
+.Schritte
+. Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie testen möchten.
++
+Der Chatbot-Simulator wird im rechten Fensterbereich angezeigt. Falls festgelegt, werden auch bestehende Gesprächseinstiege angezeigt.
+
+. Geben Sie im Chatbot-Eingabefeld eine Eingabeaufforderung oder Frage ein, und wählen Sie aus image:button-run.png["Die Schaltfläche Ausführen"] , wie Ihr Chatbot mit Ihrem organisatorischen Wissen reagiert.
+. Wenn Sie eine Ihrer Datenquellen aktualisieren müssen, damit Ihre Wissensdatenbank gezielter Antworten liefert, nehmen Sie diese Änderungen jetzt vor und testen Sie die Wissensdatenbank erneut.
+

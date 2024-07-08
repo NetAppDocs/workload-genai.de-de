@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: identify-data-sources.html 
+keywords: data sources, chatbot, documents, knowledge base 
+summary: 'Identifizieren oder erstellen Sie die Dokumente (Datenquellen), die sich auf Ihrem FSX für ONTAP-Dateisystem befinden, die Sie in Ihre Wissensdatenbank integrieren werden. Mithilfe dieser Datenquellen kann die Wissensdatenbank genaue und personalisierte Antworten auf Benutzeranfragen basierend auf Daten bereitstellen, die für Ihr Unternehmen relevant sind.' 
+---
+= Ermitteln Sie die Datenquellen, die in Ihre Wissensdatenbank integriert werden sollen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Identifizieren oder erstellen Sie die Dokumente (Datenquellen), die sich auf Ihrem FSX für ONTAP-Dateisystem befinden, die Sie in Ihre Wissensdatenbank integrieren werden. Mithilfe dieser Datenquellen kann die Wissensdatenbank genaue und personalisierte Antworten auf Benutzeranfragen basierend auf Daten bereitstellen, die für Ihr Unternehmen relevant sind.
+
+
+
+== Maximale Anzahl von Datenquellen
+
+Die maximale Anzahl unterstützter Datenquellen beträgt 10.
+
+
+
+== Speicherort der Datenquellen
+
+Datenquellen können auf einem einzelnen Volume oder in einem Ordner innerhalb eines Volumes, auf einer SMB-Freigabe oder auf einem NFS-Export auf einem Amazon FSX für NetApp ONTAP Filesystem gespeichert werden. Sie können keine einzelnen Dokumente in einem Volume oder Ordner auswählen. Daher sollten Sie sicherstellen, dass jedes Volume oder jeder Ordner, das Datenquellen enthält, keine fremden Dokumente enthält, die nicht in Ihre Wissensdatenbank integriert werden sollten.
+
+Sie können jeder Knowledge Base mehrere Datenquellen hinzufügen, allerdings müssen alle auf FSX for ONTAP-Filesystemen liegen, auf die über Ihr AWS-Konto zugegriffen werden kann.
+
+Die maximale Dateigröße für jede Datenquelle beträgt 50 MB.
+
+
+
+== Unterstützte Protokolle
+
+Die Wissensdatenbank unterstützt Daten von Volumes, die NFS- oder SMB/CIFS-Protokolle verwenden. Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, damit die Wissensdatenbank auf die Dateien auf diesen Volumes zugreifen kann. Dazu gehören die Active Directory-Domäne, die IP-Adresse, der Benutzername und das Kennwort.
+
+Wenn Sie Ihre Datenquelle auf einer über SMB zugänglichen Freigabe (Datei oder Verzeichnis) speichern, sind die Daten nur für Chatbot-Benutzer oder -Gruppen zugänglich, die über die Berechtigung zum Zugriff auf diese Freigabe verfügen. Wenn diese "Berechtigungserkennungsfunktion" aktiviert ist, vergleicht das KI-System die Benutzer-E-Mail in auth0 mit den Benutzern, die die Dateien auf der SMB-Freigabe anzeigen oder verwenden dürfen. Der Chatbot liefert Antworten basierend auf Benutzerberechtigungen für die eingebetteten Dateien.
+
+Wenn Sie beispielsweise 10 Dateien (Datenquellen) in Ihre Wissensdatenbank integriert haben und 2 der Dateien Personaldateien mit eingeschränkten Informationen sind, erhalten nur Chatbot-Benutzer, die für den Zugriff auf diese 2 Dateien authentifiziert sind, Antworten vom Chatbot, die Daten aus diesen Dateien enthalten.
+
+
+
+== Unterstützte Datenquelldateiformate
+
+Die folgenden Datenquelldateiformate werden derzeit unterstützt.
+
+[cols="2*"]
+|===
+| Dateiformat | Erweiterung 
+
+
+| Nur Text | .Txt 
+
+
+| Tragbares Dokument | .Pdf 
+
+
+| Microsoft Word | .Docx 
+
+
+| Durch Kommas getrennte Wertedatei | .Csv 
+|===

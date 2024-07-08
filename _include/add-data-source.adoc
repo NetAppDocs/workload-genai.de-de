@@ -1,0 +1,19 @@
+= 
+:allow-uri-read: 
+
+
+. *Wählen Sie ein Dateisystem*: Wählen Sie das FSX für ONTAP Dateisystem, in dem sich Ihre Datenquelldateien befinden, und wählen Sie *Weiter*.
+. *Wählen Sie ein Volume*: Wählen Sie das Volume aus, auf dem sich Ihre Quelldateien befinden, und wählen Sie *Weiter*.
++
+Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, einschließlich Domäne, IP-Adresse, Benutzername und Passwort.
+
+. *Wählen Sie eine Datenquelle*: Wählen Sie den Speicherort der Datenquelle basierend darauf, wo Sie die Dateien gespeichert haben. Dies kann ein ganzes Volume sein, oder nur ein bestimmter Ordner oder Unterordner im Volume, und wählen Sie *Weiter*.
+. *Define AI-Parameter*: Definieren Sie im Abschnitt *Chunk-Definition*, wie der Amazon Bedrock-Dienst den Inhalt der Datenquelle in Blöcke teilt, wenn die Wissensdatenbank abgefragt wird, zu der er gehört. Derzeit können Sie nur Sätze auswählen.
+. Im Abschnitt *permission aware*, der nur verfügbar ist, wenn sich die von Ihnen ausgewählte Datenquelle auf einem Volume befindet, das das SMB-Protokoll verwendet, können Sie die Auswahl aktivieren oder deaktivieren:
++
+** *Enabled*: Benutzer des Chatbot, die auf diese Wissensdatenbank zugreifen, erhalten nur Antworten auf Abfragen aus Datenquellen, auf die sie zugreifen können.
+** *Disabled*: Benutzer des Chatbot erhalten Antworten über Inhalte aus allen integrierten Datenquellen.
+
+
+. Wählen Sie *Hinzufügen*, um diese Datenquelle zu Ihrer Wissensdatenbank hinzuzufügen.
+

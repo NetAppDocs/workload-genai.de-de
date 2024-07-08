@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: genai-engine-instance.html 
+keywords: genai engine, instance, ec2, role, iam role, permissions, security group, inbound, outbound, private endpoints 
+summary: Bei der Bereitstellung der GenAI-Infrastruktur erstellt Workload Factory eine EC2-Instanz für die GenAI-Engine. Außerdem werden für diese Instanz eine IAM-Rolle, eine Sicherheitsgruppe und private Endpunkte erstellt. Vielleicht möchten Sie mehr Details zu diesen Komponenten erfahren, die Workload Factory in Ihrer AWS-Umgebung erstellt. 
+---
+= Komponenten für die NetApp GenAI Engine
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bei der Bereitstellung der GenAI-Infrastruktur erstellt Workload Factory eine EC2-Instanz für die GenAI-Engine. Außerdem werden für diese Instanz eine IAM-Rolle, eine Sicherheitsgruppe und private Endpunkte erstellt. Vielleicht möchten Sie mehr Details zu diesen Komponenten erfahren, die Workload Factory in Ihrer AWS-Umgebung erstellt.
+
+EC2 Instanztyp:: m5.large
+IAM-Rolle:: Die GenAI-Engine-Instanz benötigt die Berechtigungen, um Datenblöcke an das Einbettungsmodell in Amazon Bedrock zu senden und mit dem NetApp AI Service Back-End zu kommunizieren. Die IAM-Rolle umfasst die folgenden Berechtigungen:
++
+--
+[source, json]
+----
+"ssm:Describe*",
+"ssm:Get*",
+"ssm:List*",
+"ssm:PutInventory",
+"ssm:PutComplianceItems",
+"ssm:PutConfigurePackageResult",
+"ssm:SendCommand",
+"ssm:UpdateAssociationStatus",
+"ssm:UpdateInstanceAssociationStatus",
+"ssm:UpdateInstanceInformation",
+"ssmmessages:*",
+"ec2messages:GetMessages"
+----
+--
+Sicherheitsgruppe:: Die Regeln für ausgehende Anrufe sind für den gesamten Datenverkehr offen, während die Regeln für eingehende Anrufe vollständig geschlossen sind.
+Private Endpunkte:: Wenn sie auf der Ziel-VPC nicht bereits vorhanden sind, erstellt Workload Factory private Endpunkte für die EC2-Instanz der GenAI Engine, sodass die IT mit den folgenden AWS-Services kommunizieren kann:
++
+--
+* Amazonas-Grundgestein
+* Amazon EC2
+* Amazon Elastic Container Registry (ECR)
+* Amazon S3
+* AWS System Manager (SSM)
+
+
+--
+

@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
+summary: Informieren Sie sich über die Neuerungen bei der KI-Workload-Funktion von Workload Factory. 
+---
+= Was ist neu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloads von Workload Factory.
+
+
+
+== 7 Juli 2024
+
+
+
+=== Erstveröffentlichung der Workload Factory für GenAI
+
+Die erste Version umfasst die Fähigkeit, eine Wissensdatenbank zu entwickeln, die durch die Einbettung der Unternehmensdaten angepasst wird. Auf die Wissensdatenbank kann über eine Chatbot-Anwendung für Ihre Benutzer zugegriffen werden. Diese Funktion gewährleistet präzise und relevante Antworten auf unternehmensspezifische Fragen und verbessert so die Zufriedenheit und Produktivität aller Benutzer.

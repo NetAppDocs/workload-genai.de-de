@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="doc"></block>
+  <block id="f289767b4d1cd541fc46c0f9efe188b7" category="list-text">*Wählen Sie ein Dateisystem*: Wählen Sie das FSX für ONTAP Dateisystem, in dem sich Ihre Datenquelldateien befinden, und wählen Sie *Weiter*.</block>
+  <block id="e3fbe9ea657688c1ff4a86f23c1752c3" category="list-text">*Wählen Sie ein Volume*: Wählen Sie das Volume aus, auf dem sich Ihre Quelldateien befinden, und wählen Sie *Weiter*.</block>
+  <block id="3bce906453410b081d8e495b9cf8c9b0" category="paragraph">Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, einschließlich Domäne, IP-Adresse, Benutzername und Passwort.</block>
+  <block id="7028355d43ef8a71ff4d5e7bed32be2b" category="list-text">*Wählen Sie eine Datenquelle*: Wählen Sie den Speicherort der Datenquelle basierend darauf, wo Sie die Dateien gespeichert haben. Dies kann ein ganzes Volume sein, oder nur ein bestimmter Ordner oder Unterordner im Volume, und wählen Sie *Weiter*.</block>
+  <block id="8cb2845f0cbb1e8e9ed75fc969cf512b" category="list-text">*Define AI-Parameter*: Definieren Sie im Abschnitt *Chunk-Definition*, wie der Amazon Bedrock-Dienst den Inhalt der Datenquelle in Blöcke teilt, wenn die Wissensdatenbank abgefragt wird, zu der er gehört. Derzeit können Sie nur Sätze auswählen.</block>
+  <block id="12d073958c6d4922a6f27ae8b5e4b533" category="list-text">Im Abschnitt *permission aware*, der nur verfügbar ist, wenn sich die von Ihnen ausgewählte Datenquelle auf einem Volume befindet, das das SMB-Protokoll verwendet, können Sie die Auswahl aktivieren oder deaktivieren:</block>
+  <block id="751157f855d8f0597671b65bc8ea1301" category="list-text">*Enabled*: Benutzer des Chatbot, die auf diese Wissensdatenbank zugreifen, erhalten nur Antworten auf Abfragen aus Datenquellen, auf die sie zugreifen können.</block>
+  <block id="9969ec0e7476736a130c54f32700611e" category="list-text">*Disabled*: Benutzer des Chatbot erhalten Antworten über Inhalte aus allen integrierten Datenquellen.</block>
+  <block id="65f706122d6156fd52b6cb2ff2214944" category="list-text">Wählen Sie *Hinzufügen*, um diese Datenquelle zu Ihrer Wissensdatenbank hinzuzufügen.</block>
+  <block id="f1af0b71f33a2e37e9e17b100f3c0b1e" category="summary">Aktivieren Sie die Authentifizierung für eine Wissensdatenbank, damit Token-Validierung und ACLs bei der Integration der Wissensdatenbank in eine Chatbot-Anwendung erforderlich sind.</block>
+  <block id="970a6e4ed60b5e3eb0f25c2ab67433fe" category="doc">Externe Authentifizierung für eine Wissensdatenbank aktivieren</block>
+  <block id="f739f01e878ac777330d67ca4158aece" category="paragraph">Aktivieren Sie die Authentifizierung für eine Wissensdatenbank, damit Token-Validierung und ACLs erforderlich sind, wenn die API-Endpunkte zur Integration einer Wissensdatenbank in eine Chatbot-Anwendung verwendet werden.</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Schritte</block>
+  <block id="958a8f384aa34f23244386f38ed3aeab" category="list-text">Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie veröffentlichen möchten.</block>
+  <block id="2041999f6b6b70199d1267ee84f453a6" category="inline-image-macro">Die Optionsschaltfläche</block>
+  <block id="1f387db5a4b95771e9fc57c52beeb223" category="list-text">Wählen Sie <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> *Wissensdatenbank verwalten*.</block>
+  <block id="717cb2ec03a878d541d7d67390c70a02" category="list-text">Wählen Sie das Menü *actions* und dann *Manage Authentication settings*.</block>
+  <block id="01345ed4b5ff7f7a1a05a52074ad1caf" category="list-text">Authentifizierung einrichten:</block>
+  <block id="d408b7a47989c152a2aa2d90a6528cd8" category="list-text">Wählen Sie *Authentifizierungseinstellungen aktivieren*.</block>
+  <block id="06b97c41aa527667da7e7e745c867d3c" category="list-text">Geben Sie die erforderlichen Informationen ein:</block>
+  <block id="f67d4abfe5d3ad3bdc35adca8802160f" category="list-text">Algorithmen</block>
+  <block id="ef1e6887c579ba81dcedc3f4e3793cd2" category="list-text">Zielgruppe</block>
+  <block id="51360304ea03557e79bdf5ff9cd2e234" category="list-text">Aussteller</block>
+  <block id="9ebac1089717ab190990b2b9a0fd554c" category="list-text">JWKS-URI</block>
+  <block id="9df3162c758e92127fd15a555cd18f04" category="paragraph">Sie sollten die Werte für diese Felder von Ihrem Authentifizierungsanbieter beziehen.</block>
+  <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">Wählen Sie *Speichern*.</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Ergebnis</block>
+  <block id="5d8cae383bd52502a39a1612796fb31f" category="paragraph">Sie verfügen nun über eine veröffentlichte Wissensdatenbank und den einzigartigen Endpunkt, mit dem Sie die Wissensdatenbank in eine Chatbot-Anwendung integrieren können.</block>
+  <block id="8cf73916af9c9e607f9cebacfe1b1ac5" category="summary">Workload Factory für GenAI ermöglicht die Integration von Amazon FSX für NetApp ONTAP Filesystemen mit GenAI-Basismodellen. So erhalten Sie hochperformanten Storage mit umfassenden Funktionen für Schutz, Sicherheit und Kostenoptimierung für Ihre KI-Datensätze.</block>
+  <block id="66b1224405cf6ac792013dbc191eba66" category="doc">Erfahren Sie mehr über Workload Factory für GenAI</block>
+  <block id="25762e4e39bc220e130cc0d26e2d4ca6" category="paragraph">Mit der Workload Factory for GenAI können Sie Unternehmensdatenquellen auf Amazon FSX for NetApp ONTAP mit generativen KI-Applikationen nutzen. Mithilfe des Frameworks Retrieval Augmentation Generation (RAG) können Sie schnell Datenquellen mit Foundation-Modellen verbinden, die über Amazon Bedrock verfügbar sind, um generative KI-gestützte Anwendungen wie virtuelle Assistenten, Q&amp;A-Chatbots, Dokumentzusammenfassung, Inhaltserstellung usw. zu entwickeln</block>
+  <block id="32ec6ea7e1f597681bb91bb109a9ef11" category="paragraph">Durch den Einsatz von Generative AI mit Ihren Unternehmensdaten können Sie Ihr eigenes Wissen und Ihre eigenen Fachkenntnisse nutzen und sich nicht nur auf die Intelligenz des Modells verlassen, die auf öffentlichen Daten basiert, auf denen die Modelle trainiert wurden. Mit RAG zur Anpassung der Modelle werden genaue und relevante Antworten auf organisationsspezifische Fragen sichergestellt, wodurch die Produktivität und Effizienz für die Benutzer Ihrer Anwendungen mithilfe von Generative AI verbessert wird.</block>
+  <block id="7d5046622b6681e334f44ff69fe84455" category="paragraph">Durch die Entwicklung einer GenAI-Applikation, die auf Ihre Unternehmensdaten zugeschnitten ist, können Sie Ihr eigenes Wissen und Ihre Fachkenntnisse nutzen. Diese Anpassungsfunktion sorgt für präzise und relevante Antworten auf unternehmensspezifische Fragen und verbessert die Zufriedenheit und Produktivität aller Benutzer.</block>
+  <block id="abcb7e2975df8496b30470d76f8b1d33" category="section-title">Vorteile des Einsatzes von GenAI zur Erstellung generativer KI-Applikationen</block>
+  <block id="a8d9b71fb9e841a43685f89746970117" category="paragraph">Workload Factory for GenAI vereinfacht die Bereitstellung der Infrastruktur für die Erstellung generativer KI-Applikationen mithilfe von Retrieval Augmented Generation (RAG). Im Detail bietet GenAI folgende Vorteile:</block>
+  <block id="e3fa845bdb32966ee960e79fc4cb6cf2" category="list-text">Durch die Automatisierung von GenAI können IT-Administratoren und -Entwickler die Applikationsentwicklung beschleunigen, ohne umfassende Kenntnisse über Dateninfrastruktur, Grundlagen und Sprachmodelle benötigen. Datenadministratoren und -Entwickler können auf einfache und schnelle Weise unternehmenseigene Wissensdatenbanken erstellen, in die unstrukturierte Daten Ihres Unternehmens für generative KI-Applikationen eingebettet werden.</block>
+  <block id="ce8128205284c384b430769caeb26741" category="list-text">Erhöhen Sie die Sicherheit, indem Sie Benutzerberechtigungen in Dateien erhalten, die in Knowledge-Base eingebettet sind, um sicherzustellen, dass Datensicherheit und Datenschutz erhalten bleiben. Eine Anwendung, wie ein Chatbot, kann so entwickelt werden, dass nur authentifizierte Benutzer Antworten erhalten, die auf Daten basieren, auf die die Benutzer zugreifen können.</block>
+  <block id="3bc3038379ac11eb60388be943b76d65" category="list-text">Schützen Sie Ihre Unternehmensdaten in Ihrem AWS Kundenkonto und bewahren Sie sie sicher auf. Dabei werden Ihre Unternehmensdaten nie an Dritte zugänglich gemacht.</block>
+  <block id="2858795dda2f40fc08938e45130e6015" category="list-text">Beschleunigen Sie die Entwicklung von GenAI-Applikationen, wie z. B. einen Q&amp;A-Chatbot, mithilfe von Open-Source-Frameworks wie LangChain. Nutzen Sie die GenAI-API zur Bereitstellung und zum Management von Wissensdatenbanken, zum Chatten mit einer Wissensdatenbank und zum Speichern und Abrufen des Chatverlaufs.</block>
+  <block id="d7aa8c04a5852ad32f4df4ebc355d79b" category="list-text">Verbessern Sie die Datensicherung und -Verfügbarkeit, indem Sie die generative KI-Dateninfrastruktur auf FSX für NetApp ONTAP-Filesysteme implementieren und ONTAP Funktionen wie Hochverfügbarkeit, Snapshots für lokale Datensicherung und -Recovery, SnapMirror für Disaster Recovery und SnapVault für Backup Ihrer Dateninfrastruktur nutzen.</block>
+  <block id="258bfa564ea52ad2ae40702194995f18" category="list-text">Profitieren Sie von den ONTAP Dateneffizienzfunktionen wie Datendeduplizierung, Komprimierung und Data-Compaction, Daten-Tiering und Thin Provisioning und senken Sie so die Storage-Gesamtkosten für die generative KI-Dateninfrastruktur.</block>
+  <block id="a2313dfd4d2d5baef4999beaa742689c" category="section-title">So funktioniert GenAI</block>
+  <block id="69fc349b2f7bd62d0e7765c8cc066234" category="paragraph">GenAI verwendet die privaten Daten Ihres Unternehmens, um die Intelligenz des Modells (basierend auf den Daten, auf denen es trainiert wurde) zu ergänzen und personalisierte Antworten auf Fragen von Benutzern in Ihrem Unternehmen zu geben. Sie implementieren zuerst die Infrastruktur, die für ein RAG-Framework erforderlich ist, erstellen dann mithilfe der über Amazon Bedrock verfügbaren Datenquellen und -Basismodelle Ihres Unternehmens eine Wissensdatenbank und verbinden dann eine Applikation (z. B. einen Q&amp;A-Chatbot) mit der Wissensdatenbank.</block>
+  <block id="d70bac99beb52d5e093b391d08e80174" category="inline-image-macro">Ein Diagramm, das die wichtigsten Komponenten von GenAI, ihre Funktion und ihre Funktionsweise zeigt.</block>
+  <block id="ce3b45a4624ee79213529a063f3abb8c" category="paragraph"><block ref="ce3b45a4624ee79213529a063f3abb8c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e564ccbddd9f191b216a23125a5efb1f" category="section-title">So hilft Workload Factory for GenAI beim Aufbau generativer KI-Anwendungen</block>
+  <block id="ade2c068f72325046c5312c72ad3b430" category="paragraph">GenAI hilft wie folgt, generative KI-Applikationen mit RAG zu erstellen:</block>
+  <block id="fda814900dea98d0023eb0ecf6f36448" category="list-text">Implementiert die erforderliche Infrastruktur für Retrieval Augmented Generation (RAG) Framework, um mit Datenquellen auf FSX für ONTAP-Dateisystemen und Amazon Bedrock zu arbeiten. Die Infrastruktur umfasst die NetApp GenAI Engine-Instanz zum Managen von Daten, eine eingebettete Vektordatenbank (LanceDB) und den Speicher auf Ihrem FSX für ONTAP-Dateisystem für die Vektordatenbank.</block>
+  <block id="cc56ccbbe7a4a4f1d99e1d08267a272b" category="list-text">Hilft, die Datenquellen mit Einbettungen und Sprachmodellen zu verbinden, die über Amazon Bedrock verfügbar sind, um Datenquellen einzubetten und Antworten für Benutzeranfragen abzurufen. Die Datenquellen werden zusammen mit Modellen und ihrer Konfiguration als FSX for ONTAP-Wissensdatenbanken dargestellt.</block>
+  <block id="2ff04f7767fbbbb717b2d50acb89245d" category="list-text">Eingliederung von Quelldaten in die Wissensdatenbank zur Einbindung von Quelldateien in SMB-Freigaben und NFS-Exporte in FSX für ONTAP-Filesysteme sowie Speicherung von Dateiberechtigungen für Dateien in SMB-Freigaben.</block>
+  <block id="80a4d47d289b6794b7af32bf0403d817" category="list-text">Entwickelt automatisch Einstiegsfragen basierend auf dem Inhalt in den Wissensdatenbanken.</block>
+  <block id="d115eba24b3d1be73af7f0952b82dc13" category="list-text">Bietet einen Chat-Simulator für Datenadministratoren, um das Chatten mit den Wissensdatenbanken zu testen.</block>
+  <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">Kosten</block>
+  <block id="848d5941560ff7e3f492b8bc6ca745d1" category="paragraph">Während des Vorschauzeitraums ist die Nutzung der GenAI-Funktion von Workload Factory kostenlos.</block>
+  <block id="ca4fec9e2b2e873ba73dde822ed0fd02" category="paragraph">Sie müssen jedoch für die von Ihnen implementierten AWS Ressourcen zahlen, um die generative KI-Infrastruktur unterstützen zu können. Sie zahlen beispielsweise für AWS den Amazon Bedrock AI Service, FSX for ONTAP File-System und Storage-Kapazität und die EC2-Instanz der GenAI Engine.</block>
+  <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">Lizenzierung</block>
+  <block id="0ea77fd2fdca0ee14d426a023ea715ad" category="paragraph">Für die Nutzung der KI-Funktionen von Workload Factory sind keine speziellen Lizenzen von NetApp erforderlich.</block>
+  <block id="1bb31e213d9a78b11c5c2c214bcffc0d" category="summary">Nachdem Sie die KI-Infrastruktur bereitgestellt und die Datenquellen ermittelt haben, die Sie aus Ihren FSX für ONTAP-Datastores in Ihre Wissensdatenbank integrieren möchten, können Sie mithilfe von Workload Factory die Knowledge Base aufbauen. In diesem Schritt definieren Sie auch die KI-Merkmale und beginnen Sie mit dem Gespräch.</block>
+  <block id="0da805b7cc0727848a84e995ab36cd76" category="doc">Erstellen einer Wissensdatenbank</block>
+  <block id="f5319b0c82a4988a803605055631adad" category="paragraph">Nachdem Sie die KI-Infrastruktur bereitgestellt und die Datenquellen ermittelt haben, die Sie aus Ihren FSX für ONTAP-Datastores in Ihre Wissensdatenbank integrieren möchten, können Sie mithilfe von Workload Factory die Knowledge Base aufbauen. In diesem Schritt definieren Sie auch die Merkmale von KI und stellen den Gesprächseinstieg her.</block>
+  <block id="ede259c54718066f429204cb187335ac" category="paragraph">Eine Wissensdatenbank kann verwendet werden, ohne Datenquellen aus Ihrem Unternehmen zu integrieren. In diesem Fall liefert eine mit der Wissensdatenbank integrierte Anwendung nur Ergebnisse aus öffentlich zugänglichen Informationen im Internet. Dies wird als „_public Mode_“-Integration bezeichnet.</block>
+  <block id="9c5cf370721bfae38201d8aeb52e4022" category="paragraph">In den meisten Fällen möchten Sie Datenquellen aus Ihrem Unternehmen in die Wissensdatenbank integrieren. Dies wird als _Enterprise Mode_ Integration bezeichnet, da es Wissen aus Ihrem Unternehmen liefert.</block>
+  <block id="3bd4cddbc7a98f5c9632a455eca8c27e" category="section-title">Erstellen und Konfigurieren der Wissensdatenbank</block>
+  <block id="646df03c5fddafc8e9c4ed5aa7036edf" category="paragraph">Die Wissensdatenbank definiert Eigenschaften wie die Bedrock-KI-Modelle und das Embedding-Format, mit denen Sie Ihre Wissensdatenbank erstellen möchten.</block>
+  <block id="d34fab7936dd110b003945d679bb4133" category="list-text">Melden Sie sich bei Workload Factory an.</block>
+  <block id="2775f5aa84cae461b809b629e27e2305" category="list-text">Wählen Sie im Kachel AI Workloads *Create Chatbot* aus.</block>
+  <block id="5b20d7e96740200c428376cbb5e7fdb4" category="list-text">Wählen Sie auf der Registerkarte Wissensdatenbanken die Option *Wissensdatenbank hinzufügen* aus.</block>
+  <block id="a3efc362347ba241480bf992b9fa4899" category="list-text">Konfigurieren Sie auf der Seite „Define Knowledge Base“ die Knowledge Base-Einstellungen:</block>
+  <block id="53bdd4ba55043d3b20fafbaeddced95e" category="list-text">*Name*: Geben Sie den Namen ein, den Sie für die Wissensdatenbank verwenden möchten.</block>
+  <block id="867a64928002194654eea40509536879" category="list-text">*Beschreibung*: Geben Sie eine detaillierte Beschreibung für die Wissensdatenbank ein.</block>
+  <block id="c37e3f948924097538b621ebbdc79afa" category="list-text">*Einbettungsmodell*: Das Einbettungsmodell definiert, wie Ihre Daten in Vektoreinbettungen für die Wissensdatenbank umgewandelt werden. Workload Factory unterstützt die folgenden Modelle:</block>
+  <block id="0edab7909500c21f42341384982d7dab" category="list-text">Titan-Einbauteile G1 - Text</block>
+  <block id="b1cf79f6f67a2d7230894fc720b494b6" category="list-text">Titan Einbettung Text v2</block>
+  <block id="eca4d29f6a2ef2328233a8dd5b28dd89" category="list-text">Titan Multimodal Embeddings G1</block>
+  <block id="b6306206c9c2b9f0903b5bfc5872066e" category="paragraph">Beachten Sie, dass Sie das Einbettungsmodell von Amazon Bedrock bereits aktiviert haben müssen.</block>
+  <block id="6034693f6588a087cd6872b5c42ea4d6" category="inline-link">Erfahren Sie mehr über Amazon Titan</block>
+  <block id="558b7a3f6f7e506377040f9194ff098b" category="paragraph"><block ref="558b7a3f6f7e506377040f9194ff098b" category="inline-link-rx"></block></block>
+  <block id="eedd3619a786f9c1261bba5f49d4f821" category="list-text">*Chat-Modell*: Wählen Sie aus Claude-Chat-Modellen, die in Amazon Bedrock integriert sind. Beachten Sie, dass Sie das Chatmodell von Amazon Bedrock bereits aktiviert haben müssen.</block>
+  <block id="d6444760a98aae63c256572c582cbe80" category="inline-link">Anthropic's Claude in Amazon Bedrock</block>
+  <block id="c6a0e7101f0906d1498552ff723709e5" category="paragraph">Erfahren Sie mehr über die verfügbaren Modelle, die Ihnen bei der Auswahl helfen:<block ref="56cf03ef03ec9048e7282cdb73fcf2fd" category="inline-link-rx"></block></block>
+  <block id="bb75c182eff66bee3c76899d41fc8e8f" category="list-text">*Gesprächseinstieg*: Wählen Sie aus, ob Sie bis zu vier Gesprächseinstiegstelefonate bereitstellen möchten, die Benutzern angezeigt werden, die mit einem Chatbot interagieren, der diese Wissensdatenbank nutzt. Wir empfehlen, diese Einstellung zu aktivieren.</block>
+  <block id="fd6f710773f79577a44d128bb3df27cc" category="inline-link-macro">Erfahren Sie, wie Sie die Einstellungen der Wissensdatenbank ändern</block>
+  <block id="1010b4e428fbb8fb24725a17eb384f8e" category="paragraph">Wenn Sie Konversationsstarter aktivieren, ist standardmäßig „Automatischer Modus“ ausgewählt. Der „manuelle Modus“ kann erst aktiviert werden, nachdem Sie Datenquellen zu Ihrer Wissensdatenbank hinzugefügt haben. <block ref="787b3d64d417e723feebaf5fa5dbfeee" category="inline-link-macro-rx"></block>.</block>
+  <block id="7311e81ffb665c2ec2a4c996ce693887" category="list-text">Wählen Sie *Create Knowledge Base*, um die Wissensdatenbank zu GenAI hinzuzufügen.</block>
+  <block id="89f815e342683a86616ce06926e87088" category="list-text">Auf der nächsten Seite des Assistenten haben Sie die Möglichkeit, eine Datenquelle zu Ihrer neuen Wissensdatenbank hinzuzufügen oder den Prozess hier zu beenden, ohne eine Datenquelle hinzuzufügen. Wir empfehlen Ihnen, *Add Data source* auszuwählen und jetzt eine oder mehrere Datenquellen hinzuzufügen.</block>
+  <block id="9bd079cbc91b32393983ae28a378c00c" category="section-title">Fügen Sie der Wissensdatenbank Datenquellen hinzu</block>
+  <block id="831e8ddab4c3e70bcfe67a3e58aaf8cc" category="paragraph">Sie können eine oder mehrere Datenquellen hinzufügen, um die Wissensdatenbank mit den Daten Ihres Unternehmens zu füllen.</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Über diese Aufgabe</block>
+  <block id="443fa995d0ec899357a7e519e2055b98" category="paragraph">Die maximale Anzahl unterstützter Datenquellen beträgt 10.</block>
+  <block id="10031d73287aadb6c5f8b3dae7b23860" category="list-text">Nachdem Sie *Datenquelle hinzufügen* ausgewählt haben, wird die Seite *Dateisystem auswählen* angezeigt.</block>
+  <block id="8817d70d4163473468fa1b2b6e498321" category="paragraph">Die Datenquelle wird in Ihre Wissensdatenbank eingebettet. Der Status ändert sich von „Einbetten“ in „eingebettet“, wenn die Datenquelle vollständig eingebettet ist.</block>
+  <block id="8dfce7f4d224734508ee16a1aff7ad72" category="paragraph">Nachdem Sie eine einzelne Datenquelle zur Wissensdatenbank hinzugefügt haben, können Sie sie lokal im Chatbot Simulator-Fenster testen und alle erforderlichen Änderungen vornehmen, bevor Sie den Chatbot Ihren Benutzern zur Verfügung stellen. Sie können die gleichen Schritte ausführen, um der Wissensdatenbank zusätzliche Datenquellen hinzuzufügen.</block>
+  <block id="b9605cf748e4b8e1c97d786258a0be40" category="summary">Sie müssen die Infrastruktur für RAG Framework in Ihrer Umgebung implementieren, bevor Sie FSX für ONTAP-Wissensdatenbanken und -Anwendungen für Ihr Unternehmen entwickeln können. Die primären Infrastrukturkomponenten sind der Amazon Bedrock KI-Service, eine Virtual Machine-Instanz für die NetApp GenAI Engine und ein FSX für ONTAP Filesystem.</block>
+  <block id="e379b913896cf9bdd4e2d6717212215a" category="doc">Implementierung der GenAI-Infrastruktur</block>
+  <block id="0cd805094b5dffd702d8e0faa10c927c" category="paragraph">Sie müssen die GenAI-Infrastruktur für RAG Framework in Ihrer Umgebung implementieren, bevor Sie FSX für ONTAP-Wissensdatenbanken und -Applikationen für Ihr Unternehmen aufbauen können. Die primären Infrastrukturkomponenten sind der Amazon Bedrock Service, eine Virtual Machine-Instanz für die NetApp GenAI Engine und ein FSX für ONTAP Filesystem.</block>
+  <block id="acc7a3fda0820287411e8fb0e8b801f2" category="paragraph">Die implementierte Infrastruktur kann mehrere Wissensdatenbanken und Chatbots unterstützen, sodass diese Aufgabe in der Regel nur einmal ausgeführt werden muss.</block>
+  <block id="352b67da62e25a1a8f45636930053f08" category="section-title">Detaillierte Informationen zur Infrastruktur</block>
+  <block id="8428644910b49210b6312a1abb433a99" category="inline-link">Zeigen Sie die Liste der unterstützten Regionen an</block>
+  <block id="e295768e822c8bd83198042fbb470661" category="paragraph">Ihre GenAI-Implementierung muss sich in einer AWS-Region mit aktiviertem Amazon Bedrock befinden.<block ref="25581c78bc5f676a9b9f4743abf4f06f" category="inline-link-rx"></block></block>
+  <block id="0d5fdb6bfaa1c5a89c4128c1a8bb5b6c" category="paragraph">Die Bereitstellung besteht aus den folgenden Komponenten:</block>
+  <block id="12c3d12e41194b32453a96f3a7e15e48" category="list-text">Amazon Bedrock Service</block>
+  <block id="c79d103149669e7aa24ba1b487cccd34" category="list-text">Amazon Bedrock ist ein vollständig gemanagter Service, mit dem Sie über eine einzige API Foundation Models (FMS) führender KI-Unternehmen verwenden können. Außerdem bietet sie die Funktionen, die Sie zum Erstellen sicherer generativer KI-Applikationen benötigen.</block>
+  <block id="8013da98e1db7396729f9e939983f21d" category="inline-link">Erfahren Sie mehr über Amazon Bedrock</block>
+  <block id="23a3c6042868163a40868292d67c9df6" category="paragraph"><block ref="23a3c6042868163a40868292d67c9df6" category="inline-link-rx"></block></block>
+  <block id="ce3e282dcacc561a869106aa125f002f" category="list-text">Virtual Machine für die NetApp GenAI Engine</block>
+  <block id="c4074985e4f14e58c8d205be2ba39921" category="list-text">Dabei wird die NetApp GenAI Engine implementiert. Es bietet die Verarbeitungsleistung, um die Daten aus Ihren Datenquellen aufzunehmen und diese dann in die Vektordatenbank zu schreiben.</block>
+  <block id="e48bc5875c01dd007b7b2a370e879cde" category="list-text">FSX für ONTAP-Dateisystem</block>
+  <block id="c25a8195c5a51347051e9d38756d78ac" category="list-text">Das Filesystem FSX für ONTAP bietet den Storage für Ihr GenAI-System.</block>
+  <block id="f8bff4ff8c444e664c2c78db42ddd93c" category="paragraph">Es wird ein einzelnes Volume bereitgestellt, das die Vektordatenbank enthält, in der die Daten gespeichert werden, die vom Basismodell basierend auf Ihren Datenquellen generiert wurden.</block>
+  <block id="cd4ca8fe4f8028f11146f93e0f114879" category="paragraph">Die Datenquellen, die Sie in Ihre Wissensdatenbank integrieren, können sich auf demselben FSX für ONTAP-Dateisystem oder auf einem anderen System befinden.</block>
+  <block id="e9f04a38bc1df3695df7675463dfe7d2" category="paragraph">Die NetApp GenAI Engine überwacht beide Volumes und interagiert mit ihnen.</block>
+  <block id="cc573650532041ff5d41735ee141eab8" category="paragraph">Die folgende Abbildung zeigt die GenAI-Infrastruktur. Die Komponenten mit den Nummern 1, 2 und 3 werden während dieses Verfahrens eingesetzt. Die anderen Elemente müssen vorhanden sein, bevor mit der Bereitstellung begonnen werden kann.</block>
+  <block id="ce783b25723548b58b44d3dde715476f" category="inline-image-macro">Ein Diagramm der AI-Chatbot-Komponenten.</block>
+  <block id="b7cef2c498d21a11e9176de11360774c" category="paragraph"><block ref="b7cef2c498d21a11e9176de11360774c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b2e0047ff352d3aae4c45b40d2f7cc05" category="paragraph">Geben Sie Ihre AWS-Zugangsdaten ein und wählen Sie das FSX for ONTAP-Dateisystem aus, um die Retrieval Augmentation Generation (RAG)-Infrastruktur bereitstellen zu können.</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Bevor Sie beginnen</block>
+  <block id="567dcfd6302e5511c1b546a4df21a679" category="inline-link-macro">Den Anforderungen gerecht zu werden</block>
+  <block id="48b1a64ea0f002f28680bb1b8a8c87b2" category="paragraph">Stellen Sie sicher, dass Ihre Umgebung den Anforderungen entspricht <block ref="b537f86d93b89f494a26572d1a60f4ef" category="inline-link-macro-rx"></block> , bevor Sie mit diesem Verfahren beginnen.</block>
+  <block id="4d7ea1af041cca43906c5e490c0c1820" category="list-text">Wählen Sie in der Kachel AI-Workloads *Deploy &amp; manage* aus.</block>
+  <block id="6bb39c2a8e12d8e43ba94f5c10b515e3" category="list-text">Sehen Sie sich das Infrastrukturdiagramm an und wählen Sie *Weiter*.</block>
+  <block id="ea04a0c1437f4ebc45564d8545775b59" category="list-text">Füllen Sie die Einträge im Abschnitt *AWS-Einstellungen* aus:</block>
+  <block id="d75b2624fb3d687436ab9e7b1df2356f" category="list-text">*AWS-Anmeldeinformationen*: Wählen Sie die AWS-Anmeldeinformationen aus oder fügen Sie diese hinzu, um die AWS-Ressourcen bereitzustellen.</block>
+  <block id="e36b38f91227e22bbae32a9f84bef25b" category="list-text">*Standort*: Wählen Sie eine AWS-Region, VPC und Subnetz.</block>
+  <block id="6f2c1c768f2edab4eb318bdb1580f9f7" category="paragraph">Die Implementierung von GenAI muss sich in einer AWS Region befinden, für die Amazon Bedrock aktiviert ist.<block ref="25581c78bc5f676a9b9f4743abf4f06f" category="inline-link-rx"></block></block>
+  <block id="49d6fbbfca02733209ee2833d2481e4e" category="list-text">Füllen Sie die Einträge im Abschnitt *Infrastruktureinstellungen* aus:</block>
+  <block id="54e710456ced46833adf947bc5f6d4d8" category="list-text">*FSX für ONTAP Dateisystem*: Wählen Sie das FSX für ONTAP Dateisystem und die Speicher-VM, wo die GenAI-Instanz-Datenbank-Volumes bereitgestellt werden, und geben Sie dann den Namen an, den Sie für das Volumen verwenden möchten.</block>
+  <block id="2d63bd7626a5c75abc0b0ce09d186bf9" category="paragraph">Je nachdem, ob Workload Factory über die Anmeldeinformationen für das Dateisystem FSX for ONTAP verfügt, müssen Sie möglicherweise den Benutzernamen und das Kennwort eingeben.</block>
+  <block id="3869544f6aa6ccd1570caed7671ca0d6" category="list-text">*Tags*: Geben Sie alle Tag-Schlüssel/Wert-Paare ein, die Sie auf alle AWS-Ressourcen anwenden möchten, die Teil dieser Bereitstellung sind.</block>
+  <block id="f445edd51fe9e6a1af8ffd9c30e87f40" category="list-text">*Schlüsselpaar*: Wählen Sie ein Schlüsselpaar aus, mit dem Sie eine sichere Verbindung zur NetApp GenAI Engine-Instanz herstellen können.</block>
+  <block id="6449a99be42d938ed27187e040028634" category="list-text">Wählen Sie *Deploy*, um die Bereitstellung zu starten.</block>
+  <block id="601674fba29f7ecc4a5620e6933241f6" category="paragraph">Workload Factory beginnt mit der Bereitstellung der Chatbot-Infrastruktur. Dieser Vorgang kann bis zu 10 Minuten dauern.</block>
+  <block id="64dea11099d626528fa052576a740de2" category="paragraph">Während des Bereitstellungsprozesses werden die folgenden Elemente eingerichtet:</block>
+  <block id="8f3d503d34aa6fe6a66b841b0bdd2996" category="list-text">Das Netzwerk wird zusammen mit den privaten Endpunkten eingerichtet.</block>
+  <block id="fc4ab898b1959c931605be5dfe62a71d" category="list-text">Die IAM-Rolle, das Instanzprofil und die Sicherheitsgruppe werden erstellt.</block>
+  <block id="eac776dd224d1ed33599e26586f981b6" category="list-text">Das Volume für die GenAI Engine Datenbank (LanceDB) wird auf dem FSX für ONTAP Dateisystem erstellt.</block>
+  <block id="216a480d552bd412d15e51cde6cbbf7a" category="list-text">Die Virtual Machine-Instanz für die GenAI-Engine wird bereitgestellt.</block>
+  <block id="6b39fa3582a5336c28b4c324f016a9a8" category="summary">Bei der Bereitstellung der GenAI-Infrastruktur erstellt Workload Factory eine EC2-Instanz für die GenAI-Engine. Außerdem werden für diese Instanz eine IAM-Rolle, eine Sicherheitsgruppe und private Endpunkte erstellt. Vielleicht möchten Sie mehr Details zu diesen Komponenten erfahren, die Workload Factory in Ihrer AWS-Umgebung erstellt.</block>
+  <block id="44f33186e2b6baa4a697e5604c0a3863" category="doc">Komponenten für die NetApp GenAI Engine</block>
+  <block id="b7afd5ecab3ac597cbe300dd5827c445" category="list-text">EC2 Instanztyp</block>
+  <block id="b592e89ca5722aab8bf77ae181e9fc0d" category="list-text">m5.large</block>
+  <block id="759d9f0fdbf1b3fe124b8de48be0485b" category="list-text">IAM-Rolle</block>
+  <block id="b5bd9bcc55dd04b48583f4ab9dd580f3" category="list-text">Die GenAI-Engine-Instanz benötigt die Berechtigungen, um Datenblöcke an das Einbettungsmodell in Amazon Bedrock zu senden und mit dem NetApp AI Service Back-End zu kommunizieren. Die IAM-Rolle umfasst die folgenden Berechtigungen:</block>
+  <block id="338578acf7e0dc54ebcd8c3592f0b022" category="list-text">Sicherheitsgruppe</block>
+  <block id="36d8c0d0c9711e8ac7a5bbcbe9b96008" category="list-text">Die Regeln für ausgehende Anrufe sind für den gesamten Datenverkehr offen, während die Regeln für eingehende Anrufe vollständig geschlossen sind.</block>
+  <block id="1f171bab0b26254e4c58e536973c5c09" category="list-text">Private Endpunkte</block>
+  <block id="a91a3edb7605f2bbdd24de35ed37881d" category="list-text">Wenn sie auf der Ziel-VPC nicht bereits vorhanden sind, erstellt Workload Factory private Endpunkte für die EC2-Instanz der GenAI Engine, sodass die IT mit den folgenden AWS-Services kommunizieren kann:</block>
+  <block id="34048930da0f8b448828d6774b139b17" category="list-text">Amazonas-Grundgestein</block>
+  <block id="c421d122321bec48d6b30858f4e7b515" category="list-text">Amazon EC2</block>
+  <block id="719ffca696aa714ef090fce0aca97bd2" category="list-text">Amazon Elastic Container Registry (ECR)</block>
+  <block id="270fcb785810d0206945029bb05f4e97" category="list-text">Amazon S3</block>
+  <block id="0072b242011f459b57b0768dceac82f8" category="list-text">AWS System Manager (SSM)</block>
+  <block id="243f4102d24e538f61072e19e53b373f" category="summary">NetApp bietet unterschiedlichen Support für Workload Factory. Umfassende kostenlose Self-Support-Optionen stehen rund um die Uhr zur Verfügung, wie etwa Knowledge Base-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung umfasst technischen Remote-Support über Web-Ticketing.</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Holen Sie sich Hilfe</block>
+  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="paragraph">NetApp bietet für Workload Factory und die zugehörigen Cloud-Services unterschiedliche Unterstützung. Umfassende kostenlose Self-Support-Optionen stehen rund um die Uhr zur Verfügung, wie etwa Knowledge Base-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung umfasst technischen Remote-Support über Web-Ticketing.</block>
+  <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">Erhalten Sie Support für FSX für ONTAP</block>
+  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">Für technischen Support in Bezug auf FSX for ONTAP, seine Infrastruktur oder jede Lösung, die den Service verwendet, siehe „Hilfe erhalten“ in der Dokumentation zu Workload Factory für dieses Produkt.</block>
+  <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX für ONTAP</block>
+  <block id="9d06990508d25d367d9158c6558eb9c8" category="paragraph"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
+  <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">Nutzen Sie die unten beschriebenen Support-Optionen, um technischen Support für Workload Factory und seine Storage-Lösungen und -Services zu erhalten.</block>
+  <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Nutzen Sie Self-Support-Optionen</block>
+  <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Diese Optionen sind kostenlos verfügbar, 24 Stunden am Tag, 7 Tage die Woche:</block>
+  <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Dokumentation</block>
+  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">Die Workload Factory-Dokumentation, die Sie derzeit anzeigen.</block>
+  <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">Wissensdatenbank</block>
+  <block id="436f63b446dba5a418c698d49bd39718" category="list-text"><block ref="436f63b446dba5a418c698d49bd39718" category="inline-link-rx"></block></block>
+  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">Durchsuchen Sie die Workload Factory Knowledge Base, um hilfreiche Artikel zur Fehlerbehebung zu finden.</block>
+  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">Communitys</block>
+  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
+  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">Treten Sie der Workload Factory Community bei, um laufende Diskussionen zu verfolgen oder neue zu erstellen.</block>
+  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Erstellen Sie einen Fall mit dem NetApp Support</block>
+  <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Zusätzlich zu den oben genannten Self-Support-Optionen können Sie gemeinsam mit einem NetApp Support-Experten eventuelle Probleme nach der Aktivierung des Supports beheben.</block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">Bevor Sie beginnen</block>
+  <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">Erfahren Sie, wie Sie sich für Support registrieren</block>
+  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">Um die Funktion *Fall erstellen* nutzen zu können, müssen Sie sich zunächst für den Support registrieren. Verknüpfen Sie Ihre Zugangsdaten für die NetApp Support-Website mit Ihrer Workload Factory Anmeldung. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
+  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">Wählen Sie oben rechts in der Workload Factory-Konsole *Hilfe &gt; Support* aus.</block>
+  <block id="aadd86a3fadf19221852692c6e4adc2f" category="paragraph">Wenn Sie diese Option auswählen, wird die BlueXP Konsole um eine neue Browserregisterkarte geöffnet und das Support Dashboard geladen.</block>
+  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">Wählen Sie auf der Seite *Ressourcen* eine der verfügbaren Optionen unter Technischer Support:</block>
+  <block id="6a1b74969231967ed071d465206b15c7" category="list-text">Wählen Sie *Rufen Sie uns an*, wenn Sie mit jemandem am Telefon sprechen möchten. Sie werden zu einer Seite auf netapp.com weitergeleitet, auf der die Telefonnummern aufgeführt sind, die Sie anrufen können.</block>
+  <block id="d65a2a6fc9caad1867728d4382eeb989" category="list-text">Wählen Sie *Fall erstellen*, um ein Ticket mit einem NetApp-Supportspezialisten zu öffnen:</block>
+  <block id="d7d0da18fbb8f8f85c1364883fbdf4c7" category="list-text">*Service*: Wählen Sie *Workload Factory*.</block>
+  <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*Case Priority*: Wählen Sie die Priorität für den Fall, der niedrig, Mittel, hoch oder kritisch sein kann.</block>
+  <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">Wenn Sie weitere Informationen zu diesen Prioritäten wünschen, bewegen Sie den Mauszeiger über das Informationssymbol neben dem Feldnamen.</block>
+  <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">*Problembeschreibung*: Geben Sie eine detaillierte Beschreibung Ihres Problems an, einschließlich aller anwendbaren Fehlermeldungen oder Fehlerbehebungsschritte, die Sie durchgeführt haben.</block>
+  <block id="002c6f26fb01affb37b8cf3cef7a1fb0" category="list-text">*Zusätzliche E-Mail-Adressen*: Geben Sie zusätzliche E-Mail-Adressen ein, wenn Sie jemand anderes auf dieses Problem aufmerksam machen möchten.</block>
+  <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*Anhang (optional)*: Laden Sie bis zu fünf Anhänge nacheinander hoch.</block>
+  <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">Anhänge sind auf 25 MB pro Datei begrenzt. Folgende Dateierweiterungen werden unterstützt: Txt, log, pdf, jpg/jpeg, rtf, doc/docx, xls/xlsx und csv.</block>
+  <block id="baaf0e61add7d12cf8d12e023d5aef18" category="inline-image-macro">Screenshot aus dem Formular „Create a Case“, in dem Sie einen Case beim NetApp Support erstellen können</block>
+  <block id="b0c6c3ee60a29925d3f09cd609b79483" category="paragraph"><block ref="b0c6c3ee60a29925d3f09cd609b79483" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">Nachdem Sie fertig sind</block>
+  <block id="18f487556417bb6d9721a7005ae097c9" category="paragraph">Es wird ein Popup-Fenster mit der Support-Fallnummer angezeigt. Ein NetApp Support-Experte prüft Ihren Fall und macht Sie umgehend mit.</block>
+  <block id="0ff9b4b8684b9e03c9c1e1320935eae3" category="paragraph">Um eine Historie deiner Support-Fälle anzuzeigen, kannst du *Einstellungen &gt; Chronik* auswählen und nach Aktionen mit dem Namen „Support-Case erstellen“ suchen. Mit einer Schaltfläche ganz rechts können Sie die Aktion erweitern, um Details anzuzeigen.</block>
+  <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">Es ist möglich, dass beim Versuch, einen Fall zu erstellen, möglicherweise die folgende Fehlermeldung angezeigt wird:</block>
+  <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">„Sie sind nicht berechtigt, einen Fall für den ausgewählten Service zu erstellen.“</block>
+  <block id="c7b7a5ae9f37fd7d24e4d641b9186fe9" category="paragraph">Dieser Fehler könnte bedeuten, dass das NSS-Konto und das Unternehmen des Datensatzes, mit dem es verbunden ist, nicht das gleiche Unternehmen des Eintrags für die BlueXP Account Seriennummer (dh 960xxxx) oder Seriennummer der Arbeitsumgebung. Sie können Hilfe mit einer der folgenden Optionen anfordern:</block>
+  <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">Verwenden Sie den Chat im Produkt</block>
+  <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">Übermitteln Sie einen nicht-technischen Case unter<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
+  <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">Managen Ihrer Support-Cases (Vorschau)</block>
+  <block id="8b74b053fbeeff5c3b6f4991cb1d028d" category="paragraph">Sie können aktive und gelöste Support-Cases direkt über BlueXP anzeigen und managen. Sie können die mit Ihrem NSS-Konto und Ihrem Unternehmen verbundenen Fälle verwalten.</block>
+  <block id="394ef093ad3259b9ff0fe7406f015b83" category="paragraph">Case Management ist als Vorschau verfügbar. Wir planen, diese Erfahrungen weiter zu verbessern und in zukünftigen Versionen Verbesserungen hinzuzufügen. Bitte senden Sie uns Ihr Feedback über den Product-Chat.</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">Beachten Sie Folgendes:</block>
+  <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">Das Case-Management-Dashboard oben auf der Seite bietet zwei Ansichten:</block>
+  <block id="01c3ffea552d74a5ae390b10e71a1f26" category="list-text">Die Ansicht auf der linken Seite zeigt die Gesamtzahl der Fälle, die in den letzten 3 Monaten durch das von Ihnen angegebene NSS-Benutzerkonto eröffnet wurden.</block>
+  <block id="e3b6c09a5686233f72ce1ea60a1eb088" category="list-text">Die Ansicht auf der rechten Seite zeigt die Gesamtzahl der in den letzten 3 Monaten auf Unternehmensebene eröffneten Fälle basierend auf Ihrem NSS-Benutzerkonto an.</block>
+  <block id="b19b168cc8a2b8c984465e140256b3a2" category="paragraph">Die Ergebnisse in der Tabelle geben die Fälle in Bezug auf die ausgewählte Ansicht wieder.</block>
+  <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">Sie können interessante Spalten hinzufügen oder entfernen und den Inhalt von Spalten wie Priorität und Status filtern. Andere Spalten bieten nur Sortierfunktionen.</block>
+  <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">Weitere Informationen erhalten Sie in den Schritten unten.</block>
+  <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">Auf Fallebene bieten wir die Möglichkeit, Fallnotizen zu aktualisieren oder einen Fall zu schließen, der sich noch nicht im Status „Geschlossen“ oder „Geschlossen“ befindet.</block>
+  <block id="0a4050ac39772e9281a9aba225254bf8" category="list-text">Wählen Sie *Case Management* aus und fügen Sie bei Aufforderung Ihr NSS-Konto zu BlueXP hinzu.</block>
+  <block id="d8ce1865cf1fe3cffd60300b4b86ad63" category="paragraph">Auf der Seite *Case Management* werden offene Fälle im Zusammenhang mit dem NSS-Konto angezeigt, das mit Ihrem BlueXP Benutzerkonto verknüpft ist. Dies ist das gleiche NSS-Konto, das oben auf der Seite *NSS Management* angezeigt wird.</block>
+  <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">Ändern Sie optional die in der Tabelle angezeigten Informationen:</block>
+  <block id="1d39d3ab518e1e3f16cbafb2a56e1fd9" category="list-text">Wählen Sie unter *Vorgänge der Organisation* *Ansicht* aus, um alle mit Ihrem Unternehmen verbundenen Fälle anzuzeigen.</block>
+  <block id="059e856250b59be3069246887b74a23c" category="list-text">Ändern Sie den Datumsbereich, indem Sie einen genauen Datumsbereich oder einen anderen Zeitrahmen auswählen.</block>
+  <block id="dfb3764bce2548df4e06357403f9c7d0" category="inline-image-macro">Ein Screenshot der Option über der Tabelle auf der Seite Case Management, mit der Sie einen genauen Datumsbereich oder die letzten 7 Tage, 30 Tage oder 3 Monate auswählen können.</block>
+  <block id="4f7062c5c309a833cf46e4a1a5a5d366" category="paragraph"><block ref="4f7062c5c309a833cf46e4a1a5a5d366" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a1bb576be9e5a356290f231efb51b3f5" category="list-text">Filtern Sie den Inhalt der Spalten.</block>
+  <block id="3753f10a59e21f58b30e3e67d416453e" category="inline-image-macro">Ein Screenshot der Filteroption in der Spalte Status, in dem Sie Fälle filtern können, die einem bestimmten Status entsprechen, z. B. aktiv oder Geschlossen.</block>
+  <block id="8f624dee500d9670a27c4404084a7a62" category="paragraph"><block ref="8f624dee500d9670a27c4404084a7a62" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1c6ea5ef583389e18e7d7bda70beaa71" category="inline-image-macro">Das Plus-Symbol, das in der Tabelle angezeigt wird</block>
+  <block id="002f1c0a8cf4a68b888010ddef3a7f7e" category="list-text">Ändern Sie die Spalten, die in der Tabelle angezeigt werden, indem <block ref="e55ec8dc42ae68d9326c51261c8a5f4f" category="inline-image-macro-rx" type="image"></block> Sie die Spalten auswählen und dann auswählen, die Sie anzeigen möchten.</block>
+  <block id="370b44009f1b82d0b6b178bb80cc62fa" category="inline-image-macro">Ein Screenshot mit den Spalten, die Sie in der Tabelle anzeigen können.</block>
+  <block id="72c5c65442a2c44e7f2546b8b4c957df" category="paragraph"><block ref="72c5c65442a2c44e7f2546b8b4c957df" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">Ein Symbol mit drei Punkten, das in der letzten Spalte der Tabelle angezeigt wird</block>
+  <block id="000a1376035909240f559b8ab724030c" category="list-text">Managen Sie einen bestehenden Fall, indem <block ref="54181d1b918b28e5f92545f8b3b4a30c" category="inline-image-macro-rx" type="image"></block> Sie eine der verfügbaren Optionen auswählen:</block>
+  <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*Fall anzeigen*: Vollständige Details zu einem bestimmten Fall anzeigen.</block>
+  <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*Aktennotizen aktualisieren*: Geben Sie zusätzliche Details zu Ihrem Problem an oder wählen Sie *Dateien hochladen*, um maximal fünf Dateien anzuhängen.</block>
+  <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*Fall schließen*: Geben Sie Einzelheiten darüber an, warum Sie den Fall schließen und wählen Sie *Fall schließen*.</block>
+  <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">Ein Screenshot, der die Aktionen zeigt, die Sie nach Auswahl des Menüs in der letzten Spalte der Tabelle durchführen können.</block>
+  <block id="6f7cf78e14aa346236a87d9541221fb2" category="paragraph"><block ref="6f7cf78e14aa346236a87d9541221fb2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="81f25ad7a34a66e01021554d998e3b0c" category="summary">Identifizieren oder erstellen Sie die Dokumente (Datenquellen), die sich auf Ihrem FSX für ONTAP-Dateisystem befinden, die Sie in Ihre Wissensdatenbank integrieren werden. Mithilfe dieser Datenquellen kann die Wissensdatenbank genaue und personalisierte Antworten auf Benutzeranfragen basierend auf Daten bereitstellen, die für Ihr Unternehmen relevant sind.</block>
+  <block id="7d7b61e2696184ef2f1a673b4b505c10" category="doc">Ermitteln Sie die Datenquellen, die in Ihre Wissensdatenbank integriert werden sollen</block>
+  <block id="887cf13beb27381e3305ca34c5115c2d" category="section-title">Maximale Anzahl von Datenquellen</block>
+  <block id="4b8e341857a3eb86f0ae58a01da824ed" category="section-title">Speicherort der Datenquellen</block>
+  <block id="517b9fa88a903df70d1614de4a032562" category="paragraph">Datenquellen können auf einem einzelnen Volume oder in einem Ordner innerhalb eines Volumes, auf einer SMB-Freigabe oder auf einem NFS-Export auf einem Amazon FSX für NetApp ONTAP Filesystem gespeichert werden. Sie können keine einzelnen Dokumente in einem Volume oder Ordner auswählen. Daher sollten Sie sicherstellen, dass jedes Volume oder jeder Ordner, das Datenquellen enthält, keine fremden Dokumente enthält, die nicht in Ihre Wissensdatenbank integriert werden sollten.</block>
+  <block id="a07dd9fe7465f7ec7d15135a3cfab3a4" category="paragraph">Sie können jeder Knowledge Base mehrere Datenquellen hinzufügen, allerdings müssen alle auf FSX for ONTAP-Filesystemen liegen, auf die über Ihr AWS-Konto zugegriffen werden kann.</block>
+  <block id="ffbef7cfe7a8524b59851c8a1389ebcc" category="paragraph">Die maximale Dateigröße für jede Datenquelle beträgt 50 MB.</block>
+  <block id="c84d4278eb32c7a089aea86ebf95ad39" category="section-title">Unterstützte Protokolle</block>
+  <block id="430170fe80b2fc2e8745819f3bf64b55" category="paragraph">Die Wissensdatenbank unterstützt Daten von Volumes, die NFS- oder SMB/CIFS-Protokolle verwenden. Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, damit die Wissensdatenbank auf die Dateien auf diesen Volumes zugreifen kann. Dazu gehören die Active Directory-Domäne, die IP-Adresse, der Benutzername und das Kennwort.</block>
+  <block id="0c303dcbadd43e7fb595ff47ae13d713" category="paragraph">Wenn Sie Ihre Datenquelle auf einer über SMB zugänglichen Freigabe (Datei oder Verzeichnis) speichern, sind die Daten nur für Chatbot-Benutzer oder -Gruppen zugänglich, die über die Berechtigung zum Zugriff auf diese Freigabe verfügen. Wenn diese "Berechtigungserkennungsfunktion" aktiviert ist, vergleicht das KI-System die Benutzer-E-Mail in auth0 mit den Benutzern, die die Dateien auf der SMB-Freigabe anzeigen oder verwenden dürfen. Der Chatbot liefert Antworten basierend auf Benutzerberechtigungen für die eingebetteten Dateien.</block>
+  <block id="ccb61f3b531c53a6536d4968042eea99" category="paragraph">Wenn Sie beispielsweise 10 Dateien (Datenquellen) in Ihre Wissensdatenbank integriert haben und 2 der Dateien Personaldateien mit eingeschränkten Informationen sind, erhalten nur Chatbot-Benutzer, die für den Zugriff auf diese 2 Dateien authentifiziert sind, Antworten vom Chatbot, die Daten aus diesen Dateien enthalten.</block>
+  <block id="939bf2b00dbe77d4a65f4d265a755136" category="section-title">Unterstützte Datenquelldateiformate</block>
+  <block id="4a2c59aee6db61ec236539acdbc3b3e8" category="paragraph">Die folgenden Datenquelldateiformate werden derzeit unterstützt.</block>
+  <block id="1bd7f72decec9fb5b51a58447b152d38" category="cell">Dateiformat</block>
+  <block id="63e4e92bb7d207ca577b11c07f827279" category="cell">Erweiterung</block>
+  <block id="f39a0720a929097afa9db4505cdf9669" category="cell">Nur Text</block>
+  <block id="be4117b0c842c4be8f9960294bdc2cd1" category="cell">.Txt</block>
+  <block id="7fe3b93cf991d61aa2597033a8f37d76" category="cell">Tragbares Dokument</block>
+  <block id="abdf095626d4a4ab2bcd4167b128c1f1" category="cell">.Pdf</block>
+  <block id="d241ed446445a725f6362568f61cc6c3" category="cell">Microsoft Word</block>
+  <block id="8c7a7a618a6d4acfe85b4b4b1048846d" category="cell">.Docx</block>
+  <block id="68dfdbe39ab30356a21fe4db773d9589" category="cell">Durch Kommas getrennte Wertedatei</block>
+  <block id="01b1b6ebeb388697cca6712b58439069" category="cell">.Csv</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Rechtliche Hinweise</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Rechtliche Hinweise ermöglichen den Zugriff auf Copyright-Erklärungen, Marken, Patente und mehr.</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Urheberrecht</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marken</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp, das NETAPP Logo und die auf der NetApp Markenseite aufgeführten Marken sind Marken von NetApp Inc. Andere Firmen- und Produktnamen können Marken der jeweiligen Eigentümer sein.</block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Patente</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Eine aktuelle Liste der NetApp Patente finden Sie unter:</block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Datenschutzrichtlinie</block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open Source</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">In den Benachrichtigungsdateien finden Sie Informationen zu Urheberrechten und Lizenzen von Drittanbietern, die in der NetApp Software verwendet werden.</block>
+  <block id="22e5a7336ebe77138f0282cedcb069ab" category="inline-link">Workload Factory</block>
+  <block id="7ffcbeca3b450b8d05f9cf0eedb617f8" category="list-text"><block ref="7ffcbeca3b450b8d05f9cf0eedb617f8" category="inline-link-rx"></block></block>
+  <block id="887f800d53dc2cd5a7894464a6f60a6b" category="inline-link">Workload Factory für Datenbanken</block>
+  <block id="7e505d4c691d86e5bd415f9ccb849966" category="list-text"><block ref="7e505d4c691d86e5bd415f9ccb849966" category="inline-link-rx"></block></block>
+  <block id="9591e2d54c998ae1c9d48fd5be7762e9" category="inline-link">Workload Factory für GenAI</block>
+  <block id="f38c7416013fc239c3dd3288d40a40c0" category="list-text"><block ref="f38c7416013fc239c3dd3288d40a40c0" category="inline-link-rx"></block></block>
+  <block id="404a5efb62a3a3f22b02593091042608" category="inline-link">Workload-Fabrik für VMware</block>
+  <block id="9a211183d3fa82368d76fdbab5abdeda" category="list-text"><block ref="9a211183d3fa82368d76fdbab5abdeda" category="inline-link-rx"></block></block>
+  <block id="a76746a54be32982bbd6b113b4d88d95" category="summary">Nachdem Sie eine Wissensdatenbank mit Datenquellen auf Ihrem FSX für ONTAP-Dateisystem erstellt haben, können Sie die Details der Datenquelle anzeigen, den Inhalt der Datenquelle aktualisieren oder ändern, die Einstellungen der Datenquelle bearbeiten oder die Datenquelle löschen.</block>
+  <block id="a184e20ed5e6a5b8da09e0b40c163e0c" category="doc">Managen von Datenquellen</block>
+  <block id="185887c3ad19744e76bc5a84165858d0" category="section-title">Informationen zu einer Datenquelle anzeigen</block>
+  <block id="f6060e0bb20c0eff7193a80ac27e3036" category="paragraph">Sie können Informationen über den Inhalt einer Datenquelle anzeigen und deren Einbettungsstatus mit der Wissensdatenbank anzeigen. Da eine Datenquelle Teil einer Wissensdatenbank ist, müssen Sie zunächst die Wissensdatenbank öffnen, bevor Sie die Details der Datenquelle anzeigen können.</block>
+  <block id="ecabe73468b675c56c4b048aef061655" category="list-text">Wählen Sie im Navigationsmenü *AI*.</block>
+  <block id="2fb136b28c086b6b7bfc783f6e18f23b" category="list-text">Wählen Sie die Wissensdatenbank aus, in der sich die Datenquelle befindet, und wählen Sie dann <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> *Wissensdatenbank verwalten* aus.</block>
+  <block id="b5d487e1e7e0dc1f35f129a112481d93" category="paragraph">Im unteren Teil der Seite werden die Datenquellen aufgelistet, die Teil dieser Wissensdatenbank sind.</block>
+  <block id="8a68fc9773461f136961ee1d6821c3c8" category="inline-image-macro">Die nach-unten-Taste</block>
+  <block id="24908e355d451004c7525900e1599a1f" category="list-text">Erweitern Sie jede Zeile, indem Sie die auswählen <block ref="0722c4ff5aff83b42b3212ce6356e926" category="inline-image-macro-rx" type="image"></block> , um detaillierte Informationen zu jeder Datenquelle anzuzeigen, z. B. das FSX für ONTAP-Dateisystem, das Volume und den Pfad, in dem sich die Datenquelle befindet.</block>
+  <block id="e251df112fcfd5ceb227487e3e407e23" category="paragraph">Außerdem werden die Einbettungsdaten aufgelistet, und es wird angegeben, ob diese Datenquelle derzeit in die Wissensdatenbank eingebettet ist.</block>
+  <block id="437e83696ee10276f1829979bc2001ee" category="section-title">Bearbeiten Sie die Einstellungen für die Datenquelle</block>
+  <block id="20b4ccd92a21762105664927fab1bf0b" category="paragraph">Sie können Informationen zu einer Datenquelle bearbeiten, die Sie in eine Wissensdatenbank integriert haben. Die meisten Informationen werden behoben, nachdem Sie einer Wissensdatenbank eine Datenquelle hinzugefügt haben. Sie können jedoch Änderungen an der Chunking-Definition und an der Berechtigungskennung vornehmen (wenn Sie das SMB-Protokoll auf dem Datenquellen-Volume verwenden).</block>
+  <block id="d2e5a465dda010b6df10e906f7ceebf7" category="list-text">Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, in der sich die Datenquelle befindet, und wählen Sie dann *Wissensdatenbank verwalten* aus <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> .</block>
+  <block id="16a3994ccc4796acb1b8e40635717ec3" category="list-text">Wählen Sie in der Zeile der Datenquelle, die Sie bearbeiten möchten, *Datenquelle bearbeiten* aus <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> .</block>
+  <block id="d4e6a12cce33b083e0522879b175e10f" category="list-text">Wählen Sie auf der Seite Datenquelle bearbeiten die Option aus <block ref="0722c4ff5aff83b42b3212ce6356e926" category="inline-image-macro-rx" type="image"></block> , um die Zeile für die Chunk-Definition zu erweitern.</block>
+  <block id="2be67c88816bb68c39e2b6cb0139de03" category="list-text">Aktualisieren Sie die Einstellungen für die Chunking-Strategie und Chunk-Größe sowie Berechtigungssicherung (für SMB-Volumes), und wählen Sie *Speichern*.</block>
+  <block id="fcada3664d85dba347df890b564f014e" category="paragraph">Die Einstellungen der Datenquelle werden aktualisiert und das KI-System synchronisiert die Datenquelle, sodass sie erneut mit der Wissensdatenbank indiziert wird.</block>
+  <block id="f0c862596fc0a1dd30faa6b630a0d09b" category="section-title">Aktualisieren Sie den Inhalt einer vorhandenen Datenquelle</block>
+  <block id="d811eb8aad6aebc071695232fb58c5a5" category="paragraph">Sie können den Inhalt einer Datenquelle jederzeit ändern, um Ihre Unternehmensdaten hinzuzufügen oder zu aktualisieren. Wenn diese Datenquelle aktiv in einer Wissensdatenbank verwendet wird, müssen Sie die Datenquelle synchronisieren, damit sie mit der Wissensdatenbank neu indiziert wird. Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Bedrock nur die Objekte in Ihrem FSX für ONTAP-Volume, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.</block>
+  <block id="24f189799b33f2d3f465d0658dcc69e1" category="inline-link-macro">Führen Sie eine On-Demand-Synchronisierung durch</block>
+  <block id="424609f726117c0fe50e1034bb197bf7" category="paragraph">Datenquellen werden automatisch einmal täglich mit der Wissensdatenbank synchronisiert, sodass Änderungen der Datenquelle im Chatbot berücksichtigt werden. Wenn Sie Änderungen an einer Datenquelle vornehmen und die Daten sofort synchronisieren möchten, können Sie <block ref="67b891ffaab1342f4fb267d7cc798f81" category="inline-link-macro-rx"></block>.</block>
+  <block id="35198182831e3f9922e23822e3f2e2eb" category="section-title">Löschen einer Datenquelle</block>
+  <block id="19045c987301cc2ddb28f24761554946" category="paragraph">Wenn Sie keine Datenquelle mehr benötigen, um Teil Ihrer Wissensdatenbank zu sein, können Sie sie löschen.</block>
+  <block id="7c25f02bbc30d711041ddd1cc4235dc3" category="list-text">Wählen Sie auf der Bestandsseite der Wissensdatenbank die Wissensdatenbank aus, in der sich die Datenquelle befindet, und wählen Sie dann *Wissensdatenbank verwalten* aus <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> .</block>
+  <block id="236bd965d03b1a40bbf90a34907cef42" category="list-text">Wählen Sie in der Zeile der Datenquelle, die Sie löschen möchten, *Datenquelle löschen* aus <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> .</block>
+  <block id="107adb8bfc017487e5ba5e1e0ded4bc4" category="list-text">Bestätigen Sie im Dialogfeld Datenquelle löschen, dass Sie es löschen möchten, und wählen Sie *Bestätigen*.</block>
+  <block id="d9cbca03034ee6f956339839b4f6f8a4" category="paragraph">Die Datenquelle wird aus der Wissensdatenbank entfernt, und das KI-System entfernt die indizierten Informationen zu dieser Datenquelle aus der Wissensdatenbank. Alle Informationen aus dieser Datenquelle werden Chatbots, die die Wissensdatenbank nutzen, nicht mehr zur Verfügung stehen.</block>
+  <block id="542367feb3a76c6a1b839e65c3a7a30e" category="summary">Sie können Details zu Ihrer bereitgestellten GenAI RAG-Infrastruktur anzeigen oder die Chatbot-Infrastruktur entfernen, wenn Sie sie nicht mehr benötigen.</block>
+  <block id="508f3532a01bc6eac0fb489a7e397e06" category="doc">Management der GenAI-Infrastruktur</block>
+  <block id="7c351869b3b2a6468e0d357c2d121293" category="section-title">Zeigen Sie Informationen zur Infrastruktur an</block>
+  <block id="515a807c0436b8ab5c5bd03392131fbe" category="paragraph">Sie können Informationen über die Chatbot-Infrastruktur anzeigen.</block>
+  <block id="3263e773b336a912867ed1aeefc4176b" category="list-text">Wählen Sie die Registerkarte *Infrastruktur* aus.</block>
+  <block id="441f8ae1adcfebb474bcc1b899e82a24" category="list-text">Hier finden Sie Informationen zur Infrastruktur mit Details zu den folgenden Komponenten:</block>
+  <block id="fcf0479502455d0702db3f277c9df646" category="list-text">AWS-Einstellungen</block>
+  <block id="561e65b11988eaba0ecae49d7b764de1" category="list-text">Das Dateisystem FSX für ONTAP</block>
+  <block id="ae83c68afab83f983d4cf40bb5e9197e" category="list-text">Die KI-Engine</block>
+  <block id="6d8dc0b510e717cbe34e53d7fc1097e5" category="list-text">Die Vektordatenbank</block>
+  <block id="2a118f240daca7e8bd0c3e4bc54a8d77" category="section-title">Entfernen Sie die Infrastruktur</block>
+  <block id="a7bf703b71095ade4e9a5a2efbfb0833" category="paragraph">Wenn Sie die Chatbot-Infrastruktur, die Sie für ein oder mehrere Chatbots bereitgestellt haben, nicht mehr benötigen, können Sie sie aus Workload Factory entfernen.</block>
+  <block id="6e78a0ad87ae28b7e51a08104ee52c34" category="admonition">Alle Chatbots, die in dieser Infrastruktur bereitgestellt wurden, werden deaktiviert und der gesamte Chatverlauf wird gelöscht.</block>
+  <block id="ce3d14602fb1bff239cdf7ed290f87fa" category="paragraph">Bei diesem Vorgang werden nur die Links zur KI-Infrastruktur aus Workload Factory entfernt – es werden nicht alle Komponenten aus AWS entfernt. Folgende Infrastrukturkomponenten müssen manuell aus AWS gelöscht werden:</block>
+  <block id="6e6644acd18eb2b3e0fc07c09241130d" category="list-text">Die VM-Instanz</block>
+  <block id="32c7279612357f171a31f3fd0988e591" category="list-text">Das Volumen des FSX für ONTAP-Filesystems mit den AI-Datenbanken</block>
+  <block id="eebf0e8baab6b2923da827cd56e070ef" category="list-text">Die Rolle des IAM</block>
+  <block id="8a1a8abb9ac94c1d2fd62a902e95aa06" category="list-text">Richtlinie</block>
+  <block id="4e591f9db53b0a865ccc72ad006f4f61" category="list-text">Die Sicherheitsgruppe</block>
+  <block id="3765f8c52656be300af4ab9e0aff8ffd" category="list-text">Wählen Sie <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> und wählen Sie *Chatbot-Infrastruktur entfernen*.</block>
+  <block id="3df7e2c5a6249307f8e5f6af05d6ed2f" category="list-text">Bestätigen Sie, dass Sie die Infrastruktur löschen möchten, und wählen Sie *Entfernen*.</block>
+  <block id="f8633718706ae1721e0497e512234ee9" category="paragraph">Die Chatbot-Infrastrukturkomponenten werden aus Workload Factory entfernt.</block>
+  <block id="ed85cf4792c18c3cdb4179c827cbd42e" category="summary">Nachdem Sie eine Wissensdatenbank erstellt haben, können Sie die Details der Wissensdatenbank anzeigen, die Wissensdatenbank ändern, zusätzliche Datenquellen integrieren oder die Wissensdatenbank löschen.</block>
+  <block id="67f0dcee920749eead316e2518099abb" category="doc">Management von Wissensdatenbanken</block>
+  <block id="26de2eeb556bbb31af9129a3b43b690f" category="section-title">Informationen zu einer Wissensdatenbank anzeigen</block>
+  <block id="013f1ff7ab3949235da9d5491af2c3c0" category="paragraph">Sie können Informationen zu den Einstellungen für eine Wissensdatenbank und die integrierte Datenquelle anzeigen.</block>
+  <block id="156adcff6a674de8a5393deaefd8ef3d" category="list-text">Wählen Sie die Wissensdatenbank aus, die Sie anzeigen möchten.</block>
+  <block id="7a7796022aac6a971c98c2a0868a46f3" category="paragraph">Falls definiert, werden die derzeit verwendeten Gesprächseinstiege im rechten Fensterbereich angezeigt.</block>
+  <block id="1f9bf6f4df1d4d1f8385f00614312349" category="list-text">Um Details zur Wissensdatenbank anzuzeigen, wählen Sie <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> *Wissensdatenbank verwalten*.</block>
+  <block id="bdbb306049e4ca249dcf977dd25edd93" category="paragraph">Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus, die Liste aller eingebetteten Datenquellen und vieles mehr angezeigt.</block>
+  <block id="001ee9aff5bb5ea15cf776130cb9914f" category="paragraph">Über das Menü *Aktionen* können Sie die Wissensdatenbank verwalten, wenn Sie Änderungen vornehmen möchten.</block>
+  <block id="b76894737af4d48121780050fc9fbdcf" category="section-title">Wissensdatenbank bearbeiten</block>
+  <block id="c9d3f784627739cf8bb183ed3d6d94be" category="paragraph">Sie können eine Wissensdatenbank aktualisieren, indem Sie einige Einstellungen ändern, oder Sie können Datenquellen hinzufügen oder entfernen.</block>
+  <block id="6c81c0a68409ceeffca1a2438dbb831c" category="paragraph">Jedes Mal, wenn Sie Datenquellen in der Wissensdatenbank hinzufügen, ändern oder entfernen, müssen Sie die Datenquelle synchronisieren, damit sie mit der Wissensdatenbank neu indiziert wird. Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Bedrock nur die Objekte in Ihrem FSX für ONTAP-Volume, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.</block>
+  <block id="d21368803fa621b044a871188810b1ac" category="list-text">Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie aktualisieren möchten.</block>
+  <block id="6461d5a78cc7b9cc40e5443635d9112e" category="list-text">Wählen Sie das Menü *Aktionen* und dann *Wissensdatenbank bearbeiten*.</block>
+  <block id="0008bdb5b5e3b453e69696b34d9d5d1c" category="list-text">Auf der Seite „Wissensdatenbank bearbeiten“ können Sie den Namen der Wissensdatenbank, die Beschreibung, das Einbettungsmodell und das Chatmodell ändern und festlegen, ob Gesprächseinstiege automatisch oder manuell erstellt werden.</block>
+  <block id="e57d913eed051be6b0b9406295913487" category="paragraph">Wenn Sie den manuellen Modus für Gesprächseinstieg verwenden, können Sie hier auch den Gesprächseinstieg ändern.</block>
+  <block id="1302ca167379db1ebc02d198eb7518a3" category="list-text">Wählen Sie *Speichern*, nachdem Sie Ihre Änderungen vorgenommen haben.</block>
+  <block id="214d48f43c3d0248419d70ccacea9a73" category="section-title">Fügen Sie einer Wissensdatenbank zusätzliche Datenquellen hinzu</block>
+  <block id="95d597d59b4d10cdbd1be05c4248e039" category="paragraph">Sie können zusätzliche Datenquellen in Ihre Wissensdatenbank einbetten, um diese mit zusätzlichen Unternehmensdaten zu füllen.</block>
+  <block id="365770c3700b9872888879ce60ec18e9" category="list-text">Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, in die Sie die Datenquelle hinzufügen möchten.</block>
+  <block id="5e1a4fe723264018579dfc3330f9b160" category="list-text">Wählen Sie <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> *Datenquelle hinzufügen*.</block>
+  <block id="07d9f547e6bcd64a574782add9797b63" category="paragraph">Die Datenquelle ist in Ihre Wissensdatenbank integriert.</block>
+  <block id="5b1f48da21d15acc675f4720c57d0f26" category="section-title">Synchronisieren Sie Ihre Datenquellen mit der Wissensdatenbank</block>
+  <block id="9547b575fe1c28cc98e35108cacd9918" category="paragraph">Datenquellen werden automatisch einmal täglich mit der Wissensdatenbank synchronisiert, sodass Änderungen der Datenquelle im Chatbot berücksichtigt werden. Wenn Sie Änderungen an einer Ihrer Datenquellen vornehmen und die Daten sofort synchronisieren möchten, können Sie eine On-Demand-Synchronisierung durchführen.</block>
+  <block id="9cbd78c1bcf6132d43822acf74d520f1" category="paragraph">Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Bedrock nur die Objekte in Ihren Datenquellen, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.</block>
+  <block id="5fe210e3b4435e2188200d1f9b96db74" category="list-text">Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie synchronisieren möchten.</block>
+  <block id="fbf8fa86db3bb16616d2fb45b7250a0d" category="list-text">Wählen Sie das Menü *Aktionen* und dann *Jetzt scannen*.</block>
+  <block id="95b9c0d21b306ac819f89f1621a9aeb6" category="paragraph">Sie sehen eine Meldung, dass Ihre Datenquellen gescannt werden, und eine abschließende Meldung, wenn der Scan abgeschlossen ist.</block>
+  <block id="75e9a9151f60a78dc3c8dcbfdc67d4d6" category="paragraph">Die Wissensdatenbank wird mit den angehängten Datenquellen synchronisiert und jeder aktive Chatbot verwendet die neuesten Informationen aus Ihren Datenquellen.</block>
+  <block id="fc9a4cda27969092d9069ba3637c6474" category="section-title">Bewerten Sie Chatmodelle, bevor Sie eine Wissensdatenbank erstellen</block>
+  <block id="0bc9c39bb5d69c38b1d3bf8c3c2b4316" category="inline-link">Dieser AWS Dokumentationsseite</block>
+  <block id="6608d04dc5c74621659760c0a73880f2" category="paragraph">Sie können die verfügbaren grundlegenden Chatmodelle bewerten, bevor Sie eine Wissensdatenbank erstellen, damit Sie sehen können, welches Modell für Ihre Implementierung am besten geeignet ist. Da der Modellsupport je nach AWS-Region variiert, finden Sie unter<block ref="eddadb17a88dd68548e655a82b495d2f" category="inline-link-rx"></block> Informationen dazu, welche Modelle in den Regionen verwendet werden können, in denen Sie Ihre Knowledge Base bereitstellen möchten.</block>
+  <block id="130816622c1d9cd14009f897657c440c" category="admonition">Diese Funktion ist nur verfügbar, wenn keine Wissensdatenbanken erstellt wurden -- wenn auf der Bestandsseite der Wissensdatenbanken keine Wissensdatenbanken vorhanden sind.</block>
+  <block id="027158789a7c175e0ca63d562c57e510" category="list-text">Auf der Bestandsseite der Wissensbasen sehen Sie die Option, das Chatmodell auf der rechten Seite der Seite für den Chatbot auszuwählen.</block>
+  <block id="b81a76eb0f02acf27b441c84aa69e917" category="list-text">Wählen Sie das Chatmodell aus der Liste aus, und geben Sie eine Reihe von Fragen in den Eingabebereich ein, um zu sehen, wie der Chatbot reagiert.</block>
+  <block id="3abbf095c9505d54364aaaad6de65425" category="list-text">Testen Sie mehrere Modelle, um herauszufinden, welches Modell sich am besten für Ihre Implementierung eignet.</block>
+  <block id="e5501980da9946f8bab3d759bed634f4" category="paragraph">Verwenden Sie dieses Chatmodell, wenn Sie Ihre Wissensdatenbank erstellen.</block>
+  <block id="3fefedebc4093b4a6da5c3170b91a5bf" category="section-title">Heben Sie die Veröffentlichung Ihrer Wissensdatenbank auf</block>
+  <block id="74f1fc30f68e82e2fe786b9b321624c1" category="paragraph">Nachdem Sie Ihre Wissensdatenbank veröffentlicht haben, damit sie in eine Chatbot-Anwendung integriert werden kann, können Sie die Veröffentlichung aufheben, wenn Sie den Zugriff der Chatbot-Anwendung auf die Wissensdatenbank deaktivieren möchten.</block>
+  <block id="b552a9aa1fe09145aa3c96b6443f0f66" category="paragraph">Durch das Aufheben der Veröffentlichung der Wissensdatenbank werden alle Chat-Anwendungen nicht mehr funktionsfähig. Der eindeutige API-Endpunkt, auf den die Wissensdatenbank zugegriffen werden konnte, ist deaktiviert.</block>
+  <block id="53d7f86775e18e0f6933f81e2c14aaac" category="list-text">Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie für die Veröffentlichung aufheben möchten.</block>
+  <block id="d479146c71766563c9896677d119a596" category="paragraph">Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus und die Liste aller eingebetteten Datenquellen angezeigt.</block>
+  <block id="bd5de107e9031f0c3a6ac09d2366a7be" category="list-text">Wählen Sie das Menü *actions* und dann *Unpublish*.</block>
+  <block id="10b42a1e79dbd5f79dd793c2655522b8" category="paragraph">Die Wissensdatenbank ist deaktiviert und kann nicht mehr von einer Chatbot-Anwendung aufgerufen werden.</block>
+  <block id="cc0a404c41a82c6be9de0d64f06fcd89" category="section-title">Löschen einer Wissensdatenbank</block>
+  <block id="76420e895d8bcbca33f0cf3202997ba2" category="paragraph">Wenn Sie keine Wissensdatenbank mehr benötigen, können Sie sie löschen. Wenn Sie die Wissensdatenbank löschen, wird sie aus Workload Factory entfernt und alle Anwendungen oder Chatbots, die die Wissensdatenbank verwenden, funktionieren nicht mehr. Diese Aktion ist nicht umkehrbar.</block>
+  <block id="bd1e7a638d401a590a6dfd0683fcab0c" category="paragraph">Wenn Sie eine Wissensdatenbank löschen, sollten Sie auch die folgenden Aktionen ausführen, um alle Ressourcen, die der Wissensdatenbank zugeordnet sind, vollständig zu löschen:</block>
+  <block id="d6a62e94706e27186ebc0fbca1c802d4" category="list-text">Distanzieren Sie die Wissensdatenbank von allen Agenten, mit denen sie verknüpft ist.</block>
+  <block id="0581045f098dd9833078169a3178147a" category="list-text">Die zugrunde liegenden Daten, die aus Ihrer Wissensdatenbank indiziert wurden, bleiben im von Ihnen festgelegten Vektorspeicher und können weiterhin abgerufen werden. Um die Daten zu löschen, müssen Sie auch den Vektorindex löschen, der die Dateneinbettungen enthält.</block>
+  <block id="26d469c182333c4c1e4800ddcd6d2a61" category="list-text">Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie löschen möchten.</block>
+  <block id="0e0f1b27ca798d3b3b8154b411215d9a" category="list-text">Wählen Sie das Menü *Aktionen* und dann *Wissensdatenbank löschen*.</block>
+  <block id="74091f3303c946e291c1c1702ba6d39a" category="list-text">Bestätigen Sie im Dialogfeld Wissensdatenbank löschen, dass Sie löschen möchten, und wählen Sie *Löschen*.</block>
+  <block id="63d56e434f490d0e8d99ce407df90bf6" category="paragraph">Die Wissensdatenbank wird aus Workload Factory gelöscht.</block>
+  <block id="8bbd4e338e42c1350d453ca5c82eb3b3" category="summary">Nachdem Sie Ihre Wissensdatenbank lokal erstellt und getestet haben, können Sie die Wissensdatenbank veröffentlichen, sodass sie in die Chatbot-Anwendung integriert werden kann, die es Ihren Benutzern ermöglicht, die Wissensdatenbank abzufragen.</block>
+  <block id="70de8e73e84df845f91376c6c0d1188e" category="doc">Veröffentlichen Sie eine Wissensdatenbank, und zeigen Sie den eindeutigen Endpunkt an</block>
+  <block id="12676fc9338d312de3a6cbb584fa3284" category="paragraph">Nachdem Sie Ihre Wissensdatenbank lokal erstellt und getestet haben, können Sie die Wissensdatenbank veröffentlichen, sodass sie in eine Chatbot-Anwendung integriert werden kann, mit der Ihre Benutzer die Wissensdatenbank abfragen können.</block>
+  <block id="63c0b4117f24258cf088fd810fcdbd9f" category="paragraph">Durch die Veröffentlichung der Wissensdatenbank können Sie diese in Chat-Anwendungen verwenden. Die Veröffentlichungsaktion löst aus, dass die Workload Factory API eindeutige Endpunkte generiert und veröffentlicht. Nach der Veröffentlichung wird die Wissensdatenbank für Chat-Anwendungen zugänglich, und die API-Endpunkte sind für die Integration bereit.</block>
+  <block id="079d0a527f117f9fde217668d7359a20" category="paragraph">Jede von Ihnen veröffentlichte Wissensdatenbank verfügt über eindeutige Endpunkte.</block>
+  <block id="850b9475ef66eeb78335c085f71bae31" category="list-text">Wählen Sie das Menü *actions* und dann *Publish*.</block>
+  <block id="19761722f9e779bd2a70fef96c24a1bc" category="paragraph">Workload Factory veröffentlicht die Wissensdatenbank. Auf der Detailseite der Wissensdatenbank ändert sich der Status von *unveröffentlicht* zu *Veröffentlicht.*</block>
+  <block id="5e92f6a356303934a45930f0e541c6b1" category="paragraph">Sie können jetzt Details zum eindeutigen Endpunkt für die Wissensdatenbank abrufen.</block>
+  <block id="004faa273ca0b2383f0f12b8850c493b" category="list-text">Wählen Sie neben dem veröffentlichten Status *Ansicht*.</block>
+  <block id="d1f4efe2fd3a800f4b008e172439fe85" category="paragraph">Details zum Zugriff auf die Wissensdatenbank mithilfe der Workload Factory API-Anzeigen.</block>
+  <block id="9de2775e528dfff9dd9666885c222272" category="list-text">Kopieren Sie im Dialogfeld *veröffentlichte Informationen anzeigen* die API-Endpunkte, mit denen Sie die Wissensdatenbank in eine Anwendung integrieren können.</block>
+  <block id="7495d9f71402d3b1d20f08bd19ac6562" category="inline-link">API-Dokumentation</block>
+  <block id="2cb94eb0648b9f93f300ea0aff833f95" category="paragraph">Um mehr über die API-Endpunkte zu erfahren, gehen Sie zu<block ref="c0a9aa55ed57e2e15b2d20baa6a6e023" category="inline-link-rx"></block> und wählen Sie *AI &gt; Extern*.</block>
+  <block id="404b6a1003edac169b0788bb3fe37d9f" category="paragraph">Bevor Sie diese Endpunkte verwenden können, müssen Sie ein Benutzertoken von Ihrem Authentifizierungsanbieter beziehen.</block>
+  <block id="a0acd37c2eea374fd571fd7e5710e3ab" category="summary">Beginnen Sie mit der Erstellung einer Wissensdatenbank unter Verwendung der Daten Ihres Unternehmens, die auf Amazon FSX für NetApp ONTAP-Dateisystemen vorhanden sind. Eine Anwendung wie ein Chatbot greift auf diese Wissensdatenbank zu, um den Endbenutzern organisationsbezogene Antworten bereitzustellen.</block>
+  <block id="35f6f80cfc19636641dd85bbae19edee" category="doc">Schneller Start für GenAI</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Eins</block>
+  <block id="e16edd708081c06a9c8bdef1486a94b4" category="inline-link-macro">Richten Sie Ihre Umgebung so ein, dass sie die GenAI-Anforderungen erfüllt</block>
+  <block id="0b0e916064e065ab12e1db6735832ef0" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="d4a51aa0811f51e3206f49b62f46f1ef" category="inline-link-macro-rx"></block></block>
+  <block id="926f216b1b078ff9ce47e61e22932514" category="paragraph">Für die Implementierung der AWS-Infrastruktur benötigen Sie Zugangsdaten von AWS, ein implementiertes und erkannter FSX for ONTAP-Filesystem, die Liste der Datenquellen, die Sie in Ihre Wissensdatenbank integrieren möchten, Zugriff auf den Amazon Bedrock-KI-Service und vieles mehr.</block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Zwei</block>
+  <block id="36ec882c51ea2d7689f78bed44b7fdaa" category="inline-link-macro">Ermitteln Sie das FSX für ONTAP-Dateisystem, das die Datenquellen enthält</block>
+  <block id="cc9cd1c7d0a54d3fe49ca467804963fb" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> <block ref="7206191241f03719b7415c03564b4c6e" category="inline-link-macro-rx"></block></block>
+  <block id="10986db05c15b94a4d13e32858a6e26e" category="paragraph">Die Datenquellen, die Sie in Ihre Wissensdatenbank integrieren, können auf einem einzigen FSX für ONTAP-Dateisystem oder auf mehreren FSX für ONTAP-Dateisystemen abgelegt werden. Diese Systeme können in verschiedenen VPCs verwendet werden, müssen aber innerhalb desselben Netzwerks zugänglich sein.</block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Drittens</block>
+  <block id="ad6f5ec13ed51e48bce763e25a9c69ce" category="inline-link-macro">Implementierung der Knowledge Base Infrastruktur</block>
+  <block id="0f5790ffea3f79b1400e1156cea75fc9" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> <block ref="28cdbd6802c54419558c857e614a9714" category="inline-link-macro-rx"></block></block>
+  <block id="41c27d3fbdf0cdc6aab23df489fe4c94" category="paragraph">Starten Sie den Infrastrukturimplementierungs-Assistenten, um die Knowledge Base Infrastruktur in Ihrer AWS Umgebung zu implementieren. Bei diesem Prozess werden eine EC2-Instanz für die NetApp-GenAI-Engine und ein Volume auf einem FSX für ONTAP-Filesystem implementiert, das die Datenbanken der NetApp AI Engine enthält. Das Volume dient zum Speichern der von der Wissensdatenbank verwendeten Vektordatenbank.</block>
+  <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">Wie es weiter geht</block>
+  <block id="8d126cd06a65751189e95006c972e173" category="paragraph">Sie können jetzt eine Wissensdatenbank aufbauen, um Endbenutzern organisationsbezogene Antworten zu bieten.</block>
+  <block id="edeb3214a40db0eb77e92c619eab6024" category="summary">Stellen Sie sicher, dass Workload Factory und AWS ordnungsgemäß eingerichtet sind, bevor Sie Ihre Wissensdatenbank aufbauen. Dazu gehören die Zugangsdaten für die AWS-Anmeldung, ein bereitgestelltes FSX für ONTAP-Filesystem mit den Datenquellen, die Sie in Ihre Wissensdatenbank integrieren möchten, Zugriff auf den Amazon Bedrock KI-Service und vieles mehr.</block>
+  <block id="43b842fd441ce1ce92d22fb0ca25a507" category="doc">GenAI-Anforderungen</block>
+  <block id="55df1ea48b09b075b4b7dd39f32b38ee" category="list-text">Workload Factory Anmeldung und Konto</block>
+  <block id="47530f4f079f33bd59ebd8d6ce22e965" category="list-text">Sie müssen sich bei Workload Factory anmelden und ein Konto erstellen.</block>
+  <block id="a50b567095c55be6c1dc401e0ba4bace" category="inline-link">Erfahren Sie mehr über die Anmeldung und das Erstellen eines Kontos</block>
+  <block id="d22e0c982de7a0a1a4146a3cac481010" category="paragraph"><block ref="d22e0c982de7a0a1a4146a3cac481010" category="inline-link-rx"></block></block>
+  <block id="97911b3c54a4e826b34c1f79026316c5" category="list-text">AWS Zugangsdaten und Berechtigungen</block>
+  <block id="f734c92825c03ba8094b0c90b14ef227" category="list-text">Sie müssen AWS-Anmeldeinformationen in Workload Factory mit Automatisierungsberechtigungen hinzufügen, was bedeutet, dass Sie Workload Factory im _Automate_-Modus für GenAI verwenden werden.</block>
+  <block id="b9696d94476cf594b0d0a85c749985c8" category="paragraph">_Basic_ Mode und _Read_ Mode Berechtigungen werden derzeit nicht unterstützt.</block>
+  <block id="6acb98cae81ff4c3d668ee23eaf475ea" category="paragraph">Wenn Sie Ihre Anmeldedaten einrichten, erhalten Sie durch die Auswahl der unten aufgeführten Berechtigungen vollständigen Zugriff auf das Management von FSX für ONTAP-Dateisysteme sowie auf die Bereitstellung und das Management der GenAI EC2-Instanz und anderer AWS-Ressourcen, die für Ihre Knowledge Base und Ihren Chatbot benötigt werden.</block>
+  <block id="90971299f3c483d8dff23334303ec501" category="inline-image-macro">Ein Screenshot mit den Berechtigungseinstellungen für das vollständige Management von KI-Ressourcen.</block>
+  <block id="b0508f9b3b98a787c9ffda5b7aec828c" category="paragraph"><block ref="b0508f9b3b98a787c9ffda5b7aec828c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b6358992bb0152c2af9f3e2e315ef468" category="inline-link">Erfahren Sie, wie Sie den Workload Factory Zugangsdaten für AWS hinzufügen</block>
+  <block id="83106366073f0e7e6a64705516568b5d" category="paragraph"><block ref="83106366073f0e7e6a64705516568b5d" category="inline-link-rx"></block></block>
+  <block id="75925d950c87a7dc75f300f3d330e728" category="list-text">Mit Amazon Bedrock können Sie Grundmodelle verwenden und es bietet die Möglichkeiten, generative KI-Anwendungen zu erstellen.</block>
+  <block id="4e49292dbc43678ea9590aff823f5b35" category="paragraph">Bevor Sie mit Workload Factory für GenAI beginnen, müssen Sie Amazon Bedrock einrichten. Ihre GenAI-Implementierung muss sich in einer AWS-Region mit aktiviertem Amazon Bedrock befinden.</block>
+  <block id="42100945533643a01574ce6867f93337" category="inline-link">AWS-Dokumentation: Einrichten von Amazon Bedrock</block>
+  <block id="c28dc65deb038c89921c82f97349e6b0" category="list-text"><block ref="c28dc65deb038c89921c82f97349e6b0" category="inline-link-rx"></block></block>
+  <block id="997f616bd916b52cb9a1afa3d8f39ef7" category="inline-link">AWS-Dokumentation: Unterstützte Regionen und Modelle für Knowledge Basen für Amazon Bedrock</block>
+  <block id="3edc6942e625c13a9a58c5fbffe87b12" category="list-text"><block ref="3edc6942e625c13a9a58c5fbffe87b12" category="inline-link-rx"></block></block>
+  <block id="e9d7e3888c0ecac6d332909618bf2a62" category="list-text">Einbettungsmodell</block>
+  <block id="52e64b029bc109efaa2d9ddf8bf95697" category="list-text">Sie müssen das einzubetende Modell aktivieren, das Sie verwenden möchten, bevor Sie Ihre Wissensdatenbank erstellen. Die folgenden Einbettungsmodelle werden unterstützt:</block>
+  <block id="cffe100a2fafd4ed6df5c517d3a0c436" category="list-text">Chat-Modell</block>
+  <block id="f4b120821069537b900189401cff6123" category="list-text">Sie müssen das grundlegende Chatmodell aktivieren, das Sie verwenden möchten, bevor Sie Ihre Wissensdatenbank erstellen. Die folgenden Claude-Chat-Modelle werden unterstützt:</block>
+  <block id="91862a732427fcc9b0f3f7c7e8fd3ef1" category="list-text">Claude 3.5 Sonnet</block>
+  <block id="1ae4bf76ece2339f94382079fec8ea1b" category="list-text">Claude 3 Opus</block>
+  <block id="5cb902fc92ae2100fc949c459b29f2e0" category="list-text">Claude 3 Haiku</block>
+  <block id="dfd281025f82519d079a3bf3bfbabad2" category="list-text">Claude 3 Sonnet</block>
+  <block id="48a6d42b28f10b9387da7c0c33136030" category="list-text">Claude 2.1</block>
+  <block id="5e1e83b3913f32ce101decea051b2e89" category="list-text">Claude 2.0</block>
+  <block id="a9c39caddabc1e9e831e8874624eeb0b" category="paragraph">Da der Modellsupport je nach AWS-Region variiert, finden Sie unter<block ref="eddadb17a88dd68548e655a82b495d2f" category="inline-link-rx"></block> Informationen dazu, welche Modelle in den Regionen verwendet werden können, in denen Sie Ihre Knowledge Base bereitstellen möchten.</block>
+  <block id="c16810aa96ec44a060863610996db3f6" category="list-text">Sie benötigen mindestens ein FSX für ONTAP-Dateisystem:</block>
+  <block id="ae0e1b2daa525e1e1109bf5c13627d7d" category="list-text">Ein Dateisystem wird von der NetApp GenAI Engine verwendet, um die von der Wissensdatenbank verwendete Vektordatenbank zu speichern.</block>
+  <block id="c076421513a5b28b674cdd0d818b4476" category="paragraph">Dieses Dateisystem FSX für ONTAP muss FlexVol-Volumen verwenden. FlexGroup Volumes werden nicht unterstützt.</block>
+  <block id="1f0befb829af39db4a0cbb499215915f" category="list-text">Ein oder mehrere Dateisysteme enthalten die Datenquellen, die Sie in Ihre Wissensdatenbank integrieren werden.</block>
+  <block id="b56c72064b6e564dd0f3f703eff43db3" category="paragraph">Ein FSX für ONTAP-Dateisystem kann für beide dieser Zwecke verwendet werden, oder Sie können mehrere FSX für ONTAP-Dateisysteme verwenden.</block>
+  <block id="4daf8dc81f63d08a4e7cfc0ad7137cd6" category="list-text">Sie müssen die AWS-Region, VPC und das Subnetz kennen, in der sich das AWS FSX für ONTAP-Filesystem befindet. Das Filesystem muss sich in einer AWS-Region befinden, für die Amazon Bedrock aktiviert ist.</block>
+  <block id="1f44141a0f383810dac8c932e0d76754" category="list-text">Sie müssen die Tag-Schlüssel-/Wertpaare berücksichtigen, die Sie auf die AWS Ressourcen anwenden möchten, die Teil dieser Implementierung sind (optional).</block>
+  <block id="9125326205d647d39ee0ac50c18a9a14" category="list-text">Dabei sind die wichtigsten Paar-Informationen wichtig, die eine sichere Verbindung zur NetApp AI Engine-Instanz ermöglichen.</block>
+  <block id="d5858b81edfda50f75f7994c971764f0" category="inline-link">Erfahren Sie, wie Sie FSX für ONTAP-Dateisysteme implementieren und managen</block>
+  <block id="7d57ea8255b8142e76fbb442ea9a782f" category="paragraph"><block ref="7d57ea8255b8142e76fbb442ea9a782f" category="inline-link-rx"></block></block>
+  <block id="b334128403ed60ff931947907046e1f0" category="summary">Bevor Sie einen Support-Fall beim technischen NetApp eröffnen können, müssen Sie ein NetApp Support Site Konto bei Workload Factory hinzufügen und sich anschließend für Support registrieren.</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">Für den Support anmelden</block>
+  <block id="996ad73a480311d4f86d6946935389d2" category="paragraph">Für den Support von Workload Factory und seinen Storage-Lösungen und -Services ist eine Support-Registrierung erforderlich. Sie müssen sich für Support über die BlueXP Konsole registrieren, einer separaten webbasierten Konsole von Workload Factory.</block>
+  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">Durch die Registrierung für den Support wird die NetApp-Unterstützung für einen Fileservice eines Cloud-Providers nicht aktiviert. Technischer Support im Zusammenhang mit einem Fileservice eines Cloud-Providers, seiner Infrastruktur oder einer Lösung, die den Service verwendet, finden Sie unter „Hilfe erhalten“ in der Dokumentation zu Workload Factory für dieses Produkt.</block>
+  <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Übersicht über die Support-Registrierung</block>
+  <block id="d7e4bb081bf4ec4814d83edcfbdb8b96" category="paragraph">Die Registrierung Ihres Support-Abonnements für Ihre Account-ID (Ihre 20-stellige Seriennummer 960xxxxxxx auf der Seite „Support Resources“ in BlueXP) dient als zentrale Support-Abonnement-ID. Jedes BlueXP-Abonnement für Support auf Kontoebene muss registriert werden.</block>
+  <block id="f9e05c2b383e3f11e3b4bebbe8952225" category="paragraph">Durch das Registrieren von Funktionen wie das Öffnen von Support-Tickets und die automatische Generierung von Support-Cases. Die Registrierung ist abgeschlossen, indem wie unten beschrieben Konten der NetApp Support Website (NSS) zu BlueXP hinzugefügt werden.</block>
+  <block id="856edc4caec68fece6859c4be9360f3c" category="section-title">Registrieren Sie Ihr Konto für NetApp Support</block>
+  <block id="2d6573b6ae4c51dc24e58109473f2490" category="paragraph">Um sich für den Support zu registrieren und die Supportberechtigung zu aktivieren, muss ein Benutzer in Ihrem Konto einem NetApp Support Site Konto seine BlueXP Anmeldedaten zuweisen. Wie Sie sich für den NetApp Support registrieren, hängt davon ab, ob Sie bereits über einen NSS Account (NetApp Support Site) verfügen.</block>
+  <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">Bestandskunde mit NSS-Konto</block>
+  <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">Wenn Sie ein NetApp Kunde mit einem NSS-Konto sind, müssen Sie sich lediglich für den Support über BlueXP registrieren.</block>
+  <block id="0307a12e5749f8dd930472ee78f69d2c" category="list-text">Klicken Sie oben rechts auf der BlueXP Konsole auf das Symbol Einstellungen, und wählen Sie *Credentials* aus.</block>
+  <block id="f19ab635e6d5f884a22ee4ce067fdbfd" category="list-text">Wählen Sie *Benutzeranmeldeinformationen*.</block>
+  <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">Wählen Sie *NSS-Anmeldeinformationen hinzufügen* und folgen Sie der Eingabeaufforderung für die NetApp-Support-Website (NSS)-Authentifizierung.</block>
+  <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">Um zu bestätigen, dass die Registrierung erfolgreich war, wählen Sie das Hilfesymbol und dann *Support*.</block>
+  <block id="8add4eb0d3f6ce61d374f3df3ee4eadf" category="paragraph">Auf der Seite *Ressourcen* sollte angezeigt werden, dass Ihr Konto für Support registriert ist.</block>
+  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">Ein Screenshot mit einer Seriennummer des Kontos und einem grünen Kontrollkästchen sowie dem für den Support registrierten Text.</block>
+  <block id="fa7897454f637026faa3e00ccbfec239" category="paragraph"><block ref="fa7897454f637026faa3e00ccbfec239" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d9a01bdcfab6f0a10fc126999b4d5988" category="paragraph">Beachten Sie, dass andere BlueXP Benutzer diesen Support-Registrierungsstatus nicht sehen, wenn sie ihrem BlueXP Login kein NetApp Support Site Konto zugeordnet haben. Das bedeutet jedoch nicht, dass Ihr BlueXP Konto nicht für den Support registriert ist. Solange ein Benutzer im Konto diese Schritte befolgt hat, wurde Ihr Konto registriert.</block>
+  <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">Vorhandener Kunde, aber kein NSS-Konto</block>
+  <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">Wenn Sie bereits NetApp Kunde sind und über vorhandene Lizenzen und Seriennummern sowie _No_ NSS Konto verfügen, müssen Sie ein NSS Konto erstellen und es Ihren BlueXP Anmeldedaten zuordnen.</block>
+  <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">NetApp Support Site-Formular zur Benutzerregistrierung</block>
+  <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">Erstellen Sie ein NetApp Support Site Konto, indem Sie das abschließen<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
+  <block id="d61c9f72493817776f392db42ac446a2" category="list-text">Stellen Sie sicher, dass Sie die entsprechende Benutzerebene wählen, die normalerweise *NetApp Kunde/Endbenutzer* ist.</block>
+  <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">Kopieren Sie unbedingt die oben verwendete BlueXP-Kontonummer (960xxxx) für das Feld Seriennummer. Dadurch wird die Kontobearbeitung beschleunigt.</block>
+  <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">Ordnen Sie Ihr neues NSS-Konto Ihrem BlueXP-Login zu, indem Sie die unter aufgeführten Schritte ausführen <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">Neu bei NetApp</block>
+  <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">Wenn Sie neu bei NetApp sind und über keinen NSS-Account verfügen, befolgen Sie jeden Schritt unten.</block>
+  <block id="f5d7029ed18f998c0a9d780b2554e538" category="list-text">Suchen Sie auf der Seite „Support Resources“ nach der Seriennummer Ihres Kontos.</block>
+  <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">Ein Screenshot des Hilfemenü, in dem Support die erste Option aufgeführt ist</block>
+  <block id="55adf589d087b17fca134b34f65498ed" category="paragraph"><block ref="55adf589d087b17fca134b34f65498ed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">Die Support-Registrierungs-Website von NetApp</block>
+  <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">Navigieren Sie zu<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> und wählen Sie *Ich bin kein registrierter NetApp-Kunde*.</block>
+  <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">Füllen Sie die Pflichtfelder aus (mit roten Sternchen).</block>
+  <block id="1128fc8d5ec64880f4d49337ed798d31" category="list-text">Wählen Sie im Feld *Product Line* die Option *Cloud Manager* aus, und wählen Sie dann den gewünschten Abrechnungsanbieter aus.</block>
+  <block id="50a1dc01b7312307c34a888071586955" category="list-text">Kopieren Sie die Seriennummer des Kontos von Schritt 2 oben, füllen Sie die Sicherheitsprüfung aus und bestätigen Sie dann, dass Sie die globale Datenschutzrichtlinie von NetApp lesen.</block>
+  <block id="3a24c87c9971d2011b4df223718f84b4" category="paragraph">Zur Fertigstellung dieser sicheren Transaktion wird sofort eine E-Mail an die angegebene Mailbox gesendet. Überprüfen Sie Ihre Spam-Ordner, wenn die Validierungs-E-Mail nicht in wenigen Minuten ankommt.</block>
+  <block id="03413baeca1ff7222737d8ce299bd4e8" category="list-text">Bestätigen Sie die Aktion in der E-Mail.</block>
+  <block id="201080500e946070a2e4873042507c77" category="paragraph">Indem Sie Ihre Anfrage an NetApp senden, wird Ihnen die Erstellung eines NetApp Support Site Kontos empfohlen.</block>
+  <block id="cc8b0535948da368f832027c19b7f853" category="list-text">Kopieren Sie die oben angegebene Seriennummer (960xxxx) für das Feld „Seriennummer“. Dadurch wird die Kontobearbeitung beschleunigt.</block>
+  <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">NetApp sollte sich bei diesem Prozess mit Ihnen in Verbindung setzen. Dies ist eine einmalige Onboarding-Übung für neue Benutzer.</block>
+  <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">Wenn Sie über Ihren Account für die NetApp Support-Website verfügen, ordnen Sie das Konto Ihrer BlueXP Anmeldung zu, indem Sie die unter aufgeführten Schritte ausführen <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="d6c0fba55227980986b6e274e44b6e4e" category="summary">Nachdem Sie die Wissensdatenbank erstellt haben, können Sie sie mithilfe des Chatbot-Simulators lokal testen und erforderliche Änderungen vornehmen, bevor Sie die Wissensdatenbank Ihren Benutzern über eine Chatbot-Anwendung zur Verfügung stellen.</block>
+  <block id="a83574dd6db90afd60d3d6c11674872b" category="doc">Testen Sie eine Wissensdatenbank</block>
+  <block id="7690c373e8d8bb7bb7781f53763e1ddd" category="paragraph">Sie testen Ihre Wissensdatenbank, um sicherzustellen, dass sie funktioniert, wie Sie es erwarten, und Sie können die Konversationsstarter anpassen, die Sie standardmäßig für Chatbot-Benutzer dieser Wissensdatenbank verfügbar sein möchten. Der Chatbot-Simulator läuft gegen alle Datenquellen, die in die Wissensdatenbank eingebettet wurden.</block>
+  <block id="ef065131e9d1b1c76fc889fc9eb98a3f" category="paragraph">Sie können eine Wissensdatenbank testen, indem Sie mit Ihren eingebetteten Datenquellen im Chatbot-Simulator chatten. Beachten Sie, dass beim lokalen Testen der Wissensdatenbank keine der Interaktionen oder Erkenntnisse in der GenAI-Vektordatenbank erfasst werden.</block>
+  <block id="6ea2edc8e481e05029a9c17c0d118a4c" category="paragraph">Sie führen die meisten Tests in Workload Factory durch, bevor Sie die Wissensdatenbank in einer Anwendung für Ihre Benutzer bereitstellen. Wenn Sie Änderungen an Ihrer Datenquelle oder dem Chatbot-Vorgang vornehmen müssen, sollten Sie dies jetzt tun, bevor Sie Ihre Wissensdatenbank veröffentlichen.</block>
+  <block id="3af56fb9119d8dcdfe73d41be9e9c264" category="paragraph">Einige der Aufgaben, die Sie durchführen möchten, um Ihren Chatbot zu testen, sind:</block>
+  <block id="087dddee34d7ec6ae45e7a1eceb74f0e" category="list-text">Geben Sie eine große Anzahl von Fragen ein, die für Ihr Unternehmen relevant sind, um sicherzustellen, dass die Antworten den Erwartungen entsprechen.</block>
+  <block id="dbc108f6f2e9d63d6e85d41c9d797122" category="list-text">Passen Sie die Gesprächseinstiege an, die Sie standardmäßig für Ihre Benutzer in der Chatbot-Anwendung zur Verfügung stellen möchten.</block>
+  <block id="c6e30d922038f60cd6f0e0c72ddab156" category="list-text">Stellen Sie sicher, dass der zugeschriebene Inhalt, der unten in den Chatbot-Antworten angegeben wird, die richtigen Referenzen enthält.</block>
+  <block id="9b9ae4d8101985ff14674fde1a41dbf6" category="list-text">Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie testen möchten.</block>
+  <block id="f3142c20010e60862dddade6c526c30c" category="paragraph">Der Chatbot-Simulator wird im rechten Fensterbereich angezeigt. Falls festgelegt, werden auch bestehende Gesprächseinstiege angezeigt.</block>
+  <block id="c61f79c1724a3bab0885dbbd3b2e87ea" category="inline-image-macro">Die Schaltfläche Ausführen</block>
+  <block id="ccd43d06a7b1187d2ac93471de4a9b64" category="list-text">Geben Sie im Chatbot-Eingabefeld eine Eingabeaufforderung oder Frage ein, und wählen Sie aus <block ref="4673f7ece64f88d1999f6ef93db80a3b" category="inline-image-macro-rx" type="image"></block> , wie Ihr Chatbot mit Ihrem organisatorischen Wissen reagiert.</block>
+  <block id="2625a68b73d2dae552cbcc7be08396fc" category="list-text">Wenn Sie eine Ihrer Datenquellen aktualisieren müssen, damit Ihre Wissensdatenbank gezielter Antworten liefert, nehmen Sie diese Änderungen jetzt vor und testen Sie die Wissensdatenbank erneut.</block>
+  <block id="11408eb169fbb608ff150e7669c76840" category="summary">Informieren Sie sich über die Neuerungen bei der KI-Workload-Funktion von Workload Factory.</block>
+  <block id="490414e0366b091220802d406e52c076" category="doc">Was ist neu</block>
+  <block id="798b17d8de1952262296a846e0def34f" category="paragraph">Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloads von Workload Factory.</block>
+  <block id="1d949c7c5600289e10795f178278edd1" category="section-title">7 Juli 2024</block>
+  <block id="9ba97d99706e208a6fec2439db710d74" category="section-title">Erstveröffentlichung der Workload Factory für GenAI</block>
+  <block id="3d2b63396c87b28180a4d9d0ba951b0d" category="paragraph">Die erste Version umfasst die Fähigkeit, eine Wissensdatenbank zu entwickeln, die durch die Einbettung der Unternehmensdaten angepasst wird. Auf die Wissensdatenbank kann über eine Chatbot-Anwendung für Ihre Benutzer zugegriffen werden. Diese Funktion gewährleistet präzise und relevante Antworten auf unternehmensspezifische Fragen und verbessert so die Zufriedenheit und Produktivität aller Benutzer.</block>
+  <block id="a9273ae35bbdb787574410a5cd552892" category="summary">Nachdem Sie jetzt eine Wissensdatenbank mit Ihren Unternehmensdaten erstellt und für Ihre Benutzer bereitgestellt haben, können Sie die Wissensdatenbank, Datenquellen und die RAG-Infrastruktur, einschließlich FSX für ONTAP-Dateisysteme, verwalten.</block>
+  <block id="d0a7edff5cd82c23f3d1c18e0779ccbc" category="doc">Was Sie als Nächstes tun können</block>
+  <block id="7373882bd50a7c3d67783ca6387687f7" category="paragraph">Einige der Aufgaben, die Sie zur Verwaltung Ihrer Knowledge-Base-Komponenten durchführen können, sind:</block>
+  <block id="114d6a78b3582811ee5b1424398b429c" category="list-text">Aktualisieren Sie den Inhalt Ihrer Datenquellen, oder fügen Sie neue Datenquellen hinzu, und synchronisieren Sie diese Änderungen mit Ihrer Wissensdatenbank und Ihrem Chatbot.</block>
+  <block id="e33539c77cd7f8c72be577a444075cc8" category="list-text">Managen Sie Ihre Datenquelleinstellungen, einschließlich der Chunking-Strategie und Berechtigungsorientierung (für SMB-Dateizugriff).</block>
+  <block id="73dd64805069b754a14fd7cd8049faf8" category="list-text">Verwalten Sie Ihre Knowledge Base-Einstellungen, einschließlich Chat-Modell und Gesprächseinstieg.</block>
+  <block id="54f4a017dfd5170587a554f471d25fb9" category="list-text">Heben Sie die Veröffentlichung einer Wissensdatenbank auf, oder veröffentlichen Sie sie erneut, nachdem Sie Änderungen vorgenommen haben.</block>
+  <block id="ff39f3beaa5058a5d7eadc6c71e847e4" category="list-text">Sichern und schützen Sie die wichtigen Daten auf Ihrem FSX für ONTAP-Dateisystem, um sicherzustellen, dass Ihre Wissensdatenbank-Daten und andere Infrastrukturkomponenten immer verfügbar sind.</block>
+  <block id="e7581e4ae4d96b238a63b95760365ab6" category="inline-link">Workload Factory für Amazon FSX für NetApp ONTAP-Dokumentation</block>
+  <block id="739e9505cf489ae6de839a15d67ad290" category="paragraph">Informationen zum Verwalten Ihres FSX für ONTAP-Dateisystems finden Sie unter, um die<block ref="80490e4643319ea0ed1c5bef7c007699" category="inline-link-rx"></block> Backup- und Schutzfunktionen anzuzeigen, die Sie verwenden können.</block>
+  <block id="1995377d356d639f1a2e87a282280beb" category="sidebar">Integrieren Sie Daten aus Ihren FSX for ONTAP-Dateisystemen in Ihre MLOps-Plattformen und GenAI-Basismodelle, um anhand von Unternehmensdaten funktionale Chatbots zu erstellen.</block>
+  <block id="b476e068fefaba1a08ae0f2a7f965d59" category="sidebar">Workload Factory für GenAI-Dokumentation</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Los geht's</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">Schnellstart</block>
+  <block id="3c26a99b89e3c7e6133ab9da9015f277" category="sidebar">Aufbau einer Wissensdatenbank</block>
+  <block id="d6fd7e92747512219eb7bcf3b47fcaf9" category="sidebar">Veröffentlichen Sie eine Wissensdatenbank</block>
+  <block id="f2f80ac70883a1ae6f423f6eda663371" category="sidebar">GenAI verwalten</block>
+  <block id="1e2d1b975cb59eff959e606ba60cffac" category="sidebar">Management der Knowledge Base-Infrastruktur</block>
+  <block id="c90fe540972fc3cdcef54526cc8386e2" category="sidebar">GenAI-Dokumentation</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Versionshinweise</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Was ist neu</block>
+  <block id="acbf2b120f060c765cc5fbfef7779840" category="sidebar">Ermittlung von Datenquellen für Ihre Wissensdatenbank</block>
+  <block id="2e800147de9688c09f27dae52c542680" category="sidebar">Nutzen Sie GenAI, um Wissensdatenbanken zu erstellen</block>
+  <block id="b032727d9e00be7e59aefec94a0972c2" category="sidebar">Aktivieren Sie die Authentifizierung</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Wissen und Support</block>
+</blocks>

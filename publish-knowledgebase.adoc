@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: publish-knowledgebase.html 
+keywords: ai, chatbot, publishing, knowledge base 
+summary: Nachdem Sie Ihre Wissensdatenbank lokal erstellt und getestet haben, können Sie die Wissensdatenbank veröffentlichen, sodass sie in die Chatbot-Anwendung integriert werden kann, die es Ihren Benutzern ermöglicht, die Wissensdatenbank abzufragen. 
+---
+= Veröffentlichen Sie eine Wissensdatenbank, und zeigen Sie den eindeutigen Endpunkt an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie Ihre Wissensdatenbank lokal erstellt und getestet haben, können Sie die Wissensdatenbank veröffentlichen, sodass sie in eine Chatbot-Anwendung integriert werden kann, mit der Ihre Benutzer die Wissensdatenbank abfragen können.
+
+.Über diese Aufgabe
+Durch die Veröffentlichung der Wissensdatenbank können Sie diese in Chat-Anwendungen verwenden. Die Veröffentlichungsaktion löst aus, dass die Workload Factory API eindeutige Endpunkte generiert und veröffentlicht. Nach der Veröffentlichung wird die Wissensdatenbank für Chat-Anwendungen zugänglich, und die API-Endpunkte sind für die Integration bereit.
+
+Jede von Ihnen veröffentlichte Wissensdatenbank verfügt über eindeutige Endpunkte.
+
+.Schritte
+. Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie veröffentlichen möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
++
+Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus und die Liste aller eingebetteten Datenquellen angezeigt.
+
+. Wählen Sie das Menü *actions* und dann *Publish*.
++
+Workload Factory veröffentlicht die Wissensdatenbank. Auf der Detailseite der Wissensdatenbank ändert sich der Status von *unveröffentlicht* zu *Veröffentlicht.*
+
++
+Sie können jetzt Details zum eindeutigen Endpunkt für die Wissensdatenbank abrufen.
+
+. Wählen Sie neben dem veröffentlichten Status *Ansicht*.
++
+Details zum Zugriff auf die Wissensdatenbank mithilfe der Workload Factory API-Anzeigen.
+
+. Kopieren Sie im Dialogfeld *veröffentlichte Informationen anzeigen* die API-Endpunkte, mit denen Sie die Wissensdatenbank in eine Anwendung integrieren können.
++
+Um mehr über die API-Endpunkte zu erfahren, gehen Sie zu https://console.workloads.netapp.com/api-doc["API-Dokumentation"^] und wählen Sie *AI > Extern*.
+
++
+Bevor Sie diese Endpunkte verwenden können, müssen Sie ein Benutzertoken von Ihrem Authentifizierungsanbieter beziehen.
+
+
+
+.Ergebnis
+Sie verfügen nun über eine veröffentlichte Wissensdatenbank und den einzigartigen Endpunkt, mit dem Sie die Wissensdatenbank in eine Chatbot-Anwendung integrieren können.
