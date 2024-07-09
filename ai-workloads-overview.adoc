@@ -58,7 +58,7 @@ GenAI hilft wie folgt, generative KI-Applikationen mit RAG zu erstellen:
 
 == Kosten
 
-Während des Vorschauzeitraums ist die Nutzung der GenAI-Funktion von Workload Factory kostenlos.
+Die GenAI Funktion von Workload Factory ist mit keinerlei Kosten verbunden.
 
 Sie müssen jedoch für die von Ihnen implementierten AWS Ressourcen zahlen, um die generative KI-Infrastruktur unterstützen zu können. Sie zahlen beispielsweise für AWS den Amazon Bedrock AI Service, FSX for ONTAP File-System und Storage-Kapazität und die EC2-Instanz der GenAI Engine.
 
