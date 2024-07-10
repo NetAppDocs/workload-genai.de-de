@@ -41,6 +41,8 @@ sidebar:
         url: "/activate-authentication.html"
       - title: Veröffentlichen Sie eine Wissensdatenbank
         url: "/publish-knowledgebase.html"
+      - title: Erstellen Sie eine RAG-basierte KI-Applikation
+        url: "/create-application.html"
       - title: Was Sie als Nächstes tun können
         url: "/whats-next.html"
     - title: Managen von Datenquellen
