@@ -90,4 +90,6 @@ Während des Bereitstellungsprozesses werden die folgenden Elemente eingerichtet
 * Die IAM-Rolle, das Instanzprofil und die Sicherheitsgruppe werden erstellt.
 * Das Volume für die GenAI Engine Datenbank (LanceDB) wird auf dem FSX für ONTAP Dateisystem erstellt.
 * Die Virtual Machine-Instanz für die GenAI-Engine wird bereitgestellt.
+* Amazon Bedrock ist so konfiguriert, dass Protokolle an Amazon CloudWatch Logs gesendet werden, wobei eine Protokollgruppe mit dem Präfix verwendet `/aws/bedrock/`wird.
+* Die GenAI-Engine ist so konfiguriert, dass sie Protokolle an Amazon CloudWatch-Protokolle sendet, wobei eine Protokollgruppe mit dem Namen verwendet `/netapp/wlmai/<tenancyAccountId>/randomId`wird, wobei `<tenancyAccountID>` dies der für den aktuellen Benutzer ist https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-account-identifier["BlueXP Konto-ID"^] .
 

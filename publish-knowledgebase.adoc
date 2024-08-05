@@ -33,7 +33,7 @@ Sie können jetzt Details zum eindeutigen Endpunkt für die Wissensdatenbank abr
 
 . Wählen Sie neben dem veröffentlichten Status *Ansicht*.
 +
-Details zum Zugriff auf die Wissensdatenbank mithilfe der Workload Factory API-Anzeigen.
+Details zum Zugriff auf die Wissensdatenbank mithilfe der Workload Factory API werden angezeigt.
 
 . Kopieren Sie im Dialogfeld *veröffentlichte Informationen anzeigen* die API-Endpunkte, mit denen Sie die Wissensdatenbank in eine Anwendung integrieren können.
 +

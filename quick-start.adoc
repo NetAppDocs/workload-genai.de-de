@@ -15,7 +15,7 @@ Beginnen Sie mit der Erstellung einer Wissensdatenbank unter Verwendung der Date
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] link:requirements.html["Richten Sie Ihre Umgebung so ein, dass sie die GenAI-Anforderungen erfüllt"]
 [role="quick-margin-para"]
-Für die Implementierung der AWS-Infrastruktur benötigen Sie Zugangsdaten von AWS, ein implementiertes und erkannter FSX for ONTAP-Filesystem, die Liste der Datenquellen, die Sie in Ihre Wissensdatenbank integrieren möchten, Zugriff auf den Amazon Bedrock-KI-Service und vieles mehr.
+Für die Implementierung der AWS-Infrastruktur, eines implementierten und erkannten FSX for ONTAP-Filesystems, der Liste der Datenquellen, die Sie in Ihre Wissensdatenbank integrieren möchten, des Zugriffs auf den Amazon Bedrock-KI-Service und vieles mehr benötigen Sie Zugangsdaten von AWS.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] link:identify-data-sources.html["Ermitteln Sie das FSX für ONTAP-Dateisystem, das die Datenquellen enthält"]
 [role="quick-margin-para"]

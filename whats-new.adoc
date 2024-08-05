@@ -15,6 +15,16 @@ Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloa
 
 
 
+== 4 August 2024
+
+
+
+=== Integration von Amazon CloudWatch Logs
+
+Generative KI-Workloads sind jetzt in Amazon CloudWatch Logs integriert, sodass Sie die Protokolldateien generativer KI-Workloads überwachen können.
+
+
+
 == 7 Juli 2024
 
 

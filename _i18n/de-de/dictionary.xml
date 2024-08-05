@@ -388,7 +388,6 @@
   <block id="19761722f9e779bd2a70fef96c24a1bc" category="paragraph">Workload Factory veröffentlicht die Wissensdatenbank. Auf der Detailseite der Wissensdatenbank ändert sich der Status von *unveröffentlicht* zu *Veröffentlicht.*</block>
   <block id="5e92f6a356303934a45930f0e541c6b1" category="paragraph">Sie können jetzt Details zum eindeutigen Endpunkt für die Wissensdatenbank abrufen.</block>
   <block id="004faa273ca0b2383f0f12b8850c493b" category="list-text">Wählen Sie neben dem veröffentlichten Status *Ansicht*.</block>
-  <block id="d1f4efe2fd3a800f4b008e172439fe85" category="paragraph">Details zum Zugriff auf die Wissensdatenbank mithilfe der Workload Factory API-Anzeigen.</block>
   <block id="9de2775e528dfff9dd9666885c222272" category="list-text">Kopieren Sie im Dialogfeld *veröffentlichte Informationen anzeigen* die API-Endpunkte, mit denen Sie die Wissensdatenbank in eine Anwendung integrieren können.</block>
   <block id="7495d9f71402d3b1d20f08bd19ac6562" category="inline-link">API-Dokumentation</block>
   <block id="2cb94eb0648b9f93f300ea0aff833f95" category="paragraph">Um mehr über die API-Endpunkte zu erfahren, gehen Sie zu<block ref="c0a9aa55ed57e2e15b2d20baa6a6e023" category="inline-link-rx"></block> und wählen Sie *AI &gt; Extern*.</block>
@@ -398,7 +397,6 @@
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Eins</block>
   <block id="e16edd708081c06a9c8bdef1486a94b4" category="inline-link-macro">Richten Sie Ihre Umgebung so ein, dass sie die GenAI-Anforderungen erfüllt</block>
   <block id="0b0e916064e065ab12e1db6735832ef0" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="d4a51aa0811f51e3206f49b62f46f1ef" category="inline-link-macro-rx"></block></block>
-  <block id="926f216b1b078ff9ce47e61e22932514" category="paragraph">Für die Implementierung der AWS-Infrastruktur benötigen Sie Zugangsdaten von AWS, ein implementiertes und erkannter FSX for ONTAP-Filesystem, die Liste der Datenquellen, die Sie in Ihre Wissensdatenbank integrieren möchten, Zugriff auf den Amazon Bedrock-KI-Service und vieles mehr.</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Zwei</block>
   <block id="36ec882c51ea2d7689f78bed44b7fdaa" category="inline-link-macro">Ermitteln Sie das FSX für ONTAP-Dateisystem, das die Datenquellen enthält</block>
   <block id="cc9cd1c7d0a54d3fe49ca467804963fb" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> <block ref="7206191241f03719b7415c03564b4c6e" category="inline-link-macro-rx"></block></block>
@@ -539,8 +537,17 @@
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Wissen und Support</block>
   <block id="3163a16fc98aa29c5fea8b61c62bb459" category="paragraph">Die GenAI Funktion von Workload Factory ist mit keinerlei Kosten verbunden.</block>
   <block id="a46c34e822b00eb49125943300225ec1" category="summary">Nachdem Sie Ihre Wissensdatenbank aufgebaut und Ihren Chatbot getestet haben, können Sie die Anwendung einrichten, mit der Ihre Benutzer den Chatbot abfragen können.</block>
-  <block id="4c096c170a3ae328a9df5fb19871a9a7" category="doc">Erstellen Sie eine Anwendung mit einer FSX for ONTAP Knowledge Base</block>
   <block id="3034501b6830f6e24b0e219fa3565ffb" category="inline-link">So erstellen Sie eine RAG-basierte KI-Applikation auf FSX für ONTAP</block>
   <block id="cddb505028d2d2c7026aad1d17c19a05" category="paragraph"><block ref="cddb505028d2d2c7026aad1d17c19a05" category="inline-link-rx"></block></block>
   <block id="53b343f4a880bcff3b258324a35744ff" category="sidebar">Erstellen Sie eine RAG-basierte KI-Applikation</block>
+  <block id="da1fd32e4f4851fbf4922d1c55e8fcc0" category="list-text">Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, für die Sie die Authentifizierung aktivieren möchten.</block>
+  <block id="d71d72ee7bc5c79bade09f02715592c3" category="paragraph">Die Authentifizierung für die Wissensdatenbank ist jetzt aktiv, und Sie können API-Endpunkte verwenden, um mit der Wissensdatenbank zu interagieren und die Wissensdatenbank in eine Chatbot-Anwendung zu integrieren.</block>
+  <block id="c83d7c23906c063b64dd22d30483cb24" category="list-text">Amazon Bedrock ist so konfiguriert, dass Protokolle an Amazon CloudWatch Logs gesendet werden, wobei eine Protokollgruppe mit dem Präfix verwendet<block ref="26245dda4fa653114e9a41956171489d" prefix=" " category="inline-code"></block>wird.</block>
+  <block id="6fbe5ae14d71eb3abafcfce8f7fe977a" category="inline-link">BlueXP Konto-ID</block>
+  <block id="af270465b477b731bafe1e4859956cc4" category="list-text">Die GenAI-Engine ist so konfiguriert, dass sie Protokolle an Amazon CloudWatch-Protokolle sendet, wobei eine Protokollgruppe mit dem Namen verwendet<block ref="267ed14c989ee7da1da6b5683a1ba205" prefix=" " category="inline-code"></block>wird, wobei<block ref="44014fe9a7dd0d34b59279b9206b84b3" prefix=" " category="inline-code"></block> dies der für den aktuellen Benutzer ist<block ref="bffdd6286177ca86f99ccefe410268a2" category="inline-link-rx"></block> .</block>
+  <block id="b3ec171bb9a8cc7c009e2caf4d945535" category="paragraph">Details zum Zugriff auf die Wissensdatenbank mithilfe der Workload Factory API werden angezeigt.</block>
+  <block id="f48c3e82e3f3b9cc782fe1277e362ec5" category="paragraph">Für die Implementierung der AWS-Infrastruktur, eines implementierten und erkannten FSX for ONTAP-Filesystems, der Liste der Datenquellen, die Sie in Ihre Wissensdatenbank integrieren möchten, des Zugriffs auf den Amazon Bedrock-KI-Service und vieles mehr benötigen Sie Zugangsdaten von AWS.</block>
+  <block id="691e71734464aaf43017f5b033e54559" category="section-title">4 August 2024</block>
+  <block id="ec7827c2237ae7b863c9ba93b519cbc1" category="section-title">Integration von Amazon CloudWatch Logs</block>
+  <block id="64c1dd8cb5f86710c3293cc9807760fb" category="paragraph">Generative KI-Workloads sind jetzt in Amazon CloudWatch Logs integriert, sodass Sie die Protokolldateien generativer KI-Workloads überwachen können.</block>
 </blocks>

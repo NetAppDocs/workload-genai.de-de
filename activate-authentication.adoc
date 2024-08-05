@@ -14,7 +14,7 @@ summary: Aktivieren Sie die Authentifizierung für eine Wissensdatenbank, damit 
 Aktivieren Sie die Authentifizierung für eine Wissensdatenbank, damit Token-Validierung und ACLs erforderlich sind, wenn die API-Endpunkte zur Integration einer Wissensdatenbank in eine Chatbot-Anwendung verwendet werden.
 
 .Schritte
-. Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie veröffentlichen möchten.
+. Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, für die Sie die Authentifizierung aktivieren möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 . Wählen Sie das Menü *actions* und dann *Manage Authentication settings*.
 . Authentifizierung einrichten:
@@ -37,4 +37,4 @@ Sie sollten die Werte für diese Felder von Ihrem Authentifizierungsanbieter bez
 
 
 .Ergebnis
-Sie verfügen nun über eine veröffentlichte Wissensdatenbank und den einzigartigen Endpunkt, mit dem Sie die Wissensdatenbank in eine Chatbot-Anwendung integrieren können.
+Die Authentifizierung für die Wissensdatenbank ist jetzt aktiv, und Sie können API-Endpunkte verwenden, um mit der Wissensdatenbank zu interagieren und die Wissensdatenbank in eine Chatbot-Anwendung zu integrieren.
