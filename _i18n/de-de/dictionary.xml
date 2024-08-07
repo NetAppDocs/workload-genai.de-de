@@ -12,7 +12,6 @@
   <block id="65f706122d6156fd52b6cb2ff2214944" category="list-text">Wählen Sie *Hinzufügen*, um diese Datenquelle zu Ihrer Wissensdatenbank hinzuzufügen.</block>
   <block id="f1af0b71f33a2e37e9e17b100f3c0b1e" category="summary">Aktivieren Sie die Authentifizierung für eine Wissensdatenbank, damit Token-Validierung und ACLs bei der Integration der Wissensdatenbank in eine Chatbot-Anwendung erforderlich sind.</block>
   <block id="970a6e4ed60b5e3eb0f25c2ab67433fe" category="doc">Externe Authentifizierung für eine Wissensdatenbank aktivieren</block>
-  <block id="f739f01e878ac777330d67ca4158aece" category="paragraph">Aktivieren Sie die Authentifizierung für eine Wissensdatenbank, damit Token-Validierung und ACLs erforderlich sind, wenn die API-Endpunkte zur Integration einer Wissensdatenbank in eine Chatbot-Anwendung verwendet werden.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Schritte</block>
   <block id="958a8f384aa34f23244386f38ed3aeab" category="list-text">Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie veröffentlichen möchten.</block>
   <block id="2041999f6b6b70199d1267ee84f453a6" category="inline-image-macro">Die Optionsschaltfläche</block>
@@ -20,12 +19,6 @@
   <block id="717cb2ec03a878d541d7d67390c70a02" category="list-text">Wählen Sie das Menü *actions* und dann *Manage Authentication settings*.</block>
   <block id="01345ed4b5ff7f7a1a05a52074ad1caf" category="list-text">Authentifizierung einrichten:</block>
   <block id="d408b7a47989c152a2aa2d90a6528cd8" category="list-text">Wählen Sie *Authentifizierungseinstellungen aktivieren*.</block>
-  <block id="06b97c41aa527667da7e7e745c867d3c" category="list-text">Geben Sie die erforderlichen Informationen ein:</block>
-  <block id="f67d4abfe5d3ad3bdc35adca8802160f" category="list-text">Algorithmen</block>
-  <block id="ef1e6887c579ba81dcedc3f4e3793cd2" category="list-text">Zielgruppe</block>
-  <block id="51360304ea03557e79bdf5ff9cd2e234" category="list-text">Aussteller</block>
-  <block id="9ebac1089717ab190990b2b9a0fd554c" category="list-text">JWKS-URI</block>
-  <block id="9df3162c758e92127fd15a555cd18f04" category="paragraph">Sie sollten die Werte für diese Felder von Ihrem Authentifizierungsanbieter beziehen.</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">Wählen Sie *Speichern*.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Ergebnis</block>
   <block id="5d8cae383bd52502a39a1612796fb31f" category="paragraph">Sie verfügen nun über eine veröffentlichte Wissensdatenbank und den einzigartigen Endpunkt, mit dem Sie die Wissensdatenbank in eine Chatbot-Anwendung integrieren können.</block>
@@ -550,4 +543,13 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">4 August 2024</block>
   <block id="ec7827c2237ae7b863c9ba93b519cbc1" category="section-title">Integration von Amazon CloudWatch Logs</block>
   <block id="64c1dd8cb5f86710c3293cc9807760fb" category="paragraph">Generative KI-Workloads sind jetzt in Amazon CloudWatch Logs integriert, sodass Sie die Protokolldateien generativer KI-Workloads überwachen können.</block>
+  <block id="c34bf4f0a7173f53dc110e7f41c2e0d0" category="paragraph">Aktivieren Sie die Authentifizierung für eine Wissensdatenbank, damit Token-Validierung und ACLs erforderlich sind, wenn die API-Endpunkte zur Integration einer Wissensdatenbank in eine Chatbot-Anwendung verwendet werden. Wenn Sie die Authentifizierung aktivieren, generieren Sie ein JSON-Webtoken, das für API-Anfragen an eine Wissensdatenbank von Chatbot-Clients verwendet wird.</block>
+  <block id="d4cc00616339f0819c8ca53d7850ca2c" category="list-text">Geben Sie die erforderlichen Informationen an. Beispiele sind angegeben, aber Sie sollten die Werte für diese Felder von Ihrem Authentifizierungsanbieter beziehen:</block>
+  <block id="8fbebd38c35cb217ad6437410297b5e7" category="list-text">*Algorithmen*: Der Signierungsalgorithmus, den Ihr Authentifizierungsanbieter verwendet.</block>
+  <block id="59575929b41aa989abd4d539bc31b47a" category="list-text">*Audience* (Optional): Eine Zeichenfolge, die den beabsichtigten Empfänger des Authentifizierungstoken enthält (manchmal eine URL).</block>
+  <block id="8815fb464bfa6c8533fc5ae4e04b9c5a" category="list-text">*Aussteller*: Eine Zeichenfolge, die den Anbieter identifiziert, der das Token ausgegeben hat.</block>
+  <block id="9f921e08c2635ce0ca6d5507cf90b6d2" category="paragraph">Amazon Cognito verwendet beispielsweise Emittent Strings mit dem folgenden Format:</block>
+  <block id="69a143a2f8c7c42f85ef0de9978c131d" category="paragraph">Wobei<block ref="d1dc4390a2dfb7cdc1a097e10b04acdf" prefix=" " category="inline-code"></block> die AWS-Region, die den Benutzerpool enthält, und<block ref="d47ea98789cbedeffd13a02b7b550538" prefix=" " category="inline-code"></block> die Benutzer-Pool-ID ist. Sie können Ihre Benutzer-Pool-ID mit dem folgenden Befehl abrufen:</block>
+  <block id="563ae45eabbbd334a2af58d93ded707c" category="list-text">*JWKS URI*: Der URI-String, der öffentliche Schlüssel bereitstellt, die benötigt werden, um die Signaturen dieses Tokens zu überprüfen.</block>
+  <block id="2caafa02c784bfe569590254865dd928" category="paragraph">Amazon Cognito verwendet beispielsweise JWKS URI-Strings mit dem folgenden Format:</block>
 </blocks>
