@@ -11,7 +11,7 @@ summary: Aktivieren Sie die Authentifizierung für eine Wissensdatenbank, damit 
 
 
 [role="lead"]
-Aktivieren Sie die Authentifizierung für eine Wissensdatenbank, damit Token-Validierung und ACLs erforderlich sind, wenn die API-Endpunkte zur Integration einer Wissensdatenbank in eine Chatbot-Anwendung verwendet werden. Wenn Sie die Authentifizierung aktivieren, generieren Sie ein JSON-Webtoken, das für API-Anfragen an eine Wissensdatenbank von Chatbot-Clients verwendet wird.
+Aktivieren Sie die Authentifizierung für eine Wissensdatenbank, damit Token-Validierung und ACLs erforderlich sind, wenn die API-Endpunkte zur Integration einer Wissensdatenbank in eine Chatbot-Anwendung verwendet werden. Wenn Sie die Authentifizierung aktivieren, konfigurieren Sie Einstellungen für ein JSON-Webtoken, das für API-Anfragen von Chatbot-Clients an eine Wissensdatenbank verwendet wird.
 
 .Schritte
 . Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, für die Sie die Authentifizierung aktivieren möchten.
@@ -23,7 +23,7 @@ Aktivieren Sie die Authentifizierung für eine Wissensdatenbank, damit Token-Val
 .. Geben Sie die erforderlichen Informationen an. Beispiele sind angegeben, aber Sie sollten die Werte für diese Felder von Ihrem Authentifizierungsanbieter beziehen:
 +
 *** *Algorithmen*: Der Signierungsalgorithmus, den Ihr Authentifizierungsanbieter verwendet.
-*** *Audience* (Optional): Eine Zeichenfolge, die den beabsichtigten Empfänger des Authentifizierungstoken enthält (manchmal eine URL).
+*** *Audience* (Optional): Eine Zeichenkette, die den gewünschten Empfänger des Tokens enthält (manchmal eine URL).
 *** *Aussteller*: Eine Zeichenfolge, die den Anbieter identifiziert, der das Token ausgegeben hat.
 +
 Amazon Cognito verwendet beispielsweise Emittent Strings mit dem folgenden Format:
