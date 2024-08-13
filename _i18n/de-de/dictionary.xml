@@ -552,4 +552,23 @@
   <block id="2caafa02c784bfe569590254865dd928" category="paragraph">Amazon Cognito verwendet beispielsweise JWKS URI-Strings mit dem folgenden Format:</block>
   <block id="566673c66dc53f65f0662ca186b4ff33" category="paragraph">Aktivieren Sie die Authentifizierung für eine Wissensdatenbank, damit Token-Validierung und ACLs erforderlich sind, wenn die API-Endpunkte zur Integration einer Wissensdatenbank in eine Chatbot-Anwendung verwendet werden. Wenn Sie die Authentifizierung aktivieren, konfigurieren Sie Einstellungen für ein JSON-Webtoken, das für API-Anfragen von Chatbot-Clients an eine Wissensdatenbank verwendet wird.</block>
   <block id="af3e21688164f21808a96c579519e58a" category="list-text">*Audience* (Optional): Eine Zeichenkette, die den gewünschten Empfänger des Tokens enthält (manchmal eine URL).</block>
+  <block id="9f6d7e16caf2363ed289cf415c43d68e" category="summary">Sie können eine Chatbot-Beispielanwendung installieren und ausführen, um Ihre Wissensdatenbanken zu testen und zu lernen, wie Sie mit der Workload Factory API Ihre eigene generative KI-Anwendung erstellen.</block>
+  <block id="ce8f8573f53c4f625df29c794cd7d82a" category="doc">Verwenden Sie die externe Chatbot-Beispielanwendung</block>
+  <block id="15abf1d561eb7f7ddb0e28f6c4562a8c" category="paragraph">Nachdem Sie eine Wissensdatenbank konfiguriert, aktiviert und veröffentlicht haben, können externe Anwendungsentwickler die von NetApp bereitgestellte Chatbot-Beispielanwendung für Open Source konfigurieren und ausführen, um mit Ihrer Wissensdatenbank zu interagieren und zu erfahren, wie Sie mit der Workload Factory API ihre eigenen generativen KI-Anwendungen erstellen können.</block>
+  <block id="39f8e13a71ec862a906b446df493f119" category="list-text"><block ref="34b37227349aa26ad88498e81a1ea1af" category="inline-link-macro-rx"></block>.</block>
+  <block id="804d039033ead5360f1a1a7d2c362f11" category="list-text"><block ref="30b5e2b0cf5de93d45c874ca5c8c6a31" category="inline-link-macro-rx"></block> Für die von Ihnen erstellte Wissensdatenbank.</block>
+  <block id="73e5c231c5129b847eb8645a0a52a595" category="paragraph">Dies ermöglicht der Wissensdatenbank die Authentifizierung von API-Anforderungen und macht die Token-Validierung und ACLs erforderlich, wenn die API-Endpunkte verwendet werden.</block>
+  <block id="9422cba0464f58f3b37b0745e5b00b27" category="admonition">Externe Chat-Anwendungen, die in diese Wissensdatenbank integriert werden, müssen denselben Authentifizierungsanbieter (Emittent) verwenden, den Sie in den Authentifizierungseinstellungen für die Wissensdatenbank konfigurieren.</block>
+  <block id="4608fcb51404075a263bdb6e179b0a2d" category="inline-link-macro">Veröffentlichen Sie die Wissensdatenbank</block>
+  <block id="722a513785392127bf30ac1365e83362" category="list-text"><block ref="55b5b45f76a7f4e93c30f45e62e61f7a" category="inline-link-macro-rx"></block> Um den API-Zugriff für externe Anwendungen zu aktivieren.</block>
+  <block id="1119e2011350c0d24f44e3aaf7f8fd74" category="paragraph">Nachdem eine Wissensdatenbank veröffentlicht wurde, sind die API-Endpunkte extern zugänglich, und Sie können die Wissensdatenbank mit einer externen Chat-Anwendung (wie der Beispiel-Chatbot-Anwendung) integrieren.</block>
+  <block id="d3b7c913cd04ebfec0e9ec32cb6fd58c" category="inline-link">GitHub</block>
+  <block id="f49a88c7b28444b7b991e9803b076e62" category="list-text">Laden Sie das Beispiel-Chatbot-Anwendungspaket von herunter<block ref="61cc64ceefa7eff1b19d7a7c0c883e1f" category="inline-link-rx"></block>.</block>
+  <block id="188374f3639ec34e68d38eae79f19aae" category="list-text">Installieren und starten Sie die Chatbot-Anwendung, indem Sie die Anweisungen in der im Paket enthaltenen README-Datei befolgen.</block>
+  <block id="c2847f2ccebd5c687f46c7bf12c1be5c" category="inline-link"><block ref="c2847f2ccebd5c687f46c7bf12c1be5c" category="inline-link-rx"></block></block>
+  <block id="4fc1d0607a3fe50db5ef612a2c4a178e" category="list-text">Navigieren Sie zu<block ref="0e14f9ffc1d2673bd92f13a4ac79e32e" category="inline-link-rx"></block> , um sich bei der Anwendung anzumelden.</block>
+  <block id="5f62c285aea87618ed1381c43c7ae2cf" category="paragraph">Die Chatbot-Beispielanwendung wird angezeigt.</block>
+  <block id="d59048f21fd887ad520398ce677be586" category="section-title">Weitere Informationen .</block>
+  <block id="862b02acae8afc7a8e5ed9bf4c7cb18e" category="inline-link">Workload Factory API-Dokumentation</block>
+  <block id="39d0fcde59bc31b066cd026cdc9718f8" category="paragraph"><block ref="39d0fcde59bc31b066cd026cdc9718f8" category="inline-link-rx"></block></block>
 </blocks>

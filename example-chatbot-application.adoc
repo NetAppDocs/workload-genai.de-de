@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: example-chatbot-application.html 
+keywords: ai, example, sample, chatbot, app, application, local 
+summary: Sie können eine Chatbot-Beispielanwendung installieren und ausführen, um Ihre Wissensdatenbanken zu testen und zu lernen, wie Sie mit der Workload Factory API Ihre eigene generative KI-Anwendung erstellen. 
+---
+= Verwenden Sie die externe Chatbot-Beispielanwendung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie eine Wissensdatenbank konfiguriert, aktiviert und veröffentlicht haben, können externe Anwendungsentwickler die von NetApp bereitgestellte Chatbot-Beispielanwendung für Open Source konfigurieren und ausführen, um mit Ihrer Wissensdatenbank zu interagieren und zu erfahren, wie Sie mit der Workload Factory API ihre eigenen generativen KI-Anwendungen erstellen können.
+
+.Schritte
+. link:create-knowledgebase.html["Erstellen einer Wissensdatenbank"].
+. link:activate-authentication.html["Aktivieren Sie die Authentifizierung"] Für die von Ihnen erstellte Wissensdatenbank.
++
+Dies ermöglicht der Wissensdatenbank die Authentifizierung von API-Anforderungen und macht die Token-Validierung und ACLs erforderlich, wenn die API-Endpunkte verwendet werden.
+
++
+
+NOTE: Externe Chat-Anwendungen, die in diese Wissensdatenbank integriert werden, müssen denselben Authentifizierungsanbieter (Emittent) verwenden, den Sie in den Authentifizierungseinstellungen für die Wissensdatenbank konfigurieren.
+
+. link:publish-knowledgebase.html["Veröffentlichen Sie die Wissensdatenbank"] Um den API-Zugriff für externe Anwendungen zu aktivieren.
++
+Nachdem eine Wissensdatenbank veröffentlicht wurde, sind die API-Endpunkte extern zugänglich, und Sie können die Wissensdatenbank mit einer externen Chat-Anwendung (wie der Beispiel-Chatbot-Anwendung) integrieren.
+
+. Laden Sie das Beispiel-Chatbot-Anwendungspaket von herunter https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/AI/GenAI-ChatBot-application-sample["GitHub"^].
+. Installieren und starten Sie die Chatbot-Anwendung, indem Sie die Anweisungen in der im Paket enthaltenen README-Datei befolgen.
+. Navigieren Sie zu http://localhost:9091["http://localhost:9091"] , um sich bei der Anwendung anzumelden.
++
+Die Chatbot-Beispielanwendung wird angezeigt.
+
+
+
+
+
+== Weitere Informationen .
+
+https://console.workloads.netapp.com/api-doc["Workload Factory API-Dokumentation"]
