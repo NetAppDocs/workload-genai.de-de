@@ -15,6 +15,22 @@ Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloa
 
 
 
+== 1 September 2024
+
+
+
+=== Zusätzliche Chunking-Strategien
+
+Generative KI-Workloads unterstützen jetzt Multi-Sentence Chunking und überlappendes Chunking für Datenquellen.
+
+
+
+=== Dediziertes Volumen für jede Wissensdatenbank
+
+Generative KI-Workloads erstellen jetzt für jede neue Knowledge Base ein dediziertes Amazon FSX for NetApp ONTAP Volume, mit dem individuelle Snapshot-Richtlinien für jede Knowledge Base erstellt werden. So wird auch der Schutz vor Ausfällen und Datenvergiftungen verbessert.
+
+
+
 == 4 August 2024
 
 
@@ -22,6 +38,12 @@ Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloa
 === Integration von Amazon CloudWatch Logs
 
 Generative KI-Workloads sind jetzt in Amazon CloudWatch Logs integriert, sodass Sie die Protokolldateien generativer KI-Workloads überwachen können.
+
+
+
+=== Beispiel für eine Chatbot-Anwendung
+
+Mit der GenAI-Beispielanwendung von NetApp Workload Factory können Sie die Authentifizierung und den Abruf aus Ihrer veröffentlichten Wissensdatenbank von NetApp Workload Factory testen, indem Sie direkt mit dieser in einer webbasierten Chatbot-Anwendung interagieren.
 
 
 

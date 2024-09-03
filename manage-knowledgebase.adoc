@@ -49,7 +49,7 @@ Jedes Mal, wenn Sie Datenquellen in der Wissensdatenbank hinzufügen, ändern od
 Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus, die Liste aller eingebetteten Datenquellen und vieles mehr angezeigt.
 
 . Wählen Sie das Menü *Aktionen* und dann *Wissensdatenbank bearbeiten*.
-. Auf der Seite „Wissensdatenbank bearbeiten“ können Sie den Namen der Wissensdatenbank, die Beschreibung, das Einbettungsmodell und das Chatmodell ändern und festlegen, ob Gesprächseinstiege automatisch oder manuell erstellt werden.
+. Auf der Seite Wissensdatenbank bearbeiten können Sie den Namen der Wissensdatenbank, die Beschreibung, das Einbettungsmodell und das Chatmodell ändern, ob Gesprächseinstiege automatisch oder manuell erstellt werden, und die Snapshot-Richtlinie, die für das Volume verwendet wird, das die Wissensdatenbank enthält.
 +
 Wenn Sie den manuellen Modus für Gesprächseinstieg verwenden, können Sie hier auch den Gesprächseinstieg ändern.
 
@@ -71,7 +71,16 @@ Sie können zusätzliche Datenquellen in Ihre Wissensdatenbank einbetten, um die
 Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, einschließlich Domäne, IP-Adresse, Benutzername und Passwort.
 
 . *Wählen Sie eine Datenquelle*: Wählen Sie den Speicherort der Datenquelle basierend darauf, wo Sie die Dateien gespeichert haben. Dies kann ein ganzes Volume sein, oder nur ein bestimmter Ordner oder Unterordner im Volume, und wählen Sie *Weiter*.
-. *Define AI-Parameter*: Definieren Sie im Abschnitt *Chunk-Definition*, wie der Amazon Bedrock-Dienst den Inhalt der Datenquelle in Blöcke teilt, wenn die Wissensdatenbank abgefragt wird, zu der er gehört. Derzeit können Sie nur Sätze auswählen.
+. *Define AI-Parameter*: Definieren Sie im Abschnitt *Chunking-Strategie*, wie die GenAI-Engine den Inhalt der Datenquelle in Blöcke teilt, wenn die Datenquelle in eine Wissensdatenbank integriert ist. Sie können eine der folgenden Strategien wählen:
++
+** *Multi-Sentence Chunking*: Organisiert Informationen aus Ihrer Datenquelle in Satzbausteine. Sie können festlegen, wie viele Sätze jedes Stück ausmachen (bis zu 100).
+** *Überlappendes Chunking*: Organisiert Informationen aus Ihrer Datenquelle in zeichendefinierte Blöcke, die benachbarte Blöcke überlappen können. Sie können die Größe jedes Chunk in Zeichen auswählen und festlegen, wie viel sich jeder Chunk mit benachbarten Chunks überschneidet. Sie können eine Chunk-Größe von 50 bis 3000 Zeichen und einen Überlappungsprozentsatz von 1 bis 99 % konfigurieren.
++
+
+NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Speicherbedarf erheblich erhöhen, da die Abrufgenauigkeit nur geringfügig verbessert wird.
+
+
+
 . Im Abschnitt *permission aware*, der nur verfügbar ist, wenn sich die von Ihnen ausgewählte Datenquelle auf einem Volume befindet, das das SMB-Protokoll verwendet, können Sie die Auswahl aktivieren oder deaktivieren:
 +
 ** *Enabled*: Benutzer des Chatbot, die auf diese Wissensdatenbank zugreifen, erhalten nur Antworten auf Abfragen aus Datenquellen, auf die sie zugreifen können.
@@ -146,13 +155,9 @@ Die Wissensdatenbank ist deaktiviert und kann nicht mehr von einer Chatbot-Anwen
 
 == Löschen einer Wissensdatenbank
 
-Wenn Sie keine Wissensdatenbank mehr benötigen, können Sie sie löschen. Wenn Sie die Wissensdatenbank löschen, wird sie aus Workload Factory entfernt und alle Anwendungen oder Chatbots, die die Wissensdatenbank verwenden, funktionieren nicht mehr. Diese Aktion ist nicht umkehrbar.
+Wenn Sie keine Wissensdatenbank mehr benötigen, können Sie sie löschen. Wenn Sie eine Wissensdatenbank löschen, wird sie aus Workload Factory entfernt und das Volume, das die Wissensdatenbank enthält, wird gelöscht. Alle Anwendungen oder Chatbots, die die Wissensdatenbank nutzen, funktionieren nicht mehr. Das Löschen einer Wissensdatenbank ist nicht umkehrbar.
 
-Wenn Sie eine Wissensdatenbank löschen, sollten Sie auch die folgenden Aktionen ausführen, um alle Ressourcen, die der Wissensdatenbank zugeordnet sind, vollständig zu löschen:
-
-* Distanzieren Sie die Wissensdatenbank von allen Agenten, mit denen sie verknüpft ist.
-* Die zugrunde liegenden Daten, die aus Ihrer Wissensdatenbank indiziert wurden, bleiben im von Ihnen festgelegten Vektorspeicher und können weiterhin abgerufen werden. Um die Daten zu löschen, müssen Sie auch den Vektorindex löschen, der die Dateneinbettungen enthält.
-
+Wenn Sie eine Wissensdatenbank löschen, sollten Sie auch die Zuordnung der Wissensdatenbank zu allen Agenten aufheben, mit denen sie verknüpft ist, um alle Ressourcen, die der Wissensdatenbank zugeordnet sind, vollständig zu löschen.
 
 .Schritte
 . Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie löschen möchten.
@@ -162,4 +167,4 @@ Wenn Sie eine Wissensdatenbank löschen, sollten Sie auch die folgenden Aktionen
 
 
 .Ergebnis
-Die Wissensdatenbank wird aus Workload Factory gelöscht.
+Die Wissensdatenbank wird aus Workload Factory entfernt und das zugehörige Volume wird gelöscht.

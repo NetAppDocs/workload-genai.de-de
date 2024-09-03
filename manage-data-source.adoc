@@ -35,7 +35,7 @@ Außerdem werden die Einbettungsdaten aufgelistet, und es wird angegeben, ob die
 
 == Bearbeiten Sie die Einstellungen für die Datenquelle
 
-Sie können Informationen zu einer Datenquelle bearbeiten, die Sie in eine Wissensdatenbank integriert haben. Die meisten Informationen werden behoben, nachdem Sie einer Wissensdatenbank eine Datenquelle hinzugefügt haben. Sie können jedoch Änderungen an der Chunking-Definition und an der Berechtigungskennung vornehmen (wenn Sie das SMB-Protokoll auf dem Datenquellen-Volume verwenden).
+Sie können Informationen zu einer Datenquelle bearbeiten, die Sie in eine Wissensdatenbank integriert haben. Die meisten Informationen werden behoben, nachdem Sie einer Wissensdatenbank eine Datenquelle hinzugefügt haben. Sie können jedoch Änderungen an der Chunking-Definition und -Konfiguration sowie an der Berechtigungssicherung vornehmen (bei Verwendung des SMB-Protokolls auf dem Datenquellen-Volume).
 
 .Schritte
 . Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, in der sich die Datenquelle befindet, und wählen Sie dann *Wissensdatenbank verwalten* aus image:icon-action.png["Die Optionsschaltfläche"] .
@@ -43,8 +43,8 @@ Sie können Informationen zu einer Datenquelle bearbeiten, die Sie in eine Wisse
 Im unteren Teil der Seite werden die Datenquellen aufgelistet, die Teil dieser Wissensdatenbank sind.
 
 . Wählen Sie in der Zeile der Datenquelle, die Sie bearbeiten möchten, *Datenquelle bearbeiten* aus image:icon-action.png["Die Optionsschaltfläche"] .
-. Wählen Sie auf der Seite Datenquelle bearbeiten die Option aus image:button-down-caret.png["Die nach-unten-Taste"] , um die Zeile für die Chunk-Definition zu erweitern.
-. Aktualisieren Sie die Einstellungen für die Chunking-Strategie und Chunk-Größe sowie Berechtigungssicherung (für SMB-Volumes), und wählen Sie *Speichern*.
+. Wählen Sie auf der Seite Datenquelle bearbeiten image:button-down-caret.png["Die nach-unten-Taste"]die Option aus, um die Zeile für die Chunk-Definition zu erweitern.
+. Aktualisieren Sie die Einstellungen für die Chunking-Strategie und -Konfiguration sowie Berechtigungssicherung (für SMB-Volumes), und wählen Sie *Speichern*.
 
 
 .Ergebnis

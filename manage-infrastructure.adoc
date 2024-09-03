@@ -25,7 +25,7 @@ Sie können Informationen über die Chatbot-Infrastruktur anzeigen.
 . Hier finden Sie Informationen zur Infrastruktur mit Details zu den folgenden Komponenten:
 +
 ** AWS-Einstellungen
-** Das Dateisystem FSX für ONTAP
+** Einstellungen der Infrastruktur
 ** Die KI-Engine
 ** Die Vektordatenbank
 

@@ -25,7 +25,7 @@ Die Wissensdatenbank definiert Eigenschaften wie die Bedrock-KI-Modelle und das 
 
 .Schritte
 . Melden Sie sich bei Workload Factory an.
-. Wählen Sie im Kachel AI Workloads *Create Chatbot* aus.
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Registerkarte Wissensdatenbanken die Option *Wissensdatenbank hinzufügen* aus.
 . Konfigurieren Sie auf der Seite „Define Knowledge Base“ die Knowledge Base-Einstellungen:
 +
@@ -50,12 +50,19 @@ Erfahren Sie mehr über die verfügbaren Modelle, die Ihnen bei der Auswahl helf
 
 .. *Gesprächseinstieg*: Wählen Sie aus, ob Sie bis zu vier Gesprächseinstiegstelefonate bereitstellen möchten, die Benutzern angezeigt werden, die mit einem Chatbot interagieren, der diese Wissensdatenbank nutzt. Wir empfehlen, diese Einstellung zu aktivieren.
 +
-Wenn Sie Konversationsstarter aktivieren, ist standardmäßig „Automatischer Modus“ ausgewählt. Der „manuelle Modus“ kann erst aktiviert werden, nachdem Sie Datenquellen zu Ihrer Wissensdatenbank hinzugefügt haben. link:manage-knowledgebase.html["Erfahren Sie, wie Sie die Einstellungen der Wissensdatenbank ändern"].
+Wenn Sie Gesprächseinstieg aktivieren, ist standardmäßig der automatische Modus ausgewählt. Der „manuelle Modus“ kann erst aktiviert werden, nachdem Sie Datenquellen zu Ihrer Wissensdatenbank hinzugefügt haben. link:manage-knowledgebase.html["Erfahren Sie, wie Sie die Einstellungen der Wissensdatenbank ändern"].
+
+.. *FSX für ONTAP Dateisystem*: Wenn Sie eine neue Wissensdatenbank definieren, erstellt Workload Factory ein neues Amazon FSX für NetApp ONTAP Volumen, um es zu speichern. Wählen Sie einen vorhandenen Filesystem-Namen und eine SVM (auch Storage-VM genannt) aus, auf der das neue Volume erstellt werden soll.
+.. *Snapshot-Richtlinie*: Wählen Sie eine Snapshot-Richtlinie aus der Liste der vorhandenen Richtlinien aus, die im Workload Factory Storage Inventory definiert sind.
++
+Wenn die benötigte Snapshot-Richtlinie nicht vorhanden ist, können Sie https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["Erstellen einer Snapshot-Richtlinie"] auf der Storage-VM, die das Volume enthält, arbeiten.
 
 
 
 . Wählen Sie *Create Knowledge Base*, um die Wissensdatenbank zu GenAI hinzuzufügen.
-. Auf der nächsten Seite des Assistenten haben Sie die Möglichkeit, eine Datenquelle zu Ihrer neuen Wissensdatenbank hinzuzufügen oder den Prozess hier zu beenden, ohne eine Datenquelle hinzuzufügen. Wir empfehlen Ihnen, *Add Data source* auszuwählen und jetzt eine oder mehrere Datenquellen hinzuzufügen.
++
+Auf der nächsten Seite des Assistenten haben Sie die Möglichkeit, eine Datenquelle zu Ihrer neuen Wissensdatenbank hinzuzufügen oder den Prozess hier zu beenden, ohne eine Datenquelle hinzuzufügen. Wir empfehlen Ihnen, *Add Data source* auszuwählen und jetzt eine oder mehrere Datenquellen hinzuzufügen.
+
 
 
 
@@ -75,7 +82,16 @@ Die maximale Anzahl unterstützter Datenquellen beträgt 10.
 Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, einschließlich Domäne, IP-Adresse, Benutzername und Passwort.
 
 . *Wählen Sie eine Datenquelle*: Wählen Sie den Speicherort der Datenquelle basierend darauf, wo Sie die Dateien gespeichert haben. Dies kann ein ganzes Volume sein, oder nur ein bestimmter Ordner oder Unterordner im Volume, und wählen Sie *Weiter*.
-. *Define AI-Parameter*: Definieren Sie im Abschnitt *Chunk-Definition*, wie der Amazon Bedrock-Dienst den Inhalt der Datenquelle in Blöcke teilt, wenn die Wissensdatenbank abgefragt wird, zu der er gehört. Derzeit können Sie nur Sätze auswählen.
+. *Define AI-Parameter*: Definieren Sie im Abschnitt *Chunking-Strategie*, wie die GenAI-Engine den Inhalt der Datenquelle in Blöcke teilt, wenn die Datenquelle in eine Wissensdatenbank integriert ist. Sie können eine der folgenden Strategien wählen:
++
+** *Multi-Sentence Chunking*: Organisiert Informationen aus Ihrer Datenquelle in Satzbausteine. Sie können festlegen, wie viele Sätze jedes Stück ausmachen (bis zu 100).
+** *Überlappendes Chunking*: Organisiert Informationen aus Ihrer Datenquelle in zeichendefinierte Blöcke, die benachbarte Blöcke überlappen können. Sie können die Größe jedes Chunk in Zeichen auswählen und festlegen, wie viel sich jeder Chunk mit benachbarten Chunks überschneidet. Sie können eine Chunk-Größe von 50 bis 3000 Zeichen und einen Überlappungsprozentsatz von 1 bis 99 % konfigurieren.
++
+
+NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Speicherbedarf erheblich erhöhen, da die Abrufgenauigkeit nur geringfügig verbessert wird.
+
+
+
 . Im Abschnitt *permission aware*, der nur verfügbar ist, wenn sich die von Ihnen ausgewählte Datenquelle auf einem Volume befindet, das das SMB-Protokoll verwendet, können Sie die Auswahl aktivieren oder deaktivieren:
 +
 ** *Enabled*: Benutzer des Chatbot, die auf diese Wissensdatenbank zugreifen, erhalten nur Antworten auf Abfragen aus Datenquellen, auf die sie zugreifen können.

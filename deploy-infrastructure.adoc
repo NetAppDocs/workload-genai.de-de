@@ -69,16 +69,14 @@ Die Implementierung von GenAI muss sich in einer AWS Region befinden, für die A
 
 
 . Füllen Sie die Einträge im Abschnitt *Infrastruktureinstellungen* aus:
+
+
+. *Tags*: Geben Sie alle Tag-Schlüssel/Wert-Paare ein, die Sie auf alle AWS-Ressourcen anwenden möchten, die Teil dieser Bereitstellung sind.
+. *Schlüsselpaar*: Wählen Sie ein Schlüsselpaar aus, mit dem Sie eine sichere Verbindung zur NetApp GenAI Engine-Instanz herstellen können.
 +
-.. *FSX für ONTAP Dateisystem*: Wählen Sie das FSX für ONTAP Dateisystem und die Speicher-VM, wo die GenAI-Instanz-Datenbank-Volumes bereitgestellt werden, und geben Sie dann den Namen an, den Sie für das Volumen verwenden möchten.
-+
-Je nachdem, ob Workload Factory über die Anmeldeinformationen für das Dateisystem FSX for ONTAP verfügt, müssen Sie möglicherweise den Benutzernamen und das Kennwort eingeben.
-
-.. *Tags*: Geben Sie alle Tag-Schlüssel/Wert-Paare ein, die Sie auf alle AWS-Ressourcen anwenden möchten, die Teil dieser Bereitstellung sind.
-.. *Schlüsselpaar*: Wählen Sie ein Schlüsselpaar aus, mit dem Sie eine sichere Verbindung zur NetApp GenAI Engine-Instanz herstellen können.
+.. Wählen Sie *Deploy*, um die Bereitstellung zu starten.
 
 
-. Wählen Sie *Deploy*, um die Bereitstellung zu starten.
 
 
 .Ergebnis
@@ -88,7 +86,6 @@ Während des Bereitstellungsprozesses werden die folgenden Elemente eingerichtet
 
 * Das Netzwerk wird zusammen mit den privaten Endpunkten eingerichtet.
 * Die IAM-Rolle, das Instanzprofil und die Sicherheitsgruppe werden erstellt.
-* Das Volume für die GenAI Engine Datenbank (LanceDB) wird auf dem FSX für ONTAP Dateisystem erstellt.
 * Die Virtual Machine-Instanz für die GenAI-Engine wird bereitgestellt.
 * Amazon Bedrock ist so konfiguriert, dass Protokolle an Amazon CloudWatch Logs gesendet werden, wobei eine Protokollgruppe mit dem Präfix verwendet `/aws/bedrock/`wird.
 * Die GenAI-Engine ist so konfiguriert, dass sie Protokolle an Amazon CloudWatch-Protokolle sendet, wobei eine Protokollgruppe mit dem Namen verwendet `/netapp/wlmai/<tenancyAccountId>/randomId`wird, wobei `<tenancyAccountID>` dies der für den aktuellen Benutzer ist https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-account-identifier["BlueXP Konto-ID"^] .
