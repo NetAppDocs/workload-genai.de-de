@@ -63,6 +63,8 @@ sidebar:
     entries:
     - title: Für den Support anmelden
       url: "/support-registration.html"
+    - title: Fehlerbehebung
+      url: "/troubleshooting.html"
     - title: Holen Sie sich Hilfe
       url: "/get-help.html"
   - title: Rechtliche Hinweise

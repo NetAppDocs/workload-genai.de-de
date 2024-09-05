@@ -69,14 +69,12 @@ Die Implementierung von GenAI muss sich in einer AWS Region befinden, für die A
 
 
 . Füllen Sie die Einträge im Abschnitt *Infrastruktureinstellungen* aus:
-
-
-. *Tags*: Geben Sie alle Tag-Schlüssel/Wert-Paare ein, die Sie auf alle AWS-Ressourcen anwenden möchten, die Teil dieser Bereitstellung sind.
-. *Schlüsselpaar*: Wählen Sie ein Schlüsselpaar aus, mit dem Sie eine sichere Verbindung zur NetApp GenAI Engine-Instanz herstellen können.
 +
-.. Wählen Sie *Deploy*, um die Bereitstellung zu starten.
+.. *Tags*: Geben Sie alle Tag-Schlüssel/Wert-Paare ein, die Sie auf alle AWS-Ressourcen anwenden möchten, die Teil dieser Bereitstellung sind.
+.. *Schlüsselpaar*: Wählen Sie ein Schlüsselpaar aus, mit dem Sie eine sichere Verbindung zur NetApp GenAI Engine-Instanz herstellen können.
 
 
+. Wählen Sie *Deploy*, um die Bereitstellung zu starten.
 
 
 .Ergebnis
