@@ -53,7 +53,7 @@ Erfahren Sie mehr über die verfügbaren Modelle, die Ihnen bei der Auswahl helf
 Wenn Sie Gesprächseinstieg aktivieren, ist standardmäßig der automatische Modus ausgewählt. Der „manuelle Modus“ kann erst aktiviert werden, nachdem Sie Datenquellen zu Ihrer Wissensdatenbank hinzugefügt haben. link:manage-knowledgebase.html["Erfahren Sie, wie Sie die Einstellungen der Wissensdatenbank ändern"].
 
 .. *FSX für ONTAP Dateisystem*: Wenn Sie eine neue Wissensdatenbank definieren, erstellt Workload Factory ein neues Amazon FSX für NetApp ONTAP Volumen, um es zu speichern. Wählen Sie einen vorhandenen Filesystem-Namen und eine SVM (auch Storage-VM genannt) aus, auf der das neue Volume erstellt werden soll.
-.. *Snapshot-Richtlinie*: Wählen Sie eine Snapshot-Richtlinie aus der Liste der vorhandenen Richtlinien aus, die im Workload Factory Storage Inventory definiert sind.
+.. *Snapshot-Richtlinie*: Wählen Sie eine Snapshot-Richtlinie aus der Liste der vorhandenen Richtlinien aus, die im Workload Factory Storage Inventory definiert sind. Wiederkehrende Snapshots der Wissensdatenbank werden automatisch in einer Frequenz erstellt, die auf der von Ihnen ausgewählten Snapshot-Richtlinie basiert.
 +
 Wenn die benötigte Snapshot-Richtlinie nicht vorhanden ist, können Sie https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["Erstellen einer Snapshot-Richtlinie"] auf der Storage-VM, die das Volume enthält, arbeiten.
 
@@ -61,7 +61,10 @@ Wenn die benötigte Snapshot-Richtlinie nicht vorhanden ist, können Sie https:/
 
 . Wählen Sie *Create Knowledge Base*, um die Wissensdatenbank zu GenAI hinzuzufügen.
 +
-Auf der nächsten Seite des Assistenten haben Sie die Möglichkeit, eine Datenquelle zu Ihrer neuen Wissensdatenbank hinzuzufügen oder den Prozess hier zu beenden, ohne eine Datenquelle hinzuzufügen. Wir empfehlen Ihnen, *Add Data source* auszuwählen und jetzt eine oder mehrere Datenquellen hinzuzufügen.
+Während der Erstellung der Wissensdatenbank wird ein Fortschrittsindikator angezeigt.
+
++
+Nachdem die Wissensdatenbank erstellt wurde, haben Sie die Möglichkeit, eine Datenquelle zu Ihrer neuen Wissensdatenbank hinzuzufügen oder den Prozess zu beenden, ohne eine Datenquelle hinzuzufügen. Wir empfehlen Ihnen, *Add Data source* auszuwählen und jetzt eine oder mehrere Datenquellen hinzuzufügen.
 
 
 
@@ -104,4 +107,4 @@ NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Spei
 .Ergebnis
 Die Datenquelle wird in Ihre Wissensdatenbank eingebettet. Der Status ändert sich von „Einbetten“ in „eingebettet“, wenn die Datenquelle vollständig eingebettet ist.
 
-Nachdem Sie eine einzelne Datenquelle zur Wissensdatenbank hinzugefügt haben, können Sie sie lokal im Chatbot Simulator-Fenster testen und alle erforderlichen Änderungen vornehmen, bevor Sie den Chatbot Ihren Benutzern zur Verfügung stellen. Sie können die gleichen Schritte ausführen, um der Wissensdatenbank zusätzliche Datenquellen hinzuzufügen.
+Nachdem Sie der Wissensdatenbank eine einzelne Datenquelle hinzugefügt haben, können Sie diese lokal im Chatbot-Simulator testen und alle erforderlichen Änderungen vornehmen, bevor Sie den Chatbot Ihren Benutzern zur Verfügung stellen. Sie können die gleichen Schritte ausführen, um der Wissensdatenbank zusätzliche Datenquellen hinzuzufügen.

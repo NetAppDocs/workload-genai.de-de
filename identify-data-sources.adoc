@@ -23,7 +23,9 @@ Die maximale Anzahl unterstützter Datenquellen beträgt 10.
 
 == Speicherort der Datenquellen
 
-Datenquellen können auf einem einzelnen Volume oder in einem Ordner innerhalb eines Volumes, auf einer SMB-Freigabe oder auf einem NFS-Export auf einem Amazon FSX für NetApp ONTAP Filesystem gespeichert werden. Sie können keine einzelnen Dokumente in einem Volume oder Ordner auswählen. Daher sollten Sie sicherstellen, dass jedes Volume oder jeder Ordner, das Datenquellen enthält, keine fremden Dokumente enthält, die nicht in Ihre Wissensdatenbank integriert werden sollten.
+Datenquellen können auf einem einzelnen Volume oder in einem Ordner innerhalb eines Volumes, auf einer SMB-Freigabe oder auf einem NFS-Export auf einem Amazon FSX für NetApp ONTAP Filesystem gespeichert werden. Datenquellen können auch auf Amazon FSX for NetApp ONTAP Volumes in einer NetApp SnapMirror Datensicherungsbeziehung gespeichert werden.
+
+Sie können keine einzelnen Dokumente in einem Volume oder Ordner auswählen. Daher sollten Sie sicherstellen, dass jedes Volume oder jeder Ordner, das Datenquellen enthält, keine fremden Dokumente enthält, die nicht in Ihre Wissensdatenbank integriert werden sollten.
 
 Sie können jeder Knowledge Base mehrere Datenquellen hinzufügen, allerdings müssen alle auf FSX for ONTAP-Filesystemen liegen, auf die über Ihr AWS-Konto zugegriffen werden kann.
 
@@ -50,14 +52,17 @@ Die folgenden Datenquelldateiformate werden derzeit unterstützt.
 | Dateiformat | Erweiterung 
 
 
+| Durch Kommas getrennte Wertedatei | .Csv 
+
+
+| Markdown | .md 
+
+
+| Microsoft Word | .Doc oder .docx 
+
+
 | Nur Text | .Txt 
 
 
-| Tragbares Dokument | .Pdf 
-
-
-| Microsoft Word | .Docx 
-
-
-| Durch Kommas getrennte Wertedatei | .Csv 
+| Tragbares Dokumentformat | .Pdf 
 |===

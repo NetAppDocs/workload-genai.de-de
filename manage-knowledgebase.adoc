@@ -58,6 +58,64 @@ Wenn Sie den manuellen Modus für Gesprächseinstieg verwenden, können Sie hier
 
 
 
+== Schützen Sie eine Wissensdatenbank mit Snapshots
+
+Sie können Ihre Knowledge Base-Daten schützen, indem Sie Snapshots Ihrer Knowledge Base-Volumes erstellen und wiederherstellen. Sie können jederzeit von einem Snapshot wiederherstellen, um die vorherige Version der Wissensdatenbank wiederherzustellen.
+
+Snapshots können schneller und speichereffizienter als Backups sein und ermöglichen es Ihnen, jede Wissensdatenbank mit einer anderen Sicherungsrichtlinie zu schützen. Einige der Szenarien, in denen Snapshots nützlich sein können, sind:
+
+* Versehentlicher Datenverlust oder -Beschädigung
+* Wiederherstellung nach fehlerhaften Daten, die in die Wissensdatenbank aufgenommen werden
+* Testen verschiedener Datenquellen oder Chunking-Strategien und schnelles Zurücksetzen nach Abschluss des Tests
+
+
+
+
+=== Erstellen Sie einen Snapshot eines Knowledge-Base-Volumes
+
+Sie können den Status einer Wissensdatenbank speichern, indem Sie einen manuellen Snapshot des Knowledge Base-Volumes erstellen.
+
+.Schritte
+. Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie schützen möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
++
+Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus, die Liste aller eingebetteten Datenquellen und vieles mehr angezeigt.
+
+. Wählen Sie das Menü *actions* und dann *Snapshot > Neuen Snapshot erstellen*.
++
+Es wird eine Momentaufnahme der Wissensdatenbank erstellt.
+
+
+
+
+
+=== Stellen Sie einen Snapshot eines Knowledge-Base-Volumes wieder her
+
+Sie können jederzeit einen manuellen oder geplanten Snapshot eines Knowledge-Base-Volumes wiederherstellen.
+
+
+NOTE: Sie können einen Snapshot nicht mithilfe der Benutzeroberfläche Generative AI-Workloads wiederherstellen, wenn die auf dem Volume gespeicherte Datenbank beschädigt ist oder gelöscht wurde. Als Workaround können Sie den Snapshot mithilfe des auf dem ONTAP-Cluster wiederherstellen https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-restore.html["CLI VON ONTAP"^], auf dem das Volume gehostet wird.
+
+.Schritte
+. Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie wiederherstellen möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
++
+Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus, die Liste aller eingebetteten Datenquellen und vieles mehr angezeigt.
+
+. Wählen Sie das Menü *actions* und dann *Snapshot > Snapshot wiederherstellen*.
++
+Das Dialogfeld Snapshot-Auswahl wird angezeigt, in dem Sie eine Liste der Snapshots sehen können, die für diese Wissensdatenbank erstellt wurden.
+
+. (Optional) Wählen Sie die Option *laufende und geplante Scans anhalten nach dem Wiederherstellen des Snapshots* aus, wenn geplante und aktuell ausgeführte Datenquellenscans nach der Wiederherstellung des Snapshots fortgesetzt werden sollen.
++
+Diese Option ist standardmäßig aktiviert, um sicherzustellen, dass ein Scan nicht stattfindet, während sich die Wissensdatenbank in einem teilweise wiederhergestellten Zustand befindet, oder dass ein Scan keine frisch wiederhergestellte Wissensdatenbank mit älteren Daten aktualisiert.
+
+. Wählen Sie den zu wiederherstellenden Snapshot aus der Liste aus.
+. Wählen Sie *Wiederherstellen*.
+
+
+
+
 == Fügen Sie einer Wissensdatenbank zusätzliche Datenquellen hinzu
 
 Sie können zusätzliche Datenquellen in Ihre Wissensdatenbank einbetten, um diese mit zusätzlichen Unternehmensdaten zu füllen.
@@ -95,9 +153,9 @@ Die Datenquelle ist in Ihre Wissensdatenbank integriert.
 
 
 
-== Synchronisieren Sie Ihre Datenquellen mit der Wissensdatenbank
+== Synchronisieren Sie Ihre Datenquellen mit einer Wissensdatenbank
 
-Datenquellen werden automatisch einmal täglich mit der Wissensdatenbank synchronisiert, sodass Änderungen der Datenquelle im Chatbot berücksichtigt werden. Wenn Sie Änderungen an einer Ihrer Datenquellen vornehmen und die Daten sofort synchronisieren möchten, können Sie eine On-Demand-Synchronisierung durchführen.
+Datenquellen werden automatisch einmal täglich mit der zugehörigen Wissensdatenbank synchronisiert, sodass Änderungen der Datenquelle im Chatbot berücksichtigt werden. Wenn Sie Änderungen an einer Ihrer Datenquellen vornehmen und die Daten sofort synchronisieren möchten, können Sie eine On-Demand-Synchronisierung durchführen.
 
 Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Bedrock nur die Objekte in Ihren Datenquellen, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
 
