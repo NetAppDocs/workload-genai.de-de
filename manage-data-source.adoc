@@ -56,7 +56,7 @@ Die Einstellungen der Datenquelle werden aktualisiert und das KI-System synchron
 
 Sie können den Inhalt einer Datenquelle jederzeit ändern, um Ihre Unternehmensdaten hinzuzufügen oder zu aktualisieren. Wenn diese Datenquelle aktiv in einer Wissensdatenbank verwendet wird, müssen Sie die Datenquelle synchronisieren, damit sie mit der Wissensdatenbank neu indiziert wird. Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Bedrock nur die Objekte in Ihrem FSX für ONTAP-Volume, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
 
-Datenquellen werden automatisch einmal täglich mit der Wissensdatenbank synchronisiert, sodass Änderungen der Datenquelle im Chatbot berücksichtigt werden. Wenn Sie Änderungen an einer Datenquelle vornehmen und die Daten sofort synchronisieren möchten, können Sie link:manage-knowledgebase.html#synchronize-your-data-sources-with-the-knowledge-base["Führen Sie eine On-Demand-Synchronisierung durch"].
+Datenquellen werden automatisch einmal täglich mit der Wissensdatenbank synchronisiert, sodass Änderungen der Datenquelle im Chatbot berücksichtigt werden. Wenn Sie Änderungen an einer Datenquelle vornehmen und die Daten sofort synchronisieren möchten, können Sie link:manage-knowledgebase.html#synchronize-your-data-sources-with-a-knowledge-base["Führen Sie eine On-Demand-Synchronisierung durch"].
 
 
 

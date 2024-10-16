@@ -33,32 +33,30 @@ sidebar:
       url: "/deploy-infrastructure.html"
     - title: Verwenden Sie die externe Chatbot-Beispielanwendung
       url: "/example-chatbot-application.html"
-  - title: Nutzen Sie GenAI, um Wissensdatenbanken zu erstellen
+    - title: Komponenten für die NetApp GenAI Engine
+      url: "/genai-engine-instance.html"
+  - title: Nutzen Sie GenAI, um Wissensdatenbanken aufzubauen
     entries:
-    - title: Aufbau einer Wissensdatenbank
-      entries:
-      - title: Erstellen einer Wissensdatenbank
-        url: "/create-knowledgebase.html"
-      - title: Testen Sie eine Wissensdatenbank
-        url: "/test-knowledgebase.html"
-      - title: Aktivieren Sie die Authentifizierung
-        url: "/activate-authentication.html"
-      - title: Veröffentlichen Sie eine Wissensdatenbank
-        url: "/publish-knowledgebase.html"
-      - title: Erstellen Sie eine RAG-basierte KI-Applikation
-        url: "/create-application.html"
-      - title: Was Sie als Nächstes tun können
-        url: "/whats-next.html"
-    - title: Managen von Datenquellen
-      url: "/manage-data-source.html"
-    - title: Management von Wissensdatenbanken
-      url: "/manage-knowledgebase.html"
+    - title: Erstellen einer Wissensdatenbank
+      url: "/create-knowledgebase.html"
+    - title: Testen Sie eine Wissensdatenbank
+      url: "/test-knowledgebase.html"
+    - title: Aktivieren Sie die Authentifizierung
+      url: "/activate-authentication.html"
+    - title: Veröffentlichen Sie eine Wissensdatenbank
+      url: "/publish-knowledgebase.html"
+    - title: Erstellen Sie eine RAG-basierte KI-Applikation
+      url: "/create-application.html"
+    - title: Was Sie als Nächstes tun können
+      url: "/whats-next.html"
   - title: GenAI verwalten
     entries:
     - title: Management der GenAI-Infrastruktur
       url: "/manage-infrastructure.html"
-    - title: Komponenten für die NetApp GenAI Engine
-      url: "/genai-engine-instance.html"
+    - title: Management von Wissensdatenbanken
+      url: "/manage-knowledgebase.html"
+    - title: Managen von Datenquellen
+      url: "/manage-data-source.html"
   - title: Wissen und Support
     entries:
     - title: Für den Support anmelden
