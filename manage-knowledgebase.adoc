@@ -49,9 +49,13 @@ Jedes Mal, wenn Sie Datenquellen in der Wissensdatenbank hinzufügen, ändern od
 Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus, die Liste aller eingebetteten Datenquellen und vieles mehr angezeigt.
 
 . Wählen Sie das Menü *Aktionen* und dann *Wissensdatenbank bearbeiten*.
-. Auf der Seite Wissensdatenbank bearbeiten können Sie den Namen der Wissensdatenbank, die Beschreibung, das Einbettungsmodell und das Chatmodell ändern, ob Gesprächseinstiege automatisch oder manuell erstellt werden, und die Snapshot-Richtlinie, die für das Volume verwendet wird, das die Wissensdatenbank enthält.
+. Auf der Seite „Wissensdatenbank bearbeiten“ können Sie den Namen der Wissensdatenbank, die Beschreibung, das Einbettungsmodell, das Chatmodell, die Aktivierung von Data Guardrails ändern, auswählen, ob Gesprächsstarter automatisch oder manuell erstellt werden und die Snapshot-Richtlinie, die für das Volume verwendet wird, das die Wissensdatenbank enthält.
 +
 Wenn Sie den manuellen Modus für Gesprächseinstieg verwenden, können Sie hier auch den Gesprächseinstieg ändern.
+
++
+
+NOTE: Jeder Knowledge Base Scan, der Einbettung, Kosten beinhaltet. Wenn die Datenguardrails nach Erstellung einer Wissensdatenbank aktiviert werden, wird die Wissensdatenbank erneut gescannt und verursacht Kosten.
 
 . Wählen Sie *Speichern*, nachdem Sie Ihre Änderungen vorgenommen haben.
 

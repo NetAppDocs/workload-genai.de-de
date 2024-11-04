@@ -13,9 +13,22 @@ summary: Nachdem Sie die KI-Infrastruktur bereitgestellt und die Datenquellen er
 [role="lead"]
 Nachdem Sie die KI-Infrastruktur bereitgestellt und die Datenquellen ermittelt haben, die Sie aus Ihren FSX für ONTAP-Datastores in Ihre Wissensdatenbank integrieren möchten, können Sie mithilfe von Workload Factory die Knowledge Base aufbauen. In diesem Schritt definieren Sie auch die Merkmale von KI und stellen den Gesprächseinstieg her.
 
-Eine Wissensdatenbank kann verwendet werden, ohne Datenquellen aus Ihrem Unternehmen zu integrieren. In diesem Fall liefert eine mit der Wissensdatenbank integrierte Anwendung nur Ergebnisse aus öffentlich zugänglichen Informationen im Internet. Dies wird als „_public Mode_“-Integration bezeichnet.
+.Über diese Aufgabe
+Wissensdatenbanken haben zwei Datenintegrationsmodalitäten - _public Mode_ und _Enterprise Mode_.
 
-In den meisten Fällen möchten Sie Datenquellen aus Ihrem Unternehmen in die Wissensdatenbank integrieren. Dies wird als _Enterprise Mode_ Integration bezeichnet, da es Wissen aus Ihrem Unternehmen liefert.
+Öffentlicher Modus:: Eine Wissensdatenbank kann verwendet werden, ohne Datenquellen aus Ihrem Unternehmen zu integrieren. In diesem Fall liefert eine mit der Wissensdatenbank integrierte Anwendung nur Ergebnisse aus öffentlich zugänglichen Informationen im Internet. Dies wird als „_public Mode_“-Integration bezeichnet.
+Enterprise-Modus:: In den meisten Fällen möchten Sie Datenquellen aus Ihrem Unternehmen in die Wissensdatenbank integrieren. Dies wird als _Enterprise Mode_ Integration bezeichnet, da es Wissen aus Ihrem Unternehmen liefert.
++
+--
+Datenquellen Ihres Unternehmens können Private Identity Information (PII) enthalten. Um diese sensiblen Informationen zu schützen, können Sie _Data Guardrails_ beim Erstellen und Konfigurieren von Wissensdatenbanken aktivieren. Data Guardrails, powered by BlueXP -Klassifizierung, identifiziert und maskiert PII, so dass sie nicht zugänglich und nicht abrufbar sind.
+
+link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mehr zur BlueXP Klassifizierung"^].
+
+
+NOTE: Datenguardrails können jederzeit aktiviert oder deaktiviert werden. Wenn Sie die Data Guardrails-Aktivierung wechseln, scannt Workload Factory die gesamte Wissensdatenbank von Grund auf, was zu Kosten führt.
+
+--
+
 
 
 
@@ -47,6 +60,21 @@ https://aws.amazon.com/bedrock/titan/["Erfahren Sie mehr über Amazon Titan"^]
 .. *Chat-Modell*: Wählen Sie aus Claude-Chat-Modellen, die in Amazon Bedrock integriert sind. Beachten Sie, dass Sie das Chatmodell von Amazon Bedrock bereits aktiviert haben müssen.
 +
 Erfahren Sie mehr über die verfügbaren Modelle, die Ihnen bei der Auswahl helfen: https://aws.amazon.com/bedrock/claude/["Anthropic's Claude in Amazon Bedrock"^]
+
+.. *Data Guardrails*: Wählen Sie aus, ob Sie Data Guardrails aktivieren oder deaktivieren möchten. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mit BlueXP  Klassifizierung als Basis für Daten-Guardrails lernen"^].
++
+Die folgenden Voraussetzungen müssen erfüllt sein, um die Data Guardrails zu aktivieren.
+
++
+*** Für die Kommunikation mit der BlueXP -Klassifizierung ist ein Servicekonto erforderlich. Sie müssen die Rolle „_Organisation admin_“ auf Ihrem BlueXP -Mandantenkonto haben, um Servicekonten erstellen zu können. Ein Mitglied mit der Rolle „Organisationsadministrator“ kann alle Aktionen in BlueXP  ausführen. link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Erfahren Sie, wie Sie einem Mitglied in BlueXP  eine Rolle hinzufügen"^]
+*** Sie müssen die folgenden Schritte ausführen, wie in beschriebenlink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Dokumentation der BlueXP Klassifizierung"^]:
++
+.... BlueXP Connector erstellen
+.... Stellen Sie sicher, dass Ihre Umgebung die Voraussetzungen erfüllt
+.... Implementieren Sie die BlueXP Klassifizierung
+
+
+
 
 .. *Gesprächseinstieg*: Wählen Sie aus, ob Sie bis zu vier Gesprächseinstiegstelefonate bereitstellen möchten, die Benutzern angezeigt werden, die mit einem Chatbot interagieren, der diese Wissensdatenbank nutzt. Wir empfehlen, diese Einstellung zu aktivieren.
 +
