@@ -67,6 +67,7 @@ Die folgenden Voraussetzungen müssen erfüllt sein, um die Data Guardrails zu a
 
 +
 *** Für die Kommunikation mit der BlueXP -Klassifizierung ist ein Servicekonto erforderlich. Sie müssen die Rolle „_Organisation admin_“ auf Ihrem BlueXP -Mandantenkonto haben, um Servicekonten erstellen zu können. Ein Mitglied mit der Rolle „Organisationsadministrator“ kann alle Aktionen in BlueXP  ausführen. link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Erfahren Sie, wie Sie einem Mitglied in BlueXP  eine Rolle hinzufügen"^]
+*** Die KI-Engine muss Zugriff auf das haben link:https://console.bluexp.netapp.com/["BlueXP-Konsole"^]
 *** Sie müssen die folgenden Schritte ausführen, wie in beschriebenlink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Dokumentation der BlueXP Klassifizierung"^]:
 +
 .... BlueXP Connector erstellen

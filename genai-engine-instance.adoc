@@ -42,6 +42,8 @@ Private Endpunkte:: Wenn sie auf der Ziel-VPC nicht bereits vorhanden sind, erst
 * Amazon Elastic Container Registry (ECR)
 * Amazon S3
 * AWS System Manager (SSM)
+* Amazon FSX für NetApp ONTAP
+* Amazon CloudWatch
 
 
 --
