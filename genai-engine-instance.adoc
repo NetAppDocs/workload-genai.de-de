@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: genai-engine-instance.html 
 keywords: genai engine, instance, ec2, role, iam role, permissions, security group, inbound, outbound, private endpoints 
-summary: Bei der Bereitstellung der GenAI-Infrastruktur erstellt Workload Factory eine EC2-Instanz für die GenAI-Engine. Außerdem werden für diese Instanz eine IAM-Rolle, eine Sicherheitsgruppe und private Endpunkte erstellt. Vielleicht möchten Sie mehr Details zu diesen Komponenten erfahren, die Workload Factory in Ihrer AWS-Umgebung erstellt. 
+summary: Bei der Implementierung der GenAI-Infrastruktur erstellt die Workload Factory eine EC2 Instanz für die GenAI Engine. Außerdem werden für diese Instanz eine IAM-Rolle, eine Sicherheitsgruppe und private Endpunkte erstellt. Vielleicht möchten Sie mehr Details zu diesen Komponenten erfahren, die von den Workloads in Ihrer AWS-Umgebung werksseitig erstellt werden. 
 ---
 = Komponenten für die NetApp GenAI Engine
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Bei der Bereitstellung der GenAI-Infrastruktur erstellt Workload Factor
 
 
 [role="lead"]
-Bei der Bereitstellung der GenAI-Infrastruktur erstellt Workload Factory eine EC2-Instanz für die GenAI-Engine. Außerdem werden für diese Instanz eine IAM-Rolle, eine Sicherheitsgruppe und private Endpunkte erstellt. Vielleicht möchten Sie mehr Details zu diesen Komponenten erfahren, die Workload Factory in Ihrer AWS-Umgebung erstellt.
+Bei der Implementierung der GenAI-Infrastruktur erstellt die Workload Factory eine EC2 Instanz für die GenAI Engine. Außerdem werden für diese Instanz eine IAM-Rolle, eine Sicherheitsgruppe und private Endpunkte erstellt. Vielleicht möchten Sie mehr Details zu diesen Komponenten erfahren, die von den Workloads in Ihrer AWS-Umgebung werksseitig erstellt werden.
 
 EC2 Instanztyp:: m5.large
 IAM-Rolle:: Die GenAI-Engine-Instanz benötigt die Berechtigungen, um Datenblöcke an das Einbettungsmodell in Amazon Bedrock zu senden und mit dem NetApp AI Service Back-End zu kommunizieren. Die IAM-Rolle umfasst die folgenden Berechtigungen:
@@ -34,7 +34,7 @@ IAM-Rolle:: Die GenAI-Engine-Instanz benötigt die Berechtigungen, um Datenblöc
 ----
 --
 Sicherheitsgruppe:: Die Regeln für ausgehende Anrufe sind für den gesamten Datenverkehr offen, während die Regeln für eingehende Anrufe vollständig geschlossen sind.
-Private Endpunkte:: Wenn sie auf der Ziel-VPC nicht bereits vorhanden sind, erstellt Workload Factory private Endpunkte für die EC2-Instanz der GenAI Engine, sodass die IT mit den folgenden AWS-Services kommunizieren kann:
+Private Endpunkte:: Wenn die Ziel-VPC nicht bereits vorhanden ist, erstellt die Workload-Fabrik private Endpunkte für die EC2-Instanz der GenAI Engine, sodass die IT mit den folgenden AWS-Services kommunizieren kann:
 +
 --
 * Amazonas-Grundgestein

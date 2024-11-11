@@ -56,7 +56,7 @@ Geben Sie Ihre AWS-Zugangsdaten ein und wählen Sie das FSX for ONTAP-Dateisyste
 Stellen Sie sicher, dass Ihre Umgebung den Anforderungen entspricht link:requirements.html["Den Anforderungen gerecht zu werden"] , bevor Sie mit diesem Verfahren beginnen.
 
 .Schritte
-. Melden Sie sich bei Workload Factory an.
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Sehen Sie sich das Infrastrukturdiagramm an und wählen Sie *Weiter*.
 . Füllen Sie die Einträge im Abschnitt *AWS-Einstellungen* aus:

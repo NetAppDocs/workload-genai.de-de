@@ -22,4 +22,4 @@ Einige der Aufgaben, die Sie zur Verwaltung Ihrer Knowledge-Base-Komponenten dur
 * Sichern und schützen Sie die wichtigen Daten auf Ihrem FSX für ONTAP-Dateisystem, um sicherzustellen, dass Ihre Wissensdatenbank-Daten und andere Infrastrukturkomponenten immer verfügbar sind.
 
 
-Informationen zum Verwalten Ihres FSX für ONTAP-Dateisystems finden Sie unter, um die https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Workload Factory für Amazon FSX für NetApp ONTAP-Dokumentation"^] Backup- und Schutzfunktionen anzuzeigen, die Sie verwenden können.
+Informationen zum Verwalten Ihres FSX für ONTAP-Dateisystems finden Sie unter, um die https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Workload-Fabrik für Amazon FSX für NetApp ONTAP-Dokumentation"^] Backup- und Schutzfunktionen anzuzeigen, die Sie verwenden können.

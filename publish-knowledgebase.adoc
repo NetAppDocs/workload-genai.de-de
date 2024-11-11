@@ -14,11 +14,12 @@ summary: Nachdem Sie Ihre Wissensdatenbank lokal erstellt und getestet haben, k�
 Nachdem Sie Ihre Wissensdatenbank lokal erstellt und getestet haben, können Sie die Wissensdatenbank veröffentlichen, sodass sie in eine Chatbot-Anwendung integriert werden kann, mit der Ihre Benutzer die Wissensdatenbank abfragen können.
 
 .Über diese Aufgabe
-Durch die Veröffentlichung der Wissensdatenbank können Sie diese in Chat-Anwendungen verwenden. Die Veröffentlichungsaktion löst aus, dass die Workload Factory API eindeutige Endpunkte generiert und veröffentlicht. Nach der Veröffentlichung wird die Wissensdatenbank für Chat-Anwendungen zugänglich, und die API-Endpunkte sind für die Integration bereit.
+Durch die Veröffentlichung der Wissensdatenbank können Sie diese in Chat-Anwendungen verwenden. Die Veröffentlichungsaktion löst aus, dass die Workload-Factory-API eindeutige Endpunkte generiert und veröffentlicht. Nach der Veröffentlichung wird die Wissensdatenbank für Chat-Anwendungen zugänglich, und die API-Endpunkte sind für die Integration bereit.
 
 Jede von Ihnen veröffentlichte Wissensdatenbank verfügt über eindeutige Endpunkte.
 
 .Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie veröffentlichen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 +
@@ -33,7 +34,7 @@ Sie können jetzt Details zum eindeutigen Endpunkt für die Wissensdatenbank abr
 
 . Wählen Sie neben dem veröffentlichten Status *Ansicht*.
 +
-Details zum Zugriff auf die Wissensdatenbank mithilfe der Workload Factory API werden angezeigt.
+Es werden Details zum Zugriff auf die Wissensdatenbank mithilfe der Workload Factory API angezeigt.
 
 . Kopieren Sie im Dialogfeld *veröffentlichte Informationen anzeigen* die API-Endpunkte, mit denen Sie die Wissensdatenbank in eine Anwendung integrieren können.
 +

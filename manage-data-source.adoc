@@ -20,7 +20,8 @@ Nachdem Sie eine Wissensdatenbank mit Datenquellen auf Ihrem FSX für ONTAP-Date
 Sie können Informationen über den Inhalt einer Datenquelle anzeigen und deren Einbettungsstatus mit der Wissensdatenbank anzeigen. Da eine Datenquelle Teil einer Wissensdatenbank ist, müssen Sie zunächst die Wissensdatenbank öffnen, bevor Sie die Details der Datenquelle anzeigen können.
 
 .Schritte
-. Wählen Sie im Navigationsmenü *AI*.
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie im Menü Workload Factory Navigation die Option *AI*.
 . Wählen Sie die Wissensdatenbank aus, in der sich die Datenquelle befindet, und wählen Sie dann image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten* aus.
 +
 Im unteren Teil der Seite werden die Datenquellen aufgelistet, die Teil dieser Wissensdatenbank sind.
@@ -38,6 +39,7 @@ Außerdem werden die Einbettungsdaten aufgelistet, und es wird angegeben, ob die
 Sie können Informationen zu einer Datenquelle bearbeiten, die Sie in eine Wissensdatenbank integriert haben. Die meisten Informationen werden behoben, nachdem Sie einer Wissensdatenbank eine Datenquelle hinzugefügt haben. Sie können jedoch Änderungen an der Chunking-Definition und -Konfiguration sowie an der Berechtigungssicherung vornehmen (bei Verwendung des SMB-Protokolls auf dem Datenquellen-Volume).
 
 .Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, in der sich die Datenquelle befindet, und wählen Sie dann *Wissensdatenbank verwalten* aus image:icon-action.png["Die Optionsschaltfläche"] .
 +
 Im unteren Teil der Seite werden die Datenquellen aufgelistet, die Teil dieser Wissensdatenbank sind.
@@ -65,6 +67,7 @@ Datenquellen werden automatisch einmal täglich mit der Wissensdatenbank synchro
 Wenn Sie keine Datenquelle mehr benötigen, um Teil Ihrer Wissensdatenbank zu sein, können Sie sie löschen.
 
 .Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie auf der Bestandsseite der Wissensdatenbank die Wissensdatenbank aus, in der sich die Datenquelle befindet, und wählen Sie dann *Wissensdatenbank verwalten* aus image:icon-action.png["Die Optionsschaltfläche"] .
 +
 Im unteren Teil der Seite werden die Datenquellen aufgelistet, die Teil dieser Wissensdatenbank sind.

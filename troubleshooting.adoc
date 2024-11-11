@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: troubleshooting.html 
 keywords: support registration, register for support, support, nss account, add nss account, 
-summary: Bevor Sie einen Support-Fall beim technischen NetApp eröffnen können, müssen Sie ein NetApp Support Site Konto bei Workload Factory hinzufügen und sich anschließend für Support registrieren. 
+summary: Bevor Sie einen Support-Fall beim technischen NetApp eröffnen können, müssen Sie ein NetApp Support Site Konto zum Workload Factory hinzufügen und sich anschließend für Support registrieren. 
 ---
 = Fehlerbehebung
 :allow-uri-read: 
@@ -24,15 +24,15 @@ Wenn Sie eines dieser Probleme haben, können Sie mithilfe der Schritte in der S
 | Werden | Problem | Ursache | Behelfslösung 
 
 
-| Einsatz | Bereitstellung schlägt fehl, da das Volume bereits vorhanden ist. | Workload Factory für GenAI muss während des Bereitstellungsprozesses ein neues Volume erstellen, aber ein Volume existiert bereits mit dem von Ihnen angegebenen Namen. | Geben Sie einen eindeutigen Namen für das neue Volume an, und versuchen Sie es erneut. 
+| Einsatz | Bereitstellung schlägt fehl, da das Volume bereits vorhanden ist. | Die Workload-Fabrik für GenAI muss während des Bereitstellungsprozesses ein neues Volume erstellen, aber ein Volume ist bereits mit dem angegebenen Namen vorhanden. | Geben Sie einen eindeutigen Namen für das neue Volume an, und versuchen Sie es erneut. 
 
 
-| Einsatz | Die Bereitstellung schlägt fehl, da Workload Factory für GenAI das Volume nicht mounten kann. | Mindestens einer der für FSX for NetApp ONTAP erforderlichen eingehenden Ports wird geschlossen oder gefiltert.  a| 
+| Einsatz | Die Bereitstellung schlägt fehl, da die Workload-Fabrik für GenAI das Volume nicht mounten kann. | Mindestens einer der für FSX for NetApp ONTAP erforderlichen eingehenden Ports wird geschlossen oder gefiltert.  a| 
 Öffnen Sie die unter aufgeführten Ports https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/reference-security-groups-fsx.html#inbound-rules["Sicherheitsgruppenregeln für FSX für ONTAP"^].
 
 
 
-| Wartung | Die von Workload Factory für GenAI verwendete Docker Back-End-Instanz konnte nicht gestartet werden. | Das Volume wurde gelöscht und die EC2 Instanz neu gestartet.  a| 
+| Wartung | Die von der Workload-Fabrik für GenAI verwendete Docker Back-End-Instanz konnte nicht gestartet werden. | Das Volume wurde gelöscht und die EC2 Instanz neu gestartet.  a| 
 Führen Sie die folgenden Wiederherstellungsschritte durch:
 
 .Schritte
@@ -68,5 +68,5 @@ volumes:
 
 
 
-| Wartung | Die von Workload Factory für GenAI verwendete Docker Back-End-Instanz konnte nicht gestartet werden. | Das Root-Volume wurde gelöscht. | Erstellen Sie ein Volume mit einem Namen und Pfad und starten Sie dann die Backend-Docker-Instanz von Amazon EC2 neu. 
+| Wartung | Die von der Workload-Fabrik für GenAI verwendete Docker Back-End-Instanz konnte nicht gestartet werden. | Das Root-Volume wurde gelöscht. | Erstellen Sie ein Volume mit einem Namen und Pfad und starten Sie dann die Backend-Docker-Instanz von Amazon EC2 neu. 
 |===

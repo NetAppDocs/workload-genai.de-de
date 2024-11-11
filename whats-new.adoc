@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
-summary: Informieren Sie sich über die Neuerungen bei der KI-Workload-Funktion von Workload Factory. 
+summary: Informieren Sie sich über die Neuerungen bei den KI-Workloads, die den Workload-Betrieb unterstützen. 
 ---
 = Was ist neu
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Informieren Sie sich über die Neuerungen bei der KI-Workload-Funktion 
 
 
 [role="lead"]
-Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloads von Workload Factory.
+Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloads der Workload-Farm.
 
 
 
@@ -87,7 +87,7 @@ Generative KI-Workloads sind jetzt in Amazon CloudWatch Logs integriert, sodass 
 
 === Beispiel für eine Chatbot-Anwendung
 
-Mit der GenAI-Beispielanwendung von NetApp Workload Factory können Sie die Authentifizierung und den Abruf aus Ihrer veröffentlichten Wissensdatenbank von NetApp Workload Factory testen, indem Sie direkt mit dieser in einer webbasierten Chatbot-Anwendung interagieren.
+Mit der GenAI-Beispielanwendung für NetApp-Workload-Fabriken können Sie die Authentifizierung und den Abruf aus Ihrer veröffentlichten NetApp Workload Factory Knowledge Base testen, indem Sie direkt mit dieser in einer webbasierten Chatbot-Anwendung interagieren.
 
 
 
@@ -95,6 +95,6 @@ Mit der GenAI-Beispielanwendung von NetApp Workload Factory können Sie die Auth
 
 
 
-=== Erstveröffentlichung der Workload Factory für GenAI
+=== Erstversion der Workload-Fabrik für GenAI
 
 Die erste Version umfasst die Fähigkeit, eine Wissensdatenbank zu entwickeln, die durch die Einbettung der Unternehmensdaten angepasst wird. Auf die Wissensdatenbank kann über eine Chatbot-Anwendung für Ihre Benutzer zugegriffen werden. Diese Funktion gewährleistet präzise und relevante Antworten auf unternehmensspezifische Fragen und verbessert so die Zufriedenheit und Produktivität aller Benutzer.

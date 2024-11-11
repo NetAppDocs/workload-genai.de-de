@@ -2,16 +2,20 @@
 sidebar: sidebar 
 permalink: ai-workloads-overview.html 
 keywords: overview, concepts, features, use case, workloads, AI, Bedrock, knowledge base, chatbot 
-summary: Workload Factory für GenAI ermöglicht die Integration von Amazon FSX für NetApp ONTAP Filesystemen mit GenAI-Basismodellen. So erhalten Sie hochperformanten Storage mit umfassenden Funktionen für Schutz, Sicherheit und Kostenoptimierung für Ihre KI-Datensätze. 
+summary: Workload Factory für GenAI ermöglicht die Integration von Amazon FSX für NetApp ONTAP-Filesystemen mit GenAI-Basismodellen. So erhalten Sie hochperformanten Storage mit umfassenden Funktionen für Schutz, Sicherheit und Kostenoptimierung für Ihre KI-Datensätze. 
 ---
-= Erfahren Sie mehr über Workload Factory für GenAI
+= Erfahren Sie mehr über die Workload-Fabrik für GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Workload Factory für GenAI ermöglicht die Integration von Amazon FSX für NetApp ONTAP Filesystemen mit GenAI-Basismodellen. So erhalten Sie hochperformanten Storage mit umfassenden Funktionen für Schutz, Sicherheit und Kostenoptimierung für Ihre KI-Datensätze.
+Workload Factory für GenAI ermöglicht die Integration von Amazon FSX für NetApp ONTAP-Filesystemen mit GenAI-Basismodellen. So erhalten Sie hochperformanten Storage mit umfassenden Funktionen für Schutz, Sicherheit und Kostenoptimierung für Ihre KI-Datensätze.
+
+
+
+== Was ist die Workload-Fabrik für GenAI?
 
 Mit der Workload Factory for GenAI können Sie Unternehmensdatenquellen auf Amazon FSX for NetApp ONTAP mit generativen KI-Applikationen nutzen. Mithilfe des Frameworks Retrieval Augmentation Generation (RAG) können Sie schnell Datenquellen mit Foundation-Modellen verbinden, die über Amazon Bedrock verfügbar sind, um generative KI-gestützte Anwendungen wie virtuelle Assistenten, Q&A-Chatbots, Dokumentzusammenfassung, Inhaltserstellung usw. zu entwickeln
 
@@ -19,11 +23,13 @@ Durch den Einsatz von Generative AI mit Ihren Unternehmensdaten können Sie Ihr 
 
 Durch die Entwicklung einer GenAI-Applikation, die auf Ihre Unternehmensdaten zugeschnitten ist, können Sie Ihr eigenes Wissen und Ihre Fachkenntnisse nutzen. Diese Anpassungsfunktion sorgt für präzise und relevante Antworten auf unternehmensspezifische Fragen und verbessert die Zufriedenheit und Produktivität aller Benutzer.
 
+Weitere Informationen zur Workload Factory finden Sie im https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["Übersicht über die Workload-Fabrik"^].
+
 
 
 == Vorteile des Einsatzes von GenAI zur Erstellung generativer KI-Applikationen
 
-Workload Factory for GenAI vereinfacht die Bereitstellung der Infrastruktur für die Erstellung generativer KI-Applikationen mithilfe von Retrieval Augmented Generation (RAG). Im Detail bietet GenAI folgende Vorteile:
+Die Workload-Farm für GenAI vereinfacht die Implementierung von Infrastrukturen, die für die Erstellung generativer KI-Applikationen mithilfe von Retrieval Augmented Generation (RAG) erforderlich sind. Im Detail bietet GenAI folgende Vorteile:
 
 * Durch die Automatisierung von GenAI können IT-Administratoren und -Entwickler die Applikationsentwicklung beschleunigen, ohne umfassende Kenntnisse über Dateninfrastruktur, Grundlagen und Sprachmodelle benötigen. Datenadministratoren und -Entwickler können auf einfache und schnelle Weise unternehmenseigene Wissensdatenbanken erstellen, in die unstrukturierte Daten Ihres Unternehmens für generative KI-Applikationen eingebettet werden.
 * Erhöhen Sie die Sicherheit, indem Sie Benutzerberechtigungen in Dateien erhalten, die in Knowledge-Base eingebettet sind, um sicherzustellen, dass Datensicherheit und Datenschutz erhalten bleiben. Eine Anwendung, wie ein Chatbot, kann so entwickelt werden, dass nur authentifizierte Benutzer Antworten erhalten, die auf Daten basieren, auf die die Benutzer zugreifen können.
@@ -43,7 +49,7 @@ image:diagram-chatbot-processing.png["Ein Diagramm, das die wichtigsten Komponen
 
 
 
-== So hilft Workload Factory for GenAI beim Aufbau generativer KI-Anwendungen
+== Wie die Workload-Fabrik für GenAI zum Erstellen generativer KI-Applikationen hilft
 
 GenAI hilft wie folgt, generative KI-Applikationen mit RAG zu erstellen:
 
@@ -56,9 +62,22 @@ GenAI hilft wie folgt, generative KI-Applikationen mit RAG zu erstellen:
 
 
 
+== Tools zur Verwendung der Workload Factory
+
+Sie können die BlueXP -Workload-Fabrik mit den folgenden Tools verwenden:
+
+* *Workload Factory Konsole*: Die Workload Factory Konsole bietet eine visuelle Schnittstelle, die Ihnen einen ganzheitlichen Blick auf Ihre Anwendungen und Projekte gibt.
+* *BlueXP -Konsole*: Die BlueXP -Konsole bietet eine Hybrid-Interface-Erfahrung, so dass Sie BlueXP  Workload Factory zusammen mit anderen BlueXP -Diensten nutzen können.
+* *REST-API*: Mit REST-APIs für Workload Factory können Sie Ihre FSX for ONTAP-Dateisysteme und andere AWS-Ressourcen implementieren und managen.
+* *CloudFormation*: AWS CloudFormation-Code ermöglicht die Durchführung der in der Workload-Factory-Konsole definierten Aktionen für die Modellierung, Bereitstellung und das Management von AWS- und Drittanbieterressourcen vom CloudFormation-Stack in Ihrem AWS-Konto.
+* *Terraform BlueXP -Workload-Factory-Provider*: Mit Terraform können Sie Infrastruktur-Workflows erstellen und managen, die in der Workload-Factory-Konsole generiert werden.
+
+
+
+
 == Kosten
 
-Die GenAI Funktion von Workload Factory ist mit keinerlei Kosten verbunden.
+Die GenAI Funktion der Workload-Farm ist mit keinerlei Kosten verbunden.
 
 Sie müssen jedoch für die von Ihnen implementierten AWS Ressourcen zahlen, um die generative KI-Infrastruktur unterstützen zu können. Sie zahlen beispielsweise für AWS den Amazon Bedrock AI Service, FSX for ONTAP File-System und Storage-Kapazität und die EC2-Instanz der GenAI Engine.
 
@@ -66,4 +85,4 @@ Sie müssen jedoch für die von Ihnen implementierten AWS Ressourcen zahlen, um 
 
 == Lizenzierung
 
-Für die Nutzung der KI-Funktionen von Workload Factory sind keine speziellen Lizenzen von NetApp erforderlich.
+Für die Nutzung der KI-Funktionen der Workload-Farm sind keine speziellen Lizenzen erforderlich NetApp.

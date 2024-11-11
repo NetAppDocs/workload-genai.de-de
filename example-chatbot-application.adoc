@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: example-chatbot-application.html 
 keywords: ai, example, sample, chatbot, app, application, local 
-summary: Sie können eine Chatbot-Beispielanwendung installieren und ausführen, um Ihre Wissensdatenbanken zu testen und zu lernen, wie Sie mit der Workload Factory API Ihre eigene generative KI-Anwendung erstellen. 
+summary: Sie können eine Chatbot-Beispielanwendung installieren und ausführen, um Ihre Wissensdatenbanken zu testen und zu lernen, wie Sie die Workload Factory API zur Erstellung Ihrer eigenen generativen KI-Anwendung verwenden. 
 ---
 = Verwenden Sie die externe Chatbot-Beispielanwendung
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Sie können eine Chatbot-Beispielanwendung installieren und ausführen,
 
 
 [role="lead"]
-Nachdem Sie eine Wissensdatenbank konfiguriert, aktiviert und veröffentlicht haben, können externe Anwendungsentwickler die von NetApp bereitgestellte Chatbot-Beispielanwendung für Open Source konfigurieren und ausführen, um mit Ihrer Wissensdatenbank zu interagieren und zu erfahren, wie Sie mit der Workload Factory API ihre eigenen generativen KI-Anwendungen erstellen können.
+Nachdem Sie eine Wissensdatenbank konfiguriert, aktiviert und veröffentlicht haben, können externe Anwendungsentwickler die von NetApp bereitgestellte Chatbot-Beispielanwendung für Open Source konfigurieren und ausführen, um mit Ihrer Wissensdatenbank zu interagieren und zu erfahren, wie Sie die Workload Factory API zum Erstellen eigener generativer KI-Anwendungen verwenden.
 
 .Schritte
 . link:create-knowledgebase.html["Erstellen einer Wissensdatenbank"].

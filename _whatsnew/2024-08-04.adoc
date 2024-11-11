@@ -12,4 +12,4 @@ Generative KI-Workloads sind jetzt in Amazon CloudWatch Logs integriert, sodass 
 
 === Beispiel für eine Chatbot-Anwendung
 
-Mit der GenAI-Beispielanwendung von NetApp Workload Factory können Sie die Authentifizierung und den Abruf aus Ihrer veröffentlichten Wissensdatenbank von NetApp Workload Factory testen, indem Sie direkt mit dieser in einer webbasierten Chatbot-Anwendung interagieren.
+Mit der GenAI-Beispielanwendung für NetApp-Workload-Fabriken können Sie die Authentifizierung und den Abruf aus Ihrer veröffentlichten NetApp Workload Factory Knowledge Base testen, indem Sie direkt mit dieser in einer webbasierten Chatbot-Anwendung interagieren.

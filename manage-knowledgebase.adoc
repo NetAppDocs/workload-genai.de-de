@@ -20,7 +20,8 @@ Nachdem Sie eine Wissensdatenbank erstellt haben, können Sie die Details der Wi
 Sie können Informationen zu den Einstellungen für eine Wissensdatenbank und die integrierte Datenquelle anzeigen.
 
 .Schritte
-. Wählen Sie im Navigationsmenü *AI*.
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie im Menü Workload Factory Navigation die Option *AI*.
 . Wählen Sie die Wissensdatenbank aus, die Sie anzeigen möchten.
 +
 Falls definiert, werden die derzeit verwendeten Gesprächseinstiege im rechten Fensterbereich angezeigt.
@@ -43,6 +44,7 @@ Sie können eine Wissensdatenbank aktualisieren, indem Sie einige Einstellungen 
 Jedes Mal, wenn Sie Datenquellen in der Wissensdatenbank hinzufügen, ändern oder entfernen, müssen Sie die Datenquelle synchronisieren, damit sie mit der Wissensdatenbank neu indiziert wird. Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Bedrock nur die Objekte in Ihrem FSX für ONTAP-Volume, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
 
 .Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie aktualisieren möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 +
@@ -80,6 +82,7 @@ Snapshots können schneller und speichereffizienter als Backups sein und ermögl
 Sie können den Status einer Wissensdatenbank speichern, indem Sie einen manuellen Snapshot des Knowledge Base-Volumes erstellen.
 
 .Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie schützen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 +
@@ -101,6 +104,7 @@ Sie können jederzeit einen manuellen oder geplanten Snapshot eines Knowledge-Ba
 NOTE: Sie können einen Snapshot nicht mithilfe der Benutzeroberfläche Generative AI-Workloads wiederherstellen, wenn die auf dem Volume gespeicherte Datenbank beschädigt ist oder gelöscht wurde. Als Workaround können Sie den Snapshot mithilfe des auf dem ONTAP-Cluster wiederherstellen https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-restore.html["CLI VON ONTAP"^], auf dem das Volume gehostet wird.
 
 .Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie wiederherstellen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 +
@@ -125,6 +129,7 @@ Diese Option ist standardmäßig aktiviert, um sicherzustellen, dass ein Scan ni
 Sie können zusätzliche Datenquellen in Ihre Wissensdatenbank einbetten, um diese mit zusätzlichen Unternehmensdaten zu füllen.
 
 .Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, in die Sie die Datenquelle hinzufügen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Datenquelle hinzufügen*.
 . *Wählen Sie ein Dateisystem*: Wählen Sie das FSX für ONTAP Dateisystem, in dem sich Ihre Datenquelldateien befinden, und wählen Sie *Weiter*.
@@ -164,6 +169,7 @@ Datenquellen werden automatisch einmal täglich mit der zugehörigen Wissensdate
 Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Bedrock nur die Objekte in Ihren Datenquellen, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
 
 .Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie synchronisieren möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 . Wählen Sie das Menü *Aktionen* und dann *Jetzt scannen*.
@@ -185,6 +191,7 @@ Sie können die verfügbaren grundlegenden Chatmodelle bewerten, bevor Sie eine 
 NOTE: Diese Funktion ist nur verfügbar, wenn keine Wissensdatenbanken erstellt wurden -- wenn auf der Bestandsseite der Wissensdatenbanken keine Wissensdatenbanken vorhanden sind.
 
 .Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Auf der Bestandsseite der Wissensbasen sehen Sie die Option, das Chatmodell auf der rechten Seite der Seite für den Chatbot auszuwählen.
 . Wählen Sie das Chatmodell aus der Liste aus, und geben Sie eine Reihe von Fragen in den Eingabebereich ein, um zu sehen, wie der Chatbot reagiert.
 . Testen Sie mehrere Modelle, um herauszufinden, welches Modell sich am besten für Ihre Implementierung eignet.
@@ -202,6 +209,7 @@ Nachdem Sie Ihre Wissensdatenbank veröffentlicht haben, damit sie in eine Chatb
 Durch das Aufheben der Veröffentlichung der Wissensdatenbank werden alle Chat-Anwendungen nicht mehr funktionsfähig. Der eindeutige API-Endpunkt, auf den die Wissensdatenbank zugegriffen werden konnte, ist deaktiviert.
 
 .Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie für die Veröffentlichung aufheben möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 +
@@ -217,11 +225,12 @@ Die Wissensdatenbank ist deaktiviert und kann nicht mehr von einer Chatbot-Anwen
 
 == Löschen einer Wissensdatenbank
 
-Wenn Sie keine Wissensdatenbank mehr benötigen, können Sie sie löschen. Wenn Sie eine Wissensdatenbank löschen, wird sie aus Workload Factory entfernt und das Volume, das die Wissensdatenbank enthält, wird gelöscht. Alle Anwendungen oder Chatbots, die die Wissensdatenbank nutzen, funktionieren nicht mehr. Das Löschen einer Wissensdatenbank ist nicht umkehrbar.
+Wenn Sie keine Wissensdatenbank mehr benötigen, können Sie sie löschen. Wenn Sie eine Wissensdatenbank löschen, wird sie aus der Workload Factory entfernt und das Volume, das die Wissensdatenbank enthält, wird gelöscht. Alle Anwendungen oder Chatbots, die die Wissensdatenbank nutzen, funktionieren nicht mehr. Das Löschen einer Wissensdatenbank ist nicht umkehrbar.
 
 Wenn Sie eine Wissensdatenbank löschen, sollten Sie auch die Zuordnung der Wissensdatenbank zu allen Agenten aufheben, mit denen sie verknüpft ist, um alle Ressourcen, die der Wissensdatenbank zugeordnet sind, vollständig zu löschen.
 
 .Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie löschen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 . Wählen Sie das Menü *Aktionen* und dann *Wissensdatenbank löschen*.
@@ -229,4 +238,4 @@ Wenn Sie eine Wissensdatenbank löschen, sollten Sie auch die Zuordnung der Wiss
 
 
 .Ergebnis
-Die Wissensdatenbank wird aus Workload Factory entfernt und das zugehörige Volume wird gelöscht.
+Die Wissensdatenbank wird aus der Workload-Fabrik entfernt und das zugehörige Volume wird gelöscht.

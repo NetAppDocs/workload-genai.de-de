@@ -20,7 +20,8 @@ Sie können Details zu Ihrer bereitgestellten GenAI RAG-Infrastruktur anzeigen o
 Sie können Informationen über die Chatbot-Infrastruktur anzeigen.
 
 .Schritte
-. Wählen Sie im Navigationsmenü *AI*.
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie im Menü Workload Factory Navigation die Option *AI*.
 . Wählen Sie die Registerkarte *Infrastruktur* aus.
 . Hier finden Sie Informationen zur Infrastruktur mit Details zu den folgenden Komponenten:
 +
@@ -36,12 +37,12 @@ Sie können Informationen über die Chatbot-Infrastruktur anzeigen.
 
 == Entfernen Sie die Infrastruktur
 
-Wenn Sie die Chatbot-Infrastruktur, die Sie für ein oder mehrere Chatbots bereitgestellt haben, nicht mehr benötigen, können Sie sie aus Workload Factory entfernen.
+Wenn Sie die Chatbot-Infrastruktur, die Sie für ein oder mehrere Chatbots bereitgestellt haben, nicht mehr benötigen, können Sie sie aus der Workload-Fabrik entfernen.
 
 
 NOTE: Alle Chatbots, die in dieser Infrastruktur bereitgestellt wurden, werden deaktiviert und der gesamte Chatverlauf wird gelöscht.
 
-Bei diesem Vorgang werden nur die Links zur KI-Infrastruktur aus Workload Factory entfernt – es werden nicht alle Komponenten aus AWS entfernt. Folgende Infrastrukturkomponenten müssen manuell aus AWS gelöscht werden:
+Bei diesem Vorgang werden nur die Links zur KI-Infrastruktur aus der Workload-Farm entfernt – nicht alle Komponenten von AWS. Folgende Infrastrukturkomponenten müssen manuell aus AWS gelöscht werden:
 
 * Die VM-Instanz
 * Private Endpunkte
@@ -52,11 +53,12 @@ Bei diesem Vorgang werden nur die Links zur KI-Infrastruktur aus Workload Factor
 
 
 .Schritte
-. Wählen Sie im Navigationsmenü *AI*.
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie im Menü Workload Factory Navigation die Option *AI*.
 . Wählen Sie die Registerkarte *Infrastruktur* aus.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] und wählen Sie *Chatbot-Infrastruktur entfernen*.
 . Bestätigen Sie, dass Sie die Infrastruktur löschen möchten, und wählen Sie *Entfernen*.
 
 
 .Ergebnis
-Die Chatbot-Infrastrukturkomponenten werden aus Workload Factory entfernt.
+Die Komponenten der Chatbot-Infrastruktur werden aus der Workload Factory entfernt.
