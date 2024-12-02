@@ -124,6 +124,34 @@ Diese Option ist standardmäßig aktiviert, um sicherzustellen, dass ein Scan ni
 
 
 
+=== Klonen einer Wissensdatenbank
+
+Sie können eine neue Wissensdatenbank aus einem Momentaufnahme der Wissensdatenbank erstellen. Dies ist nützlich, wenn die ursprüngliche Wissensdatenbank beschädigt ist oder verloren geht.
+
+.Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie wiederherstellen möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
++
+Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus, die Liste aller eingebetteten Datenquellen und vieles mehr angezeigt.
+
+. Wählen Sie das Menü *actions* und dann *Snapshot > Clone Knowledge Base*.
++
+Das Dialogfeld Klonen wird angezeigt.
+
+. Deaktivieren Sie optional die Option *Anhalten der laufenden und geplanten Scans nach dem Klonen des Snapshots*, wenn geplante und aktuell ausgeführte Datenquellen-Scans nach dem Klonen des Snapshots fortgesetzt werden sollen.
++
+Diese Option ist standardmäßig aktiviert, um sicherzustellen, dass ein Scan nicht stattfindet, während sich die Wissensdatenbank in einem teilweise wiederhergestellten Zustand befindet, oder dass ein Scan keine frisch wiederhergestellte Wissensdatenbank mit älteren Daten aktualisiert.
+
+. Wählen Sie den zu klonenden Snapshot aus der Liste aus.
+. Wählen Sie *Weiter*.
+. Geben Sie einen Namen für die neue Wissensdatenbank ein.
+. Wählen Sie einen Dateisystem-SVM- und Volume-Namen für die neue Wissensdatenbank aus.
+. Wählen Sie *Clone*.
+
+
+
+
 == Fügen Sie einer Wissensdatenbank zusätzliche Datenquellen hinzu
 
 Sie können zusätzliche Datenquellen in Ihre Wissensdatenbank einbetten, um diese mit zusätzlichen Unternehmensdaten zu füllen.

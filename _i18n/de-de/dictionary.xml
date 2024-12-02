@@ -91,7 +91,6 @@
   <block id="cc573650532041ff5d41735ee141eab8" category="paragraph">Die folgende Abbildung zeigt die GenAI-Infrastruktur. Die Komponenten mit den Nummern 1, 2 und 3 werden während dieses Verfahrens eingesetzt. Die anderen Elemente müssen vorhanden sein, bevor mit der Bereitstellung begonnen werden kann.</block>
   <block id="ce783b25723548b58b44d3dde715476f" category="inline-image-macro">Ein Diagramm der AI-Chatbot-Komponenten.</block>
   <block id="b7cef2c498d21a11e9176de11360774c" category="paragraph"><block ref="b7cef2c498d21a11e9176de11360774c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b2e0047ff352d3aae4c45b40d2f7cc05" category="paragraph">Geben Sie Ihre AWS-Zugangsdaten ein und wählen Sie das FSX for ONTAP-Dateisystem aus, um die Retrieval Augmentation Generation (RAG)-Infrastruktur bereitstellen zu können.</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Bevor Sie beginnen</block>
   <block id="567dcfd6302e5511c1b546a4df21a679" category="inline-link-macro">Den Anforderungen gerecht zu werden</block>
   <block id="48b1a64ea0f002f28680bb1b8a8c87b2" category="paragraph">Stellen Sie sicher, dass Ihre Umgebung den Anforderungen entspricht <block ref="b537f86d93b89f494a26572d1a60f4ef" category="inline-link-macro-rx"></block> , bevor Sie mit diesem Verfahren beginnen.</block>
@@ -236,14 +235,6 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open Source</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">In den Benachrichtigungsdateien finden Sie Informationen zu Urheberrechten und Lizenzen von Drittanbietern, die in der NetApp Software verwendet werden.</block>
-  <block id="22e5a7336ebe77138f0282cedcb069ab" category="inline-link">Workload Factory</block>
-  <block id="7ffcbeca3b450b8d05f9cf0eedb617f8" category="list-text"><block ref="7ffcbeca3b450b8d05f9cf0eedb617f8" category="inline-link-rx"></block></block>
-  <block id="887f800d53dc2cd5a7894464a6f60a6b" category="inline-link">Workload Factory für Datenbanken</block>
-  <block id="7e505d4c691d86e5bd415f9ccb849966" category="list-text"><block ref="7e505d4c691d86e5bd415f9ccb849966" category="inline-link-rx"></block></block>
-  <block id="9591e2d54c998ae1c9d48fd5be7762e9" category="inline-link">Workload Factory für GenAI</block>
-  <block id="f38c7416013fc239c3dd3288d40a40c0" category="list-text"><block ref="f38c7416013fc239c3dd3288d40a40c0" category="inline-link-rx"></block></block>
-  <block id="404a5efb62a3a3f22b02593091042608" category="inline-link">Workload-Fabrik für VMware</block>
-  <block id="9a211183d3fa82368d76fdbab5abdeda" category="list-text"><block ref="9a211183d3fa82368d76fdbab5abdeda" category="inline-link-rx"></block></block>
   <block id="a76746a54be32982bbd6b113b4d88d95" category="summary">Nachdem Sie eine Wissensdatenbank mit Datenquellen auf Ihrem FSX für ONTAP-Dateisystem erstellt haben, können Sie die Details der Datenquelle anzeigen, den Inhalt der Datenquelle aktualisieren oder ändern, die Einstellungen der Datenquelle bearbeiten oder die Datenquelle löschen.</block>
   <block id="a184e20ed5e6a5b8da09e0b40c163e0c" category="doc">Managen von Datenquellen</block>
   <block id="185887c3ad19744e76bc5a84165858d0" category="section-title">Informationen zu einer Datenquelle anzeigen</block>
@@ -528,8 +519,6 @@
   <block id="c7ffd0cab67a601554ae934436d644d8" category="cell">Bereitstellung schlägt fehl, da das Volume bereits vorhanden ist.</block>
   <block id="c116d59189f49ad24327d9067ef9806e" category="cell">Geben Sie einen eindeutigen Namen für das neue Volume an, und versuchen Sie es erneut.</block>
   <block id="8f3392d21c1e23f002f42fd0394d7c80" category="cell">Mindestens einer der für FSX for NetApp ONTAP erforderlichen eingehenden Ports wird geschlossen oder gefiltert.</block>
-  <block id="e87d6ed459b274ad7c388e0797013c9f" category="inline-link">Sicherheitsgruppenregeln für FSX für ONTAP</block>
-  <block id="5503cb2b17f74a27a0085d8499cd3f60" category="paragraph">Öffnen Sie die unter aufgeführten Ports<block ref="127df24588c6526408fa1a708579050d" category="inline-link-rx"></block>.</block>
   <block id="10d0de28911c5f66463b9c8783f8148a" category="cell">Wartung</block>
   <block id="f1e0872518e98f8295b8550491f79850" category="cell">Das Volume wurde gelöscht und die EC2 Instanz neu gestartet.</block>
   <block id="35df13c892646e1e41e065276ead0cee" category="paragraph">Führen Sie die folgenden Wiederherstellungsschritte durch:</block>
@@ -620,13 +609,8 @@
   <block id="dcafe9cce796ce855e87b270f0a5af59" category="inline-link-macro">Konsolenerfahrungen</block>
   <block id="eb788a90862825cc147ed3f85612a8cc" category="list-text">Melden Sie sich bei Workload Factory mit einem der <block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>an.</block>
   <block id="ba069bdc38a1ce5022a1e6d8b69882b8" category="summary">Workload Factory für GenAI ermöglicht die Integration von Amazon FSX für NetApp ONTAP-Filesystemen mit GenAI-Basismodellen. So erhalten Sie hochperformanten Storage mit umfassenden Funktionen für Schutz, Sicherheit und Kostenoptimierung für Ihre KI-Datensätze.</block>
-  <block id="8746750042cf20aa9acdb3cd89b6448b" category="doc">Erfahren Sie mehr über die Workload-Fabrik für GenAI</block>
-  <block id="ac1e1d326a41d16c68d8f5d08e1dbfe0" category="section-title">Was ist die Workload-Fabrik für GenAI?</block>
-  <block id="40a89d6e158f3dbec860ab6d35794644" category="paragraph">Mit der Workload Factory for GenAI können Sie Unternehmensdatenquellen auf Amazon FSX for NetApp ONTAP mit generativen KI-Applikationen nutzen. Mithilfe des Frameworks Retrieval Augmentation Generation (RAG) können Sie schnell Datenquellen mit Foundation-Modellen verbinden, die über Amazon Bedrock verfügbar sind, um generative KI-gestützte Anwendungen wie virtuelle Assistenten, Q&amp;A-Chatbots, Dokumentzusammenfassung, Inhaltserstellung usw. zu entwickeln</block>
   <block id="70cb57a8d5d75d8762d6b082d319dec7" category="inline-link">Übersicht über die Workload-Fabrik</block>
   <block id="41dde101808f5228034390c3766fcad7" category="paragraph">Weitere Informationen zur Workload Factory finden Sie im<block ref="5b162ed7e5df7e2d72a6505743e2b555" category="inline-link-rx"></block>.</block>
-  <block id="4a7de00a0cde12ad329c366ef21a723d" category="paragraph">Die Workload-Farm für GenAI vereinfacht die Implementierung von Infrastrukturen, die für die Erstellung generativer KI-Applikationen mithilfe von Retrieval Augmented Generation (RAG) erforderlich sind. Im Detail bietet GenAI folgende Vorteile:</block>
-  <block id="c7fb8bbb17373e98570b6e60b217343a" category="section-title">Wie die Workload-Fabrik für GenAI zum Erstellen generativer KI-Applikationen hilft</block>
   <block id="200e3179449390bdf5f3f8d9a199630c" category="section-title">Tools zur Verwendung der Workload Factory</block>
   <block id="b5a374f3f5b31b5057808689d26fe2c4" category="paragraph">Sie können die BlueXP -Workload-Fabrik mit den folgenden Tools verwenden:</block>
   <block id="becd2c66a018e594b787abb509da2fcb" category="list-text">*Workload Factory Konsole*: Die Workload Factory Konsole bietet eine visuelle Schnittstelle, die Ihnen einen ganzheitlichen Blick auf Ihre Anwendungen und Projekte gibt.</block>
@@ -676,15 +660,89 @@
   <block id="c3c0f7069bfe59c5a67dd6f1fd5d2301" category="list-text">Sie müssen AWS-Anmeldeinformationen in die Workload-Fabrik mit automatisierten Berechtigungen hinzufügen, was bedeutet, dass Sie die Workload-Fabrik im _Automate_-Modus für GenAI verwenden werden.</block>
   <block id="5145374f219e1c177ab5588a5344aa6e" category="inline-link">Erfahren Sie, wie Sie AWS-Anmeldedaten zu der Workload-Farm hinzufügen</block>
   <block id="ced1a4827b1ea3c1da0273c3d73fdd46" category="paragraph"><block ref="ced1a4827b1ea3c1da0273c3d73fdd46" category="inline-link-rx"></block></block>
-  <block id="e75accc1948bab24f6bde8f2716d9465" category="paragraph">Bevor Sie mit der Workload-Fabrik für GenAI beginnen, müssen Sie Amazon Bedrock einrichten. Ihre GenAI-Implementierung muss sich in einer AWS-Region mit aktiviertem Amazon Bedrock befinden.</block>
   <block id="056634bec4a153903ebb9b769277f4d7" category="summary">Bevor Sie einen Support-Fall beim technischen NetApp eröffnen können, müssen Sie ein NetApp Support Site Konto zum Workload Factory hinzufügen und sich anschließend für Support registrieren.</block>
   <block id="3616889860b75d784463bb497e34e82f" category="paragraph">Sie führen die meisten Tests innerhalb der Workload Factory durch, bevor Sie die Wissensdatenbank in einer Anwendung für Ihre Benutzer bereitstellen. Wenn Sie Änderungen an Ihrer Datenquelle oder dem Chatbot-Vorgang vornehmen müssen, sollten Sie dies jetzt tun, bevor Sie Ihre Wissensdatenbank veröffentlichen.</block>
-  <block id="448a7638f78d8e27c82dc4eb9cfffaa5" category="cell">Die Workload-Fabrik für GenAI muss während des Bereitstellungsprozesses ein neues Volume erstellen, aber ein Volume ist bereits mit dem angegebenen Namen vorhanden.</block>
-  <block id="9db9426b923f79f37245bd6e27517b75" category="cell">Die Bereitstellung schlägt fehl, da die Workload-Fabrik für GenAI das Volume nicht mounten kann.</block>
-  <block id="3b93973bf09251ccbc76e14631d727e0" category="cell">Die von der Workload-Fabrik für GenAI verwendete Docker Back-End-Instanz konnte nicht gestartet werden.</block>
   <block id="1862818cbcef0536011835283968bd91" category="summary">Informieren Sie sich über die Neuerungen bei den KI-Workloads, die den Workload-Betrieb unterstützen.</block>
   <block id="34734891f639d2ae1ecbbaab22157fe2" category="paragraph">Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloads der Workload-Farm.</block>
   <block id="81ff996ef963d9805259d4a6c9bafac8" category="inline-link">Workload-Fabrik für Amazon FSX für NetApp ONTAP-Dokumentation</block>
   <block id="07e2e5eecff8fe1dbb4712055f0055f1" category="paragraph">Informationen zum Verwalten Ihres FSX für ONTAP-Dateisystems finden Sie unter, um die<block ref="3845b9852e43f2af9ae621ea5bb328c1" category="inline-link-rx"></block> Backup- und Schutzfunktionen anzuzeigen, die Sie verwenden können.</block>
   <block id="2b6b3d10fe7ba8590618a95b1cc96a1a" category="sidebar">BlueXP -Workload für GenAI-Dokumentation</block>
+  <block id="f8a21101d47aa852f29a4be35904736e" category="doc">Klonen Sie eine Wissensdatenbank aus einem Snapshot</block>
+  <block id="c711d2f72cc16ad2c0919ebe70292834" category="paragraph">Die BlueXP  Workload-Farm für GenAI unterstützt jetzt das Klonen einer Knowledge Base aus einem Snapshot. Dies ermöglicht eine schnelle Wiederherstellung von Wissensdatenbanken und die Erstellung neuer Wissensdatenbanken mit vorhandenen Datenquellen. Außerdem hilft es bei der Wiederherstellung und Entwicklung von Daten.</block>
+  <block id="53ea9e78bbaa3e1c3ead030a954216c8" category="inline-link-macro">Klonen einer Wissensdatenbank</block>
+  <block id="23899d33da818933cc59017a222d3f1f" category="paragraph"><block ref="23899d33da818933cc59017a222d3f1f" category="inline-link-macro-rx"></block></block>
+  <block id="aadb8a2a44b75c1333f5a52c2ceb1516" category="section-title">Erkennung und Replizierung von lokalen ONTAP Clustern</block>
+  <block id="490a30e9496a9d55f2cfdb934812658b" category="paragraph">Ermitteln und replizieren Sie On-Premises-ONTAP-Cluster-Daten auf ein FSX for ONTAP-Filesystem, damit es für eine Erweiterung von KI-Knowledge-Basen verwendet werden kann. Alle lokalen Erkennungs- und Replikations-Workflows sind über die neue Registerkarte *On-Premises ONTAP* im Speicherbestand möglich.</block>
+  <block id="c6f905e067bdaa7ba33a58a907e59477" category="inline-link-macro">Ermitteln eines lokalen ONTAP Clusters</block>
+  <block id="b169507cd10826b5a52f573e2f75ad2c" category="paragraph"><block ref="b169507cd10826b5a52f573e2f75ad2c" category="inline-link-macro-rx"></block></block>
+  <block id="b83113ab8d9d4c69dfb32e9034617513" category="summary">Mit der BlueXP  Workload-Farm für GenAI können Sie Amazon FSX für NetApp ONTAP-Filesysteme mit GenAI-Modellen integrieren. So erhalten Sie hochperformanten Storage mit umfassenden Funktionen für Schutz, Sicherheit und Kostenoptimierung für Ihre KI-Datensätze.</block>
+  <block id="77c129bd3271a24d7bdf27f4904c52f4" category="doc">Erfahren Sie mehr über die BlueXP -Workload-Fabrik für GenAI</block>
+  <block id="766c4de0717e832db67cb7e35ee5df4b" category="section-title">Was ist eine BlueXP -Workload-Fabrik für GenAI?</block>
+  <block id="847fc7565e14d8fa93f26cd789e29cb5" category="paragraph">Mit der BlueXP  Workload Factory for GenAI können Sie Unternehmensdatenquellen auf Amazon FSX for NetApp ONTAP mit generativen KI-Applikationen nutzen. Mithilfe des Frameworks Retrieval Augmentation Generation (RAG) können Sie schnell Datenquellen mit Foundation-Modellen verbinden, die über Amazon Bedrock verfügbar sind, um generative KI-gestützte Anwendungen wie virtuelle Assistenten, Q&amp;A-Chatbots, Dokumentzusammenfassung, Inhaltserstellung usw. zu entwickeln</block>
+  <block id="586d1c82027100a85b2c840e10585fd4" category="paragraph">Die BlueXP  Workload-Farm für GenAI vereinfacht die Implementierung von Infrastrukturen für die Erstellung generativer KI-Applikationen mithilfe von Retrieval Augmented Generation (RAG). Im Detail bietet GenAI folgende Vorteile:</block>
+  <block id="daadd89cd1fba3fd8665e4d598faa29e" category="section-title">Wie die BlueXP -Workload-Farm für GenAI hilft, generative KI-Applikationen zu erstellen</block>
+  <block id="6849617ada590bcd67ec5c42f527dbca" category="paragraph">Geben Sie Ihre AWS-Zugangsdaten ein und wählen Sie das Filesystem FSX für ONTAP aus, um die Infrastruktur zur Retrieval-Augmented Generation (RAG) implementieren zu können.</block>
+  <block id="29c02ba7cbd3c64fafa4c7eab2de837a" category="admonition">Wenn die Bereitstellung mit einem Fehler bei den Anmeldeinformationen fehlschlägt, erhalten Sie weitere Fehlerdetails, indem Sie die Hyperlinks in der Fehlermeldung auswählen. Sie sehen eine Liste mit fehlenden oder blockierten Berechtigungen sowie eine Liste mit Berechtigungen, die der GenAI-Workload benötigt, um die GenAI-Infrastruktur bereitstellen zu können.</block>
+  <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">BlueXP -Workload ist werkseitig eingestellt</block>
+  <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
+  <block id="3797e84a3c9da31524b0e5a526fb59cb" category="paragraph">Sie können eine neue Wissensdatenbank aus einem Momentaufnahme der Wissensdatenbank erstellen. Dies ist nützlich, wenn die ursprüngliche Wissensdatenbank beschädigt ist oder verloren geht.</block>
+  <block id="e83bec71ebafaf78ee9064dcfcc19f67" category="list-text">Wählen Sie das Menü *actions* und dann *Snapshot &gt; Clone Knowledge Base*.</block>
+  <block id="8b6829f6ee0ef3bfbe0ab0540f326557" category="paragraph">Das Dialogfeld Klonen wird angezeigt.</block>
+  <block id="e9a021d7afe855c5ba056c07000e7027" category="list-text">Deaktivieren Sie optional die Option *Anhalten der laufenden und geplanten Scans nach dem Klonen des Snapshots*, wenn geplante und aktuell ausgeführte Datenquellen-Scans nach dem Klonen des Snapshots fortgesetzt werden sollen.</block>
+  <block id="0568052f85119ac83d89df964e8851c0" category="list-text">Wählen Sie den zu klonenden Snapshot aus der Liste aus.</block>
+  <block id="136dc09835924029e4299fa28f17233d" category="list-text">Wählen Sie *Weiter*.</block>
+  <block id="86de75270b79ca51ee2b62cc69460393" category="list-text">Geben Sie einen Namen für die neue Wissensdatenbank ein.</block>
+  <block id="0ddebe34caa600a9062280228e099952" category="list-text">Wählen Sie einen Dateisystem-SVM- und Volume-Namen für die neue Wissensdatenbank aus.</block>
+  <block id="9de0e2b17d7e1e2da6c0ce7e9dc6e377" category="list-text">Wählen Sie *Clone*.</block>
+  <block id="f895e26ca8de37d350a247e7eae1987c" category="paragraph">Bevor Sie mit der BlueXP -Workload-Fabrik für GenAI beginnen, müssen Sie Amazon Bedrock einrichten. Ihre GenAI-Implementierung muss sich in einer AWS-Region mit aktiviertem Amazon Bedrock befinden.</block>
+  <block id="96f6c1844fa04dad54f5ced764d5d751" category="cell">Für die BlueXP -Workload-Farm für GenAI muss während des Bereitstellungsprozesses ein neues Volume erstellt werden. Ein Volume ist jedoch bereits vorhanden, das den von Ihnen angegebenen Namen verwendet.</block>
+  <block id="efc3cdef33c078d242eaa096c1a9da3d" category="cell">Die Implementierung schlägt fehl, weil die BlueXP -Workload-Fabrik für GenAI das Volume nicht mounten kann.</block>
+  <block id="407b33bc44b7fc7c0c4648bcaeff2a44" category="paragraph">Öffnen Sie die folgenden eingehenden Ports:</block>
+  <block id="888a77f5ac0748b6c8001822417df8b6" category="cell">Protokoll</block>
+  <block id="60aaf44d4b562252c04db7f98497e9aa" category="cell">Port</block>
+  <block id="261addf78c7b2c961032b3dd08ba0b1f" category="cell">Zweck</block>
+  <block id="d4b4ed7579a4f9267cc7dff8a948018e" category="cell">Alle ICMP</block>
+  <block id="b1c94ca2fbc3e78fc30069c8d0f01680" category="cell">Alle</block>
+  <block id="fbabb5b35538d91f91e0e1d4f56ff5a4" category="cell">Pingen der Instanz</block>
+  <block id="0e8433f9a404f1f3ba601c14b026d321" category="cell">HTTPS</block>
+  <block id="13f3cf8c531952d72e5847c4183e6910" category="cell">443</block>
+  <block id="1960d6022dcb5a2b9a687d1f6cbd8931" category="cell">Zugriff vom Connector auf die Verwaltungsschnittstelle fsxadmin, um API-Aufrufe an FSX zu senden</block>
+  <block id="765553e6c7ac8592c389acb9878a050a" category="cell">SSH</block>
+  <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="cell">22</block>
+  <block id="68e68bb8029eb3e7ed079fea7b679d99" category="cell">SSH-Zugriff auf die IP-Adresse der Cluster Management LIF oder einer Node Management LIF</block>
+  <block id="b136ef5f6a01d816991fe3cf7a6ac763" category="cell">TCP</block>
+  <block id="698d51a19d8a121ce581499d7b701668" category="cell">111</block>
+  <block id="42309a274997c44da61b489d9df7edc8" category="cell">Remote-Prozeduraufruf für NFS</block>
+  <block id="e00da03b685a0dd18fb6a08af0923de0" category="cell">139</block>
+  <block id="f578101933ae5aa506411a00b33b06ec" category="cell">NetBIOS-Servicesitzung für CIFS</block>
+  <block id="ff86b94aeb68e2de5387c9dbf865b3b9" category="cell">161-162</block>
+  <block id="e0215167b05004bf68d7d23d0a15605c" category="cell">Einfaches Netzwerkverwaltungsprotokoll</block>
+  <block id="67f7fb873eaf29526a11a9b7ac33bfac" category="cell">445</block>
+  <block id="100c97ce556d60c86e5d8b424c3ed3ad" category="cell">Microsoft SMB/CIFS über TCP mit NETBIOS-Framing</block>
+  <block id="6a10bbd480e4c5573d8f3af73ae0454b" category="cell">635</block>
+  <block id="718b3fb251c2987c99ce9d2d23eb38b6" category="cell">NFS-Mount</block>
+  <block id="b056eb1587586b71e2da9acfe4fbd19e" category="cell">749</block>
+  <block id="87b3695bfd6f672e2c7c4da7ca2b46a8" category="cell">Kerberos</block>
+  <block id="06b1338ba02add2b5d2da67663b19ebe" category="cell">2049</block>
+  <block id="02c69a3a7485c8d2f899c2eb58f8be50" category="cell">NFS-Server-Daemon</block>
+  <block id="d54ce9de9df77c579775a7b6b1a4bdc0" category="cell">3260</block>
+  <block id="decc72453fd5881c6144ead65577abe0" category="cell">ISCSI-Zugriff über die iSCSI-Daten-LIF</block>
+  <block id="ee0e95249268b86ff2053bef214bfeda" category="cell">4045</block>
+  <block id="3efa34cc491e9e34264231984db1c224" category="cell">NFS-Sperr-Daemon</block>
+  <block id="354ac345fd8c6d7ef634d9a8e3d47b83" category="cell">4046</block>
+  <block id="6e1768e34172523fffe5e878d95f0f1a" category="cell">Netzwerkstatusüberwachung für NFS</block>
+  <block id="b7a782741f667201b54880c925faec4b" category="cell">10000</block>
+  <block id="9f6c516b5f5492bbbe0bfa8167ac3c38" category="cell">Backup mit NDMP</block>
+  <block id="bf03faf089665754a8af5dce381a42ca" category="cell">11104</block>
+  <block id="0f98f191f6139c531c1435214b55de48" category="cell">Management von interclusterübergreifenden Kommunikationssitzungen für SnapMirror</block>
+  <block id="f0f07e680de407b0f12abf15bd520097" category="cell">11105</block>
+  <block id="d03bcbb93f8e29ffb08772b43b55d234" category="cell">SnapMirror Datenübertragung über Cluster-interne LIFs</block>
+  <block id="f5ef036b4d8b630721e51fe23489fbc9" category="cell">UDP</block>
+  <block id="89a4779d3836ea432f7ea074e522a17e" category="cell">4049</block>
+  <block id="ec29b09319bcf28d103f2dda2dae3590" category="cell">NFS rquotad-Protokoll</block>
+  <block id="edd9b7b1aa59153309a4116720911246" category="cell">Die AI-Engine startet nicht, und Sie sehen den Fehler "AI Engine Instance error" auf der Seite *Knowledge Basen*.</block>
+  <block id="b7542ca3c48aa928fdf94d78371dd834" category="cell">Die Instanz der KI-Engine wurde beschädigt oder existiert nicht.</block>
+  <block id="849293736c770408f68a35f4fcdf9592" category="cell">Klicken Sie auf die Schaltfläche *Rebuild*. Die BlueXP  Workload-Farm für GenAI stellt die Infrastruktur wieder her und zeigt den Rebuild-Fortschritt an. Nach Abschluss werden Ihre Wissensdatenbanken wieder mit der neu aufgebauten Infrastruktur verbunden, und die Liste der Wissensdatenbanken wird angezeigt.</block>
+  <block id="d1955ee5035af265f471c1debd693717" category="cell">Die von der BlueXP -Workload-Fabrik für GenAI verwendete Docker Back-End-Instanz konnte nicht gestartet werden.</block>
+  <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">Bis 01. Dezember 2024</block>
 </blocks>

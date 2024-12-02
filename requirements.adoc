@@ -29,7 +29,7 @@ https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahre
 Amazonas-Grundgestein:: Mit Amazon Bedrock können Sie Grundmodelle verwenden und es bietet die Möglichkeiten, generative KI-Anwendungen zu erstellen.
 +
 --
-Bevor Sie mit der Workload-Fabrik für GenAI beginnen, müssen Sie Amazon Bedrock einrichten. Ihre GenAI-Implementierung muss sich in einer AWS-Region mit aktiviertem Amazon Bedrock befinden.
+Bevor Sie mit der BlueXP -Workload-Fabrik für GenAI beginnen, müssen Sie Amazon Bedrock einrichten. Ihre GenAI-Implementierung muss sich in einer AWS-Region mit aktiviertem Amazon Bedrock befinden.
 
 * https://docs.aws.amazon.com/bedrock/latest/userguide/setting-up.html["AWS-Dokumentation: Einrichten von Amazon Bedrock"^]
 * https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["AWS-Dokumentation: Unterstützte Regionen und Modelle für Knowledge Basen für Amazon Bedrock"^]

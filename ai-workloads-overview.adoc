@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ai-workloads-overview.html 
 keywords: overview, concepts, features, use case, workloads, AI, Bedrock, knowledge base, chatbot 
-summary: Workload Factory für GenAI ermöglicht die Integration von Amazon FSX für NetApp ONTAP-Filesystemen mit GenAI-Basismodellen. So erhalten Sie hochperformanten Storage mit umfassenden Funktionen für Schutz, Sicherheit und Kostenoptimierung für Ihre KI-Datensätze. 
+summary: Mit der BlueXP  Workload-Farm für GenAI können Sie Amazon FSX für NetApp ONTAP-Filesysteme mit GenAI-Modellen integrieren. So erhalten Sie hochperformanten Storage mit umfassenden Funktionen für Schutz, Sicherheit und Kostenoptimierung für Ihre KI-Datensätze. 
 ---
-= Erfahren Sie mehr über die Workload-Fabrik für GenAI
+= Erfahren Sie mehr über die BlueXP -Workload-Fabrik für GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -15,9 +15,9 @@ Workload Factory für GenAI ermöglicht die Integration von Amazon FSX für NetA
 
 
 
-== Was ist die Workload-Fabrik für GenAI?
+== Was ist eine BlueXP -Workload-Fabrik für GenAI?
 
-Mit der Workload Factory for GenAI können Sie Unternehmensdatenquellen auf Amazon FSX for NetApp ONTAP mit generativen KI-Applikationen nutzen. Mithilfe des Frameworks Retrieval Augmentation Generation (RAG) können Sie schnell Datenquellen mit Foundation-Modellen verbinden, die über Amazon Bedrock verfügbar sind, um generative KI-gestützte Anwendungen wie virtuelle Assistenten, Q&A-Chatbots, Dokumentzusammenfassung, Inhaltserstellung usw. zu entwickeln
+Mit der BlueXP  Workload Factory for GenAI können Sie Unternehmensdatenquellen auf Amazon FSX for NetApp ONTAP mit generativen KI-Applikationen nutzen. Mithilfe des Frameworks Retrieval Augmentation Generation (RAG) können Sie schnell Datenquellen mit Foundation-Modellen verbinden, die über Amazon Bedrock verfügbar sind, um generative KI-gestützte Anwendungen wie virtuelle Assistenten, Q&A-Chatbots, Dokumentzusammenfassung, Inhaltserstellung usw. zu entwickeln
 
 Durch den Einsatz von Generative AI mit Ihren Unternehmensdaten können Sie Ihr eigenes Wissen und Ihre eigenen Fachkenntnisse nutzen und sich nicht nur auf die Intelligenz des Modells verlassen, die auf öffentlichen Daten basiert, auf denen die Modelle trainiert wurden. Mit RAG zur Anpassung der Modelle werden genaue und relevante Antworten auf organisationsspezifische Fragen sichergestellt, wodurch die Produktivität und Effizienz für die Benutzer Ihrer Anwendungen mithilfe von Generative AI verbessert wird.
 
@@ -29,7 +29,7 @@ Weitere Informationen zur Workload Factory finden Sie im https://docs.netapp.com
 
 == Vorteile des Einsatzes von GenAI zur Erstellung generativer KI-Applikationen
 
-Die Workload-Farm für GenAI vereinfacht die Implementierung von Infrastrukturen, die für die Erstellung generativer KI-Applikationen mithilfe von Retrieval Augmented Generation (RAG) erforderlich sind. Im Detail bietet GenAI folgende Vorteile:
+Die BlueXP  Workload-Farm für GenAI vereinfacht die Implementierung von Infrastrukturen für die Erstellung generativer KI-Applikationen mithilfe von Retrieval Augmented Generation (RAG). Im Detail bietet GenAI folgende Vorteile:
 
 * Durch die Automatisierung von GenAI können IT-Administratoren und -Entwickler die Applikationsentwicklung beschleunigen, ohne umfassende Kenntnisse über Dateninfrastruktur, Grundlagen und Sprachmodelle benötigen. Datenadministratoren und -Entwickler können auf einfache und schnelle Weise unternehmenseigene Wissensdatenbanken erstellen, in die unstrukturierte Daten Ihres Unternehmens für generative KI-Applikationen eingebettet werden.
 * Erhöhen Sie die Sicherheit, indem Sie Benutzerberechtigungen in Dateien erhalten, die in Knowledge-Base eingebettet sind, um sicherzustellen, dass Datensicherheit und Datenschutz erhalten bleiben. Eine Anwendung, wie ein Chatbot, kann so entwickelt werden, dass nur authentifizierte Benutzer Antworten erhalten, die auf Daten basieren, auf die die Benutzer zugreifen können.
@@ -49,7 +49,7 @@ image:diagram-chatbot-processing.png["Ein Diagramm, das die wichtigsten Komponen
 
 
 
-== Wie die Workload-Fabrik für GenAI zum Erstellen generativer KI-Applikationen hilft
+== Wie die BlueXP -Workload-Farm für GenAI hilft, generative KI-Applikationen zu erstellen
 
 GenAI hilft wie folgt, generative KI-Applikationen mit RAG zu erstellen:
 

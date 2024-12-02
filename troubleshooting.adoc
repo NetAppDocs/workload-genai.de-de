@@ -24,15 +24,91 @@ Wenn Sie eines dieser Probleme haben, können Sie mithilfe der Schritte in der S
 | Werden | Problem | Ursache | Behelfslösung 
 
 
-| Einsatz | Bereitstellung schlägt fehl, da das Volume bereits vorhanden ist. | Die Workload-Fabrik für GenAI muss während des Bereitstellungsprozesses ein neues Volume erstellen, aber ein Volume ist bereits mit dem angegebenen Namen vorhanden. | Geben Sie einen eindeutigen Namen für das neue Volume an, und versuchen Sie es erneut. 
+| Einsatz | Bereitstellung schlägt fehl, da das Volume bereits vorhanden ist. | Für die BlueXP -Workload-Farm für GenAI muss während des Bereitstellungsprozesses ein neues Volume erstellt werden. Ein Volume ist jedoch bereits vorhanden, das den von Ihnen angegebenen Namen verwendet. | Geben Sie einen eindeutigen Namen für das neue Volume an, und versuchen Sie es erneut. 
 
 
-| Einsatz | Die Bereitstellung schlägt fehl, da die Workload-Fabrik für GenAI das Volume nicht mounten kann. | Mindestens einer der für FSX for NetApp ONTAP erforderlichen eingehenden Ports wird geschlossen oder gefiltert.  a| 
-Öffnen Sie die unter aufgeführten Ports https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/reference-security-groups-fsx.html#inbound-rules["Sicherheitsgruppenregeln für FSX für ONTAP"^].
+| Einsatz | Die Implementierung schlägt fehl, weil die BlueXP -Workload-Fabrik für GenAI das Volume nicht mounten kann. | Mindestens einer der für FSX for NetApp ONTAP erforderlichen eingehenden Ports wird geschlossen oder gefiltert.  a| 
+Öffnen Sie die folgenden eingehenden Ports:
+
+[cols="10,10,80"]
+|===
+| Protokoll | Port | Zweck 
 
 
+| Alle ICMP | Alle | Pingen der Instanz 
 
-| Wartung | Die von der Workload-Fabrik für GenAI verwendete Docker Back-End-Instanz konnte nicht gestartet werden. | Das Volume wurde gelöscht und die EC2 Instanz neu gestartet.  a| 
+
+| HTTPS | 443 | Zugriff vom Connector auf die Verwaltungsschnittstelle fsxadmin, um API-Aufrufe an FSX zu senden 
+
+
+| SSH | 22 | SSH-Zugriff auf die IP-Adresse der Cluster Management LIF oder einer Node Management LIF 
+
+
+| TCP | 111 | Remote-Prozeduraufruf für NFS 
+
+
+| TCP | 139 | NetBIOS-Servicesitzung für CIFS 
+
+
+| TCP | 161-162 | Einfaches Netzwerkverwaltungsprotokoll 
+
+
+| TCP | 445 | Microsoft SMB/CIFS über TCP mit NETBIOS-Framing 
+
+
+| TCP | 635 | NFS-Mount 
+
+
+| TCP | 749 | Kerberos 
+
+
+| TCP | 2049 | NFS-Server-Daemon 
+
+
+| TCP | 3260 | ISCSI-Zugriff über die iSCSI-Daten-LIF 
+
+
+| TCP | 4045 | NFS-Sperr-Daemon 
+
+
+| TCP | 4046 | Netzwerkstatusüberwachung für NFS 
+
+
+| TCP | 10000 | Backup mit NDMP 
+
+
+| TCP | 11104 | Management von interclusterübergreifenden Kommunikationssitzungen für SnapMirror 
+
+
+| TCP | 11105 | SnapMirror Datenübertragung über Cluster-interne LIFs 
+
+
+| UDP | 111 | Remote-Prozeduraufruf für NFS 
+
+
+| UDP | 161-162 | Einfaches Netzwerkverwaltungsprotokoll 
+
+
+| UDP | 635 | NFS-Mount 
+
+
+| UDP | 2049 | NFS-Server-Daemon 
+
+
+| UDP | 4045 | NFS-Sperr-Daemon 
+
+
+| UDP | 4046 | Netzwerkstatusüberwachung für NFS 
+
+
+| UDP | 4049 | NFS rquotad-Protokoll 
+|===
+
+
+| Wartung | Die AI-Engine startet nicht, und Sie sehen den Fehler "AI Engine Instance error" auf der Seite *Knowledge Basen*. | Die Instanz der KI-Engine wurde beschädigt oder existiert nicht. | Klicken Sie auf die Schaltfläche *Rebuild*. Die BlueXP  Workload-Farm für GenAI stellt die Infrastruktur wieder her und zeigt den Rebuild-Fortschritt an. Nach Abschluss werden Ihre Wissensdatenbanken wieder mit der neu aufgebauten Infrastruktur verbunden, und die Liste der Wissensdatenbanken wird angezeigt. 
+
+
+| Wartung | Die von der BlueXP -Workload-Fabrik für GenAI verwendete Docker Back-End-Instanz konnte nicht gestartet werden. | Das Volume wurde gelöscht und die EC2 Instanz neu gestartet.  a| 
 Führen Sie die folgenden Wiederherstellungsschritte durch:
 
 .Schritte
@@ -68,5 +144,8 @@ volumes:
 
 
 
-| Wartung | Die von der Workload-Fabrik für GenAI verwendete Docker Back-End-Instanz konnte nicht gestartet werden. | Das Root-Volume wurde gelöscht. | Erstellen Sie ein Volume mit einem Namen und Pfad und starten Sie dann die Backend-Docker-Instanz von Amazon EC2 neu. 
+| Wartung | Die von der BlueXP -Workload-Fabrik für GenAI verwendete Docker Back-End-Instanz konnte nicht gestartet werden. | Das Root-Volume wurde gelöscht. | Erstellen Sie ein Volume mit einem Namen und Pfad und starten Sie dann die Backend-Docker-Instanz von Amazon EC2 neu. 
+
+
+| Wartung | Die von der BlueXP -Workload-Fabrik für GenAI verwendete Docker Back-End-Instanz konnte nicht gestartet werden. | Das Root-Volume wurde gelöscht. | Erstellen Sie ein Volume mit einem Namen und Pfad und starten Sie dann die Backend-Docker-Instanz von Amazon EC2 neu. 
 |===
