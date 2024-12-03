@@ -600,8 +600,6 @@
   <block id="b91895758c5a35a75fd3e87dc1fa0741" category="list-text">Auf der Seite „Wissensdatenbank bearbeiten“ können Sie den Namen der Wissensdatenbank, die Beschreibung, das Einbettungsmodell, das Chatmodell, die Aktivierung von Data Guardrails ändern, auswählen, ob Gesprächsstarter automatisch oder manuell erstellt werden und die Snapshot-Richtlinie, die für das Volume verwendet wird, das die Wissensdatenbank enthält.</block>
   <block id="fde00ba8f64d2c57d64a163698fd6f03" category="admonition">Jeder Knowledge Base Scan, der Einbettung, Kosten beinhaltet. Wenn die Datenguardrails nach Erstellung einer Wissensdatenbank aktiviert werden, wird die Wissensdatenbank erneut gescannt und verursacht Kosten.</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">Bis 3. November 2024</block>
-  <block id="5975f7e9036c78e6217b16f295f0ca75" category="inline-link-macro">BlueXP-Konsole</block>
-  <block id="402ae08ce46f82670c0313312e504ad7" category="list-text">Die KI-Engine muss Zugriff auf das haben <block ref="046fd603b18837f482287e5ec741e5ed" category="inline-link-macro-rx"></block></block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSX für NetApp ONTAP</block>
   <block id="4b88d56bd65ef92611ac63064c38369f" category="list-text">Amazon CloudWatch</block>
   <block id="1ee7c829860de53ba4857ad78b7aadef" category="doc">Erstversion der Workload-Fabrik für GenAI</block>
@@ -745,4 +743,5 @@
   <block id="849293736c770408f68a35f4fcdf9592" category="cell">Klicken Sie auf die Schaltfläche *Rebuild*. Die BlueXP  Workload-Farm für GenAI stellt die Infrastruktur wieder her und zeigt den Rebuild-Fortschritt an. Nach Abschluss werden Ihre Wissensdatenbanken wieder mit der neu aufgebauten Infrastruktur verbunden, und die Liste der Wissensdatenbanken wird angezeigt.</block>
   <block id="d1955ee5035af265f471c1debd693717" category="cell">Die von der BlueXP -Workload-Fabrik für GenAI verwendete Docker Back-End-Instanz konnte nicht gestartet werden.</block>
   <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">Bis 01. Dezember 2024</block>
+  <block id="79cee61f29eb5a0e2dd156871eb70a40" category="list-text">Die KI-Engine muss Zugriff auf den BlueXP -API-Endpunkt haben: \https://api.BlueXP .NetApp.com.</block>
 </blocks>
