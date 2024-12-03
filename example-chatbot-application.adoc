@@ -4,7 +4,7 @@ permalink: example-chatbot-application.html
 keywords: ai, example, sample, chatbot, app, application, local 
 summary: Sie können eine Chatbot-Beispielanwendung installieren und ausführen, um Ihre Wissensdatenbanken zu testen und zu lernen, wie Sie die Workload Factory API zur Erstellung Ihrer eigenen generativen KI-Anwendung verwenden. 
 ---
-= Verwenden Sie die externe Chatbot-Beispielanwendung
+= Verwenden Sie die externe Anwendung des GenAI-Beispiels Chatbot
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

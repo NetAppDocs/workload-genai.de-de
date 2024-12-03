@@ -4,7 +4,7 @@ permalink: test-knowledgebase.html
 keywords: ai, chatbot, creating, knowledge base 
 summary: Nachdem Sie die Wissensdatenbank erstellt haben, können Sie sie mithilfe des Chatbot-Simulators lokal testen und erforderliche Änderungen vornehmen, bevor Sie die Wissensdatenbank Ihren Benutzern über eine Chatbot-Anwendung zur Verfügung stellen. 
 ---
-= Testen Sie eine Wissensdatenbank
+= Testen Sie eine GenAI Knowledge Base
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

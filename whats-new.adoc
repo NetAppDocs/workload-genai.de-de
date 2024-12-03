@@ -4,7 +4,7 @@ permalink: whats-new.html
 keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
 summary: Informieren Sie sich über die Neuerungen bei den KI-Workloads, die den Workload-Betrieb unterstützen. 
 ---
-= Was ist neu
+= Neuerungen bei der BlueXP -Workload-Farm für GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -4,7 +4,7 @@ permalink: manage-knowledgebase.html
 keywords: ai, chatbot, managing, knowledge base 
 summary: Nachdem Sie eine Wissensdatenbank erstellt haben, können Sie die Details der Wissensdatenbank anzeigen, die Wissensdatenbank ändern, zusätzliche Datenquellen integrieren oder die Wissensdatenbank löschen. 
 ---
-= Management von Wissensdatenbanken
+= Management von GenAI Knowledge Base
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

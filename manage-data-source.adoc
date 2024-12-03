@@ -4,7 +4,7 @@ permalink: manage-data-source.html
 keywords: ai, chatbot, creating, knowledge base, data source 
 summary: Nachdem Sie eine Wissensdatenbank mit Datenquellen auf Ihrem FSX für ONTAP-Dateisystem erstellt haben, können Sie die Details der Datenquelle anzeigen, den Inhalt der Datenquelle aktualisieren oder ändern, die Einstellungen der Datenquelle bearbeiten oder die Datenquelle löschen. 
 ---
-= Managen von Datenquellen
+= Management von GenAI Datenquellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

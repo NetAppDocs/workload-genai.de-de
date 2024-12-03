@@ -4,7 +4,7 @@ permalink: create-knowledgebase.html
 keywords: ai, chatbot, creating, knowledge base 
 summary: Nachdem Sie die KI-Infrastruktur implementiert und die Datenquellen ermittelt haben, die Sie in Ihre Knowledge Base aus Ihren FSX für ONTAP-Datastores integrieren möchten, können Sie mithilfe der Workload-Factory eine Knowledge Base aufbauen. In diesem Schritt definieren Sie auch die KI-Merkmale und beginnen Sie mit dem Gespräch. 
 ---
-= Erstellen einer Wissensdatenbank
+= Einrichtung einer GenAI Knowledge Base
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

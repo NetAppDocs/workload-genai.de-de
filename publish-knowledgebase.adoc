@@ -4,7 +4,7 @@ permalink: publish-knowledgebase.html
 keywords: ai, chatbot, publishing, knowledge base 
 summary: Nachdem Sie Ihre Wissensdatenbank lokal erstellt und getestet haben, können Sie die Wissensdatenbank veröffentlichen, sodass sie in die Chatbot-Anwendung integriert werden kann, die es Ihren Benutzern ermöglicht, die Wissensdatenbank abzufragen. 
 ---
-= Veröffentlichen Sie eine Wissensdatenbank, und zeigen Sie den eindeutigen Endpunkt an
+= Veröffentlichen Sie eine GenAI Knowledge Base, und zeigen Sie den eindeutigen Endpunkt an
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

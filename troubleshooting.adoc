@@ -4,7 +4,7 @@ permalink: troubleshooting.html
 keywords: support registration, register for support, support, nss account, add nss account, 
 summary: Bevor Sie einen Support-Fall beim technischen NetApp eröffnen können, müssen Sie ein NetApp Support Site Konto zum Workload Factory hinzufügen und sich anschließend für Support registrieren. 
 ---
-= Fehlerbehebung
+= GenAI-Fehlerbehebung
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
