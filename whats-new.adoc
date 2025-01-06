@@ -15,6 +15,34 @@ Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloa
 
 
 
+== 05 Januar 2025
+
+
+
+=== Benutzerdefinierter Snapshot-Name
+
+Sie können jetzt einen Snapshot-Namen für einen Ad-hoc-Snapshot bereitstellen.
+
+link:https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#protect-a-knowledge-base-with-snapshots["Schützen Sie eine Wissensdatenbank mit Snapshots"]
+
+
+
+=== Individueller Name für die AI Engine Instance
+
+Sie können der KI-Engine-Instanz jetzt während der Implementierung einen benutzerdefinierten Namen geben.
+
+link:https://docs.netapp.com/us-en/workload-genai/deploy-infrastructure.html["Implementierung der GenAI-Infrastruktur"]
+
+
+
+=== Wiederherstellung beschädigter oder fehlender GenAI-Infrastruktur
+
+Wenn Ihre KI-Engine beschädigt wird oder irgendwie gelöscht wird, können Sie sie auf der Workload-Farm für Sie neu erstellen lassen. Die Workload Factory verbindet Ihre Wissensdatenbanken nach Abschluss der Neuerstellung automatisch mit der Infrastruktur, sodass sie einsatzbereit sind.
+
+link:https://docs.netapp.com/us-en/workload-genai/troubleshooting.html["Fehlerbehebung"]
+
+
+
 == Bis 01. Dezember 2024
 
 
@@ -45,11 +73,7 @@ Der generative KI-Workload bietet eine Data Guardrails-Funktion basierend auf ei
 
 link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#create-and-configure-the-knowledge-base["Erstellen einer Wissensdatenbank"]
 
-link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mehr zur BlueXP Klassifizierung"^]
-
-
-
-== 29 September 2024
+link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mehr zur BlueXP Klassifizierung"^] == 29. September 2024
 
 
 

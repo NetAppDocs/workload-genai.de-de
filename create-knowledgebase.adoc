@@ -25,7 +25,10 @@ Datenquellen Ihres Unternehmens können Private Identity Information (PII) entha
 link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mehr zur BlueXP Klassifizierung"^].
 
 
-NOTE: Datenguardrails können jederzeit aktiviert oder deaktiviert werden. Wenn Sie die Data Guardrails-Aktivierung wechseln, scannt Workload Factory die gesamte Wissensdatenbank von Grund auf, was zu Kosten führt.
+NOTE: BlueXP  Workload Factory für GenAI maskiert keine sensiblen persönlichen Informationen (SPii). Weitere Informationen zu diesem Datentyp finden Sie unterlink:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-data["Arten sensibler personenbezogener Daten"^].
+
+
+NOTE: Datenguardrails können jederzeit aktiviert oder deaktiviert werden. Wenn Sie die Data Guardrails-Enablement wechseln, scannt Workload Factory die gesamte Wissensdatenbank von Grund auf, was Kosten nach sich zieht.
 
 --
 

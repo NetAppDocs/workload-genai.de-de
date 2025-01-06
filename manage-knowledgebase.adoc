@@ -89,6 +89,11 @@ Sie können den Status einer Wissensdatenbank speichern, indem Sie einen manuell
 Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus, die Liste aller eingebetteten Datenquellen und vieles mehr angezeigt.
 
 . Wählen Sie das Menü *actions* und dann *Snapshot > Neuen Snapshot erstellen*.
+. Wählen Sie optional *Snapshot-Namen definieren* und geben Sie einen benutzerdefinierten Namen für den Snapshot ein.
++
+Durch das Definieren eines benutzerdefinierten Namens können Sie den Inhalt eines Snapshots besser bestimmen, wenn Sie ihn in Zukunft wiederherstellen müssen.
+
+. Wählen Sie *Erstellen*.
 +
 Es wird eine Momentaufnahme der Wissensdatenbank erstellt.
 

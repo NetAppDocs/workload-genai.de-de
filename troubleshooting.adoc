@@ -108,6 +108,25 @@ Wenn Sie eines dieser Probleme haben, können Sie mithilfe der Schritte in der S
 | Wartung | Die AI-Engine startet nicht, und Sie sehen den Fehler "AI Engine Instance error" auf der Seite *Knowledge Basen*. | Die Instanz der KI-Engine wurde beschädigt oder existiert nicht. | Klicken Sie auf die Schaltfläche *Rebuild*. Die BlueXP  Workload-Farm für GenAI stellt die Infrastruktur wieder her und zeigt den Rebuild-Fortschritt an. Nach Abschluss werden Ihre Wissensdatenbanken wieder mit der neu aufgebauten Infrastruktur verbunden, und die Liste der Wissensdatenbanken wird angezeigt. 
 
 
+| Wartung | Die AI-Engine startet nicht, und Sie sehen den Fehler "die GenAI-Engine-Instanz wird gestoppt" auf der Seite *Knowledge Basen*. | Die Instanz der KI-Engine wird nicht ausgeführt. | Starten Sie die KI-Engine-Instanz mithilfe der AWS Management Console oder der AWS CLI. 
+
+
+| Wartung | Die AI-Engine startet nicht, und Sie sehen den Fehler "der GenAI-Engine-Server reagiert nicht" auf der Seite *Wissensdatenbanken*. | Die Instanz der KI-Engine reagiert nicht.  a| 
+Führen Sie die folgenden Wiederherstellungsschritte durch:
+
+.Schritte
+. Ändern Sie die Sicherheitsgruppe der GenAI-Engine, um SSH-Zugriff auf die GenAI-Engine-Instanz zu aktivieren.
+. Melden Sie sich bei der Instanz über SSH an.
+. Führen Sie den folgenden Befehl aus:
++
+[source, console]
+----
+docker-compose up
+----
+
+
+
+
 | Wartung | Die von der BlueXP -Workload-Fabrik für GenAI verwendete Docker Back-End-Instanz konnte nicht gestartet werden. | Das Volume wurde gelöscht und die EC2 Instanz neu gestartet.  a| 
 Führen Sie die folgenden Wiederherstellungsschritte durch:
 
