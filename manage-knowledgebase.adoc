@@ -57,7 +57,7 @@ Wenn Sie den manuellen Modus für Gesprächseinstieg verwenden, können Sie hier
 
 +
 
-NOTE: Jeder Knowledge Base Scan, der Einbettung, Kosten beinhaltet. Wenn die Datenguardrails nach Erstellung einer Wissensdatenbank aktiviert werden, wird die Wissensdatenbank erneut gescannt und verursacht Kosten.
+NOTE: Jeder Knowledge Base Scan, der Einbettung, Kosten beinhaltet. Wenn die Datenguardrails nach Erstellung einer Wissensdatenbank aktiviert werden, wird die Wissensdatenbank erneut gescannt und verursacht Kosten. Ebenso scannt GenAI die zugehörigen Datenquellen erneut, wenn Sie die Chatmodelle ändern (Kosten entstehen).
 
 . Wählen Sie *Speichern*, nachdem Sie Ihre Änderungen vorgenommen haben.
 
@@ -171,17 +171,41 @@ Sie können zusätzliche Datenquellen in Ihre Wissensdatenbank einbetten, um die
 Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, einschließlich Domäne, IP-Adresse, Benutzername und Passwort.
 
 . *Wählen Sie eine Datenquelle*: Wählen Sie den Speicherort der Datenquelle basierend darauf, wo Sie die Dateien gespeichert haben. Dies kann ein ganzes Volume sein, oder nur ein bestimmter Ordner oder Unterordner im Volume, und wählen Sie *Weiter*.
-. *Define AI-Parameter*: Definieren Sie im Abschnitt *Chunking-Strategie*, wie die GenAI-Engine den Inhalt der Datenquelle in Blöcke teilt, wenn die Datenquelle in eine Wissensdatenbank integriert ist. Sie können eine der folgenden Strategien wählen:
+. *Konfigurationen*: Konfigurieren Sie, wie die Datenquelle Informationen aus Ihren Dateien einliest und welche Dateien sie in Scans enthält:
 +
-** *Multi-Sentence Chunking*: Organisiert Informationen aus Ihrer Datenquelle in Satzbausteine. Sie können festlegen, wie viele Sätze jedes Stück ausmachen (bis zu 100).
-** *Überlappendes Chunking*: Organisiert Informationen aus Ihrer Datenquelle in zeichendefinierte Blöcke, die benachbarte Blöcke überlappen können. Sie können die Größe jedes Chunk in Zeichen auswählen und festlegen, wie viel sich jeder Chunk mit benachbarten Chunks überschneidet. Sie können eine Chunk-Größe von 50 bis 3000 Zeichen und einen Überlappungsprozentsatz von 1 bis 99 % konfigurieren.
+** *Datenquelle definieren*: Definieren Sie im Abschnitt *Chunking-Strategie*, wie die GenAI-Engine den Inhalt der Datenquelle in Blöcke teilt, wenn die Datenquelle in eine Wissensdatenbank integriert ist. Sie können eine der folgenden Strategien wählen:
++
+*** *Multi-Sentence Chunking*: Organisiert Informationen aus Ihrer Datenquelle in Satzbausteine. Sie können festlegen, wie viele Sätze jedes Stück ausmachen (bis zu 100).
+*** *Überlappendes Chunking*: Organisiert Informationen aus Ihrer Datenquelle in zeichendefinierte Blöcke, die benachbarte Blöcke überlappen können. Sie können die Größe jedes Chunk in Zeichen auswählen und festlegen, wie viel sich jeder Chunk mit benachbarten Chunks überschneidet. Sie können eine Chunk-Größe von 50 bis 3000 Zeichen und einen Überlappungsprozentsatz von 1 bis 99 % konfigurieren.
 +
 
 NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Speicherbedarf erheblich erhöhen, da die Abrufgenauigkeit nur geringfügig verbessert wird.
 
 
 
-. Im Abschnitt *permission aware*, der nur verfügbar ist, wenn sich die von Ihnen ausgewählte Datenquelle auf einem Volume befindet, das das SMB-Protokoll verwendet, können Sie die Auswahl aktivieren oder deaktivieren:
+** *Dateifilterung*: Konfigurieren Sie, welche Dateien in Scans enthalten sind:
++
+*** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
++
+Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+
++
+Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
+
++
+
+NOTE: Ihre Wahl, Bilddateien in Scans aufzunehmen, hängt mit dem Chatmodell der Wissensdatenbank zusammen. Wenn Sie Bilddateien in Scans aufnehmen, muss das Chatmodell Bilder unterstützen. Wenn hier Bilddateitypen ausgewählt sind, können Sie die Wissensdatenbank nicht auf ein Chatmodell umschalten, das keine Bilddateien unterstützt.
+
+*** Wählen Sie im Abschnitt *Dateiänderungszeitfilter* die Option, die Aufnahme von Dateien basierend auf ihrer Änderungszeit zu aktivieren oder zu deaktivieren. Wenn Sie die Zeitfilterung für die Änderung aktivieren, wählen Sie einen Datumsbereich aus der Liste aus.
++
+
+NOTE: Wenn Sie Dateien auf Basis eines Änderungsdatums einbeziehen, werden die Dateien aus dem periodischen Scan ausgeschlossen, und die Datenquelle enthält diese Dateien nicht, sobald der Datumsbereich nicht erfüllt ist (die Dateien wurden nicht innerhalb des von Ihnen angegebenen Datumsbereichs geändert).
+
+
+
+
+
+. Im Abschnitt *permission aware*, der nur verfügbar ist, wenn sich die von Ihnen ausgewählte Datenquelle auf einem Volume befindet, das das SMB-Protokoll verwendet, können Sie permission-aware Antworten aktivieren oder deaktivieren:
 +
 ** *Enabled*: Benutzer des Chatbot, die auf diese Wissensdatenbank zugreifen, erhalten nur Antworten auf Abfragen aus Datenquellen, auf die sie zugreifen können.
 ** *Disabled*: Benutzer des Chatbot erhalten Antworten über Inhalte aus allen integrierten Datenquellen.

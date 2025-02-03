@@ -5,7 +5,6 @@
   <block id="e3fbe9ea657688c1ff4a86f23c1752c3" category="list-text">*Wählen Sie ein Volume*: Wählen Sie das Volume aus, auf dem sich Ihre Quelldateien befinden, und wählen Sie *Weiter*.</block>
   <block id="3bce906453410b081d8e495b9cf8c9b0" category="paragraph">Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, einschließlich Domäne, IP-Adresse, Benutzername und Passwort.</block>
   <block id="7028355d43ef8a71ff4d5e7bed32be2b" category="list-text">*Wählen Sie eine Datenquelle*: Wählen Sie den Speicherort der Datenquelle basierend darauf, wo Sie die Dateien gespeichert haben. Dies kann ein ganzes Volume sein, oder nur ein bestimmter Ordner oder Unterordner im Volume, und wählen Sie *Weiter*.</block>
-  <block id="12d073958c6d4922a6f27ae8b5e4b533" category="list-text">Im Abschnitt *permission aware*, der nur verfügbar ist, wenn sich die von Ihnen ausgewählte Datenquelle auf einem Volume befindet, das das SMB-Protokoll verwendet, können Sie die Auswahl aktivieren oder deaktivieren:</block>
   <block id="751157f855d8f0597671b65bc8ea1301" category="list-text">*Enabled*: Benutzer des Chatbot, die auf diese Wissensdatenbank zugreifen, erhalten nur Antworten auf Abfragen aus Datenquellen, auf die sie zugreifen können.</block>
   <block id="9969ec0e7476736a130c54f32700611e" category="list-text">*Disabled*: Benutzer des Chatbot erhalten Antworten über Inhalte aus allen integrierten Datenquellen.</block>
   <block id="65f706122d6156fd52b6cb2ff2214944" category="list-text">Wählen Sie *Hinzufügen*, um diese Datenquelle zu Ihrer Wissensdatenbank hinzuzufügen.</block>
@@ -115,9 +114,7 @@
   <block id="36d8c0d0c9711e8ac7a5bbcbe9b96008" category="list-text">Die Regeln für ausgehende Anrufe sind für den gesamten Datenverkehr offen, während die Regeln für eingehende Anrufe vollständig geschlossen sind.</block>
   <block id="1f171bab0b26254e4c58e536973c5c09" category="list-text">Private Endpunkte</block>
   <block id="34048930da0f8b448828d6774b139b17" category="list-text">Amazonas-Grundgestein</block>
-  <block id="c421d122321bec48d6b30858f4e7b515" category="list-text">Amazon EC2</block>
   <block id="719ffca696aa714ef090fce0aca97bd2" category="list-text">Amazon Elastic Container Registry (ECR)</block>
-  <block id="270fcb785810d0206945029bb05f4e97" category="list-text">Amazon S3</block>
   <block id="0072b242011f459b57b0768dceac82f8" category="list-text">AWS System Manager (SSM)</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Holen Sie sich Hilfe</block>
   <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">Erhalten Sie Support für FSX für ONTAP</block>
@@ -475,7 +472,6 @@
   <block id="4fc1d0607a3fe50db5ef612a2c4a178e" category="list-text">Navigieren Sie zu<block ref="0e14f9ffc1d2673bd92f13a4ac79e32e" category="inline-link-rx"></block> , um sich bei der Anwendung anzumelden.</block>
   <block id="5f62c285aea87618ed1381c43c7ae2cf" category="paragraph">Die Chatbot-Beispielanwendung wird angezeigt.</block>
   <block id="d59048f21fd887ad520398ce677be586" category="section-title">Weitere Informationen .</block>
-  <block id="8f3f613a5094ebfa7c5f531cb356028e" category="list-text">*Define AI-Parameter*: Definieren Sie im Abschnitt *Chunking-Strategie*, wie die GenAI-Engine den Inhalt der Datenquelle in Blöcke teilt, wenn die Datenquelle in eine Wissensdatenbank integriert ist. Sie können eine der folgenden Strategien wählen:</block>
   <block id="091e1c7957272ab69145f4859b4465d0" category="list-text">*Multi-Sentence Chunking*: Organisiert Informationen aus Ihrer Datenquelle in Satzbausteine. Sie können festlegen, wie viele Sätze jedes Stück ausmachen (bis zu 100).</block>
   <block id="87aa4ffcf50084a10651fe7094e75bda" category="list-text">*Überlappendes Chunking*: Organisiert Informationen aus Ihrer Datenquelle in zeichendefinierte Blöcke, die benachbarte Blöcke überlappen können. Sie können die Größe jedes Chunk in Zeichen auswählen und festlegen, wie viel sich jeder Chunk mit benachbarten Chunks überschneidet. Sie können eine Chunk-Größe von 50 bis 3000 Zeichen und einen Überlappungsprozentsatz von 1 bis 99 % konfigurieren.</block>
   <block id="18c41e2a8da7a23dcc990da8d7dfe06d" category="admonition">Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Speicherbedarf erheblich erhöhen, da die Abrufgenauigkeit nur geringfügig verbessert wird.</block>
@@ -583,7 +579,6 @@
   <block id="3e3c8a56035df76e06772f4505dc58c7" category="list-text">Stellen Sie sicher, dass Ihre Umgebung die Voraussetzungen erfüllt</block>
   <block id="0ce4d42838344488f607ff306088fae9" category="list-text">Implementieren Sie die BlueXP Klassifizierung</block>
   <block id="b91895758c5a35a75fd3e87dc1fa0741" category="list-text">Auf der Seite „Wissensdatenbank bearbeiten“ können Sie den Namen der Wissensdatenbank, die Beschreibung, das Einbettungsmodell, das Chatmodell, die Aktivierung von Data Guardrails ändern, auswählen, ob Gesprächsstarter automatisch oder manuell erstellt werden und die Snapshot-Richtlinie, die für das Volume verwendet wird, das die Wissensdatenbank enthält.</block>
-  <block id="fde00ba8f64d2c57d64a163698fd6f03" category="admonition">Jeder Knowledge Base Scan, der Einbettung, Kosten beinhaltet. Wenn die Datenguardrails nach Erstellung einer Wissensdatenbank aktiviert werden, wird die Wissensdatenbank erneut gescannt und verursacht Kosten.</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">Bis 3. November 2024</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSX für NetApp ONTAP</block>
   <block id="4b88d56bd65ef92611ac63064c38369f" category="list-text">Amazon CloudWatch</block>
@@ -781,5 +776,47 @@
   <block id="2c6cb4e03314c724c32217626f17bd37" category="list-text">Melden Sie sich bei der Instanz über SSH an.</block>
   <block id="337d79852891a37d41285c9101c3fff4" category="list-text">Führen Sie den folgenden Befehl aus:</block>
   <block id="37b8354fe553b0151888468751ea8eb0" category="section-title">05 Januar 2025</block>
-  <block id="0fdf33109843473a96b84acfe576030a" category="paragraph"><block ref="384713a8a1d5a2dd365da2851c50ad93" category="inline-link-macro-rx"></block> == 29. September 2024</block>
+  <block id="2b33992406857bfe64aea3c375dfd0f3" category="list-text">*Konfigurationen*: Konfigurieren Sie, wie die Datenquelle Informationen aus Ihren Dateien einliest und welche Dateien sie in Scans enthält:</block>
+  <block id="556d69e48e56f7282433b4470f9fc985" category="list-text">*Datenquelle definieren*: Definieren Sie im Abschnitt *Chunking-Strategie*, wie die GenAI-Engine den Inhalt der Datenquelle in Blöcke teilt, wenn die Datenquelle in eine Wissensdatenbank integriert ist. Sie können eine der folgenden Strategien wählen:</block>
+  <block id="441ffcb2a5deb53b096bf6da09532c3c" category="list-text">*Dateifilterung*: Konfigurieren Sie, welche Dateien in Scans enthalten sind:</block>
+  <block id="fbf5c3d1e175475dce2b6f27f23e342c" category="list-text">Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.</block>
+  <block id="9c91ae043d4f1fed127449b7d9f56f1a" category="paragraph">Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.</block>
+  <block id="cdc5210ee55660ad12576b6b12e53505" category="paragraph">Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.</block>
+  <block id="527140faa5b9a355e269287e721ad95b" category="admonition">Ihre Wahl, Bilddateien in Scans aufzunehmen, hängt mit dem Chatmodell der Wissensdatenbank zusammen. Wenn Sie Bilddateien in Scans aufnehmen, muss das Chatmodell Bilder unterstützen. Wenn hier Bilddateitypen ausgewählt sind, können Sie die Wissensdatenbank nicht auf ein Chatmodell umschalten, das keine Bilddateien unterstützt.</block>
+  <block id="2af4913e8e59a092d414744be9ae44d2" category="list-text">Wählen Sie im Abschnitt *Dateiänderungszeitfilter* die Option, die Aufnahme von Dateien basierend auf ihrer Änderungszeit zu aktivieren oder zu deaktivieren. Wenn Sie die Zeitfilterung für die Änderung aktivieren, wählen Sie einen Datumsbereich aus der Liste aus.</block>
+  <block id="67aa8f84073b450b225b7d2830cc4e41" category="admonition">Wenn Sie Dateien auf Basis eines Änderungsdatums einbeziehen, werden die Dateien aus dem periodischen Scan ausgeschlossen, und die Datenquelle enthält diese Dateien nicht, sobald der Datumsbereich nicht erfüllt ist (die Dateien wurden nicht innerhalb des von Ihnen angegebenen Datumsbereichs geändert).</block>
+  <block id="a036984d47253ddc828a04bc8ac85524" category="list-text">Im Abschnitt *permission aware*, der nur verfügbar ist, wenn sich die von Ihnen ausgewählte Datenquelle auf einem Volume befindet, das das SMB-Protokoll verwendet, können Sie permission-aware Antworten aktivieren oder deaktivieren:</block>
+  <block id="77fd00559b8279b555e48d21e5e67c34" category="doc">Dateitypfilterung für Datenquellen</block>
+  <block id="47cf5538cc85b7acf0e24098fc5bbffd" category="paragraph">GenAI unterstützt jetzt die Auswahl bestimmter Dateitypen, die beim Hinzufügen einer Datenquelle in den Scan der Datenquelle einbezogen werden sollen.</block>
+  <block id="e57c1e86c82776cdcb9c50b4e82943f8" category="paragraph"><block ref="e57c1e86c82776cdcb9c50b4e82943f8" category="inline-link-macro-rx"></block></block>
+  <block id="f191d5f0a123d62966b3617a9d8c752c" category="section-title">Dateiänderung nach Datenquellen filtern</block>
+  <block id="b1be3e2e5ab05373dbf3927507ea84d2" category="paragraph">GenAI unterstützt jetzt das Filtern von Dateien, die beim Hinzufügen einer Datenquelle in den Scan der Datenquelle nach Änderungsdatum einbezogen werden sollen. Sie können einen Änderungsdatumbereich für die enthaltenen Dateien auswählen.</block>
+  <block id="7a7ba68ff13813a8c9d7413b67a91e34" category="section-title">Unterstützung für Bilddateien und erweiterte Unterstützung für PDF-Dateien</block>
+  <block id="02edd7a4065e5f73535b550150fc46f2" category="paragraph">GenAI unterstützt jetzt das Scannen von Bilddateien und Bildern in PDF-Dateien (auch als Multi-modale Dateiunterstützung bekannt). Wenn Sie Bilddateien auswählen, wird der Text aus den Bildern in die Datenquelle gescannt und als Daten verwendet. Diese Funktion umfasst Bilder in PDF-Dokumenten. Wenn Sie PDF-Dateitypen hinzufügen, werden Bilder in jeder PDF-Datei nach Text gescannt, und dieser Text wird in den Informationen aus der Datenquelle enthalten.</block>
+  <block id="b9a5ff8382cbb9f5609b8bff25344245" category="section-title">Hybride Suche und erneute Unterstützung</block>
+  <block id="429b63d212adaceb6de8dae934d76ea4" category="paragraph">GenAI verbessert jetzt die Relevanz von Suchergebnissen durch hybride Suche und Neubewertung der Ergebnisse. Hybride Suche kombiniert Schlüsselwortsuche mit Vektor- und semantischer Suche. Die Standard-Keyword-Suchergebnisse werden durch enge Übereinstimmungen und sprachliche Nuance erweitert, was die Relevanz erhöht. GenAI ordnet die Suchergebnisse neu und liefert nur Ergebnisse mit der höchsten Relevanz.</block>
+  <block id="397adcec169a6ce17f0abfc941258c0f" category="paragraph"><block ref="397adcec169a6ce17f0abfc941258c0f" category="inline-link-macro-rx"></block></block>
+  <block id="c009fe342f72cc06fe63760e2eaa701c" category="list-text">Mit der hybriden Suche und den von GenAI bereitgestellten Neurankungsfunktionen erhalten Sie hochwertige Ergebnisse aus Ihren Daten. Die hybride Suche in Kombination mit einem Re-Ranking verbessert die Relevanz der Suchergebnisse deutlich. Diese Funktionen sind über Amazon AWS verfügbar und regionsabhängig.</block>
+  <block id="e1201f675c705c74b856dba391a68602" category="paragraph">Einige multimodale Operationen, wie das Scannen von Bildern nach Textinformationen, können mehr Ressourcen verwenden und damit höhere Kosten verursachen. Einige Konfigurationsvorgänge, wie das Ändern von Einstellungen für eine Wissensdatenbank, können dazu führen, dass Datenquellen erneut gescannt werden, und Datenquellprüfungen können auch höhere Kosten verursachen.</block>
+  <block id="0a2b76d9cf1a9ffdd3b88e030e038252" category="example-title">IAM-Rollenberechtigungen</block>
+  <block id="216304eb42158c57d4ec762a309c7df6" category="list-text">Grundgestein</block>
+  <block id="12789b4d0bdf3d54be09051f154d5eba" category="list-text">Bedrock-Runtime</block>
+  <block id="ca6c1f270eb3bc12524f0c3ad6af0765" category="list-text">Bedrock-Agent-Runtime</block>
+  <block id="db974238714ca8de634a7ce1d083a14f" category="list-text">API</block>
+  <block id="05b6053c41a2130afd6fc3b158bda4e6" category="list-text">docker</block>
+  <block id="078aab7ae8c1a0df339ac8525790d5e1" category="list-text">SSM</block>
+  <block id="627597c7a47356c5c9f55a4854a59ff3" category="list-text">ec2messages</block>
+  <block id="25f6388206f436c2d1de63216302b13d" category="list-text">Ssmbotschaften</block>
+  <block id="907e06a16862d82ca6907a28a68d0ad6" category="cell">JPEG</block>
+  <block id="8106d47388a74c58448d40c84de6fd91" category="cell">.Jpg or.jpeg</block>
+  <block id="7281c70f390b5e0f3c8827352c83f0b0" category="cell">Tragbare Netzwerkgrafiken</block>
+  <block id="6446d860dbbfe540e9e2cbab5f98f1e3" category="cell">.Png</block>
+  <block id="a97aa4a947e531a7fa6f96a2b73876e3" category="cell">Format Für Den Austausch Von Grafiken</block>
+  <block id="03a46779cf1ed515b29e1c471efd4c0f" category="cell">.Gif</block>
+  <block id="830b1d3b1096152076b8daa22a275a74" category="cell">WEBP-Bild</block>
+  <block id="f38a468e497336f7e3144a22393a4ca9" category="cell">.webp</block>
+  <block id="0c05a373f02466ab8f502ea4b3b8e2e8" category="admonition">Jeder Knowledge Base Scan, der Einbettung, Kosten beinhaltet. Wenn die Datenguardrails nach Erstellung einer Wissensdatenbank aktiviert werden, wird die Wissensdatenbank erneut gescannt und verursacht Kosten. Ebenso scannt GenAI die zugehörigen Datenquellen erneut, wenn Sie die Chatmodelle ändern (Kosten entstehen).</block>
+  <block id="f7fb3b5dc06e03848b8f5ff23bbcd37d" category="paragraph">GenAI ordnet die Suchergebnisse standardmäßig neu ein, um die Relevanz der Ergebnisse zu verbessern. Um die besten Ergebnisse zu erzielen, stellen Sie sicher, dass Ihre Konfiguration des Basismodells Amazon Bedrock den Zugriff auf ein neues Modell wie Cohere Rerank oder Amazon Rerank umfasst, falls es in Ihrer Region verfügbar ist.</block>
+  <block id="986aee2caba870111e5ce3c5571c82de" category="section-title">02 Februar 2025</block>
+  <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">29 September 2024</block>
 </blocks>

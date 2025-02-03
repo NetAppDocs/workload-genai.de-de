@@ -35,6 +35,8 @@ Bevor Sie mit der BlueXP -Workload-Fabrik für GenAI beginnen, müssen Sie Amaz
 * https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["AWS-Dokumentation: Unterstützte Regionen und Modelle für Knowledge Basen für Amazon Bedrock"^]
 
 
+GenAI ordnet die Suchergebnisse standardmäßig neu ein, um die Relevanz der Ergebnisse zu verbessern. Um die besten Ergebnisse zu erzielen, stellen Sie sicher, dass Ihre Konfiguration des Basismodells Amazon Bedrock den Zugriff auf ein neues Modell wie Cohere Rerank oder Amazon Rerank umfasst, falls es in Ihrer Region verfügbar ist.
+
 --
 Einbettungsmodell:: Sie müssen das einzubetende Modell aktivieren, das Sie verwenden möchten, bevor Sie Ihre Wissensdatenbank erstellen. Die folgenden Einbettungsmodelle werden unterstützt:
 +

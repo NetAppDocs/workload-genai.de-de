@@ -37,6 +37,7 @@ Die BlueXP  Workload-Farm für GenAI vereinfacht die Implementierung von Infras
 * Beschleunigen Sie die Entwicklung von GenAI-Applikationen, wie z. B. einen Q&A-Chatbot, mithilfe von Open-Source-Frameworks wie LangChain. Nutzen Sie die GenAI-API zur Bereitstellung und zum Management von Wissensdatenbanken, zum Chatten mit einer Wissensdatenbank und zum Speichern und Abrufen des Chatverlaufs.
 * Verbessern Sie die Datensicherung und -Verfügbarkeit, indem Sie die generative KI-Dateninfrastruktur auf FSX für NetApp ONTAP-Filesysteme implementieren und ONTAP Funktionen wie Hochverfügbarkeit, Snapshots für lokale Datensicherung und -Recovery, SnapMirror für Disaster Recovery und SnapVault für Backup Ihrer Dateninfrastruktur nutzen.
 * Profitieren Sie von den ONTAP Dateneffizienzfunktionen wie Datendeduplizierung, Komprimierung und Data-Compaction, Daten-Tiering und Thin Provisioning und senken Sie so die Storage-Gesamtkosten für die generative KI-Dateninfrastruktur.
+* Mit der hybriden Suche und den von GenAI bereitgestellten Neurankungsfunktionen erhalten Sie hochwertige Ergebnisse aus Ihren Daten. Die hybride Suche in Kombination mit einem Re-Ranking verbessert die Relevanz der Suchergebnisse deutlich. Diese Funktionen sind über Amazon AWS verfügbar und regionsabhängig.
 
 
 
@@ -80,6 +81,8 @@ Sie können die BlueXP -Workload-Fabrik mit den folgenden Tools verwenden:
 Die GenAI Funktion der Workload-Farm ist mit keinerlei Kosten verbunden.
 
 Sie müssen jedoch für die von Ihnen implementierten AWS Ressourcen zahlen, um die generative KI-Infrastruktur unterstützen zu können. Sie zahlen beispielsweise für AWS den Amazon Bedrock AI Service, FSX for ONTAP File-System und Storage-Kapazität und die EC2-Instanz der GenAI Engine.
+
+Einige multimodale Operationen, wie das Scannen von Bildern nach Textinformationen, können mehr Ressourcen verwenden und damit höhere Kosten verursachen. Einige Konfigurationsvorgänge, wie das Ändern von Einstellungen für eine Wissensdatenbank, können dazu führen, dass Datenquellen erneut gescannt werden, und Datenquellprüfungen können auch höhere Kosten verursachen.
 
 
 
