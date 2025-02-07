@@ -50,21 +50,34 @@ https://aws.amazon.com/bedrock/titan/["Erfahren Sie mehr über Amazon Titan"^]
 
 
 --
-Chat-Modell:: Sie müssen das grundlegende Chatmodell aktivieren, das Sie verwenden möchten, bevor Sie Ihre Wissensdatenbank erstellen. Die folgenden Claude-Chat-Modelle werden unterstützt:
+Chat-Modell:: Sie müssen das grundlegende Chatmodell aktivieren, das Sie verwenden möchten, bevor Sie Ihre Wissensdatenbank erstellen. Da der Modellsupport je nach AWS-Region variiert, finden Sie unter https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["Die AWS Dokumentation"^] Informationen dazu, welche Modelle in den Regionen verwendet werden können, in denen Sie Ihre Knowledge Base bereitstellen möchten.
 +
 --
-* Claude 3.5 Sonnet
-* Claude 3 Opus
-* Claude 3 Haiku
-* Claude 3 Sonnet
-* Claude 2.1
-* Claude 2.0
-+
-Da der Modellsupport je nach AWS-Region variiert, finden Sie unter https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["Dieser AWS Dokumentationsseite"^] Informationen dazu, welche Modelle in den Regionen verwendet werden können, in denen Sie Ihre Knowledge Base bereitstellen möchten.
+GenAI unterstützt die folgenden anthropischen Claude- und Amazon Nova-Modelle:
 
+* Anthropic Claude:
 +
-Erfahren Sie mehr über die verfügbaren Modelle, die Ihnen bei der Auswahl helfen: https://aws.amazon.com/bedrock/claude/["Anthropic's Claude in Amazon Bedrock"^]
+** Claude 3.5 Sonnet
+** Claude 3 Opus
+** Claude 3 Haiku
+** Claude 3 Sonnet
+** Claude 2.1
+** Claude 2.0
 
+
+* Amazon Nova:
++
+** Nova Micro
+** Nova Lite (unterstützt Bilder und Text)
+** Nova Pro (unterstützt Bilder und Text)
+
+
+
+
+Erfahren Sie mehr über die Verwendung dieser Modelle mit Amazon Bedrock:
+
+* https://aws.amazon.com/bedrock/claude/["Anthropic's Claude in Amazon Bedrock"^]
+* https://docs.aws.amazon.com/nova/latest/userguide/getting-started-console.html["Erste Schritte mit Amazon Nova in der Amazon Bedrock Konsole"^]
 
 
 --

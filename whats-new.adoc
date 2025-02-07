@@ -19,6 +19,14 @@ Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloa
 
 
 
+=== Support für Amazon Nova-Basismodelle
+
+GenAI unterstützt jetzt die Amazon Nova Foundation Modelle. Amazon Nova Micro, Amazon Nova Lite und Amazon Nova Pro werden unterstützt.
+
+link:https://docs.netapp.com/us-en/workload-genai/requirements.html["GenAI-Anforderungen"]
+
+
+
 === Dateitypfilterung für Datenquellen
 
 GenAI unterstützt jetzt die Auswahl bestimmter Dateitypen, die beim Hinzufügen einer Datenquelle in den Scan der Datenquelle einbezogen werden sollen.
