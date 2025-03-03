@@ -52,7 +52,16 @@ Die folgenden Datenquelldateiformate werden derzeit unterstützt.
 | Dateiformat | Erweiterung 
 
 
+| Apache Parkett | .Parkett 
+
+
 | Durch Kommas getrennte Wertedatei | .Csv 
+
+
+| Format Für Den Austausch Von Grafiken | .Gif 
+
+
+| JPEG | .Jpg or.jpeg 
 
 
 | Markdown | .md 
@@ -67,13 +76,7 @@ Die folgenden Datenquelldateiformate werden derzeit unterstützt.
 | Tragbares Dokumentformat | .Pdf 
 
 
-| JPEG | .Jpg or.jpeg 
-
-
 | Tragbare Netzwerkgrafiken | .Png 
-
-
-| Format Für Den Austausch Von Grafiken | .Gif 
 
 
 | WEBP-Bild | .webp 

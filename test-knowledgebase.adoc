@@ -20,6 +20,9 @@ Sie können eine Wissensdatenbank testen, indem Sie mit Ihren eingebetteten Date
 
 Sie führen die meisten Tests innerhalb der Workload Factory durch, bevor Sie die Wissensdatenbank in einer Anwendung für Ihre Benutzer bereitstellen. Wenn Sie Änderungen an Ihrer Datenquelle oder dem Chatbot-Vorgang vornehmen müssen, sollten Sie dies jetzt tun, bevor Sie Ihre Wissensdatenbank veröffentlichen.
 
+
+TIP: Sie können die Größe des Chatbot-Simulatorfensters ändern und neu benennen sowie Fragen und Antworten in die Zwischenablage kopieren.
+
 Einige der Aufgaben, die Sie durchführen möchten, um Ihren Chatbot zu testen, sind:
 
 * Geben Sie eine große Anzahl von Fragen ein, die für Ihr Unternehmen relevant sind, um sicherzustellen, dass die Antworten den Erwartungen entsprechen.
@@ -33,5 +36,13 @@ Einige der Aufgaben, die Sie durchführen möchten, um Ihren Chatbot zu testen, 
 Der Chatbot-Simulator wird im rechten Fensterbereich angezeigt. Falls festgelegt, werden auch bestehende Gesprächseinstiege angezeigt.
 
 . Geben Sie im Chatbot-Eingabefeld eine Eingabeaufforderung oder Frage ein, und wählen Sie aus image:button-run.png["Die Schaltfläche Ausführen"] , wie Ihr Chatbot mit Ihrem organisatorischen Wissen reagiert.
++
+[TIP]
+====
+** Sie können die Quellen sehen, die zur Erstellung der Antwort verwendet werden, indem Sie die Liste *sources* unter der Antwort erweitern. Hier finden Sie eine Liste der Dateien, die zum Generieren der Antwort verwendet werden. Sie können die von jeder Datei und jedem Volume verwendeten Datenblöcke anzeigen und in jede Datei kopieren, indem Sie den Mauszeiger über den Dateinamen bewegen.
+** Wenn Tabellen in der Antwort enthalten sind, können Sie die Daten in jeder Spalte sortieren und jede Tabelle in die Zwischenablage kopieren.
+
+
+====
 . Wenn Sie eine Ihrer Datenquellen aktualisieren müssen, damit Ihre Wissensdatenbank gezielter Antworten liefert, nehmen Sie diese Änderungen jetzt vor und testen Sie die Wissensdatenbank erneut.
 
