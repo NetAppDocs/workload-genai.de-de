@@ -52,16 +52,19 @@ Die folgenden Datenquelldateiformate werden derzeit unterstützt.
 | Dateiformat | Erweiterung 
 
 
-| Apache Parkett | .Parkett 
+| Apache Parquetfootnote:Disclaimer[das Data Guardrails-Feature wird beim Einlesen strukturierter Datendateien nicht unterstützt.] | .Parkett 
 
 
-| Durch Kommas getrennte Wertedatei | .Csv 
+| Kommagetrennte Werte filefootnote:Disclaimer[] | .Csv 
 
 
 | Format Für Den Austausch Von Grafiken | .Gif 
 
 
 | JPEG | .Jpg or.jpeg 
+
+
+| JSON und JSONPfootnote:Disclaimer[] | .Json 
 
 
 | Markdown | .md 

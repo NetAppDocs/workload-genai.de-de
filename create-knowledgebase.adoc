@@ -60,9 +60,14 @@ https://aws.amazon.com/bedrock/titan/["Erfahren Sie mehr über Amazon Titan"^]
 
 
 
-.. *Chat-Modell*: Wählen Sie aus Claude-Chat-Modellen, die in Amazon Bedrock integriert sind. Beachten Sie, dass Sie das Chatmodell von Amazon Bedrock bereits aktiviert haben müssen.
+.. *Chat-Modell*: Wählen Sie zwischen Anthropic Claude oder Amazon Nova Chat-Modellen, die in Amazon Bedrock integriert sind. Beachten Sie, dass Sie das Chatmodell von Amazon Bedrock bereits aktiviert haben müssen.
 +
-Erfahren Sie mehr über die verfügbaren Modelle, die Ihnen bei der Auswahl helfen: https://aws.amazon.com/bedrock/claude/["Anthropic's Claude in Amazon Bedrock"^]
+Erfahren Sie mehr über die Verwendung dieser Modelle mit Amazon Bedrock:
+
++
+*** https://aws.amazon.com/bedrock/claude/["Anthropic's Claude in Amazon Bedrock"^]
+*** https://docs.aws.amazon.com/nova/latest/userguide/getting-started-console.html["Erste Schritte mit Amazon Nova in der Amazon Bedrock Konsole"^]
+
 
 .. *Data Guardrails*: Wählen Sie aus, ob Sie Data Guardrails aktivieren oder deaktivieren möchten. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mit BlueXP  Klassifizierung als Basis für Daten-Guardrails lernen"^].
 +
@@ -70,7 +75,7 @@ Die folgenden Voraussetzungen müssen erfüllt sein, um die Data Guardrails zu a
 
 +
 *** Für die Kommunikation mit der BlueXP -Klassifizierung ist ein Servicekonto erforderlich. Sie müssen die Rolle „_Organisation admin_“ auf Ihrem BlueXP -Mandantenkonto haben, um Servicekonten erstellen zu können. Ein Mitglied mit der Rolle „Organisationsadministrator“ kann alle Aktionen in BlueXP  ausführen. link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Erfahren Sie, wie Sie einem Mitglied in BlueXP  eine Rolle hinzufügen"^]
-*** Die KI-Engine muss Zugriff auf den BlueXP -API-Endpunkt haben: \https://api.BlueXP .NetApp.com.
+*** Die KI-Engine muss Zugriff auf die habenlink:https://api.bluexp.netapp.com["BlueXP -API-Endpunkt"^].
 *** Sie müssen die folgenden Schritte ausführen, wie in beschriebenlink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Dokumentation der BlueXP Klassifizierung"^]:
 +
 .... BlueXP Connector erstellen
@@ -80,6 +85,13 @@ Die folgenden Voraussetzungen müssen erfüllt sein, um die Data Guardrails zu a
 
 
 
+
+
++
+
+NOTE: Die Datenguardrails-Funktion wird bei der Aufnahme strukturierter Datendateien wie CSV, JSON, JSONP oder Parkett nicht unterstützt.
+
++
 .. *Gesprächseinstieg*: Wählen Sie aus, ob Sie bis zu vier Gesprächseinstiegstelefonate bereitstellen möchten, die Benutzern angezeigt werden, die mit einem Chatbot interagieren, der diese Wissensdatenbank nutzt. Wir empfehlen, diese Einstellung zu aktivieren.
 +
 Wenn Sie Gesprächseinstieg aktivieren, ist standardmäßig der automatische Modus ausgewählt. Der „manuelle Modus“ kann erst aktiviert werden, nachdem Sie Datenquellen zu Ihrer Wissensdatenbank hinzugefügt haben. link:manage-knowledgebase.html["Erfahren Sie, wie Sie die Einstellungen der Wissensdatenbank ändern"].
