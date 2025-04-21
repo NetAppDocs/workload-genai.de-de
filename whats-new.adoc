@@ -23,7 +23,7 @@ Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloa
 
 Diese Version von GenAI führt die Unterstützung von JSON- und JSONP-Dateiformaten ein, wenn Dateien aus Datenquellen erstellt `.json` werden. JSON-Dateien mit geschachtelten Objekten werden unterstützt, wobei die Unterstützung für verschachtelte Arrays eingeschränkt ist.
 
-link:https://review.docs.netapp.com/us-en/workload-genai_mar-2-release/identify-data-sources.html#supported-data-source-file-formats["Unterstützte Datenquelldateiformate"]
+link:https://docs.netapp.com/us-en/workload-genai/identify-data-sources.html#supported-data-source-file-formats["Unterstützte Datenquelldateiformate"]
 
 
 
@@ -88,7 +88,7 @@ Diese Version von GenAI bietet erweiterte Dateiunterstützung:
 * GenAI unterstützt jetzt die Aufnahme von Microsoft Word DOCX-Dateien, die Bilder enthalten. In DOCX-Dokumenten eingebettete Bilder werden gescannt, und Texteinblicke aus den eingebetteten Bildern werden in Antworten auf Knowledge-Base-Abfragen berücksichtigt.
 
 
-link:https://review.docs.netapp.com/us-en/workload-genai_mar-2-release/identify-data-sources.html#supported-data-source-file-formats["Unterstützte Datenquelldateiformate"]
+link:https://docs.netapp.com/us-en/workload-genai/identify-data-sources.html#supported-data-source-file-formats["Unterstützte Datenquelldateiformate"]
 
 
 
