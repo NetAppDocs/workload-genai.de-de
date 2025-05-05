@@ -45,7 +45,7 @@ Wenn Sie beispielsweise 10 Dateien (Datenquellen) in Ihren Konnektor integriert 
 NOTE: Wenn Sie Datenquellen zu einem Amazon Q Business Connector hinzufügen, gelten nur Benutzerberechtigungen für Datenquelldateien. Gruppenberechtigungen werden nicht angewendet.
 
 
-NOTE: Wenn es Dateien in Ihrer Datenquelle gibt, die keinen Text enthalten, indiziert Amazon Q Business diese Dateien nicht und protokolliert stattdessen einen Eintrag in Amazon CloudWatch Logs, indem er darauf hinweist, dass die Dateien keinen zu indexenden Text enthalten.
+NOTE: Wenn in einer Datei in Ihrer Datenquelle kein Text vorhanden ist (z. B. ein textfreies Bild), indiziert Amazon Q Business diese Datei nicht, sondern protokolliert einen Eintrag in Amazon CloudWatch Logs, der das Fehlen von Text feststellt.
 
 
 
