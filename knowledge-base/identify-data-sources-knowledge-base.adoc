@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: identify-data-sources.html 
-keywords: data sources, chatbot, documents, knowledge base 
+permalink: knowledge-base/identify-data-sources-knowledge-base.html 
+keywords: data sources, chatbot, documents, knowledge base, connector 
 summary: 'Identifizieren oder erstellen Sie die Dokumente (Datenquellen), die sich auf Ihrem FSX für ONTAP-Dateisystem befinden, die Sie in Ihre Wissensdatenbank integrieren werden. Mithilfe dieser Datenquellen kann die Wissensdatenbank genaue und personalisierte Antworten auf Benutzeranfragen basierend auf Daten bereitstellen, die für Ihr Unternehmen relevant sind.' 
 ---
-= Ermittlung der Datenquellen, die in Ihre GenAI Knowledge Base integriert werden sollen
+= Identifizieren von Datenquellen, die zu einer Wissensdatenbank oder einem Konnektor hinzugefügt werden sollen
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ Die maximale Dateigröße für jede Datenquelle beträgt 50 MB.
 
 == Unterstützte Protokolle
 
-Die Wissensdatenbank unterstützt Daten von Volumes, die NFS- oder SMB/CIFS-Protokolle verwenden. Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, damit die Wissensdatenbank auf die Dateien auf diesen Volumes zugreifen kann. Dazu gehören die Active Directory-Domäne, die IP-Adresse, der Benutzername und das Kennwort.
+Wissensdatenbanken unterstützen Daten von Volumes, die entweder NFS- oder SMB/CIFS-Protokolle verwenden. Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, damit die Wissensdatenbank auf die Dateien auf diesen Volumes zugreifen kann. Dazu gehören die Active Directory-Domäne, die IP-Adresse, der Benutzername und das Kennwort.
 
 Wenn Sie Ihre Datenquelle auf einer über SMB zugänglichen Freigabe (Datei oder Verzeichnis) speichern, sind die Daten nur für Chatbot-Benutzer oder -Gruppen zugänglich, die über die Berechtigung zum Zugriff auf diese Freigabe verfügen. Wenn diese "Berechtigungserkennungsfunktion" aktiviert ist, vergleicht das KI-System die Benutzer-E-Mail in auth0 mit den Benutzern, die die Dateien auf der SMB-Freigabe anzeigen oder verwenden dürfen. Der Chatbot liefert Antworten basierend auf Benutzerberechtigungen für die eingebetteten Dateien.
 
@@ -45,14 +45,14 @@ Wenn Sie beispielsweise 10 Dateien (Datenquellen) in Ihre Wissensdatenbank integ
 
 == Unterstützte Datenquelldateiformate
 
-Die folgenden Datenquelldateiformate werden derzeit unterstützt.
+Die folgenden Datenquelldateiformate werden derzeit von den GenAI-Wissensdatenbanken für Workloads unterstützt.
 
 [cols="2*"]
 |===
 | Dateiformat | Erweiterung 
 
 
-| Apache Parquetfootnote:Disclaimer[das Data Guardrails-Feature wird beim Einlesen strukturierter Datendateien nicht unterstützt.] | .Parkett 
+| Apache Parquetfootnote:Disclaimer[das Data Guardrails Feature wird nicht unterstützt, wenn strukturierte Datendateien in Wissensdatenbanken aufgenommen werden.] | .Parkett 
 
 
 | Kommagetrennte Werte filefootnote:Disclaimer[] | .Csv 

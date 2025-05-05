@@ -1,34 +1,34 @@
 ---
 sidebar: sidebar 
-permalink: manage-data-source.html 
+permalink: general/manage-data-source.html 
 keywords: ai, chatbot, creating, knowledge base, data source 
 summary: Nachdem Sie eine Wissensdatenbank mit Datenquellen auf Ihrem FSX für ONTAP-Dateisystem erstellt haben, können Sie die Details der Datenquelle anzeigen, den Inhalt der Datenquelle aktualisieren oder ändern, die Einstellungen der Datenquelle bearbeiten oder die Datenquelle löschen. 
 ---
 = Management von GenAI Datenquellen
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
-Nachdem Sie eine Wissensdatenbank mit Datenquellen auf Ihrem FSX für ONTAP-Dateisystem erstellt haben, können Sie die Details der Datenquelle anzeigen, den Inhalt der Datenquelle aktualisieren oder ändern, die Einstellungen der Datenquelle bearbeiten oder die Datenquelle löschen.
+Nachdem Sie eine Wissensdatenbank oder einen Konnektor mit Datenquellen auf Ihrem FSX für ONTAP-Dateisystem erstellt haben, können Sie die Details der Datenquelle anzeigen, den Inhalt der Datenquelle aktualisieren oder ändern, die Einstellungen der Datenquelle bearbeiten oder die Datenquelle löschen.
 
 
 
 == Informationen zu einer Datenquelle anzeigen
 
-Sie können Informationen über den Inhalt einer Datenquelle anzeigen und deren Einbettungsstatus mit der Wissensdatenbank anzeigen. Da eine Datenquelle Teil einer Wissensdatenbank ist, müssen Sie zunächst die Wissensdatenbank öffnen, bevor Sie die Details der Datenquelle anzeigen können.
+Sie können Informationen über den Inhalt einer Datenquelle anzeigen und deren Einbettungsstatus mit der Wissensdatenbank oder dem Konnektor anzeigen. Da Datenquellen mit einer Wissensdatenbank oder einem Konnektor verknüpft sind, müssen Sie zunächst die Wissensdatenbank oder den Konnektor auswählen, bevor Sie die Details der Datenquelle anzeigen können.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie im Menü Workload Factory Navigation die Option *AI*.
-. Wählen Sie die Wissensdatenbank aus, in der sich die Datenquelle befindet, und wählen Sie dann image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten* aus.
+. Wählen Sie die Wissensdatenbank oder den Konnektor aus, in der sich die Datenquelle befindet, und wählen Sie dann image:icon-action.png["Die Optionsschaltfläche"]*Wissensdatenbank verwalten* oder *Konnektor verwalten* aus.
 +
-Im unteren Teil der Seite werden die Datenquellen aufgelistet, die Teil dieser Wissensdatenbank sind.
+Im unteren Teil der Seite werden die zugehörigen Datenquellen aufgelistet.
 
 . Erweitern Sie jede Zeile, indem Sie die auswählen image:button-down-caret.png["Die nach-unten-Taste"] , um detaillierte Informationen zu jeder Datenquelle anzuzeigen, z. B. das FSX für ONTAP-Dateisystem, das Volume und den Pfad, in dem sich die Datenquelle befindet.
 +
-Außerdem werden die Einbettungsdaten aufgelistet, und es wird angegeben, ob diese Datenquelle derzeit in die Wissensdatenbank eingebettet ist.
+Außerdem werden die einbettenden Informationen aufgelistet und es wird angegeben, ob diese Datenquelle derzeit in die Wissensdatenbank oder den Konnektor eingebettet ist.
 
 
 
@@ -36,7 +36,7 @@ Außerdem werden die Einbettungsdaten aufgelistet, und es wird angegeben, ob die
 
 == Bearbeiten Sie die Einstellungen für die Datenquelle
 
-Sie können Informationen zu einer Datenquelle bearbeiten, die Sie in eine Wissensdatenbank integriert haben. Die meisten Informationen werden behoben, nachdem Sie einer Wissensdatenbank eine Datenquelle hinzugefügt haben. Sie können jedoch Änderungen an der Chunking-Definition und -Konfiguration sowie an der Berechtigungssicherung vornehmen (bei Verwendung des SMB-Protokolls auf dem Datenquellen-Volume).
+Sie können Informationen zu einer Datenquelle bearbeiten, die Sie in eine Wissensdatenbank oder einen Konnektor integriert haben. Die meisten Informationen werden behoben, nachdem Sie eine Datenquelle hinzugefügt haben, aber Sie können Änderungen an einigen der Konfiguration vornehmen (z. B. Chunking-Definition oder Berechtigungssicherung).
 
 .Schritte
 . Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -58,7 +58,7 @@ Die Einstellungen der Datenquelle werden aktualisiert und das KI-System synchron
 
 Sie können den Inhalt einer Datenquelle jederzeit ändern, um Ihre Unternehmensdaten hinzuzufügen oder zu aktualisieren. Wenn diese Datenquelle aktiv in einer Wissensdatenbank verwendet wird, müssen Sie die Datenquelle synchronisieren, damit sie mit der Wissensdatenbank neu indiziert wird. Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Bedrock nur die Objekte in Ihrem FSX für ONTAP-Volume, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
 
-Datenquellen werden automatisch einmal täglich mit der Wissensdatenbank synchronisiert, sodass Änderungen der Datenquelle im Chatbot berücksichtigt werden. Wenn Sie Änderungen an einer Datenquelle vornehmen und die Daten sofort synchronisieren möchten, können Sie link:manage-knowledgebase.html#synchronize-your-data-sources-with-a-knowledge-base["Führen Sie eine On-Demand-Synchronisierung durch"].
+Datenquellen werden automatisch einmal täglich mit der Wissensdatenbank synchronisiert, sodass Änderungen der Datenquelle im Chatbot berücksichtigt werden. Wenn Sie Änderungen an einer Datenquelle vornehmen und die Daten sofort synchronisieren möchten, können Sie link:../knowledge-base/manage-knowledgebase.html#synchronize-your-data-sources-with-a-knowledge-base["Führen Sie eine On-Demand-Synchronisierung durch"].
 
 
 

@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: connector/requirements-connector.html 
+keywords: ai, chatbot, prerequisites, bedrock, fsx for ontap, prerequisites, requirements 
+summary: Stellen Sie sicher, dass die Workload-Fabrik und AWS ordnungsgemäß eingerichtet sind, bevor Sie Ihre Knowledge Base aufbauen. Dazu gehören die Zugangsdaten für die AWS-Anmeldung, ein bereitgestelltes FSX für ONTAP-Filesystem mit den Datenquellen, die Sie in Ihre Wissensdatenbank integrieren möchten, Zugriff auf den Amazon Bedrock KI-Service und vieles mehr. 
+---
+= Anforderungen an den GenAI-Anschluss
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Stellen Sie sicher, dass die Workload-Fabrik und AWS ordnungsgemäß eingerichtet sind, bevor Sie einen NetApp ONTAP-Connector für Amazon Q erstellen
+
+
+
+== Grundlegende GenAI-Anforderungen
+
+Für GenAI gelten allgemeine Anforderungen, die Ihre Umgebung vor der Inbetriebnahme erfüllen muss.
+
+Workload Werksanmeldung und Konto:: Sie müssen https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Richten Sie ein Konto mit Workload Factory ein"^] sich mit einem der anmelden https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^].
+AWS Zugangsdaten und Berechtigungen:: Sie müssen AWS-Anmeldeinformationen zur Workload-Fabrik mit Lese-/Schreibberechtigungen hinzufügen. Das bedeutet, dass Sie die Workload-Fabrik im Modus „_Read/Write_“ für GenAI verwenden werden.
++
+--
+_Basic_ Mode und _Read-Only_ Mode Berechtigungen werden derzeit nicht unterstützt.
+
+Wenn Sie Ihre Anmeldedaten einrichten, erhalten Sie durch die Auswahl der unten aufgeführten Berechtigungen vollständigen Zugriff auf das Management von FSX für ONTAP-Dateisysteme sowie auf die Bereitstellung und das Management der GenAI EC2-Instanz und anderer AWS-Ressourcen, die für Ihre Knowledge Base und Ihren Chatbot benötigt werden.
+
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie AWS-Anmeldedaten zu der Workload-Farm hinzufügen"^]
+
+--
+
+
+
+
+== Anforderungen für den NetApp ONTAP Connector für Amazon Q
+
+Stellen Sie sicher, dass Ihre Umgebung die folgenden spezifischen Anforderungen für Amazon Q Business Connectors erfüllt.
+
+Amazon Q Business-Anwendung:: Sie müssen eine Amazon Q Business-Anwendung erstellen oder eine vorhandene verwenden.
++
+--
+* Stellen Sie sicher, dass die Applikation in einer Ihrer AWS Regionen vorhanden ist.
+* Stellen Sie sicher, dass Sie für die Anwendung haben https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/select-retriever.html["Index erstellt"^].
+* Stellen Sie sicher, dass sich die Anwendung nicht in einem fehlerhaften Zustand befindet.
+
+
+--
+FSX für ONTAP-Dateisystem:: Sie benötigen mindestens ein FSX für ONTAP-Dateisystem:
++
+--
+* Ein Dateisystem wird von der NetApp GenAI Engine verwendet (oder erstellt, falls es nicht vorhanden ist), um Informationen über den Connector zu speichern.
++
+Dieses Dateisystem FSX für ONTAP muss FlexVol-Volumen verwenden. FlexGroup Volumes werden nicht unterstützt.
+
+* Ein oder mehrere Dateisysteme enthalten die Datenquellen, die Sie Ihrem Connector hinzufügen werden.
++
+Ein FSX für ONTAP-Dateisystem kann für beide dieser Zwecke verwendet werden, oder Sie können mehrere FSX für ONTAP-Dateisysteme verwenden.
+
+* Sie müssen die AWS-Region, VPC und das Subnetz kennen, in der sich das AWS FSX für ONTAP-Filesystem befindet.
+* Sie müssen die Tag-Schlüssel-/Wertpaare berücksichtigen, die Sie auf die AWS Ressourcen anwenden möchten, die Teil dieser Implementierung sind (optional).
+* Dabei sind die wichtigsten Paar-Informationen wichtig, die eine sichere Verbindung zur NetApp AI Engine-Instanz ermöglichen.
+
+
+https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["Erfahren Sie, wie Sie FSX für ONTAP-Dateisysteme implementieren und managen"^]
+
+--
+

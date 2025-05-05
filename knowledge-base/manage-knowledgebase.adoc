@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: manage-knowledgebase.html 
+permalink: knowledge-base/manage-knowledgebase.html 
 keywords: ai, chatbot, managing, knowledge base 
 summary: Nachdem Sie eine Wissensdatenbank erstellt haben, können Sie die Details der Wissensdatenbank anzeigen, die Wissensdatenbank ändern, zusätzliche Datenquellen integrieren oder die Wissensdatenbank löschen. 
 ---
 = Management von GenAI Knowledge Base
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -237,6 +237,22 @@ Sie sehen eine Meldung, dass Ihre Datenquellen gescannt werden, und eine abschli
 
 .Ergebnis
 Die Wissensdatenbank wird mit den angehängten Datenquellen synchronisiert und jeder aktive Chatbot verwendet die neuesten Informationen aus Ihren Datenquellen.
+
+
+
+=== Eine geplante Synchronisierung anhalten oder fortsetzen
+
+Wenn Sie die nächste Synchronisierung (Scan) der Datenquellen anhalten oder fortsetzen möchten, können Sie dies jederzeit tun. Möglicherweise müssen Sie die nächste geplante Synchronisierung anhalten, wenn Sie Änderungen an einer Datenquelle vornehmen und die Synchronisierung während des Änderungsfensters nicht durchführen möchten.
+
+.Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie auf der Registerkarte Knowledge Basen & Connectors die Wissensdatenbank aus, für die Sie die Scans anhalten oder fortsetzen möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
+. Wählen Sie das Menü *Aktionen* und dann *Scan > geplante Messung anhalten* oder *Scan > geplante Messung fortsetzen*.
++
+Es wird eine Meldung angezeigt, dass der nächste geplante Scan entweder angehalten oder fortgesetzt wurde.
+
+
 
 
 

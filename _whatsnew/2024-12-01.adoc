@@ -8,7 +8,7 @@
 
 Die BlueXP  Workload-Farm für GenAI unterstützt jetzt das Klonen einer Knowledge Base aus einem Snapshot. Dies ermöglicht eine schnelle Wiederherstellung von Wissensdatenbanken und die Erstellung neuer Wissensdatenbanken mit vorhandenen Datenquellen. Außerdem hilft es bei der Wiederherstellung und Entwicklung von Daten.
 
-link:https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#clone-a-knowledge-base["Klonen einer Wissensdatenbank"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#clone-a-knowledge-base["Klonen einer Wissensdatenbank"]
 
 
 

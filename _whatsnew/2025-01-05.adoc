@@ -8,7 +8,7 @@
 
 Sie können jetzt einen Snapshot-Namen für einen Ad-hoc-Snapshot bereitstellen.
 
-link:https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#protect-a-knowledge-base-with-snapshots["Schützen Sie eine Wissensdatenbank mit Snapshots"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#protect-a-knowledge-base-with-snapshots["Schützen Sie eine Wissensdatenbank mit Snapshots"]
 
 
 
@@ -16,7 +16,7 @@ link:https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#prot
 
 Sie können der KI-Engine-Instanz jetzt während der Implementierung einen benutzerdefinierten Namen geben.
 
-link:https://docs.netapp.com/us-en/workload-genai/deploy-infrastructure.html["Implementierung der GenAI-Infrastruktur"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/deploy-infrastructure.html["Implementierung der GenAI-Infrastruktur"]
 
 
 
@@ -24,4 +24,4 @@ link:https://docs.netapp.com/us-en/workload-genai/deploy-infrastructure.html["Im
 
 Wenn Ihre KI-Engine beschädigt wird oder irgendwie gelöscht wird, können Sie sie auf der Workload-Farm für Sie neu erstellen lassen. Die Workload Factory verbindet Ihre Wissensdatenbanken nach Abschluss der Neuerstellung automatisch mit der Infrastruktur, sodass sie einsatzbereit sind.
 
-link:https://docs.netapp.com/us-en/workload-genai/troubleshooting.html["Fehlerbehebung"]
+link:https://docs.netapp.com/us-en/workload-genai/general/troubleshooting.html["Fehlerbehebung"]

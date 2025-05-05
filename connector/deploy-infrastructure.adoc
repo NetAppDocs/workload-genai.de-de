@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: connector/deploy-infrastructure.html 
+keywords: ai, chatbot, infrastructure, bedrock, fsx for ontap 
+summary: Sie müssen die Infrastruktur für RAG Framework in Ihrer Umgebung implementieren, bevor Sie FSX für ONTAP-Wissensdatenbanken und -Anwendungen für Ihr Unternehmen entwickeln können. Die primären Infrastrukturkomponenten sind der Amazon Bedrock KI-Service, eine Virtual Machine-Instanz für die NetApp GenAI Engine und ein FSX für ONTAP Filesystem. 
+---
+= Implementierung der GenAI-Infrastruktur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die GenAI-Infrastruktur für RAG Framework in Ihrer Umgebung implementieren, bevor Sie FSX für ONTAP-Wissensdatenbanken, -Konnektoren und -Applikationen für Ihr Unternehmen entwickeln können. Die primären Infrastrukturkomponenten sind der Amazon Bedrock Service, eine Virtual Machine-Instanz für die NetApp GenAI Engine und ein FSX für ONTAP Filesystem.
+
+Die implementierte Infrastruktur kann mehrere Wissensdatenbanken, Chatbots und Konnektoren unterstützen, sodass Sie diese Aufgabe in der Regel nur einmal durchführen müssen.
+
+
+
+== Detaillierte Informationen zur Infrastruktur
+
+Ihre GenAI-Implementierung muss sich in einer AWS-Region mit aktiviertem Amazon Bedrock befinden. https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Zeigen Sie die Liste der unterstützten Regionen an"^]
+
+Die Infrastruktur besteht aus folgenden Komponenten:
+
+Amazon Bedrock Service:: Amazon Bedrock ist ein vollständig gemanagter Service, mit dem Sie über eine einzige API Foundation Models (FMS) führender KI-Unternehmen verwenden können. Außerdem bietet sie die Funktionen, die Sie zum Erstellen sicherer generativer KI-Applikationen benötigen.
++
+--
+https://aws.amazon.com/bedrock/["Erfahren Sie mehr über Amazon Bedrock"^]
+
+--
+Amazon Q Business:: Amazon Q baut auf Amazon Bedrock auf, um einen vollständig gemanagten generativen KI-Assistenten bereitzustellen, mit dem Sie Fragen beantworten und Inhalte basierend auf Informationen aus Ihren Datenquellen generieren können.
++
+--
+https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html["Erfahren Sie mehr über Amazon Q Business"^]
+
+--
+Virtual Machine für die NetApp GenAI Engine:: Dabei wird die NetApp GenAI Engine implementiert. Es bietet die Verarbeitungsleistung, um die Daten aus Ihren Datenquellen aufzunehmen und diese dann in die Vektordatenbank zu schreiben.
+FSX für ONTAP-Dateisystem:: Das Filesystem FSX für ONTAP bietet den Storage für Ihr GenAI-System.
++
+--
+Es wird ein einzelnes Volume bereitgestellt, das die Vektordatenbank enthält, in der die Daten gespeichert werden, die vom Basismodell basierend auf Ihren Datenquellen generiert wurden.
+
+Die Datenquellen, die Sie in Ihre Wissensdatenbank integrieren, können sich auf demselben FSX für ONTAP-Dateisystem oder auf einem anderen System befinden.
+
+Die NetApp GenAI Engine überwacht beide Volumes und interagiert mit ihnen.
+
+--
+
+
+Die folgende Abbildung zeigt die GenAI-Infrastruktur. Die Komponenten mit den Nummern 1, 2 und 3 werden während dieses Verfahrens eingesetzt. Die anderen Elemente müssen vorhanden sein, bevor mit der Bereitstellung begonnen werden kann.
+
+image:genai-infrastructure-diagram-numbered.png["Ein Diagramm der GenAI-Infrastrukturkomponenten"]
+
+
+
+== Implementierung der GenAI-Infrastruktur
+
+Geben Sie Ihre AWS-Zugangsdaten ein und wählen Sie das Filesystem FSX für ONTAP aus, um die Infrastruktur zur Retrieval-Augmented Generation (RAG) implementieren zu können.
+
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Ihre Umgebung die Anforderungen für Wissensdatenbanken oder Konnektoren erfüllt, je nachdem, welche Sie wählen, bevor Sie mit diesem Verfahren beginnen.
+
+* link:../knowledge-base/requirements-knowledge-base.html["Anforderungen an die Wissensdatenbank"]
+* link:../connector/requirements-connector.html["Anforderungen an Steckverbinder"]
+
+
+.Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
+. Sehen Sie sich das Infrastrukturdiagramm an und wählen Sie *Weiter*.
+. Füllen Sie die Einträge im Abschnitt *AWS-Einstellungen* aus:
++
+.. *AWS-Anmeldeinformationen*: Wählen Sie die AWS-Anmeldeinformationen aus oder fügen Sie diese hinzu, um die AWS-Ressourcen bereitzustellen.
+.. *Standort*: Wählen Sie eine AWS-Region, VPC und Subnetz.
++
+Die Implementierung von GenAI muss sich in einer AWS Region befinden, für die Amazon Bedrock aktiviert ist. https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Zeigen Sie die Liste der unterstützten Regionen an"^]
+
+
+
+. Füllen Sie die Einträge im Abschnitt *Infrastruktureinstellungen* aus:
++
+.. *Tags*: Geben Sie alle Tag-Schlüssel/Wert-Paare ein, die Sie auf alle AWS-Ressourcen anwenden möchten, die Teil dieser Bereitstellung sind. Diese Tags werden in der AWS Management Console und im Infrastrukturinformationsbereich innerhalb der Workload Factory angezeigt und können Ihnen dabei helfen, die Betriebsressourcen der Workloads im Auge zu behalten.
+
+
+. Füllen Sie den Abschnitt *Konnektivität* aus:
++
+.. *Schlüsselpaar*: Wählen Sie ein Schlüsselpaar aus, mit dem Sie eine sichere Verbindung zur NetApp GenAI Engine-Instanz herstellen können.
+
+
+. Füllen Sie den Abschnitt *AI Engine* aus:
++
+.. *Instanzname*: Wählen Sie optional *Instanzname definieren* und geben Sie einen benutzerdefinierten Namen für die AI-Engine-Instanz ein. Der Instanzname wird in der AWS-Verwaltungskonsole und im Infrastrukturinformationsbereich in der Workload-Fabrik angezeigt. Er kann Ihnen dabei helfen, die Werkseinstellungen für Workloads zu verfolgen.
+
+
+. Wählen Sie *Deploy*, um die Bereitstellung zu starten.
++
+
+NOTE: Wenn die Bereitstellung mit einem Fehler bei den Anmeldeinformationen fehlschlägt, erhalten Sie weitere Fehlerdetails, indem Sie die Hyperlinks in der Fehlermeldung auswählen. Sie sehen eine Liste mit fehlenden oder blockierten Berechtigungen sowie eine Liste mit Berechtigungen, die der GenAI-Workload benötigt, um die GenAI-Infrastruktur bereitstellen zu können.
+
+
+
+.Ergebnis
+Workload Factory beginnt mit der Bereitstellung der Chatbot-Infrastruktur. Dieser Vorgang kann bis zu 10 Minuten dauern.
+
+Während des Bereitstellungsprozesses werden die folgenden Elemente eingerichtet:
+
+* Das Netzwerk wird zusammen mit den privaten Endpunkten eingerichtet.
+* Die IAM-Rolle, das Instanzprofil und die Sicherheitsgruppe werden erstellt.
+* Die Virtual Machine-Instanz für die GenAI-Engine wird bereitgestellt.
+* Amazon Bedrock ist so konfiguriert, dass Protokolle an Amazon CloudWatch Logs gesendet werden, wobei eine Protokollgruppe mit dem Präfix verwendet `/aws/bedrock/`wird.
+* Die GenAI-Engine ist so konfiguriert, dass sie Protokolle an Amazon CloudWatch-Protokolle sendet, wobei eine Protokollgruppe mit dem Namen verwendet `/netapp/wlmai/<tenancyAccountId>/randomId`wird, wobei `<tenancyAccountID>` dies der für den aktuellen Benutzer ist https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-account-identifier["BlueXP Konto-ID"^] .
+

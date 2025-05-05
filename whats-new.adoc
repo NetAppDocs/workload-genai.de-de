@@ -15,47 +15,39 @@ Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloa
 
 
 
-== 30 März 2025
+== 04 Mai 2025
 
 
 
-=== Verbesserte Unterstützung von Dateitypen
+=== Unterstützung von NetApp ONTAP Connector für Amazon Q
 
-Diese Version von GenAI führt die Unterstützung von JSON- und JSONP-Dateiformaten ein, wenn Dateien aus Datenquellen erstellt `.json` werden. JSON-Dateien mit geschachtelten Objekten werden unterstützt, wobei die Unterstützung für verschachtelte Arrays eingeschränkt ist.
+Diese Version von GenAI bietet Unterstützung für NetApp ONTAP Connector für Amazon Q, damit Sie Connectors für Amazon Q Business erstellen können. Nutzen Sie den Amazon Q Business KI-Assistenten schnell und einfach mit einer geringeren Erstkonfiguration als mit dem Aufbau einer GenAI Knowledge Base für Amazon Bedrock.
 
-link:https://docs.netapp.com/us-en/workload-genai/identify-data-sources.html#supported-data-source-file-formats["Unterstützte Datenquelldateiformate"]
-
-
-
-=== Internationalisierungsunterstützung für die externe Chatbot-Beispielanwendung
-
-Sie können die Benutzeroberfläche der externen GenAI-Beispielanwendung für Chatbot jetzt ganz einfach in eine andere Sprache oder ein anderes Gebietsschema ändern.
-
-link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/AI/GenAI-ChatBot-application-sample#netapp-workload-factory-genai-sample-application["Externe Beispiel-Chatbot-Anwendung von GenAI"]
+link:https://docs.netapp.com/us-en/workload-genai/connector/define-connector.html["Erstellen Sie einen GenAI-Connector für Amazon Q Business"]
 
 
 
-=== Unterstützung für das Anthropic Claude Sonnet 3.7 Chat-Modell
+=== Verbesserter Support für Chatmodelle
 
-GenAI bietet jetzt Unterstützung für das Anthropic Claude 3.7 Sonnet Chat-Modell. Die Beta-Funktionen von Claude 3.7 Sonnet ermöglichen bis zu 128K Output-Token pro Anfrage und unterstützen neue Computer-Use-Aktionen. Claude 3.7 Sonnet Extended Thinking Mode wird in einer zukünftigen GenAI Version unterstützt.
+GenAI unterstützt jetzt die folgenden zusätzlichen Chatmodelle für Wissensdatenbanken:
 
-link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["Einrichtung einer GenAI Knowledge Base"]
-
-
-
-=== Unterstützung für das Hinzufügen von Datenquellen von generischen NFS/SMB-Freigaben
-
-Mit der Workload-Factory-API können Sie jetzt eine Datenquelle aus einer generischen NFSv3, NFSv4 oder SMB-Freigabe hinzufügen. Wenn Sie eine Datenquelle aus einer NFS- oder SMB-Freigabe hinzufügen, bleibt das Knowledge-Base-Volume auf einem Amazon FSX for NetApp ONTAP-Volume erhalten. Die Workload Factory Web UI unterstützt diese Funktion in einer zukünftigen Version.
-
-link:https://console.workloads.netapp.com/api-doc["Verwenden Sie die Workload Factory API"^]
+* link:https://docs.mistral.ai/getting-started/models/models_overview/["Mistral KI-Modelle"^]
+* link:https://docs.aws.amazon.com/bedrock/latest/userguide/titan-text-models.html["Amazon Titan Textmodelle"^]
+* link:https://www.llama.com/docs/model-cards-and-prompt-formats/["Meta Llama Modelle"^]
+* link:https://docs.ai21.com/["Jamba 1.5 Modelle"^]
+* link:https://docs.cohere.com/docs/the-cohere-platform["Co-here Command-Modelle"^]
+* link:https://aws.amazon.com/bedrock/deepseek/["Deepseek-Modelle"^]
 
 
-
-=== VPC-Peering-Unterstützung
-
-Jetzt können Sie die GenAI-Infrastruktur über dieselbe Region hinweg implementieren link:https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html["Peered Virtual Private Clouds (VPCs)"^]und dasselbe AWS-Konto verwenden. Sie können die AI-Engine in einer VPC implementieren und dann eine Knowledge Base in einer Peering-VPC erstellen. Anschließend können Sie Amazon FSX für NetApp ONTAP-Dateisysteme in einem Peering-VPC auswählen.
+GenAI unterstützt die Modelle von jedem Provider, die von Amazon Bedrock unterstützt werden: link:https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html["Unterstützte Basismodelle in Amazon Bedrock"^]
 
 link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["Einrichtung einer GenAI Knowledge Base"]
+
+
+
+=== Terminologie für Berechtigungen wurde aktualisiert
+
+Die Benutzeroberfläche und Dokumentation der Workload Factory verwenden jetzt „Read-Only“, um auf Leseberechtigungen und „Read-Write“ zu verweisen, um Berechtigungen zu automatisieren.
 
 
 
@@ -67,7 +59,7 @@ link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["Ein
 
 Sie können jetzt Fragen und Antworten direkt in die Zwischenablage kopieren, die Größe des Chat-Fensters anpassen und dessen Titel ändern. Darüber hinaus können Chat-Antworten jetzt Tabellen enthalten, die auch kopierbar sind.
 
-link:https://docs.netapp.com/us-en/workload-genai/test-knowledgebase.html["Testen Sie eine GenAI Knowledge Base"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/test-knowledgebase.html["Testen Sie eine GenAI Knowledge Base"]
 
 
 
@@ -75,7 +67,7 @@ link:https://docs.netapp.com/us-en/workload-genai/test-knowledgebase.html["Teste
 
 Die Chat-Antworten enthalten nun Zitate, in denen die Dateien und Datenpakete aufgelistet sind, die zur Generierung der Antwort verwendet wurden.
 
-link:https://docs.netapp.com/us-en/workload-genai/test-knowledgebase.html["Testen Sie eine GenAI Knowledge Base"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/test-knowledgebase.html["Testen Sie eine GenAI Knowledge Base"]
 
 
 
@@ -88,7 +80,7 @@ Diese Version von GenAI bietet erweiterte Dateiunterstützung:
 * GenAI unterstützt jetzt die Aufnahme von Microsoft Word DOCX-Dateien, die Bilder enthalten. In DOCX-Dokumenten eingebettete Bilder werden gescannt, und Texteinblicke aus den eingebetteten Bildern werden in Antworten auf Knowledge-Base-Abfragen berücksichtigt.
 
 
-link:https://docs.netapp.com/us-en/workload-genai/identify-data-sources.html#supported-data-source-file-formats["Unterstützte Datenquelldateiformate"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/identify-data-sources-knowledge-base.html#supported-data-source-file-formats["Unterstützte Datenquelldateiformate"]
 
 
 
@@ -100,7 +92,7 @@ link:https://docs.netapp.com/us-en/workload-genai/identify-data-sources.html#sup
 
 GenAI unterstützt jetzt die Amazon Nova Foundation Modelle. Amazon Nova Micro, Amazon Nova Lite und Amazon Nova Pro werden unterstützt.
 
-link:https://docs.netapp.com/us-en/workload-genai/requirements.html["GenAI-Anforderungen"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/requirements-knowledge-base.html["GenAI-Anforderungen"]
 
 
 
@@ -108,7 +100,7 @@ link:https://docs.netapp.com/us-en/workload-genai/requirements.html["GenAI-Anfor
 
 GenAI unterstützt jetzt die Auswahl bestimmter Dateitypen, die beim Hinzufügen einer Datenquelle in den Scan der Datenquelle einbezogen werden sollen.
 
-link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Fügen Sie der Wissensdatenbank Datenquellen hinzu"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Fügen Sie der Wissensdatenbank Datenquellen hinzu"]
 
 
 
@@ -116,7 +108,7 @@ link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#add-
 
 GenAI unterstützt jetzt das Filtern von Dateien, die beim Hinzufügen einer Datenquelle in den Scan der Datenquelle nach Änderungsdatum einbezogen werden sollen. Sie können einen Änderungsdatumbereich für die enthaltenen Dateien auswählen.
 
-link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Fügen Sie der Wissensdatenbank Datenquellen hinzu"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Fügen Sie der Wissensdatenbank Datenquellen hinzu"]
 
 
 
@@ -124,7 +116,7 @@ link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#add-
 
 GenAI unterstützt jetzt die Verbesserung der Antworten auf Knowledge-Base-Abfragen durch Einblicke aus Bildern und Diagrammbeschreibungen sowie Dokumenttext, was zu reichhaltigeren und qualitativ hochwertigeren Antworten führt. GenAI kann nun Bilddateien und Bilder innerhalb von PDF-Dateien scannen (auch als Multi-modale Dateiunterstützung bekannt). Wenn Sie Bilder oder PDF-Dateien scannen, wird der Text der Bilder (einschließlich der in PDF-Dokumenten eingebetteten Bilder) in die Datenquelle gescannt und die Ergebnisse der Scans werden in die Antworten auf Knowledge-Base-Abfragen aufgenommen.
 
-link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Fügen Sie der Wissensdatenbank Datenquellen hinzu"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Fügen Sie der Wissensdatenbank Datenquellen hinzu"]
 
 
 
@@ -132,7 +124,7 @@ link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#add-
 
 GenAI kann jetzt die Relevanz und Genauigkeit von Suchergebnissen durch hybride Suche und Neubewertung der Ergebnisse deutlich verbessern. Die hybride Suche kombiniert die Stärken der herkömmlichen Keyword-basierten Suche mit erweiterten dichten vektorbasierten semantischen Suchtechniken. Die Standard-Keyword-Suchergebnisse werden durch enge Übereinstimmungen und sprachliche Nuance erweitert, was die Relevanz erhöht. GenAI verfeinert diese Ergebnisse dann weiter, indem er erweiterte Re-Ranking-Modelle wie Cohere Rerank und Amazon Rerank verwendet, und gibt die relevantesten Ergebnisse zurück. Diese Funktion ist für neu erstellte Wissensdatenbanken verfügbar.
 
-link:https://docs.netapp.com/us-en/workload-genai/ai-workloads-overview.html#benefits-of-using-genai-to-create-generative-ai-applications["Erfahren Sie mehr über die BlueXP -Workload-Fabrik für GenAI"]
+link:https://docs.netapp.com/us-en/workload-genai/general/ai-workloads-overview.html#benefits-of-using-genai-to-create-generative-ai-applications["Erfahren Sie mehr über die BlueXP -Workload-Fabrik für GenAI"]
 
 
 
@@ -144,7 +136,7 @@ link:https://docs.netapp.com/us-en/workload-genai/ai-workloads-overview.html#ben
 
 Sie können jetzt einen Snapshot-Namen für einen Ad-hoc-Snapshot bereitstellen.
 
-link:https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#protect-a-knowledge-base-with-snapshots["Schützen Sie eine Wissensdatenbank mit Snapshots"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#protect-a-knowledge-base-with-snapshots["Schützen Sie eine Wissensdatenbank mit Snapshots"]
 
 
 
@@ -152,7 +144,7 @@ link:https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#prot
 
 Sie können der KI-Engine-Instanz jetzt während der Implementierung einen benutzerdefinierten Namen geben.
 
-link:https://docs.netapp.com/us-en/workload-genai/deploy-infrastructure.html["Implementierung der GenAI-Infrastruktur"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/deploy-infrastructure.html["Implementierung der GenAI-Infrastruktur"]
 
 
 
@@ -160,7 +152,7 @@ link:https://docs.netapp.com/us-en/workload-genai/deploy-infrastructure.html["Im
 
 Wenn Ihre KI-Engine beschädigt wird oder irgendwie gelöscht wird, können Sie sie auf der Workload-Farm für Sie neu erstellen lassen. Die Workload Factory verbindet Ihre Wissensdatenbanken nach Abschluss der Neuerstellung automatisch mit der Infrastruktur, sodass sie einsatzbereit sind.
 
-link:https://docs.netapp.com/us-en/workload-genai/troubleshooting.html["Fehlerbehebung"]
+link:https://docs.netapp.com/us-en/workload-genai/general/troubleshooting.html["Fehlerbehebung"]
 
 
 
@@ -172,7 +164,7 @@ link:https://docs.netapp.com/us-en/workload-genai/troubleshooting.html["Fehlerbe
 
 Die BlueXP  Workload-Farm für GenAI unterstützt jetzt das Klonen einer Knowledge Base aus einem Snapshot. Dies ermöglicht eine schnelle Wiederherstellung von Wissensdatenbanken und die Erstellung neuer Wissensdatenbanken mit vorhandenen Datenquellen. Außerdem hilft es bei der Wiederherstellung und Entwicklung von Daten.
 
-link:https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#clone-a-knowledge-base["Klonen einer Wissensdatenbank"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#clone-a-knowledge-base["Klonen einer Wissensdatenbank"]
 
 
 
@@ -192,7 +184,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-onprem-data.html["Ermi
 
 Der generative KI-Workload bietet eine Data Guardrails-Funktion basierend auf einer BlueXP -Klassifizierung. Mithilfe der Funktion „Data Guardrails“ werden personenbezogene Daten identifiziert und maskiert. Auf diese Weise können Sie die Compliance aufrechterhalten und die Sicherheit Ihrer sensiblen Unternehmensdaten stärken.
 
-link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#create-and-configure-the-knowledge-base["Erstellen einer Wissensdatenbank"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Einrichtung einer GenAI Knowledge Base"]
 
 link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mehr zur BlueXP Klassifizierung"^]
 
@@ -206,9 +198,9 @@ link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-complianc
 
 Sie können jetzt Daten aus generativen KI-Workloads schützen, indem Sie eine zeitpunktgenaue Kopie einer Knowledge Base erstellen. So können Sie Ihre Daten vor versehentlichem Verlust schützen oder Änderungen an den Einstellungen der Wissensdatenbank testen. Sie können jederzeit die vorherige Version des Knowledge Base-Volumes wiederherstellen.
 
-https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#take-a-snapshot-of-a-knowledge-base-volume["Erstellen Sie einen Snapshot eines Knowledge-Base-Volumes"]
+https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#take-a-snapshot-of-a-knowledge-base-volume["Erstellen Sie einen Snapshot eines Knowledge-Base-Volumes"]
 
-https://review.docs.netapp.com/us-en/workload-genai_29-sept-24-release/manage-knowledgebase.html#restore-a-snapshot-of-a-knowledge-base-volume["Stellen Sie einen Snapshot eines Knowledge-Base-Volumes wieder her"]
+https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#restore-a-snapshot-of-a-knowledge-base-volume["Stellen Sie einen Snapshot eines Knowledge-Base-Volumes wieder her"]
 
 
 
@@ -216,7 +208,7 @@ https://review.docs.netapp.com/us-en/workload-genai_29-sept-24-release/manage-kn
 
 Sie können jetzt geplante Scans der Datenquelle anhalten. Standardmäßig scannt generative KI-Workloads jede Datenquelle täglich, um neue Daten in jeder Knowledge Base zu erfassen. Wenn Sie nicht möchten, dass die letzten Änderungen aufgenommen werden (z. B. während des Tests oder beim Wiederherstellen eines Snapshots), können Sie die geplanten Scans anhalten und jederzeit wieder aufnehmen.
 
-https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html["Management von Wissensdatenbanken"]
+https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html["Management von Wissensdatenbanken"]
 
 
 
@@ -224,7 +216,7 @@ https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html["Manageme
 
 Bei der Auswahl eines Knowledge-Base-Volumes können Sie nun ein Datensicherungs-Volume auswählen, das Teil einer NetApp SnapMirror Replizierungsbeziehung ist. So können Sie Wissensdatenbanken auf Volumes speichern, die bereits durch die SnapMirror-Replizierung geschützt sind.
 
-https://docs.netapp.com/us-en/workload-genai/identify-data-sources.html["Ermitteln Sie die Datenquellen, die in Ihre Wissensdatenbank integriert werden sollen"]
+https://docs.netapp.com/us-en/workload-genai/knowledge-base/identify-data-sources-knowledge-base.html["Ermitteln Sie die Datenquellen, die in Ihre Wissensdatenbank integriert werden sollen"]
 
 
 

@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: whats-next.html 
+permalink: knowledge-base/whats-next.html 
 keywords: what you can do, knowledge base 
 summary: Nachdem Sie jetzt eine Wissensdatenbank mit Ihren Unternehmensdaten erstellt und für Ihre Benutzer bereitgestellt haben, können Sie die Wissensdatenbank, Datenquellen und die RAG-Infrastruktur, einschließlich FSX für ONTAP-Dateisysteme, verwalten. 
 ---
 = Was Sie mit GenAI erreichen können
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

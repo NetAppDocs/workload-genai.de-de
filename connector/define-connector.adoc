@@ -1,0 +1,132 @@
+---
+sidebar: sidebar 
+permalink: connector/define-connector.html 
+keywords: ai, chatbot, connector, 
+summary: Nachdem Sie die KI-Infrastruktur bereitgestellt und die Datenquellen identifiziert haben, die Sie in Amazon Q Business integrieren möchten, können Sie einen Connector definieren. 
+---
+= Erstellen Sie einen NetApp ONTAP-Connector für Amazon Q
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie die KI-Infrastruktur bereitgestellt und die Datenquellen ermittelt haben, die Sie aus Ihren FSX für ONTAP-Datastores verwenden werden, können Sie einen NetApp ONTAP-Connector für Amazon Q. definieren
+
+Stellen Sie sicher, dass Ihre Umgebung den  für Amazon Q Business erfülltlink:requirements-connector.html["Anforderungen"], bevor Sie fortfahren.
+
+.Über diese Aufgabe
+Datenquellen Ihres Unternehmens können personenbezogene Daten enthalten. Um diese sensiblen Informationen zu schützen, können Sie _Data Guardrails_ beim Definieren eines Konnektors aktivieren. Data Guardrails, powered by BlueXP -Klassifizierung, identifiziert und maskiert PII, so dass sie nicht zugänglich und nicht abrufbar sind.
+
+link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mehr zur BlueXP Klassifizierung"^].
+
+
+NOTE: Bei der BlueXP  Workload Factory für GenAI werden vertrauliche personenbezogene Daten nicht maskiert. Weitere Informationen zu diesem Datentyp finden Sie unterlink:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-data["Arten sensibler personenbezogener Daten"^].
+
+
+NOTE: Datenguardrails können jederzeit aktiviert oder deaktiviert werden. Wenn Sie die Data Guardrails-Aktivierung wechseln, scannt Workload Factory die gesamte Datenquelle von Grund auf, was Kosten verursachen kann.
+
+
+
+== Definieren Sie einen Konnektor
+
+Erstellen Sie einen NetApp ONTAP-Connector für Amazon Q. der Connector ermöglicht die API- und Datenquellkommunikation zwischen GenAI und Amazon Q Business.
+
+.Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
+. Wählen Sie auf der Registerkarte Knowledge Basen & Connectors das Dropdown *Create New* aus und wählen Sie *Amazon Q Business Connector*.
+. Konfigurieren Sie auf der Seite Konnektor definieren die Verbindungseinstellungen:
++
+.. *Name*: Geben Sie den Namen ein, den Sie für den Konnektor verwenden möchten.
+.. *Beschreibung*: Geben Sie eine detaillierte Beschreibung für den Konnektor ein.
+.. *Amazon Q*: Die Region und der Anwendungsname für die Amazon Q Business Instanz, die Sie integrieren möchten.
+.. *Data Guardrails*: Wählen Sie aus, ob Sie Data Guardrails aktivieren oder deaktivieren möchten. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mit BlueXP  Klassifizierung als Basis für Daten-Guardrails lernen"^].
++
+Die folgenden Voraussetzungen müssen erfüllt sein, um die Data Guardrails zu aktivieren.
+
++
+*** Für die Kommunikation mit der BlueXP -Klassifizierung ist ein Servicekonto erforderlich. Sie müssen die Rolle „_Organisation admin_“ auf Ihrem BlueXP -Mandantenkonto haben, um Servicekonten erstellen zu können. Ein Mitglied mit der Rolle „Organisationsadministrator“ kann alle Aktionen in BlueXP  ausführen. link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Erfahren Sie, wie Sie einem Mitglied in BlueXP  eine Rolle hinzufügen"^]
+*** Die KI-Engine muss Zugriff auf die habenlink:https://api.bluexp.netapp.com["BlueXP -API-Endpunkt"^].
+*** Sie müssen die folgenden Schritte ausführen, wie in beschriebenlink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Dokumentation der BlueXP Klassifizierung"^]:
++
+.... BlueXP Connector erstellen
+.... Stellen Sie sicher, dass Ihre Umgebung die Voraussetzungen erfüllt
+.... Implementieren Sie die BlueXP Klassifizierung
+
+
+
+
+
+
++
+
+NOTE: Wenn Sie die Funktion „Data Guardrails“ aktivieren, verarbeitet GenAI die Dateien .txt, .md, .csv, .docx und .pdf, indem nur Klartext (ohne eingebetteten Bild- oder Medientext) aufgenommen und private oder sensible Daten maskiert werden. Alle anderen Dateitypen werden normal verarbeitet, ohne dass private oder sensible Daten maskiert werden.
+
++
+.. *FSX für ONTAP Dateisystem*: Wenn Sie einen neuen NetApp ONTAP-Konnektor für Amazon Q definieren, erstellt Workload Factory ein neues Amazon FSX für NetApp ONTAP Volumen, um die Connector-Informationen zu speichern. Wählen Sie ein vorhandenes Filesystem und eine SVM (auch Storage-VM genannt), auf der das neue Volume erstellt werden soll.
+.. *Snapshot-Richtlinie*: Wählen Sie eine Snapshot-Richtlinie aus der Liste der vorhandenen Richtlinien aus, die im werkseitigen Lagerbestand des Workloads definiert sind. GenAI erstellt automatisch wiederkehrende Snapshots des Volumes, wobei die Verbindungsdaten in einer Frequenz auf der Grundlage der von Ihnen ausgewählten Snapshot-Richtlinie gespeichert werden.
++
+Wenn die benötigte Snapshot-Richtlinie nicht vorhanden ist, können Sie https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["Erstellen einer Snapshot-Richtlinie"^] auf der Storage-VM, die das Volume enthält, arbeiten.
+
+
+
+. Wählen Sie *Create Connector*, um Amazon Q Business mit GenAI zu integrieren.
++
+Während der Verbindungserstellung wird eine Fortschrittsanzeige angezeigt.
+
++
+Nachdem der Connector erstellt wurde, haben Sie die Möglichkeit, dem Connector eine Datenquelle hinzuzufügen, sodass Amazon Q Business Ihre Daten aufnimmt und zu seinem Index hinzufügt. Wir empfehlen Ihnen, *Add Data source* auszuwählen und jetzt eine oder mehrere Datenquellen hinzuzufügen.
+
+
+
+
+
+== Fügen Sie dem Connector Datenquellen hinzu
+
+Sie können eine oder mehrere Datenquellen hinzufügen, um den Amazon Q Business Index mit den Daten Ihres Unternehmens zu füllen.
+
+.Über diese Aufgabe
+* Die maximale Anzahl unterstützter Datenquellen beträgt 10.
+* In https://docs.aws.amazon.com/kendra/latest/dg/quotas.html["Amazon Q Business-Dokumentation"^] finden Sie spezifische Serviceeinschränkungen des Amazon Q Business Index.
+
+
+.Schritte
+. Nachdem Sie *Datenquelle hinzufügen* ausgewählt haben, wird die Seite *Dateisystem auswählen* angezeigt.
+. *Wählen Sie ein Dateisystem*: Wählen Sie das FSX für ONTAP Dateisystem, in dem sich Ihre Datenquelldateien befinden, und wählen Sie *Weiter*.
+. *Wählen Sie ein Volume*: Wählen Sie das Volume aus, auf dem sich Ihre Quelldateien befinden, und wählen Sie *Weiter*.
++
+Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, einschließlich Domäne, IP-Adresse, Benutzername und Passwort.
+
+. *Wählen Sie eine Datenquelle*: Wählen Sie den Speicherort der Datenquelle basierend darauf, wo Sie die Dateien gespeichert haben. Dies kann ein ganzes Volume sein, oder nur ein bestimmter Ordner oder Unterordner im Volume, und wählen Sie *Weiter*.
+. *Konfigurationen*: Konfigurieren Sie, wie die Datenquelle Informationen aus Ihren Dateien einliest und welche Dateien sie in Scans enthält:
++
+** *Dateifilterung*: Konfigurieren Sie, welche Dateien in Scans enthalten sind:
++
+*** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
+*** Wählen Sie im Abschnitt *Dateiänderungszeitfilter* die Option, die Aufnahme von Dateien basierend auf ihrer Änderungszeit zu aktivieren oder zu deaktivieren. Wenn Sie die Zeitfilterung für die Änderung aktivieren, wählen Sie einen Datumsbereich aus der Liste aus.
++
+
+NOTE: Wenn Sie Dateien auf Basis eines Änderungsdatums einbeziehen, werden die Dateien aus dem periodischen Scan ausgeschlossen, und die Datenquelle enthält diese Dateien nicht, sobald der Datumsbereich nicht erfüllt ist (die Dateien wurden nicht innerhalb des von Ihnen angegebenen Datumsbereichs geändert).
+
+
+
+
+
+. Im Abschnitt *permission aware*, der nur verfügbar ist, wenn sich die von Ihnen ausgewählte Datenquelle auf einem Volume befindet, das das SMB-Protokoll verwendet, können Sie permission-aware Antworten aktivieren oder deaktivieren:
++
+** *Enabled*: Benutzer des Chatbot, die auf diesen Konnektor zugreifen, erhalten nur Antworten auf Abfragen aus Datenquellen, auf die sie Zugriff haben.
+** *Disabled*: Benutzer des Chatbot erhalten Antworten über Inhalte aus allen integrierten Datenquellen.
++
+
+NOTE: Active Directory-Gruppenberechtigungen werden für Datenquellen des Amazon Q Business Connectors nicht unterstützt.
+
+
+
+. Wählen Sie *Hinzufügen*, um diese Datenquelle zum Amazon Q Business Connector hinzuzufügen.
+
+
+.Ergebnis
+Die Datenquelle ist in den Amazon Q Business Index eingebettet. Der Status ändert sich von „Einbetten“ in „eingebettet“, wenn die Datenquelle vollständig eingebettet ist.
+
+Nachdem Sie dem Connector eine einzelne Datenquelle hinzugefügt haben, können Sie diese in der Chatbot-Umgebung von Amazon Q Business testen und alle erforderlichen Änderungen vornehmen, bevor Sie den Dienst Ihren Benutzern zur Verfügung stellen. Sie können auch die gleichen Schritte ausführen, um dem Connector zusätzliche Datenquellen hinzuzufügen.

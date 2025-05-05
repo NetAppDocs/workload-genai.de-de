@@ -1,0 +1,175 @@
+---
+sidebar: sidebar 
+permalink: connector/manage-connector.html 
+keywords: ai, chatbot, managing, knowledge base 
+summary: Nachdem Sie eine Wissensdatenbank erstellt haben, können Sie die Details der Wissensdatenbank anzeigen, die Wissensdatenbank ändern, zusätzliche Datenquellen integrieren oder die Wissensdatenbank löschen. 
+---
+= Verwalten von Amazon Q Business Connectors
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie einen Connector für Amazon Q Business erstellt haben, können Sie die Verbindungsdetails anzeigen, den Connector ändern, zusätzliche Datenquellen integrieren oder den Connector löschen.
+
+
+
+== Anzeigen von Informationen zu einem Konnektor
+
+Sie können Informationen zu den Einstellungen für einen Konnektor und zu den integrierten Datenquellen anzeigen.
+
+.Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie im Menü Workload Factory Navigation die Option *AI*.
+. Wählen Sie den Konnektor aus, den Sie anzeigen möchten.
+. Wählen Sie zum Anzeigen von Verbindungsdetails image:icon-action.png["Die Optionsschaltfläche"]*Connector verwalten* aus, und wählen Sie diese Option aus.
++
+Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus, die Liste aller eingebetteten Datenquellen und vieles mehr angezeigt.
+
++
+Über das Menü *actions* können Sie den Konnektor verwalten, wenn Sie Änderungen vornehmen möchten.
+
+
+
+
+
+== Bearbeiten Sie einen Konnektor
+
+Sie können einen Konnektor aktualisieren, indem Sie einige Einstellungen ändern, oder Sie können Datenquellen hinzufügen oder entfernen.
+
+Jedes Mal, wenn Sie Datenquellen vom Connector hinzufügen, ändern oder entfernen, muss GenAI die Datenquellinformationen an Amazon Q Business senden, damit sie neu indiziert werden. Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Q Business nur die Objekte in Ihrem FSX für ONTAP-Volume, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
+
+.Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie auf der Bestandsseite Knowledge Basen & Connectors den Konnektor aus, den Sie aktualisieren möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"]*Connector verwalten*.
++
+Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus, die Liste aller eingebetteten Datenquellen und vieles mehr angezeigt.
+
+. Wählen Sie das Menü *actions* und dann *Connector bearbeiten*.
+. Auf der Seite Connector bearbeiten können Sie den Anschlussnamen, die Beschreibung, das Einbettungsmodell, die Aktivierung von Data Guardrails und die Snapshot-Richtlinie ändern, die für das Volume verwendet wird, das den Konnektor enthält.
++
+
+NOTE: Jeder Scan der Datenquelle, einschließlich Einbettung, verursacht Kosten. Wenn Sie nach der Erstellung eines Konnektors die Data Guardrails aktivieren, wird die Datenquelle erneut gescannt und verursacht Kosten.
+
+. Wählen Sie *Speichern*, nachdem Sie Änderungen vorgenommen haben.
+
+
+
+
+== Fügen Sie einem Konnektor zusätzliche Datenquellen hinzu
+
+Sie können zusätzliche Datenquellen in Ihren Connector einbetten, um sie mit zusätzlichen Unternehmensdaten zu füllen.
+
+.Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie auf der Bestandsseite Knowledge Basen & Connectors den Konnektor aus, zu dem Sie die Datenquelle hinzufügen möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Datenquelle hinzufügen*.
+. *Wählen Sie ein Dateisystem*: Wählen Sie das FSX für ONTAP Dateisystem, in dem sich Ihre Datenquelldateien befinden, und wählen Sie *Weiter*.
+. *Wählen Sie ein Volume*: Wählen Sie das Volume aus, auf dem sich Ihre Quelldateien befinden, und wählen Sie *Weiter*.
++
+Bei der Auswahl der mit dem SMB-Protokoll gespeicherten Dateien müssen Sie die Active Directory-Informationen eingeben, einschließlich Domäne, IP-Adresse, Benutzername und Passwort.
+
+. *Wählen Sie eine Datenquelle*: Wählen Sie den Speicherort der Datenquelle basierend darauf, wo Sie die Dateien gespeichert haben. Dies kann ein ganzes Volume sein, oder nur ein bestimmter Ordner oder Unterordner im Volume, und wählen Sie *Weiter*.
+. *Konfigurationen*: Konfigurieren Sie, wie die Datenquelle Informationen aus Ihren Dateien einliest und welche Dateien sie in Scans enthält:
++
+** *Datenquelle definieren*: Definieren Sie im Abschnitt *Chunking-Strategie*, wie die GenAI-Engine den Inhalt der Datenquelle in Blöcke teilt, wenn die Datenquelle in eine Wissensdatenbank integriert ist. Sie können eine der folgenden Strategien wählen:
++
+*** *Multi-Sentence Chunking*: Organisiert Informationen aus Ihrer Datenquelle in Satzbausteine. Sie können festlegen, wie viele Sätze jedes Stück ausmachen (bis zu 100).
+*** *Überlappendes Chunking*: Organisiert Informationen aus Ihrer Datenquelle in zeichendefinierte Blöcke, die benachbarte Blöcke überlappen können. Sie können die Größe jedes Chunk in Zeichen auswählen und festlegen, wie viel sich jeder Chunk mit benachbarten Chunks überschneidet. Sie können eine Chunk-Größe von 50 bis 3000 Zeichen und einen Überlappungsprozentsatz von 1 bis 99 % konfigurieren.
++
+
+NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Speicherbedarf erheblich erhöhen, da die Abrufgenauigkeit nur geringfügig verbessert wird.
+
+
+
+** *Dateifilterung*: Konfigurieren Sie, welche Dateien in Scans enthalten sind:
++
+*** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
++
+Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+
++
+Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
+
++
+
+NOTE: Ihre Wahl, Bilddateien in Scans aufzunehmen, hängt mit dem Chatmodell der Wissensdatenbank zusammen. Wenn Sie Bilddateien in Scans aufnehmen, muss das Chatmodell Bilder unterstützen. Wenn hier Bilddateitypen ausgewählt sind, können Sie die Wissensdatenbank nicht auf ein Chatmodell umschalten, das keine Bilddateien unterstützt.
+
+*** Wählen Sie im Abschnitt *Dateiänderungszeitfilter* die Option, die Aufnahme von Dateien basierend auf ihrer Änderungszeit zu aktivieren oder zu deaktivieren. Wenn Sie die Zeitfilterung für die Änderung aktivieren, wählen Sie einen Datumsbereich aus der Liste aus.
++
+
+NOTE: Wenn Sie Dateien auf Basis eines Änderungsdatums einbeziehen, werden die Dateien aus dem periodischen Scan ausgeschlossen, und die Datenquelle enthält diese Dateien nicht, sobald der Datumsbereich nicht erfüllt ist (die Dateien wurden nicht innerhalb des von Ihnen angegebenen Datumsbereichs geändert).
+
+
+
+
+
+. Im Abschnitt *permission aware*, der nur verfügbar ist, wenn sich die von Ihnen ausgewählte Datenquelle auf einem Volume befindet, das das SMB-Protokoll verwendet, können Sie permission-aware Antworten aktivieren oder deaktivieren:
++
+** *Enabled*: Benutzer des Chatbot, die auf diese Wissensdatenbank zugreifen, erhalten nur Antworten auf Abfragen aus Datenquellen, auf die sie zugreifen können.
+** *Disabled*: Benutzer des Chatbot erhalten Antworten über Inhalte aus allen integrierten Datenquellen.
+
+
+. Wählen Sie *Hinzufügen*, um diese Datenquelle zu Ihrer Wissensdatenbank hinzuzufügen.
+
+
+.Ergebnis
+Die Datenquelle ist in Ihren Connector integriert.
+
+
+
+== Synchronisieren Sie Ihre Datenquellen mit einem Konnektor
+
+Datenquellen werden automatisch einmal täglich mit dem zugehörigen Connector synchronisiert, sodass Änderungen an der Datenquelle in Amazon Q Business berücksichtigt werden. Wenn Sie Änderungen an einer Ihrer Datenquellen vornehmen und die Daten sofort synchronisieren (scannen) möchten, können Sie eine On-Demand-Synchronisierung durchführen.
+
+Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Q Business nur die Objekte in Ihren Datenquellen, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
+
+.Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie auf der Registerkarte Knowledge Basen & Connectors den Konnektor aus, den Sie synchronisieren möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"]*Connector verwalten*.
+. Wählen Sie das Menü *Aktionen* und dann *Jetzt scannen*.
++
+Sie sehen eine Meldung, dass Ihre Datenquellen gescannt werden, und eine abschließende Meldung, wenn der Scan abgeschlossen ist.
+
+
+
+.Ergebnis
+Der Connector wird mit den angehängten Datenquellen synchronisiert, und Amazon Q Business verwendet die neuesten Informationen aus Ihren Datenquellen.
+
+
+
+=== Eine geplante Synchronisierung anhalten oder fortsetzen
+
+Wenn Sie die nächste Synchronisierung (Scan) der Datenquellen anhalten oder fortsetzen möchten, können Sie dies jederzeit tun. Möglicherweise müssen Sie die nächste geplante Synchronisierung anhalten, wenn Sie Änderungen an einer Datenquelle vornehmen und die Synchronisierung während des Änderungsfensters nicht durchführen möchten.
+
+.Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie auf der Seite Connector Inventory den Anschluss aus, für den Sie die Scans anhalten oder fortsetzen möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"]*Connector verwalten*.
+. Wählen Sie das Menü *Aktionen* und dann *Scan > geplante Messung anhalten* oder *Scan > geplante Messung fortsetzen*.
++
+Es wird eine Meldung angezeigt, dass der nächste geplante Scan entweder angehalten oder fortgesetzt wurde.
+
+
+
+
+
+== Löschen Sie einen Konnektor
+
+Wenn Sie keinen Konnektor mehr benötigen, können Sie ihn löschen. Wenn Sie einen Konnektor löschen, wird er aus der Arbeitslastfabrik entfernt und das Volume, das den Connector enthält, wird gelöscht. Das Löschen eines Konnektors kann nicht rückgängig gemacht werden.
+
+Wenn Sie einen Konnektor löschen, sollten Sie auch die Zuordnung des Connectors zu allen Agenten aufheben, mit denen er verknüpft ist, um alle Ressourcen, die dem Connector zugeordnet sind, vollständig zu löschen.
+
+.Schritte
+. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie auf der Bestandsseite Knowledge Basen & Connectors den Konnektor aus, den Sie löschen möchten.
+. Wählen Sie image:icon-action.png["Die Optionsschaltfläche"]*Connector verwalten*.
+. Wählen Sie das Menü *actions* und dann *Delete Connector*.
+. Bestätigen Sie im Dialogfeld Connector löschen, dass Sie es löschen möchten, und wählen Sie *Löschen*.
+
+
+.Ergebnis
+Der Connector wird aus der Workload Factory entfernt und das zugehörige Volume wird gelöscht.

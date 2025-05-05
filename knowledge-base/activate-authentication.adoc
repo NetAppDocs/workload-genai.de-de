@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: activate-authentication.html 
+permalink: knowledge-base/activate-authentication.html 
 keywords: ai, chatbot, publishing, knowledge base 
 summary: Aktivieren Sie die Authentifizierung für eine Wissensdatenbank, damit Token-Validierung und ACLs bei der Integration der Wissensdatenbank in eine Chatbot-Anwendung erforderlich sind. 
 ---
 = Aktivieren der externen Authentifizierung für eine GenAI-Wissensdatenbank
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: general/ai-workloads-overview.html 
+keywords: overview, concepts, features, use case, workloads, AI, Bedrock, knowledge base, chatbot 
+summary: Mit der BlueXP  Workload-Farm für GenAI können Sie Amazon FSX für NetApp ONTAP-Filesysteme mit GenAI-Modellen integrieren. So erhalten Sie hochperformanten Storage mit umfassenden Funktionen für Schutz, Sicherheit und Kostenoptimierung für Ihre KI-Datensätze. 
+---
+= Erfahren Sie mehr über die BlueXP -Workload-Fabrik für GenAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der BlueXP  Workload Factory für GenAI können Sie Amazon FSX für NetApp ONTAP Filesysteme mit GenAI-Basismodellen integrieren. So erhalten Sie hochperformanten Storage mit umfassenden Funktionen für Schutz, Sicherheit und Kostenoptimierung für Ihre KI-Datensätze.
+
+
+
+== Was ist eine BlueXP -Workload-Fabrik für GenAI?
+
+Mit der BlueXP  Workload Factory for GenAI können Sie Unternehmensdatenquellen auf Amazon FSX for NetApp ONTAP mit generativen KI-Applikationen nutzen. Mithilfe von Retrieval-Augmented Generation (RAG) können Sie Datenquellen schnell mit Basismodellen verbinden, die über Amazon Bedrock oder Amazon Q Business verfügbar sind, um generative KI-gestützte Anwendungen wie virtuelle Assistenten, Q&A-Chatbots, Dokumentzusammenfassung, Inhaltserstellung usw. zu entwickeln
+
+Durch den Einsatz von Generative AI mit Ihren Unternehmensdaten können Sie Ihr eigenes Wissen und Ihre eigenen Fachkenntnisse nutzen und sich nicht nur auf die Intelligenz des Modells verlassen, die auf öffentlichen Daten basiert, auf denen die Modelle trainiert wurden. Mit RAG zur Anpassung der Modelle werden genaue und relevante Antworten auf organisationsspezifische Fragen sichergestellt, wodurch die Produktivität und Effizienz für die Benutzer Ihrer Anwendungen mithilfe von Generative AI verbessert wird.
+
+Durch die Entwicklung einer GenAI-Applikation, die auf Ihre Unternehmensdaten zugeschnitten ist, können Sie Ihr eigenes Wissen und Ihre Fachkenntnisse nutzen. Diese Anpassungsfunktion sorgt für präzise und relevante Antworten auf unternehmensspezifische Fragen und verbessert die Zufriedenheit und Produktivität aller Benutzer.
+
+Falls Sie link:../knowledge-base/create-knowledgebase.html["Erstellen einer Wissensdatenbank"^], GenAI nimmt Daten aus Ihren Datenquellen auf, speichert die vektorisierten Ergebnisse in einer Datenbank und gibt Ihnen volle Kontrolle darüber, wie Sie die aufgenommenen Daten zum Beantworten von Abfragen verwenden. Dieser Ansatz erfordert eine stärkere Erstkonfiguration, ermöglicht Ihnen jedoch die Auswahl verschiedener Chatmodelle für unterschiedliche Ergebnisse. Wenn Sie link:../connector/define-connector.html["Definieren Sie einen NetApp ONTAP-Konnektor für Amazon Q"], werden Daten aus Ihren Datenquellen von Amazon Q Business aufgenommen und in einem Index gespeichert. Dieser Ansatz erfordert weniger Anfangskonfiguration, bietet Ihnen jedoch weniger Kontrolle über die Ergebnisse.
+
+Weitere Informationen zur Workload Factory finden Sie im https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["Übersicht über die Workload-Fabrik"^].
+
+
+
+== Vorteile des Einsatzes von GenAI zur Erstellung generativer KI-Applikationen
+
+Die BlueXP  Workload-Fabrik für GenAI vereinfacht die Implementierung einer Infrastruktur für die Erstellung generativer KI-Applikationen mithilfe von Retrieval-Augmented Generation (RAG). Im Detail bietet GenAI folgende Vorteile:
+
+* Durch die Automatisierung von GenAI können IT-Administratoren und -Entwickler die Applikationsentwicklung beschleunigen, ohne umfassende Kenntnisse über Dateninfrastruktur, Grundlagen und Sprachmodelle benötigen. Datenadministratoren und -Entwickler können auf einfache und schnelle Weise unternehmenseigene Wissensdatenbanken erstellen, in die unstrukturierte Daten Ihres Unternehmens für generative KI-Applikationen eingebettet werden.
+* Erhöhen Sie die Sicherheit, indem Sie Benutzerberechtigungen in Dateien erhalten, die in Knowledge-Base eingebettet sind, um sicherzustellen, dass Datensicherheit und Datenschutz erhalten bleiben. Eine Anwendung, wie ein Chatbot, kann so entwickelt werden, dass nur authentifizierte Benutzer Antworten erhalten, die auf Daten basieren, auf die die Benutzer zugreifen können.
+* Schützen Sie Ihre Unternehmensdaten in Ihrem AWS Kundenkonto und bewahren Sie sie sicher auf. Dabei werden Ihre Unternehmensdaten nie an Dritte zugänglich gemacht.
+* Beschleunigen Sie die Entwicklung von GenAI-Applikationen, wie z. B. einen Q&A-Chatbot, mithilfe von Open-Source-Frameworks wie LangChain. Verwenden Sie die GenAI-API, um Wissensdatenbanken und -Konnektoren bereitzustellen und zu managen, mit einer Knowledge Base zu chatten und den Chat-Verlauf zu speichern und abzurufen.
+* Verbessern Sie die Datensicherung und -Verfügbarkeit, indem Sie die generative KI-Dateninfrastruktur auf FSX für NetApp ONTAP-Filesysteme implementieren und ONTAP Funktionen wie Hochverfügbarkeit, Snapshots für lokale Datensicherung und -Recovery, SnapMirror für Disaster Recovery und SnapVault für Backup Ihrer Dateninfrastruktur nutzen.
+* Profitieren Sie von den ONTAP Dateneffizienzfunktionen wie Datendeduplizierung, Komprimierung und Data-Compaction, Daten-Tiering und Thin Provisioning und senken Sie so die Storage-Gesamtkosten für die generative KI-Dateninfrastruktur.
+* Mit der hybriden Suche und den von GenAI bereitgestellten Neurankungsfunktionen erhalten Sie hochwertige Ergebnisse aus Ihren Daten. Die hybride Suche in Kombination mit einem Re-Ranking verbessert die Relevanz der Suchergebnisse deutlich. Diese Funktionen sind über Amazon AWS verfügbar und regionsabhängig.
+
+
+
+
+== So funktioniert GenAI
+
+GenAI verwendet die privaten Daten Ihres Unternehmens, um die Intelligenz des Modells (basierend auf den Daten, auf denen es trainiert wurde) zu ergänzen und personalisierte Antworten auf Fragen von Benutzern in Ihrem Unternehmen zu geben. Sie implementieren zuerst die Infrastruktur, die für ein RAG-Framework erforderlich ist, erstellen dann eine Wissensdatenbank oder definieren einen Konnektor mithilfe der Datenquellen und Basismodelle Ihres Unternehmens, die über Amazon Bedrock oder Amazon Q Business verfügbar sind, und verbinden dann eine Applikation (z. B. einen Q&A-Chatbot) mit der Wissensdatenbank oder dem Connector.
+
+image:genai-infrastructure-diagram.png["Ein Diagramm, das die wichtigsten Komponenten von GenAI, ihre Funktion und ihre Funktionsweise zeigt."]
+
+
+
+== Wie die BlueXP -Workload-Farm für GenAI hilft, generative KI-Applikationen zu erstellen
+
+GenAI hilft wie folgt, generative KI-Applikationen mit RAG zu erstellen:
+
+* Implementiert die erforderliche Infrastruktur für das RAG-Framework (Retrieval Augmented Generation), um mit Datenquellen auf FSX für ONTAP-Filesystemen und Amazon Bedrock oder Amazon Q Business zusammenzuarbeiten. Die Infrastruktur umfasst die NetApp GenAI Engine-Instanz zum Managen von Daten, eine eingebettete Vektordatenbank (LanceDB) und den Speicher auf Ihrem FSX für ONTAP-Dateisystem für die Vektordatenbank.
+* Hilft, die Datenquellen mit Einbettungen und Sprachmodellen zu verbinden, die über Amazon Bedrock oder Amazon Q Business verfügbar sind, um Datenquellen einzubetten und Antworten für Benutzeranfragen abzurufen. Die Datenquellen werden zusammen mit Modellen und ihrer Konfiguration als FSX for ONTAP-Wissensdatenbanken dargestellt.
+* Eingliederung von Quelldaten in die Wissensdatenbank oder den Connector zur Einbindung von Quelldateien in SMB-Freigaben und NFS-Exporte in FSX für ONTAP-Filesysteme sowie Speicherung von Dateiberechtigungen für Dateien in SMB-Freigaben.
+* Entwickelt automatisch Einstiegsfragen basierend auf dem Inhalt in Wissensdatenbanken.
+* Bietet einen Chat-Simulator für Datenadministratoren, um das Chatten mit Wissensdatenbanken zu testen.
+* Über eine einfache Connector-Schnittstelle kann GenAI schnell und einfach mit Amazon Q Business verbunden werden.
+
+
+https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/learn-about-tools.adoc[]
+
+
+
+== Kosten
+
+Die GenAI Funktion der Workload-Farm ist mit keinerlei Kosten verbunden.
+
+Sie müssen jedoch für die von Ihnen implementierten AWS Ressourcen zahlen, um die generative KI-Infrastruktur unterstützen zu können. Sie zahlen beispielsweise AWS für Amazon Bedrock oder Amazon Q Business, FSX für ONTAP-Dateisystem- und Storage-Kapazität und die EC2-Instanz für die GenAI Engine.
+
+Einige multimodale Operationen, wie das Scannen von Bildern nach Textinformationen, können mehr Ressourcen verwenden und damit höhere Kosten verursachen. Einige Konfigurationsvorgänge, wie das Ändern von Einstellungen für eine Wissensdatenbank, können dazu führen, dass Datenquellen erneut gescannt werden, und Datenquellprüfungen können auch höhere Kosten verursachen.
+
+
+
+== Lizenzierung
+
+Für die Nutzung der KI-Funktionen der Workload-Farm sind keine speziellen Lizenzen erforderlich NetApp.

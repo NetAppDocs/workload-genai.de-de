@@ -1,19 +1,11 @@
----
-sidebar: sidebar 
-permalink: deploy-infrastructure.html 
-keywords: ai, chatbot, infrastructure, bedrock, fsx for ontap 
-summary: Sie müssen die Infrastruktur für RAG Framework in Ihrer Umgebung implementieren, bevor Sie FSX für ONTAP-Wissensdatenbanken und -Anwendungen für Ihr Unternehmen entwickeln können. Die primären Infrastrukturkomponenten sind der Amazon Bedrock KI-Service, eine Virtual Machine-Instanz für die NetApp GenAI Engine und ein FSX für ONTAP Filesystem. 
----
-= Implementierung der GenAI-Infrastruktur
+= Detaillierte Informationen zur Infrastruktur
 :allow-uri-read: 
-:icons: font
-:imagesdir: ./media/
 
 
 [role="lead"]
-Sie müssen die GenAI-Infrastruktur für RAG Framework in Ihrer Umgebung implementieren, bevor Sie FSX für ONTAP-Wissensdatenbanken und -Applikationen für Ihr Unternehmen aufbauen können. Die primären Infrastrukturkomponenten sind der Amazon Bedrock Service, eine Virtual Machine-Instanz für die NetApp GenAI Engine und ein FSX für ONTAP Filesystem.
+Sie müssen die GenAI-Infrastruktur für RAG Framework in Ihrer Umgebung implementieren, bevor Sie FSX für ONTAP-Wissensdatenbanken, -Konnektoren und -Applikationen für Ihr Unternehmen entwickeln können. Die primären Infrastrukturkomponenten sind der Amazon Bedrock Service, eine Virtual Machine-Instanz für die NetApp GenAI Engine und ein FSX für ONTAP Filesystem.
 
-Die implementierte Infrastruktur kann mehrere Wissensdatenbanken und Chatbots unterstützen, sodass diese Aufgabe in der Regel nur einmal ausgeführt werden muss.
+Die implementierte Infrastruktur kann mehrere Wissensdatenbanken, Chatbots und Konnektoren unterstützen, sodass Sie diese Aufgabe in der Regel nur einmal durchführen müssen.
 
 
 
@@ -21,12 +13,18 @@ Die implementierte Infrastruktur kann mehrere Wissensdatenbanken und Chatbots un
 
 Ihre GenAI-Implementierung muss sich in einer AWS-Region mit aktiviertem Amazon Bedrock befinden. https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Zeigen Sie die Liste der unterstützten Regionen an"^]
 
-Die Bereitstellung besteht aus den folgenden Komponenten:
+Die Infrastruktur besteht aus folgenden Komponenten:
 
 Amazon Bedrock Service:: Amazon Bedrock ist ein vollständig gemanagter Service, mit dem Sie über eine einzige API Foundation Models (FMS) führender KI-Unternehmen verwenden können. Außerdem bietet sie die Funktionen, die Sie zum Erstellen sicherer generativer KI-Applikationen benötigen.
 +
 --
 https://aws.amazon.com/bedrock/["Erfahren Sie mehr über Amazon Bedrock"^]
+
+--
+Amazon Q Business:: Amazon Q baut auf Amazon Bedrock auf, um einen vollständig gemanagten generativen KI-Assistenten bereitzustellen, mit dem Sie Fragen beantworten und Inhalte basierend auf Informationen aus Ihren Datenquellen generieren können.
++
+--
+https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html["Erfahren Sie mehr über Amazon Q Business"^]
 
 --
 Virtual Machine für die NetApp GenAI Engine:: Dabei wird die NetApp GenAI Engine implementiert. Es bietet die Verarbeitungsleistung, um die Daten aus Ihren Datenquellen aufzunehmen und diese dann in die Vektordatenbank zu schreiben.
@@ -44,7 +42,7 @@ Die NetApp GenAI Engine überwacht beide Volumes und interagiert mit ihnen.
 
 Die folgende Abbildung zeigt die GenAI-Infrastruktur. Die Komponenten mit den Nummern 1, 2 und 3 werden während dieses Verfahrens eingesetzt. Die anderen Elemente müssen vorhanden sein, bevor mit der Bereitstellung begonnen werden kann.
 
-image:diagram-chatbot-infrastructure.png["Ein Diagramm der AI-Chatbot-Komponenten."]
+image:genai-infrastructure-diagram-numbered.png["Ein Diagramm der GenAI-Infrastrukturkomponenten"]
 
 
 
@@ -53,7 +51,11 @@ image:diagram-chatbot-infrastructure.png["Ein Diagramm der AI-Chatbot-Komponente
 Geben Sie Ihre AWS-Zugangsdaten ein und wählen Sie das Filesystem FSX für ONTAP aus, um die Infrastruktur zur Retrieval-Augmented Generation (RAG) implementieren zu können.
 
 .Bevor Sie beginnen
-Stellen Sie sicher, dass Ihre Umgebung den Anforderungen entspricht link:requirements.html["Den Anforderungen gerecht zu werden"] , bevor Sie mit diesem Verfahren beginnen.
+Stellen Sie sicher, dass Ihre Umgebung die Anforderungen für Wissensdatenbanken oder Konnektoren erfüllt, je nachdem, welche Sie wählen, bevor Sie mit diesem Verfahren beginnen.
+
+* link:../knowledge-base/requirements-knowledge-base.html["Anforderungen an die Wissensdatenbank"]
+* link:../connector/requirements-connector.html["Anforderungen an Steckverbinder"]
+
 
 .Schritte
 . Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
