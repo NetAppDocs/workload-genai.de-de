@@ -58,10 +58,10 @@ sidebar:
       entries:
       - title: Schnellstart
         url: "/connector/quick-start-connector.html"
-      - title: Anforderungen an die Wissensdatenbank
+      - title: Anforderungen an Steckverbinder
         url: "/connector/requirements-connector.html"
-      - title: Identifizieren von Datenquellen, die zu einer Wissensdatenbank hinzugefügt
-          werden können
+      - title: Identifizieren von Datenquellen, die einem Konnektor hinzugefügt werden
+          sollen
         url: "/connector/identify-data-sources-connector.html"
       - title: Implementierung der GenAI-Infrastruktur
         url: "/connector/deploy-infrastructure.html"
