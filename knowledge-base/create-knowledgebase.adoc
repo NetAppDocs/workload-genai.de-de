@@ -65,6 +65,7 @@ https://aws.amazon.com/bedrock/titan/["Erfahren Sie mehr über Amazon Titan"^]
 
 
 .. *Chat-Modell*: Wählen Sie aus verschiedenen Chat-Modellen, die in Amazon Bedrock integriert sind. Beachten Sie, dass Sie das Chatmodell von Amazon Bedrock bereits aktiviert haben müssen.
+.. *Neuranking*: Aktivieren oder deaktivieren Sie das Neuranking, um die Relevanz und Qualität der Abfrageergebnisse zu verbessern. Wählen Sie ein Standard-Chat-Modell oder ein spezielles Reranking-Modell für das Neuranking. Reranking-Modelloptionen werden nur angezeigt, wenn sie in Ihrer Region verfügbar sind.
 .. *Data Guardrails*: Wählen Sie aus, ob Sie Data Guardrails aktivieren oder deaktivieren möchten. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mit BlueXP  Klassifizierung als Basis für Daten-Guardrails lernen"^].
 +
 Die folgenden Voraussetzungen müssen erfüllt sein, um die Data Guardrails zu aktivieren.
