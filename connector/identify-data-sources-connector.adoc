@@ -51,7 +51,7 @@ NOTE: Wenn in einer Datei in Ihrer Datenquelle kein Text vorhanden ist (z. B. ei
 
 == Unterstützte Datenquelldateiformate
 
-Die folgenden Datenquelldateiformate werden derzeit mit NetApp ONTAP Connector für Amazon Q. unterstützt
+Die folgenden Datenquellendateiformate werden derzeit mit NetApp Connector für Amazon Q Business unterstützt.
 
 [cols="2*"]
 |===

@@ -11,7 +11,7 @@ summary: Beginnen Sie mit dem Erstellen eines Konnektors mithilfe der Daten Ihre
 
 
 [role="lead"]
-Erste Schritte zum Erstellen eines NetApp ONTAP-Connectors für Amazon Q unter Verwendung der Daten Ihres Unternehmens, die auf Amazon FSX für NetApp ONTAP-Dateisystemen vorhanden sind. Nachdem Sie einen Konnektor erstellt haben, können Endbenutzer auf den Amazon Q Business Assistant zugreifen, um auf ihre Fragen auf organisationsbezogene Antworten zuzugreifen.
+Beginnen Sie mit der Erstellung eines NetApp Connectors für Amazon Q Business unter Verwendung der Daten Ihrer Organisation, die auf Amazon FSx für NetApp ONTAP-Dateisysteme vorhanden sind. Nachdem Sie einen Konnektor erstellt haben, können Endbenutzer auf den Amazon Q Business Assistant zugreifen, um auf ihre Fragen auf organisationsbezogene Antworten zuzugreifen.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] Melden Sie sich bei Workload Factory an
 [role="quick-margin-para"]

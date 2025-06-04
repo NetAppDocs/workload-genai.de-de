@@ -25,11 +25,11 @@ indexpage:
       url: knowledge-base/test-knowledgebase.html
     - title: Veröffentlichen Sie eine Wissensdatenbank
       url: knowledge-base/publish-knowledgebase.html
-  - title: Erstellen Sie einen Connector für Amazon Q Business
+  - title: Erstellen Sie einen NetApp Connector für Amazon Q Business
     links:
     - title: Schnellstart für Anschlüsse
       url: connector/quick-start-connector.html
-    - title: Erstellen Sie einen Connector für Amazon Q Business
+    - title: Erstellen Sie einen NetApp Connector für Amazon Q Business
       url: connector/define-connector.html
   - title: GenAI verwalten
     links:
