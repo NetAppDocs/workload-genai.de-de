@@ -20,10 +20,10 @@ Stellen Sie sicher, dass Workload Factory und AWS ordnungsgemäß eingerichtet s
 Für GenAI gelten allgemeine Anforderungen, die Ihre Umgebung vor der Inbetriebnahme erfüllen muss.
 
 Workload Werksanmeldung und Konto:: Sie müssen https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Richten Sie ein Konto mit Workload Factory ein"^] sich mit einem der anmelden https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^].
-AWS Zugangsdaten und Berechtigungen:: Sie müssen AWS-Anmeldeinformationen zur Workload-Fabrik mit Lese-/Schreibberechtigungen hinzufügen. Das bedeutet, dass Sie die Workload-Fabrik im Modus „_Read/Write_“ für GenAI verwenden werden.
+AWS Zugangsdaten und Berechtigungen:: Sie müssen der Workload Factory AWS-Anmeldeinformationen mit Lese-/Schreibberechtigungen hinzufügen. Dies bedeutet, dass Sie die Workload Factory für GenAI im Lese-/Schreibmodus verwenden.
 +
 --
-_Basic_ Mode und _Read-Only_ Mode Berechtigungen werden derzeit nicht unterstützt.
+Die Berechtigungen im _Basismodus_ und _Nur-Lese-Modus_ werden derzeit nicht unterstützt.
 
 Wenn Sie Ihre Anmeldedaten einrichten, erhalten Sie durch die Auswahl der unten aufgeführten Berechtigungen vollständigen Zugriff auf das Management von FSX für ONTAP-Dateisysteme sowie auf die Bereitstellung und das Management der GenAI EC2-Instanz und anderer AWS-Ressourcen, die für Ihre Knowledge Base und Ihren Chatbot benötigt werden.
 
