@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, genai' 
 summary: Informieren Sie sich über die Neuerungen bei den KI-Workloads, die den Workload-Betrieb unterstützen. 
 ---
 = Neuerungen bei der BlueXP -Workload-Farm für GenAI
@@ -12,6 +12,20 @@ summary: Informieren Sie sich über die Neuerungen bei den KI-Workloads, die den
 
 [role="lead"]
 Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloads der Workload-Farm.
+
+
+
+== 29 Juni 2025
+
+
+
+=== Unterstützung für Datenquellen, die auf generischen NFS/SMB-Dateisystemen gehostet werden
+
+Sie können jetzt eine Datenquelle aus einer generischen SMB- oder NFS-Freigabe hinzufügen. Dadurch können Sie Dateien einbeziehen, die auf Volumes gespeichert sind, die von anderen Dateisystemen als Amazon FSx für NetApp ONTAP gehostet werden.
+
+https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Hinzufügen von Datenquellen zu einer Wissensdatenbank"]
+
+https://docs.netapp.com/us-en/workload-genai/connector/define-connector.html#add-data-sources-to-the-connector["Hinzufügen von Datenquellen zu einem Connector"]
 
 
 
@@ -67,11 +81,7 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledg
 
 === Terminologie für Berechtigungen wurde aktualisiert
 
-In der Benutzeroberfläche und Dokumentation der Workload Factory wird jetzt „schreibgeschützt“ für Leseberechtigungen und „Lesen/Schreiben“ für automatisierte Berechtigungen verwendet.
-
-
-
-== 02 März 2025
+In der Benutzeroberfläche und Dokumentation der Workload Factory wird jetzt „schreibgeschützt“ für Leseberechtigungen und „Lesen/Schreiben“ für automatisierte Berechtigungen verwendet. == 02. März 2025
 
 
 

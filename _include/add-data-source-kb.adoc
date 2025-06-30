@@ -2,6 +2,10 @@
 :allow-uri-read: 
 
 
+[role="tabbed-block"]
+====
+.Fügen Sie ein FSx für ONTAP-Dateisystem hinzu
+--
 . *Wählen Sie ein Dateisystem*: Wählen Sie das FSX für ONTAP Dateisystem, in dem sich Ihre Datenquelldateien befinden, und wählen Sie *Weiter*.
 . *Wählen Sie ein Volume*: Wählen Sie das Volume aus, auf dem sich Ihre Quelldateien befinden, und wählen Sie *Weiter*.
 +
@@ -50,3 +54,111 @@ NOTE: Wenn Sie Dateien auf Basis eines Änderungsdatums einbeziehen, werden die 
 
 . Wählen Sie *Hinzufügen*, um diese Datenquelle zu Ihrer Wissensdatenbank hinzuzufügen.
 
+
+--
+.Hinzufügen eines generischen NFS-Dateisystems
+--
+. *Wählen Sie ein Dateisystem*: Geben Sie die IP-Adresse oder den FQDN für den Dateisystem-Host ein, auf dem sich Ihre Datenquelldateien befinden, wählen Sie das NFS-Protokoll für die Netzwerkfreigabe und klicken Sie auf *Weiter*.
+. *Wählen Sie eine Datenquelle*: Wählen Sie den Speicherort der Datenquelle basierend darauf, wo Sie die Dateien gespeichert haben. Dies kann ein ganzes Volume sein, oder nur ein bestimmter Ordner oder Unterordner im Volume, und wählen Sie *Weiter*.
++
+
+NOTE: In manchen Fällen müssen Sie den NFS-Exportnamen manuell eingeben und „Verzeichnisse abrufen“ auswählen, um die verfügbaren Verzeichnisse anzuzeigen. Sie können den gesamten Export oder nur bestimmte Ordner auswählen.
+
+. *Konfigurationen*: Konfigurieren Sie, wie die Datenquelle Informationen aus Ihren Dateien einliest und welche Dateien sie in Scans enthält:
++
+** *Datenquelle definieren*: Definieren Sie im Abschnitt *Chunking-Strategie*, wie die GenAI-Engine den Inhalt der Datenquelle in Blöcke teilt, wenn die Datenquelle in eine Wissensdatenbank integriert ist. Sie können eine der folgenden Strategien wählen:
++
+*** *Multi-Sentence Chunking*: Organisiert Informationen aus Ihrer Datenquelle in Satzbausteine. Sie können festlegen, wie viele Sätze jedes Stück ausmachen (bis zu 100).
+*** *Überlappendes Chunking*: Organisiert Informationen aus Ihrer Datenquelle in zeichendefinierte Blöcke, die benachbarte Blöcke überlappen können. Sie können die Größe jedes Chunk in Zeichen auswählen und festlegen, wie viel sich jeder Chunk mit benachbarten Chunks überschneidet. Sie können eine Chunk-Größe von 50 bis 3000 Zeichen und einen Überlappungsprozentsatz von 1 bis 99 % konfigurieren.
++
+
+NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Speicherbedarf erheblich erhöhen, da die Abrufgenauigkeit nur geringfügig verbessert wird.
+
+
+
+** *Dateifilterung*: Konfigurieren Sie, welche Dateien in Scans enthalten sind:
++
+*** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
++
+Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+
++
+Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
+
++
+
+NOTE: Ihre Wahl, Bilddateien in Scans aufzunehmen, hängt mit dem Chatmodell der Wissensdatenbank zusammen. Wenn Sie Bilddateien in Scans aufnehmen, muss das Chatmodell Bilder unterstützen. Wenn hier Bilddateitypen ausgewählt sind, können Sie die Wissensdatenbank nicht auf ein Chatmodell umschalten, das keine Bilddateien unterstützt.
+
+*** Wählen Sie im Abschnitt *Dateiänderungszeitfilter* die Option, die Aufnahme von Dateien basierend auf ihrer Änderungszeit zu aktivieren oder zu deaktivieren. Wenn Sie die Zeitfilterung für die Änderung aktivieren, wählen Sie einen Datumsbereich aus der Liste aus.
++
+
+NOTE: Wenn Sie Dateien auf Basis eines Änderungsdatums einbeziehen, werden die Dateien aus dem periodischen Scan ausgeschlossen, und die Datenquelle enthält diese Dateien nicht, sobald der Datumsbereich nicht erfüllt ist (die Dateien wurden nicht innerhalb des von Ihnen angegebenen Datumsbereichs geändert).
+
+
+
+
+
+. Wählen Sie *Datenquelle hinzufügen*, um diese Datenquelle zu Ihrer Wissensdatenbank hinzuzufügen.
+
+
+--
+.Hinzufügen eines generischen SMB-Dateisystems
+--
+. *Dateisystem auswählen*:
++
+.. Geben Sie die IP-Adresse oder den FQDN für den Dateisystem-Host ein, auf dem sich Ihre Datenquelldateien befinden.
+.. Wählen Sie das SMB-Protokoll für die Netzwerkfreigabe.
+.. Geben Sie die Active Directory-Informationen ein, darunter Domäne, IP-Adresse, Benutzername und Kennwort.
+.. Wählen Sie *Weiter*.
+
+
+. *Wählen Sie eine Datenquelle*: Wählen Sie den Speicherort der Datenquelle basierend darauf, wo Sie die Dateien gespeichert haben. Dies kann ein ganzes Volume sein, oder nur ein bestimmter Ordner oder Unterordner im Volume, und wählen Sie *Weiter*.
++
+
+NOTE: In manchen Fällen müssen Sie den Namen der SMB-Freigabe manuell eingeben und „Verzeichnisse abrufen“ auswählen, um die verfügbaren Verzeichnisse anzuzeigen. Sie können die gesamte Freigabe oder nur bestimmte Ordner darin auswählen.
+
+. *Konfigurationen*: Konfigurieren Sie, wie die Datenquelle Informationen aus Ihren Dateien einliest und welche Dateien sie in Scans enthält:
++
+** *Datenquelle definieren*: Definieren Sie im Abschnitt *Chunking-Strategie*, wie die GenAI-Engine den Inhalt der Datenquelle in Blöcke teilt, wenn die Datenquelle in eine Wissensdatenbank integriert ist. Sie können eine der folgenden Strategien wählen:
++
+*** *Multi-Sentence Chunking*: Organisiert Informationen aus Ihrer Datenquelle in Satzbausteine. Sie können festlegen, wie viele Sätze jedes Stück ausmachen (bis zu 100).
+*** *Überlappendes Chunking*: Organisiert Informationen aus Ihrer Datenquelle in zeichendefinierte Blöcke, die benachbarte Blöcke überlappen können. Sie können die Größe jedes Chunk in Zeichen auswählen und festlegen, wie viel sich jeder Chunk mit benachbarten Chunks überschneidet. Sie können eine Chunk-Größe von 50 bis 3000 Zeichen und einen Überlappungsprozentsatz von 1 bis 99 % konfigurieren.
++
+
+NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Speicherbedarf erheblich erhöhen, da die Abrufgenauigkeit nur geringfügig verbessert wird.
+
+
+
+** *Berechtigungsbewusst*: Aktivieren oder deaktivieren Sie berechtigungsbewusste Antworten:
++
+*** *Enabled*: Benutzer des Chatbot, die auf diese Wissensdatenbank zugreifen, erhalten nur Antworten auf Abfragen aus Datenquellen, auf die sie zugreifen können.
+*** *Disabled*: Benutzer des Chatbot erhalten Antworten über Inhalte aus allen integrierten Datenquellen.
+
+
+** *Dateifilterung*: Konfigurieren Sie, welche Dateien in Scans enthalten sind:
++
+*** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
++
+Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+
++
+Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
+
++
+
+NOTE: Ihre Wahl, Bilddateien in Scans aufzunehmen, hängt mit dem Chatmodell der Wissensdatenbank zusammen. Wenn Sie Bilddateien in Scans aufnehmen, muss das Chatmodell Bilder unterstützen. Wenn hier Bilddateitypen ausgewählt sind, können Sie die Wissensdatenbank nicht auf ein Chatmodell umschalten, das keine Bilddateien unterstützt.
+
+*** Wählen Sie im Abschnitt *Dateiänderungszeitfilter* die Option, die Aufnahme von Dateien basierend auf ihrer Änderungszeit zu aktivieren oder zu deaktivieren. Wenn Sie die Zeitfilterung für die Änderung aktivieren, wählen Sie einen Datumsbereich aus der Liste aus.
++
+
+NOTE: Wenn Sie Dateien auf Basis eines Änderungsdatums einbeziehen, werden die Dateien aus dem periodischen Scan ausgeschlossen, und die Datenquelle enthält diese Dateien nicht, sobald der Datumsbereich nicht erfüllt ist (die Dateien wurden nicht innerhalb des von Ihnen angegebenen Datumsbereichs geändert).
+
+
+
+
+
+. Wählen Sie *Datenquelle hinzufügen*, um diese Datenquelle zu Ihrer Wissensdatenbank hinzuzufügen.
+
+
+--
+====
