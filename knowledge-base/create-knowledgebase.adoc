@@ -88,13 +88,15 @@ Die folgenden Voraussetzungen müssen erfüllt sein, um die Data Guardrails zu a
 
 NOTE: Die Datenguardrails-Funktion wird bei der Aufnahme strukturierter Datendateien wie CSV, JSON, JSONP oder Parkett nicht unterstützt.
 
-+
-.. *Gesprächseinstieg*: Wählen Sie aus, ob Sie bis zu vier Gesprächseinstiegstelefonate bereitstellen möchten, die Benutzern angezeigt werden, die mit einem Chatbot interagieren, der diese Wissensdatenbank nutzt. Wir empfehlen, diese Einstellung zu aktivieren.
+
+
+. *Gesprächseinstieg*: Wählen Sie aus, ob Sie bis zu vier Gesprächseinstiegstelefonate bereitstellen möchten, die Benutzern angezeigt werden, die mit einem Chatbot interagieren, der diese Wissensdatenbank nutzt. Wir empfehlen, diese Einstellung zu aktivieren.
 +
 Wenn Sie Gesprächseinstieg aktivieren, ist standardmäßig der automatische Modus ausgewählt. Der „manuelle Modus“ kann erst aktiviert werden, nachdem Sie Datenquellen zu Ihrer Wissensdatenbank hinzugefügt haben. link:manage-knowledgebase.html["Erfahren Sie, wie Sie die Einstellungen der Wissensdatenbank ändern"].
 
-.. *FSX für ONTAP Dateisystem*: Wenn Sie eine neue Wissensdatenbank definieren, erstellt Workload Factory ein neues Amazon FSX für NetApp ONTAP Volumen, um es zu speichern. Wählen Sie einen vorhandenen Filesystem-Namen und eine SVM (auch Storage-VM genannt) aus, auf der das neue Volume erstellt werden soll.
-.. *Snapshot-Richtlinie*: Wählen Sie eine Snapshot-Richtlinie aus der Liste der vorhandenen Richtlinien aus, die im werkseitigen Lagerbestand des Workloads definiert sind. Wiederkehrende Snapshots der Wissensdatenbank werden automatisch in einer Frequenz erstellt, die auf der von Ihnen ausgewählten Snapshot-Richtlinie basiert.
+. *FSX für ONTAP Dateisystem*: Wenn Sie eine neue Wissensdatenbank definieren, erstellt Workload Factory ein neues Amazon FSX für NetApp ONTAP Volumen, um es zu speichern. Wählen Sie einen vorhandenen Filesystem-Namen und eine SVM (auch Storage-VM genannt) aus, auf der das neue Volume erstellt werden soll.
+. *Snapshot-Richtlinie*: Wählen Sie eine Snapshot-Richtlinie aus der Liste der vorhandenen Richtlinien aus, die im werkseitigen Lagerbestand des Workloads definiert sind. Wiederkehrende Snapshots der Wissensdatenbank werden automatisch in einer Frequenz erstellt, die auf der von Ihnen ausgewählten Snapshot-Richtlinie basiert.
+. *S3-Bucket*: Wenn die Abfrageergebnisse des Chatbots strukturierte Daten enthalten, kann GenAI die Ergebnisse in einem S3-Bucket speichern.  Um diese Funktion zu verwenden, aktivieren Sie die Einstellung *S3-Bucket aktivieren* und wählen Sie aus der Liste einen S3-Bucket aus, der mit Ihrem Konto verknüpft ist.  Wenn diese Ergebnisse in einem S3-Bucket gespeichert sind, können Sie sie über den Download-Link innerhalb der Chat-Sitzung herunterladen.
 +
 Wenn die benötigte Snapshot-Richtlinie nicht vorhanden ist, können Sie https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["Erstellen einer Snapshot-Richtlinie"] auf der Storage-VM, die das Volume enthält, arbeiten.
 

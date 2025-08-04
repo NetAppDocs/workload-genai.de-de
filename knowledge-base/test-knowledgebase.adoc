@@ -40,7 +40,8 @@ Der Chatbot-Simulator wird im rechten Fensterbereich angezeigt. Falls festgelegt
 [TIP]
 ====
 ** Sie können die Quellen sehen, die zur Erstellung der Antwort verwendet werden, indem Sie die Liste *sources* unter der Antwort erweitern. Hier finden Sie eine Liste der Dateien, die zum Generieren der Antwort verwendet werden. Sie können die von jeder Datei und jedem Volume verwendeten Datenblöcke anzeigen und in jede Datei kopieren, indem Sie den Mauszeiger über den Dateinamen bewegen.
-** Wenn Tabellen in der Antwort enthalten sind, können Sie die Daten in jeder Spalte sortieren und jede Tabelle in die Zwischenablage kopieren.
+** Wenn die Antwort Tabellen enthält, können Sie die Daten in jeder Spalte sortieren und jede Tabelle in die Zwischenablage kopieren.
+** Wenn die Antwortergebnisse strukturierte Daten enthalten und die Funktion *S3 Bucket* für die Wissensdatenbank aktiviert ist, speichert GenAI die Ergebnisse in einem S3-Bucket.  Sie können die Ergebnisse aus dem Bucket über den Link *Ergebnisse herunterladen* innerhalb der Chat-Sitzung herunterladen.
 
 
 ====

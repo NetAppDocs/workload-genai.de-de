@@ -755,7 +755,6 @@
   <block id="2041784b912a2b2e72827a5e9c656f5f" category="cell">.Parkett</block>
   <block id="f1776184cd873aef06fc869138b3b776" category="admonition">Sie können die Größe des Chatbot-Simulatorfensters ändern und neu benennen sowie Fragen und Antworten in die Zwischenablage kopieren.</block>
   <block id="e27f142520976de0e091895abd1a2b45" category="list-text">Sie können die Quellen sehen, die zur Erstellung der Antwort verwendet werden, indem Sie die Liste *sources* unter der Antwort erweitern. Hier finden Sie eine Liste der Dateien, die zum Generieren der Antwort verwendet werden. Sie können die von jeder Datei und jedem Volume verwendeten Datenblöcke anzeigen und in jede Datei kopieren, indem Sie den Mauszeiger über den Dateinamen bewegen.</block>
-  <block id="8e08c9e7067a8bc5d8828ba0b5a8a5b2" category="list-text">Wenn Tabellen in der Antwort enthalten sind, können Sie die Daten in jeder Spalte sortieren und jede Tabelle in die Zwischenablage kopieren.</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blogs und Community</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp Community</block>
   <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">BlueXP Blogs</block>
@@ -1100,5 +1099,15 @@
   <block id="63e19fdc4a09680278ff2270264b3005" category="list-text">Dateisystem hinzufügen (Dateien aus einer generischen SMB- oder NFS-Freigabe verwenden)</block>
   <block id="438852e39ff5e2c7366e67dde7cfdab4" category="list-text">Nachdem Sie *Datenquelle hinzufügen* ausgewählt haben, wählen Sie den Typ der Datenquelle aus, die Sie hinzufügen möchten:</block>
   <block id="7454fc4c14df2a987637928e569efe3a" category="section-title">29 Juni 2025</block>
-  <block id="84cd46ec8d4d2d63881ed3e5d98fe218" category="paragraph">In der Benutzeroberfläche und Dokumentation der Workload Factory wird jetzt „schreibgeschützt“ für Leseberechtigungen und „Lesen/Schreiben“ für automatisierte Berechtigungen verwendet. == 02. März 2025</block>
+  <block id="1d92da78b598707dec3df4d7281f1ec3" category="doc">Sichere Speicherung strukturierter Datenergebnisse</block>
+  <block id="c4b4739fe392b8cae69417a08008577b" category="paragraph">Wenn die Abfrageergebnisse des Chatbots strukturierte Daten enthalten, kann GenAI die Ergebnisse in einem Amazon S3-Bucket speichern.  Wenn diese Ergebnisse in einem S3-Bucket gespeichert sind, können Sie sie über den Download-Link innerhalb der Chat-Sitzung herunterladen.</block>
+  <block id="9a0737b14158e601f99b4265c5bd3e5a" category="section-title">MCP-Serververfügbarkeit</block>
+  <block id="7577ac9e07061812bfe5cec74bafd782" category="paragraph">NetApp bietet jetzt einen Model Context Protocol (MCP)-Server mit BlueXP workload factory für GenAI.  Sie können den Server lokal installieren, um externen MCP-Clients das Ermitteln und Abrufen von Abfrageergebnissen aus einer GenAI-Wissensdatenbank zu ermöglichen.</block>
+  <block id="6ce9fdd00e9870d205a0b965e8d376fd" category="inline-link-macro">NetApp Workload Factory GenAI MCP-Server</block>
+  <block id="499a63951a1faf063a1d481e63ba0fd9" category="paragraph"><block ref="499a63951a1faf063a1d481e63ba0fd9" category="inline-link-macro-rx"></block></block>
+  <block id="c88eb449e8388152b30e0d6f5c7fd191" category="list-text">*S3-Bucket*: Wenn die Abfrageergebnisse des Chatbots strukturierte Daten enthalten, kann GenAI die Ergebnisse in einem S3-Bucket speichern.  Um diese Funktion zu verwenden, aktivieren Sie die Einstellung *S3-Bucket aktivieren* und wählen Sie aus der Liste einen S3-Bucket aus, der mit Ihrem Konto verknüpft ist.  Wenn diese Ergebnisse in einem S3-Bucket gespeichert sind, können Sie sie über den Download-Link innerhalb der Chat-Sitzung herunterladen.</block>
+  <block id="c56ce0bea3e69444b0c0078136e9b7ce" category="list-text">Wenn die Antwort Tabellen enthält, können Sie die Daten in jeder Spalte sortieren und jede Tabelle in die Zwischenablage kopieren.</block>
+  <block id="689b99dcda35ffe2433b85248726142a" category="list-text">Wenn die Antwortergebnisse strukturierte Daten enthalten und die Funktion *S3 Bucket* für die Wissensdatenbank aktiviert ist, speichert GenAI die Ergebnisse in einem S3-Bucket.  Sie können die Ergebnisse aus dem Bucket über den Link *Ergebnisse herunterladen* innerhalb der Chat-Sitzung herunterladen.</block>
+  <block id="613abd0d9da6f7ee37d283174e11fcaf" category="section-title">03. August 2025</block>
+  <block id="2d5a4b914acb6c2f03d312067c73ce32" category="section-title">02. März 2025</block>
 </blocks>
