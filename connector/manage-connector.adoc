@@ -20,9 +20,9 @@ Nachdem Sie einen Connector für Amazon Q Business erstellt haben, können Sie d
 Sie können Informationen zu den Einstellungen für einen Konnektor und zu den integrierten Datenquellen anzeigen.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie im Menü Workload Factory Navigation die Option *AI*.
-. Wählen Sie den Konnektor aus, den Sie anzeigen möchten.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
+. Wählen Sie auf der Inventarseite „Wissensdatenbanken und Konnektoren“ den Konnektor aus, den Sie anzeigen möchten.
 . Wählen Sie zum Anzeigen von Verbindungsdetails image:icon-action.png["Die Optionsschaltfläche"]*Connector verwalten* aus, und wählen Sie diese Option aus.
 +
 Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der Datenquellen, der Einbettungsmodus, die Liste aller eingebetteten Datenquellen und vieles mehr angezeigt.
@@ -41,7 +41,8 @@ Sie können einen Konnektor aktualisieren, indem Sie einige Einstellungen änder
 Jedes Mal, wenn Sie Datenquellen vom Connector hinzufügen, ändern oder entfernen, muss GenAI die Datenquellinformationen an Amazon Q Business senden, damit sie neu indiziert werden. Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Q Business nur die Objekte in Ihrem FSX für ONTAP-Volume, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Bestandsseite Knowledge Basen & Connectors den Konnektor aus, den Sie aktualisieren möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"]*Connector verwalten*.
 +
@@ -63,7 +64,8 @@ NOTE: Jeder Scan der Datenquelle, einschließlich Einbettung, verursacht Kosten.
 Sie können zusätzliche Datenquellen in Ihren Connector einbetten, um sie mit zusätzlichen Unternehmensdaten zu füllen.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Bestandsseite Knowledge Basen & Connectors den Konnektor aus, zu dem Sie die Datenquelle hinzufügen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Datenquelle hinzufügen*.
 . Wählen Sie den Typ der Datenquelle aus, die Sie hinzufügen möchten:
@@ -100,7 +102,7 @@ NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Spei
 +
 *** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
 +
-Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+Wenn Sie Bilder oder PDF-Dateien einschließen, analysiert NetApp Workload Factory für GenAI den Text in den Bildern (einschließlich Bildern in PDF-Dokumenten), was höhere Kosten verursacht.
 
 +
 Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
@@ -152,7 +154,7 @@ NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Spei
 +
 *** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
 +
-Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+Wenn Sie Bilder oder PDF-Dateien einschließen, analysiert NetApp Workload Factory für GenAI den Text in den Bildern (einschließlich Bildern in PDF-Dokumenten), was höhere Kosten verursacht.
 
 +
 Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
@@ -211,7 +213,7 @@ NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Spei
 +
 *** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
 +
-Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+Wenn Sie Bilder oder PDF-Dateien einschließen, analysiert NetApp Workload Factory für GenAI den Text in den Bildern (einschließlich Bildern in PDF-Dokumenten), was höhere Kosten verursacht.
 
 +
 Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
@@ -246,8 +248,9 @@ Datenquellen werden automatisch einmal täglich mit dem zugehörigen Connector s
 Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Q Business nur die Objekte in Ihren Datenquellen, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie auf der Registerkarte Knowledge Basen & Connectors den Konnektor aus, den Sie synchronisieren möchten.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
+. Wählen Sie im Menü „Wissensdatenbanken und Konnektoren“ den Konnektor aus, den Sie synchronisieren möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"]*Connector verwalten*.
 . Wählen Sie das Menü *Aktionen* und dann *Jetzt scannen*.
 +
@@ -265,7 +268,8 @@ Der Connector wird mit den angehängten Datenquellen synchronisiert, und Amazon 
 Wenn Sie die nächste Synchronisierung (Scan) der Datenquellen anhalten oder fortsetzen möchten, können Sie dies jederzeit tun. Möglicherweise müssen Sie die nächste geplante Synchronisierung anhalten, wenn Sie Änderungen an einer Datenquelle vornehmen und die Synchronisierung während des Änderungsfensters nicht durchführen möchten.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Seite Connector Inventory den Anschluss aus, für den Sie die Scans anhalten oder fortsetzen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"]*Connector verwalten*.
 . Wählen Sie das Menü *Aktionen* und dann *Scan > geplante Messung anhalten* oder *Scan > geplante Messung fortsetzen*.
@@ -278,12 +282,13 @@ Es wird eine Meldung angezeigt, dass der nächste geplante Scan entweder angehal
 
 == Löschen Sie einen Konnektor
 
-Wenn Sie keinen Konnektor mehr benötigen, können Sie ihn löschen. Wenn Sie einen Konnektor löschen, wird er aus der Arbeitslastfabrik entfernt und das Volume, das den Connector enthält, wird gelöscht. Das Löschen eines Konnektors kann nicht rückgängig gemacht werden.
+Wenn Sie einen Connector nicht mehr benötigen, können Sie ihn löschen.  Wenn Sie einen Connector löschen, wird er aus Workload Factory entfernt und das Volume, das den Connector enthält, wird gelöscht.  Das Löschen eines Konnektors kann nicht rückgängig gemacht werden.
 
 Wenn Sie einen Konnektor löschen, sollten Sie auch die Zuordnung des Connectors zu allen Agenten aufheben, mit denen er verknüpft ist, um alle Ressourcen, die dem Connector zugeordnet sind, vollständig zu löschen.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Bestandsseite Knowledge Basen & Connectors den Konnektor aus, den Sie löschen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"]*Connector verwalten*.
 . Wählen Sie das Menü *actions* und dann *Delete Connector*.
@@ -291,4 +296,4 @@ Wenn Sie einen Konnektor löschen, sollten Sie auch die Zuordnung des Connectors
 
 
 .Ergebnis
-Der Connector wird aus der Workload Factory entfernt und das zugehörige Volume wird gelöscht.
+Der Connector wird aus Workload Factory entfernt und das zugehörige Volume wird gelöscht.

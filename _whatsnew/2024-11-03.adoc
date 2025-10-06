@@ -6,8 +6,8 @@
 
 === Maskieren Sie personenbezogene Daten mithilfe von Datengeländern
 
-Der generative KI-Workload bietet eine Data Guardrails-Funktion basierend auf einer BlueXP -Klassifizierung. Mithilfe der Funktion „Data Guardrails“ werden personenbezogene Daten identifiziert und maskiert. Auf diese Weise können Sie die Compliance aufrechterhalten und die Sicherheit Ihrer sensiblen Unternehmensdaten stärken.
+Die Generative AI-Workload führt die Datenleitplankenfunktion ein, die durch die NetApp Console-Klassifizierung unterstützt wird.  Die Datenleitplankenfunktion identifiziert und maskiert personenbezogene Daten (PII) und hilft Ihnen so, die Compliance aufrechtzuerhalten und die Sicherheit Ihrer sensiblen Unternehmensdaten zu erhöhen.
 
 link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Einrichtung einer GenAI Knowledge Base"]
 
-link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mehr zur BlueXP Klassifizierung"^]
+link:https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die Klassifizierung der NetApp Konsole"^]

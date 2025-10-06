@@ -22,6 +22,6 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/deploy-infrastr
 
 === Wiederherstellung beschädigter oder fehlender GenAI-Infrastruktur
 
-Wenn Ihre KI-Engine beschädigt wird oder irgendwie gelöscht wird, können Sie sie auf der Workload-Farm für Sie neu erstellen lassen. Die Workload Factory verbindet Ihre Wissensdatenbanken nach Abschluss der Neuerstellung automatisch mit der Infrastruktur, sodass sie einsatzbereit sind.
+Wenn Ihre KI-Engine-Instanz beschädigt oder irgendwie gelöscht wird, können Sie sie von Workload Factory für Sie neu erstellen lassen.  Workload Factory fügt Ihre Wissensdatenbanken nach Abschluss des Neuaufbaus automatisch wieder an die Infrastruktur an, sodass sie einsatzbereit sind.
 
 link:https://docs.netapp.com/us-en/workload-genai/general/troubleshooting.html["Fehlerbehebung"]

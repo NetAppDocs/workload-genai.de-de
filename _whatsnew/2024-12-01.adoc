@@ -6,7 +6,7 @@
 
 === Klonen Sie eine Wissensdatenbank aus einem Snapshot
 
-Die BlueXP  Workload-Farm für GenAI unterstützt jetzt das Klonen einer Knowledge Base aus einem Snapshot. Dies ermöglicht eine schnelle Wiederherstellung von Wissensdatenbanken und die Erstellung neuer Wissensdatenbanken mit vorhandenen Datenquellen. Außerdem hilft es bei der Wiederherstellung und Entwicklung von Daten.
+NetApp Workload Factory für GenAI unterstützt jetzt das Klonen einer Wissensdatenbank aus einem Snapshot.  Dies ermöglicht die schnelle Wiederherstellung von Wissensdatenbanken und die Erstellung neuer Wissensdatenbanken mit vorhandenen Datenquellen und hilft bei der Datenwiederherstellung und -entwicklung.
 
 link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#clone-a-knowledge-base["Klonen einer Wissensdatenbank"]
 
@@ -14,6 +14,6 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledg
 
 === Erkennung und Replizierung von lokalen ONTAP Clustern
 
-Ermitteln und replizieren Sie On-Premises-ONTAP-Cluster-Daten auf ein FSX for ONTAP-Filesystem, damit es für eine Erweiterung von KI-Knowledge-Basen verwendet werden kann. Alle lokalen Erkennungs- und Replikations-Workflows sind über die neue Registerkarte *On-Premises ONTAP* im Speicherbestand möglich.
+Entdecken und replizieren Sie lokale ONTAP Clusterdaten in ein FSx für ONTAP -Dateisystem, damit diese zur Anreicherung von KI-Wissensdatenbanken verwendet werden können.  Alle lokalen Erkennungs- und Replikations-Workflows sind über das neue Menü *On-Premises ONTAP* im Speicherinventar möglich.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-onprem-data.html["Ermitteln eines lokalen ONTAP Clusters"]

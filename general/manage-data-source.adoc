@@ -20,8 +20,8 @@ Nachdem Sie eine Wissensdatenbank oder einen Konnektor mit Datenquellen auf Ihre
 Sie können Informationen über den Inhalt einer Datenquelle anzeigen und deren Einbettungsstatus mit der Wissensdatenbank oder dem Konnektor anzeigen. Da Datenquellen mit einer Wissensdatenbank oder einem Konnektor verknüpft sind, müssen Sie zunächst die Wissensdatenbank oder den Konnektor auswählen, bevor Sie die Details der Datenquelle anzeigen können.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie im Menü Workload Factory Navigation die Option *AI*.
+. Melden Sie sich bei Workload Factory mit einem der folgenden https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie die Wissensdatenbank oder den Konnektor aus, in der sich die Datenquelle befindet, und wählen Sie dann image:icon-action.png["Die Optionsschaltfläche"]*Wissensdatenbank verwalten* oder *Konnektor verwalten* aus.
 +
 Im unteren Teil der Seite werden die zugehörigen Datenquellen aufgelistet.
@@ -39,7 +39,8 @@ Außerdem werden die einbettenden Informationen aufgelistet und es wird angegebe
 Sie können Informationen zu einer Datenquelle bearbeiten, die Sie in eine Wissensdatenbank oder einen Konnektor integriert haben. Die meisten Informationen werden behoben, nachdem Sie eine Datenquelle hinzugefügt haben, aber Sie können Änderungen an einigen der Konfiguration vornehmen (z. B. Chunking-Definition oder Berechtigungssicherung).
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, in der sich die Datenquelle befindet, und wählen Sie dann *Wissensdatenbank verwalten* aus image:icon-action.png["Die Optionsschaltfläche"] .
 +
 Im unteren Teil der Seite werden die Datenquellen aufgelistet, die Teil dieser Wissensdatenbank sind.
@@ -67,7 +68,8 @@ Datenquellen werden automatisch einmal täglich mit der Wissensdatenbank synchro
 Wenn Sie keine Datenquelle mehr benötigen, um Teil Ihrer Wissensdatenbank zu sein, können Sie sie löschen.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Bestandsseite der Wissensdatenbank die Wissensdatenbank aus, in der sich die Datenquelle befindet, und wählen Sie dann *Wissensdatenbank verwalten* aus image:icon-action.png["Die Optionsschaltfläche"] .
 +
 Im unteren Teil der Seite werden die Datenquellen aufgelistet, die Teil dieser Wissensdatenbank sind.

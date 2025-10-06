@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: knowledge-base/create-knowledgebase.html 
 keywords: ai, chatbot, creating, knowledge base 
-summary: Nachdem Sie die KI-Infrastruktur implementiert und die Datenquellen ermittelt haben, die Sie in Ihre Knowledge Base aus Ihren FSX für ONTAP-Datastores integrieren möchten, können Sie mithilfe der Workload-Factory eine Knowledge Base aufbauen. In diesem Schritt definieren Sie auch die KI-Merkmale und beginnen Sie mit dem Gespräch. 
+summary: Nachdem Sie die KI-Infrastruktur bereitgestellt und die Datenquellen identifiziert haben, die Sie aus Ihren FSx for ONTAP -Datenspeichern in Ihre Wissensdatenbank integrieren möchten, können Sie mit dem Erstellen der Wissensdatenbank mithilfe von Workload Factory beginnen.  Im Rahmen dieses Schritts definieren Sie auch die KI-Eigenschaften und erstellen Gesprächseinstiege. 
 ---
 = Einrichtung einer GenAI Knowledge Base
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Nachdem Sie die KI-Infrastruktur implementiert und die Datenquellen erm
 
 
 [role="lead"]
-Nachdem Sie die KI-Infrastruktur implementiert und die Datenquellen ermittelt haben, die Sie in Ihre Knowledge Base aus Ihren FSX für ONTAP-Datastores integrieren möchten, können Sie mithilfe der Workload-Factory eine Knowledge Base aufbauen. In diesem Schritt definieren Sie auch die Merkmale von KI und stellen den Gesprächseinstieg her.
+Nachdem Sie die KI-Infrastruktur bereitgestellt und die Datenquellen identifiziert haben, die Sie aus Ihren FSx for ONTAP -Datenspeichern in Ihre Wissensdatenbank integrieren möchten, können Sie mit dem Erstellen der Wissensdatenbank mithilfe von Workload Factory beginnen.  Im Rahmen dieses Schritts definieren Sie auch die KI-Eigenschaften und erstellen Gesprächseinstiege.
 
 Stellen Sie sicher, dass Ihre Umgebung den  für Wissensdatenbanken entsprichtlink:requirements-knowledge-base.html["Anforderungen"], bevor Sie fortfahren.
 
@@ -22,15 +22,15 @@ Wissensdatenbanken haben zwei Datenintegrationsmodalitäten - _public Mode_ und 
 Enterprise-Modus:: In den meisten Fällen möchten Sie Datenquellen aus Ihrem Unternehmen in die Wissensdatenbank integrieren. Dies wird als _Enterprise Mode_ Integration bezeichnet, da es Wissen aus Ihrem Unternehmen liefert.
 +
 --
-Datenquellen Ihres Unternehmens können personenbezogene Daten enthalten. Um diese sensiblen Informationen zu schützen, können Sie _Data Guardrails_ beim Erstellen und Konfigurieren von Wissensdatenbanken aktivieren. Data Guardrails, powered by BlueXP -Klassifizierung, identifiziert und maskiert PII, so dass sie nicht zugänglich und nicht abrufbar sind.
+Datenquellen Ihrer Organisation können personenbezogene Daten (PII) enthalten.  Um diese vertraulichen Informationen zu schützen, können Sie beim Erstellen und Konfigurieren von Wissensdatenbanken _Datenleitplanken_ aktivieren.  Datenleitplanken, unterstützt durch NetApp Data Classification, identifizieren und maskieren personenbezogene Daten und machen sie so unzugänglich und unwiederbringlich.
 
-link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mehr zur BlueXP Klassifizierung"^].
-
-
-NOTE: BlueXP  Workload Factory für GenAI maskiert keine sensiblen persönlichen Informationen (SPii). Weitere Informationen zu diesem Datentyp finden Sie unterlink:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-data["Arten sensibler personenbezogener Daten"^].
+link:https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^] .
 
 
-NOTE: Datenguardrails können jederzeit aktiviert oder deaktiviert werden. Wenn Sie die Data Guardrails-Enablement wechseln, scannt Workload Factory die gesamte Wissensdatenbank von Grund auf, was Kosten nach sich zieht.
+NOTE: NetApp Workload Factory für GenAI maskiert keine sensiblen persönlichen Informationen (SPii).  Siehelink:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-sensitive-personal-data["Arten sensibler personenbezogener Daten"^] für weitere Informationen zu dieser Art von Daten.
+
+
+NOTE: Datenleitplanken können jederzeit aktiviert oder deaktiviert werden.  Wenn Sie die Aktivierung von Datenleitplanken ändern, scannt Workload Factory die gesamte Wissensdatenbank von Grund auf neu, was Kosten verursacht.
 
 --
 
@@ -42,44 +42,52 @@ NOTE: Datenguardrails können jederzeit aktiviert oder deaktiviert werden. Wenn 
 Die Wissensdatenbank definiert Eigenschaften wie die Bedrock-KI-Modelle und das Embedding-Format, mit denen Sie Ihre Wissensdatenbank erstellen möchten.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
 . Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
-. Wählen Sie auf der Registerkarte Wissensdatenbanken und -Anschlüsse das Dropdown *Neu erstellen* aus und wählen Sie *NetApp GenAI Wissensdatenbank für Bedrock*.
-. Konfigurieren Sie auf der Seite „Define Knowledge Base“ die Knowledge Base-Einstellungen:
+. Wählen Sie im Menü „Wissensdatenbanken und Konnektoren“ das Dropdown-Menü „Neu erstellen“ und wählen Sie „NetApp GenAI-Wissensdatenbank für Bedrock“ aus.
+. Konfigurieren Sie auf der Seite „NetApp GenAI-Wissensdatenbank erstellen“ die Einstellungen für die Wissensdatenbank:
+
+
+[discrete]
+===== Details zur Wissensdatenbank
+
+. *Name*: Geben Sie den Namen ein, den Sie für die Wissensdatenbank verwenden möchten.
+. *Beschreibung*: Geben Sie eine detaillierte Beschreibung für die Wissensdatenbank ein.
+. *Bedrock*: Wählen Sie die Region, in der Amazon Bedrock für Ihr AWS-Konto verfügbar ist.
+
+
+[discrete]
+===== Verschlucken
+
+. *Einbettungsmodell*:
 +
-.. *Name*: Geben Sie den Namen ein, den Sie für die Wissensdatenbank verwenden möchten.
-.. *Beschreibung*: Geben Sie eine detaillierte Beschreibung für die Wissensdatenbank ein.
-.. *Einbettungsmodell*: Das Einbettungsmodell definiert, wie Ihre Daten in Vektoreinbettungen für die Wissensdatenbank umgewandelt werden. Workload Factory unterstützt die folgenden Modelle:
-+
-*** Titan-Einbauteile G1 - Text
-*** Titan Einbettung Text v2
-*** Titan Multimodal Embeddings G1
-*** Englisch Einbetten
-*** Mehrsprachig Einbetten
+** Wählen Sie ein Einbettungsmodell zur Verwendung für die Wissensdatenbank aus.  Das Einbettungsmodell definiert, wie Ihre Daten in Vektoreinbettungen für die Wissensdatenbank konvertiert werden.  Workload Factory unterstützt die folgenden Modelle:
+** Titan-Einbauteile G1 - Text
+** Titan Einbettung Text v2
+** Titan Multimodal Embeddings G1
+** Englisch Einbetten
+** Mehrsprachig Einbetten
 +
 Beachten Sie, dass Sie das Einbettungsmodell von Amazon Bedrock bereits aktiviert haben müssen.
 
 +
 https://aws.amazon.com/bedrock/titan/["Erfahren Sie mehr über Amazon Titan"^]
 
+** Wählen Sie gegebenenfalls den Inferenztyp aus, der der Konfiguration des ausgewählten Einbettungsmodells entspricht.
 
 
-.. *Chat-Modell*: Wählen Sie aus verschiedenen Chat-Modellen, die in Amazon Bedrock integriert sind. Beachten Sie, dass Sie das Chatmodell von Amazon Bedrock bereits aktiviert haben müssen.
-.. *Neuranking*: Aktivieren oder deaktivieren Sie das Neuranking, um die Relevanz und Qualität der Abfrageergebnisse zu verbessern. Wählen Sie ein Standard-Chat-Modell oder ein spezielles Reranking-Modell für das Neuranking. Reranking-Modelloptionen werden nur angezeigt, wenn sie in Ihrer Region verfügbar sind.
-.. *Data Guardrails*: Wählen Sie aus, ob Sie Data Guardrails aktivieren oder deaktivieren möchten. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mit BlueXP  Klassifizierung als Basis für Daten-Guardrails lernen"^].
+. *Datenleitplanken*: Wählen Sie, ob Sie Datenleitplanken aktivieren oder deaktivieren möchten. link:https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über Datenleitplanken, unterstützt durch NetApp Data Classification"^] .
 +
 Die folgenden Voraussetzungen müssen erfüllt sein, um die Data Guardrails zu aktivieren.
 
 +
-*** Für die Kommunikation mit der BlueXP -Klassifizierung ist ein Servicekonto erforderlich. Sie müssen die Rolle „_Organisation admin_“ auf Ihrem BlueXP -Mandantenkonto haben, um Servicekonten erstellen zu können. Ein Mitglied mit der Rolle „Organisationsadministrator“ kann alle Aktionen in BlueXP  ausführen. link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Erfahren Sie, wie Sie einem Mitglied in BlueXP  eine Rolle hinzufügen"^]
-*** Die KI-Engine muss Zugriff auf die habenlink:https://api.bluexp.netapp.com["BlueXP -API-Endpunkt"^].
-*** Sie müssen die folgenden Schritte ausführen, wie in beschriebenlink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Dokumentation der BlueXP Klassifizierung"^]:
+** Für die Kommunikation mit NetApp Data Classification ist ein Servicekonto erforderlich.  Für die Erstellung eines Dienstkontos müssen Sie in Ihrem NetApp Console-Mandantenkonto über die Rolle „Organisationsadministrator“ verfügen.  Ein Mitglied mit der Rolle des Organisationsadministrators kann alle Aktionen in der ausführen.link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Erfahren Sie, wie Sie einem Mitglied in der NetApp -Konsole eine Rolle hinzufügen"^]
+** Die KI-Engine muss Zugriff auf dielink:https://api.bluexp.netapp.com["NetApp Console API-Endpunkt"^] .
+** Sie müssen Folgendes tun, wie inlink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-cloud-compliance.html#quick-start["Dokumentation zur NetApp -Datenklassifizierung"^] :
 +
-.... BlueXP Connector erstellen
-.... Stellen Sie sicher, dass Ihre Umgebung die Voraussetzungen erfüllt
-.... Implementieren Sie die BlueXP Klassifizierung
-
-
+... Erstellen eines Konsolenagenten
+... Stellen Sie sicher, dass Ihre Umgebung die Voraussetzungen erfüllt
+... Bereitstellen der NetApp Datenklassifizierung
 
 
 
@@ -90,12 +98,34 @@ NOTE: Die Datenguardrails-Funktion wird bei der Aufnahme strukturierter Datendat
 
 
 
+[discrete]
+===== Chat- und Abrufeinstellungen
+
+. *Chat-Modell*:
++
+** Wählen Sie aus verschiedenen Chat-Modellen, die in Amazon Bedrock integriert sind.  Beachten Sie, dass Sie das Chat-Modell von Amazon Bedrock bereits aktiviert haben müssen.
+** Wählen Sie gegebenenfalls den Inferenztyp aus, der der Konfiguration des ausgewählten Modells entspricht.
+
+
+. *Chat-Einstellungen*:
++
+** Wählen Sie eine Temperatur für den Chatbot, um die Zufälligkeit und Kreativität der Antworten zu konfigurieren.  Eine niedrigere Temperatur führt zu vorhersehbareren Reaktionen und eine höhere Temperatur zu vielfältigeren Reaktionen.
+** Wählen Sie eine maximale Antwortlänge, um zu konfigurieren, wie detailliert die Antworten sein sollen.  Längere Antwortlängen verbrauchen mehr Antworttoken und können höhere Kosten verursachen.
+
+
+. *Denkmodus*: Wenn der Denkmodus aktiviert ist, benötigt der Chatbot mehr Zeit zum Verarbeiten von Anfragen und die Ergebnisse sind in der Regel genauer.  Wenn Sie den Denkmodus aktivieren, können Sie steuern, wie viele Argumentationstoken beim Generieren von Ergebnissen verwendet werden.  Die Verwendung mehrerer Argumentationstoken kann zu genaueren Antworten führen, ist jedoch möglicherweise mit höheren Kosten verbunden.
+. *Neurangfolge*: Aktivieren oder deaktivieren Sie die Neurangfolge, die die Relevanz und Qualität der Abfrageergebnisse verbessern kann.  Wählen Sie für die Neubewertung ein Standard-Chat-Modell oder ein spezielles Reranker-Modell aus.  Reranker-Modelloptionen werden nur angezeigt, wenn sie in Ihrer Region verfügbar sind.  Wählen Sie den Inferenztyp aus, der der Konfiguration des ausgewählten Modells entspricht.
 . *Gesprächseinstieg*: Wählen Sie aus, ob Sie bis zu vier Gesprächseinstiegstelefonate bereitstellen möchten, die Benutzern angezeigt werden, die mit einem Chatbot interagieren, der diese Wissensdatenbank nutzt. Wir empfehlen, diese Einstellung zu aktivieren.
 +
 Wenn Sie Gesprächseinstieg aktivieren, ist standardmäßig der automatische Modus ausgewählt. Der „manuelle Modus“ kann erst aktiviert werden, nachdem Sie Datenquellen zu Ihrer Wissensdatenbank hinzugefügt haben. link:manage-knowledgebase.html["Erfahren Sie, wie Sie die Einstellungen der Wissensdatenbank ändern"].
 
-. *FSX für ONTAP Dateisystem*: Wenn Sie eine neue Wissensdatenbank definieren, erstellt Workload Factory ein neues Amazon FSX für NetApp ONTAP Volumen, um es zu speichern. Wählen Sie einen vorhandenen Filesystem-Namen und eine SVM (auch Storage-VM genannt) aus, auf der das neue Volume erstellt werden soll.
-. *Snapshot-Richtlinie*: Wählen Sie eine Snapshot-Richtlinie aus der Liste der vorhandenen Richtlinien aus, die im werkseitigen Lagerbestand des Workloads definiert sind. Wiederkehrende Snapshots der Wissensdatenbank werden automatisch in einer Frequenz erstellt, die auf der von Ihnen ausgewählten Snapshot-Richtlinie basiert.
+
+
+[discrete]
+===== Speicherdefinitionen
+
+. *FSx für ONTAP -Dateisystem*: Wenn Sie eine neue Wissensdatenbank definieren, erstellt Workload Factory ein neues Amazon FSx for NetApp ONTAP Volume, um sie zu speichern.  Wählen Sie einen vorhandenen Dateisystemnamen und eine SVM (auch Speicher-VM genannt), auf der das neue Volume erstellt wird.
+. *Snapshot-Richtlinie*: Wählen Sie eine Snapshot-Richtlinie aus der Liste der vorhandenen Richtlinien aus, die im Workload Factory-Speicherinventar definiert sind.  Es werden automatisch wiederkehrende Snapshots der Wissensdatenbank in einer Häufigkeit erstellt, die auf der von Ihnen ausgewählten Snapshot-Richtlinie basiert.
 . *S3-Bucket*: Wenn die Abfrageergebnisse des Chatbots strukturierte Daten enthalten, kann GenAI die Ergebnisse in einem S3-Bucket speichern.  Um diese Funktion zu verwenden, aktivieren Sie die Einstellung *S3-Bucket aktivieren* und wählen Sie aus der Liste einen S3-Bucket aus, der mit Ihrem Konto verknüpft ist.  Wenn diese Ergebnisse in einem S3-Bucket gespeichert sind, können Sie sie über den Download-Link innerhalb der Chat-Sitzung herunterladen.
 +
 Wenn die benötigte Snapshot-Richtlinie nicht vorhanden ist, können Sie https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["Erstellen einer Snapshot-Richtlinie"] auf der Storage-VM, die das Volume enthält, arbeiten.
@@ -155,7 +185,7 @@ NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Spei
 +
 *** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
 +
-Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+Wenn Sie Bilder oder PDF-Dateien einschließen, analysiert NetApp Workload Factory für GenAI den Text in den Bildern (einschließlich Bildern in PDF-Dokumenten), was höhere Kosten verursacht.
 
 +
 Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
@@ -207,7 +237,7 @@ NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Spei
 +
 *** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
 +
-Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+Wenn Sie Bilder oder PDF-Dateien einschließen, analysiert NetApp Workload Factory für GenAI den Text in den Bildern (einschließlich Bildern in PDF-Dokumenten), was höhere Kosten verursacht.
 
 +
 Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
@@ -266,7 +296,7 @@ NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Spei
 +
 *** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
 +
-Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+Wenn Sie Bilder oder PDF-Dateien einschließen, analysiert NetApp Workload Factory für GenAI den Text in den Bildern (einschließlich Bildern in PDF-Dokumenten), was höhere Kosten verursacht.
 
 +
 Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.

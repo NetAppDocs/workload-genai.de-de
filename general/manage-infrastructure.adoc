@@ -20,9 +20,9 @@ Sie können Details zu Ihrer bereitgestellten GenAI RAG-Infrastruktur anzeigen o
 Sie können Informationen über die Chatbot-Infrastruktur anzeigen.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie im Menü Workload Factory Navigation die Option *AI*.
-. Wählen Sie die Registerkarte *Infrastruktur* aus.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
+. Wählen Sie das Menü *Infrastruktur*.
 . Hier finden Sie Informationen zur Infrastruktur mit Details zu den folgenden Komponenten:
 +
 ** AWS-Einstellungen
@@ -37,12 +37,12 @@ Sie können Informationen über die Chatbot-Infrastruktur anzeigen.
 
 == Entfernen Sie die Infrastruktur
 
-Wenn Sie die Chatbot-Infrastruktur, die Sie für ein oder mehrere Chatbots bereitgestellt haben, nicht mehr benötigen, können Sie sie aus der Workload-Fabrik entfernen.
+Wenn Sie die Chatbot-Infrastruktur, die Sie für einen oder mehrere Chatbots bereitgestellt haben, nicht mehr benötigen, können Sie sie aus Workload Factory entfernen.
 
 
 NOTE: Alle Chatbots, die in dieser Infrastruktur bereitgestellt wurden, werden deaktiviert und der gesamte Chatverlauf wird gelöscht.
 
-Bei diesem Vorgang werden nur die Links zur KI-Infrastruktur aus der Workload-Farm entfernt, nicht alle Komponenten von AWS. Folgende Infrastrukturkomponenten müssen manuell aus AWS gelöscht werden:
+Dieser Vorgang entfernt nur die Links zur KI-Infrastruktur von Workload Factory; er entfernt nicht alle Komponenten von AWS.  Sie müssen die folgenden Infrastrukturkomponenten manuell aus AWS löschen:
 
 * Die VM-Instanz
 * Private Endpunkte
@@ -53,12 +53,12 @@ Bei diesem Vorgang werden nur die Links zur KI-Infrastruktur aus der Workload-Fa
 
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie im Menü Workload Factory Navigation die Option *AI*.
-. Wählen Sie die Registerkarte *Infrastruktur* aus.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
+. Wählen Sie das Menü *Infrastruktur*.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] und wählen Sie *Chatbot-Infrastruktur entfernen*.
 . Bestätigen Sie, dass Sie die Infrastruktur löschen möchten, und wählen Sie *Entfernen*.
 
 
 .Ergebnis
-Die Komponenten der Chatbot-Infrastruktur werden aus der Workload Factory entfernt.
+Die Chatbot-Infrastrukturkomponenten werden aus Workload Factory entfernt.

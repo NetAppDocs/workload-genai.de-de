@@ -18,9 +18,9 @@ sidebar:
     entries:
     - title: Was ist neu
       url: "/whats-new.html"
-  - title: Erfahren Sie mehr über die BlueXP -Workload-Fabrik für GenAI
+  - title: Erfahren Sie mehr über NetApp Workload Factory für GenAI
     entries:
-    - title: Erfahren Sie mehr über die BlueXP -Workload-Fabrik für GenAI
+    - title: Erfahren Sie mehr über NetApp Workload Factory für GenAI
       url: "/general/ai-workloads-overview.html"
     - title: Komponenten der NetApp GenAI Engine
       url: "/general/genai-engine-instance.html"
@@ -89,5 +89,5 @@ sidebar:
   - title: Rechtliche Hinweise
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP workload factory
+  name: NetApp Workload Factory
   repo: workload-family

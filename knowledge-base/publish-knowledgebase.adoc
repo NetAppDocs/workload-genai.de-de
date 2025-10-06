@@ -14,12 +14,13 @@ summary: Nachdem Sie Ihre Wissensdatenbank lokal erstellt und getestet haben, k�
 Nachdem Sie Ihre Wissensdatenbank lokal erstellt und getestet haben, können Sie die Wissensdatenbank veröffentlichen, sodass sie in eine Chatbot-Anwendung integriert werden kann, mit der Ihre Benutzer die Wissensdatenbank abfragen können.
 
 .Über diese Aufgabe
-Durch die Veröffentlichung der Wissensdatenbank können Sie diese in Chat-Anwendungen verwenden. Die Veröffentlichungsaktion löst aus, dass die Workload-Factory-API eindeutige Endpunkte generiert und veröffentlicht. Nach der Veröffentlichung wird die Wissensdatenbank für Chat-Anwendungen zugänglich, und die API-Endpunkte sind für die Integration bereit.
+Durch die Veröffentlichung der Wissensdatenbank können Sie diese in Chat-Anwendungen verwenden.  Die Veröffentlichungsaktion löst die Workload Factory-API aus, um eindeutige Endpunkte zu generieren und zu veröffentlichen.  Nach der Veröffentlichung wird die Wissensdatenbank für Chat-Anwendungen zugänglich und die API-Endpunkte sind für die Integration bereit.
 
 Jede von Ihnen veröffentlichte Wissensdatenbank verfügt über eindeutige Endpunkte.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie veröffentlichen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 +
@@ -27,14 +28,14 @@ Auf dieser Seite werden der veröffentlichte Status, der Einbettungsstatus der D
 
 . Wählen Sie das Menü *actions* und dann *Publish*.
 +
-Workload Factory veröffentlicht die Wissensdatenbank. Auf der Detailseite der Wissensdatenbank ändert sich der Status von *unveröffentlicht* zu *Veröffentlicht.*
+Workload Factory veröffentlicht die Wissensdatenbank.  Auf der Detailseite der Wissensdatenbank ändert sich der Status von *Unveröffentlicht* zu *Veröffentlicht*.
 
 +
 Sie können jetzt Details zum eindeutigen Endpunkt für die Wissensdatenbank abrufen.
 
 . Wählen Sie neben dem veröffentlichten Status *Ansicht*.
 +
-Es werden Details zum Zugriff auf die Wissensdatenbank mithilfe der Workload Factory API angezeigt.
+Es werden Details zum Zugriff auf die Wissensdatenbank mithilfe der Workload Factory-API angezeigt.
 
 . Kopieren Sie im Dialogfeld *veröffentlichte Informationen anzeigen* die API-Endpunkte, mit denen Sie die Wissensdatenbank in eine Anwendung integrieren können.
 +

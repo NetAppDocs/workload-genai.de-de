@@ -20,8 +20,8 @@ Nachdem Sie eine Wissensdatenbank erstellt haben, können Sie die Details der Wi
 Sie können Informationen zu den Einstellungen für eine Wissensdatenbank und die integrierte Datenquelle anzeigen.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie im Menü Workload Factory Navigation die Option *AI*.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie die Wissensdatenbank aus, die Sie anzeigen möchten.
 +
 Falls definiert, werden die derzeit verwendeten Gesprächseinstiege im rechten Fensterbereich angezeigt.
@@ -44,7 +44,8 @@ Sie können eine Wissensdatenbank aktualisieren, indem Sie einige Einstellungen 
 Jedes Mal, wenn Sie Datenquellen in der Wissensdatenbank hinzufügen, ändern oder entfernen, müssen Sie die Datenquelle synchronisieren, damit sie mit der Wissensdatenbank neu indiziert wird. Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Bedrock nur die Objekte in Ihrem FSX für ONTAP-Volume, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie aktualisieren möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 +
@@ -82,7 +83,8 @@ Snapshots können schneller und speichereffizienter als Backups sein und ermögl
 Sie können den Status einer Wissensdatenbank speichern, indem Sie einen manuellen Snapshot des Knowledge Base-Volumes erstellen.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie schützen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 +
@@ -109,7 +111,8 @@ Sie können jederzeit einen manuellen oder geplanten Snapshot eines Knowledge-Ba
 NOTE: Sie können einen Snapshot nicht mithilfe der Benutzeroberfläche Generative AI-Workloads wiederherstellen, wenn die auf dem Volume gespeicherte Datenbank beschädigt ist oder gelöscht wurde. Als Workaround können Sie den Snapshot mithilfe des auf dem ONTAP-Cluster wiederherstellen https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-restore.html["CLI VON ONTAP"^], auf dem das Volume gehostet wird.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie wiederherstellen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 +
@@ -134,7 +137,8 @@ Diese Option ist standardmäßig aktiviert, um sicherzustellen, dass ein Scan ni
 Sie können eine neue Wissensdatenbank aus einem Momentaufnahme der Wissensdatenbank erstellen. Dies ist nützlich, wenn die ursprüngliche Wissensdatenbank beschädigt ist oder verloren geht.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie wiederherstellen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 +
@@ -162,7 +166,8 @@ Diese Option ist standardmäßig aktiviert, um sicherzustellen, dass ein Scan ni
 Sie können zusätzliche Datenquellen in Ihre Wissensdatenbank einbetten, um diese mit zusätzlichen Unternehmensdaten zu füllen.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, in die Sie die Datenquelle hinzufügen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Datenquelle hinzufügen*.
 . Wählen Sie den Typ der Datenquelle aus, die Sie hinzufügen möchten:
@@ -199,7 +204,7 @@ NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Spei
 +
 *** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
 +
-Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+Wenn Sie Bilder oder PDF-Dateien einschließen, analysiert NetApp Workload Factory für GenAI den Text in den Bildern (einschließlich Bildern in PDF-Dokumenten), was höhere Kosten verursacht.
 
 +
 Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
@@ -251,7 +256,7 @@ NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Spei
 +
 *** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
 +
-Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+Wenn Sie Bilder oder PDF-Dateien einschließen, analysiert NetApp Workload Factory für GenAI den Text in den Bildern (einschließlich Bildern in PDF-Dokumenten), was höhere Kosten verursacht.
 
 +
 Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
@@ -310,7 +315,7 @@ NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Spei
 +
 *** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
 +
-Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+Wenn Sie Bilder oder PDF-Dateien einschließen, analysiert NetApp Workload Factory für GenAI den Text in den Bildern (einschließlich Bildern in PDF-Dokumenten), was höhere Kosten verursacht.
 
 +
 Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
@@ -345,7 +350,8 @@ Datenquellen werden automatisch einmal täglich mit der zugehörigen Wissensdate
 Die Synchronisierung ist inkrementell, daher verarbeitet Amazon Bedrock nur die Objekte in Ihren Datenquellen, die seit der letzten Synchronisierung hinzugefügt, geändert oder gelöscht wurden.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Seite Knowledge Base Inventory die Wissensdatenbank aus, die Sie synchronisieren möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 . Wählen Sie das Menü *Aktionen* und dann *Jetzt scannen*.
@@ -364,8 +370,9 @@ Die Wissensdatenbank wird mit den angehängten Datenquellen synchronisiert und j
 Wenn Sie die nächste Synchronisierung (Scan) der Datenquellen anhalten oder fortsetzen möchten, können Sie dies jederzeit tun. Möglicherweise müssen Sie die nächste geplante Synchronisierung anhalten, wenn Sie Änderungen an einer Datenquelle vornehmen und die Synchronisierung während des Änderungsfensters nicht durchführen möchten.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie auf der Registerkarte Knowledge Basen & Connectors die Wissensdatenbank aus, für die Sie die Scans anhalten oder fortsetzen möchten.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
+. Wählen Sie im Menü „Wissensdatenbanken und Konnektoren“ die Wissensdatenbank aus, für die Sie Scans anhalten oder fortsetzen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 . Wählen Sie das Menü *Aktionen* und dann *Scan > geplante Messung anhalten* oder *Scan > geplante Messung fortsetzen*.
 +
@@ -383,7 +390,8 @@ Sie können die verfügbaren grundlegenden Chatmodelle bewerten, bevor Sie eine 
 NOTE: Diese Funktion ist nur verfügbar, wenn keine Wissensdatenbanken erstellt wurden -- wenn auf der Bestandsseite der Wissensdatenbanken keine Wissensdatenbanken vorhanden sind.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Auf der Bestandsseite der Wissensbasen sehen Sie die Option, das Chatmodell auf der rechten Seite der Seite für den Chatbot auszuwählen.
 . Wählen Sie das Chatmodell aus der Liste aus, und geben Sie eine Reihe von Fragen in den Eingabebereich ein, um zu sehen, wie der Chatbot reagiert.
 . Testen Sie mehrere Modelle, um herauszufinden, welches Modell sich am besten für Ihre Implementierung eignet.
@@ -401,7 +409,8 @@ Nachdem Sie Ihre Wissensdatenbank veröffentlicht haben, damit sie in eine Chatb
 Durch das Aufheben der Veröffentlichung der Wissensdatenbank werden alle Chat-Anwendungen nicht mehr funktionsfähig. Der eindeutige API-Endpunkt, auf den die Wissensdatenbank zugegriffen werden konnte, ist deaktiviert.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie für die Veröffentlichung aufheben möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 +
@@ -417,12 +426,13 @@ Die Wissensdatenbank ist deaktiviert und kann nicht mehr von einer Chatbot-Anwen
 
 == Löschen einer Wissensdatenbank
 
-Wenn Sie keine Wissensdatenbank mehr benötigen, können Sie sie löschen. Wenn Sie eine Wissensdatenbank löschen, wird sie aus der Workload Factory entfernt und das Volume, das die Wissensdatenbank enthält, wird gelöscht. Alle Anwendungen oder Chatbots, die die Wissensdatenbank nutzen, funktionieren nicht mehr. Das Löschen einer Wissensdatenbank ist nicht umkehrbar.
+Wenn Sie eine Wissensdatenbank nicht mehr benötigen, können Sie sie löschen.  Wenn Sie eine Wissensdatenbank löschen, wird sie aus Workload Factory entfernt und das Volume, das die Wissensdatenbank enthält, wird gelöscht.  Alle Anwendungen oder Chatbots, die die Wissensdatenbank verwenden, funktionieren nicht mehr.  Das Löschen einer Wissensdatenbank kann nicht rückgängig gemacht werden.
 
 Wenn Sie eine Wissensdatenbank löschen, sollten Sie auch die Zuordnung der Wissensdatenbank zu allen Agenten aufheben, mit denen sie verknüpft ist, um alle Ressourcen, die der Wissensdatenbank zugeordnet sind, vollständig zu löschen.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
+. Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Wählen Sie auf der Bestandsseite Wissensdatenbanken die Wissensdatenbank aus, die Sie löschen möchten.
 . Wählen Sie image:icon-action.png["Die Optionsschaltfläche"] *Wissensdatenbank verwalten*.
 . Wählen Sie das Menü *Aktionen* und dann *Wissensdatenbank löschen*.
@@ -430,4 +440,4 @@ Wenn Sie eine Wissensdatenbank löschen, sollten Sie auch die Zuordnung der Wiss
 
 
 .Ergebnis
-Die Wissensdatenbank wird aus der Workload-Fabrik entfernt und das zugehörige Volume wird gelöscht.
+Die Wissensdatenbank wird aus Workload Factory entfernt und das zugehörige Volume wird gelöscht.

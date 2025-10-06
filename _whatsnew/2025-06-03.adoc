@@ -8,7 +8,7 @@
 
 Die Tracker-Überwachungsfunktion ist jetzt in GenAI verfügbar. Mit Tracker können Sie den Fortschritt und Status ausstehender, laufender und abgeschlossener Vorgänge überwachen und verfolgen, Details zu Vorgangsaufgaben und Unteraufgaben überprüfen, Probleme oder Fehler diagnostizieren, Parameter für fehlgeschlagene Vorgänge bearbeiten und fehlgeschlagene Vorgänge wiederholen.
 
-link:https://docs.netapp.com/us-en/workload-genai/general/monitor-operations.html["Überwachen Sie Workload-Vorgänge mit Tracker in der BlueXP-Workload-Factory"]
+link:https://docs.netapp.com/us-en/workload-genai/general/monitor-operations.html["Überwachen Sie Workload-Vorgänge mit Tracker in NetApp Workload Factory"]
 
 
 

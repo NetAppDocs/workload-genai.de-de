@@ -30,9 +30,9 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledg
 
 === Unterstützung für das Hinzufügen von Datenquellen von generischen NFS/SMB-Freigaben
 
-Mit der Workload-Factory-API können Sie jetzt eine Datenquelle aus einer generischen NFSv3, NFSv4 oder SMB-Freigabe hinzufügen. Wenn Sie eine Datenquelle aus einer NFS- oder SMB-Freigabe hinzufügen, bleibt das Knowledge-Base-Volume auf einem Amazon FSX for NetApp ONTAP-Volume erhalten. Die Workload Factory Web UI unterstützt diese Funktion in einer zukünftigen Version.
+Mithilfe der Workload Factory API können Sie jetzt eine Datenquelle aus einer generischen NFSv3-, NFSv4- oder SMB-Freigabe hinzufügen.  Wenn Sie eine Datenquelle aus einer NFS- oder SMB-Freigabe hinzufügen, verbleibt das Wissensdatenbank-Volume auf einem Amazon FSx for NetApp ONTAP -Volume.  Die Workload Factory-Web-Benutzeroberfläche wird diese Funktion in einer zukünftigen Version unterstützen.
 
-link:https://console.workloads.netapp.com/api-doc["Verwenden Sie die Workload Factory API"^]
+link:https://console.workloads.netapp.com/api-doc["Verwenden der Workload Factory-API"^]
 
 
 

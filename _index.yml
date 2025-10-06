@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: BlueXP -Workload für GenAI-Dokumentation
+  title: Dokumentation zu NetApp Workload Factory für GenAI
   summary: Integrieren Sie Daten aus Ihren FSX for ONTAP-Dateisystemen in Ihre MLOps-Plattformen
     und GenAI-Basismodelle, um anhand von Unternehmensdaten funktionale Chatbots zu
     erstellen.
@@ -11,7 +11,7 @@ indexpage:
   tiles:
   - title: Los geht's
     links:
-    - title: Erfahren Sie mehr über die BlueXP -Workload-Fabrik für GenAI
+    - title: Erfahren Sie mehr über NetApp Workload Factory für GenAI
       url: general/ai-workloads-overview.html
     - title: Implementierung der Knowledge Base Infrastruktur
       url: knowledge-base/deploy-infrastructure.html
@@ -41,11 +41,9 @@ indexpage:
       url: connector/manage-connector.html
   - title: Blogs und Community
     links:
+    - title: NetApp Konsole
+      url: https://www.netapp.com/console
+    - title: NetApp Datenservices
+      url: https://www.netapp.com/data-services/
     - title: NetApp Community
-      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
-    - title: BlueXP Blogs
-      url: https://bluexp.netapp.com/blog
-    - title: Cloud-Webinare
-      url: https://bluexp.netapp.com/events
-    - title: Nutzen Sie das Potenzial von GenAI mit Ihren Daten
-      url: https://community.netapp.com/t5/Tech-ONTAP-Blogs/Unlocking-GenAI-with-your-data-using-Amazon-FSx-for-NetApp-ONTAP-and-BlueXP/ba-p/456394
+      url: https://community.netapp.com/

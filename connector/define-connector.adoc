@@ -16,15 +16,15 @@ Nachdem Sie die KI-Infrastruktur bereitgestellt und die Datenquellen identifizie
 Stellen Sie sicher, dass Ihre Umgebung den  für Amazon Q Business erfülltlink:requirements-connector.html["Anforderungen"], bevor Sie fortfahren.
 
 .Über diese Aufgabe
-Datenquellen Ihres Unternehmens können personenbezogene Daten enthalten. Um diese sensiblen Informationen zu schützen, können Sie _Data Guardrails_ beim Definieren eines Konnektors aktivieren. Data Guardrails, powered by BlueXP -Klassifizierung, identifiziert und maskiert PII, so dass sie nicht zugänglich und nicht abrufbar sind.
+Datenquellen Ihrer Organisation können personenbezogene Daten (PII) enthalten.  Um diese vertraulichen Informationen zu schützen, können Sie beim Definieren eines Connectors _Datenleitplanken_ aktivieren.  Datenleitplanken, unterstützt durch NetApp Data Classification, identifizieren und maskieren personenbezogene Daten und machen sie so unzugänglich und unwiederbringlich.
 
-link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mehr zur BlueXP Klassifizierung"^].
-
-
-NOTE: Bei der BlueXP  Workload Factory für GenAI werden vertrauliche personenbezogene Daten nicht maskiert. Weitere Informationen zu diesem Datentyp finden Sie unterlink:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-data["Arten sensibler personenbezogener Daten"^].
+link:https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^] .
 
 
-NOTE: Datenguardrails können jederzeit aktiviert oder deaktiviert werden. Wenn Sie die Data Guardrails-Aktivierung wechseln, scannt Workload Factory die gesamte Datenquelle von Grund auf, was Kosten verursachen kann.
+NOTE: NetApp Workload Factory für GenAI maskiert keine sensiblen persönlichen Informationen (SPII).  Siehelink:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-sensitive-personal-data["Arten sensibler personenbezogener Daten"^] für weitere Informationen zu dieser Art von Daten.
+
+
+NOTE: Datenleitplanken können jederzeit aktiviert oder deaktiviert werden.  Wenn Sie die Aktivierung von Datenleitplanken ändern, scannt Workload Factory die gesamte Datenquelle von Grund auf, was Kosten verursachen kann.
 
 
 
@@ -33,26 +33,26 @@ NOTE: Datenguardrails können jederzeit aktiviert oder deaktiviert werden. Wenn 
 Erstellen Sie einen NetApp-Connector für Amazon Q Business. Der Connector ermöglicht die API- und Datenquellenkommunikation zwischen GenAI und Amazon Q Business.
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
 . Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
-. Wählen Sie auf der Registerkarte Knowledge Basen & Connectors das Dropdown *Create New* aus und wählen Sie *Amazon Q Business Connector*.
+. Wählen Sie im Menü „Wissensdatenbanken und Konnektoren“ das Dropdown-Menü „Neu erstellen“ und wählen Sie „Amazon Q Business Connector“ aus.
 . Konfigurieren Sie auf der Seite Konnektor definieren die Verbindungseinstellungen:
 +
 .. *Name*: Geben Sie den Namen ein, den Sie für den Konnektor verwenden möchten.
 .. *Beschreibung*: Geben Sie eine detaillierte Beschreibung für den Konnektor ein.
 .. *Amazon Q*: Die Region und der Anwendungsname für die Amazon Q Business Instanz, die Sie integrieren möchten.
-.. *Data Guardrails*: Wählen Sie aus, ob Sie Data Guardrails aktivieren oder deaktivieren möchten. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mit BlueXP  Klassifizierung als Basis für Daten-Guardrails lernen"^].
+.. *Datenleitplanken*: Wählen Sie, ob Sie Datenleitplanken aktivieren oder deaktivieren möchten. link:https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über Datenleitplanken, unterstützt durch NetApp Data Classification"^] .
 +
 Die folgenden Voraussetzungen müssen erfüllt sein, um die Data Guardrails zu aktivieren.
 
 +
-*** Für die Kommunikation mit der BlueXP -Klassifizierung ist ein Servicekonto erforderlich. Sie müssen die Rolle „_Organisation admin_“ auf Ihrem BlueXP -Mandantenkonto haben, um Servicekonten erstellen zu können. Ein Mitglied mit der Rolle „Organisationsadministrator“ kann alle Aktionen in BlueXP  ausführen. link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Erfahren Sie, wie Sie einem Mitglied in BlueXP  eine Rolle hinzufügen"^]
-*** Die KI-Engine muss Zugriff auf die habenlink:https://api.bluexp.netapp.com["BlueXP -API-Endpunkt"^].
-*** Sie müssen die folgenden Schritte ausführen, wie in beschriebenlink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Dokumentation der BlueXP Klassifizierung"^]:
+*** Für die Kommunikation mit NetApp Data Classification ist ein Servicekonto erforderlich.  Für die Erstellung eines Dienstkontos müssen Sie in Ihrem NetApp Console-Mandantenkonto über die Rolle „Organisationsadministrator“ verfügen.  Ein Mitglied mit der Rolle „Organisationsadministrator“ kann alle Aktionen in der NetApp Konsole ausführen.link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Erfahren Sie, wie Sie einem Mitglied in der NetApp -Konsole eine Rolle hinzufügen"^]
+*** Die KI-Engine muss Zugriff auf dielink:https://api.bluexp.netapp.com["NetApp Console API-Endpunkt"^] .
+*** Sie müssen Folgendes tun, wie inlink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-cloud-compliance.html#quick-start["Dokumentation zur NetApp -Datenklassifizierung"^] :
 +
-.... BlueXP Connector erstellen
+.... Erstellen eines Konsolenagenten
 .... Stellen Sie sicher, dass Ihre Umgebung die Voraussetzungen erfüllt
-.... Implementieren Sie die BlueXP Klassifizierung
+.... Bereitstellen der NetApp Datenklassifizierung
 
 
 
@@ -64,8 +64,8 @@ Die folgenden Voraussetzungen müssen erfüllt sein, um die Data Guardrails zu a
 NOTE: Wenn Sie die Funktion „Data Guardrails“ aktivieren, verarbeitet GenAI die Dateien .txt, .md, .csv, .docx und .pdf, indem nur Klartext (ohne eingebetteten Bild- oder Medientext) aufgenommen und private oder sensible Daten maskiert werden. Alle anderen Dateitypen werden normal verarbeitet, ohne dass private oder sensible Daten maskiert werden.
 
 +
-.. *FSx für ONTAP-Dateisystem*: Wenn Sie einen neuen NetApp Connector für Amazon Q Business definieren, erstellt Workload Factory ein neues Amazon FSx für NetApp ONTAP-Volume, um die Connector-Informationen zu speichern. Wählen Sie ein vorhandenes Filesystem und eine SVM (auch Storage-VM genannt), auf der das neue Volume erstellt werden soll.
-.. *Snapshot-Richtlinie*: Wählen Sie eine Snapshot-Richtlinie aus der Liste der vorhandenen Richtlinien aus, die im werkseitigen Lagerbestand des Workloads definiert sind. GenAI erstellt automatisch wiederkehrende Snapshots des Volumes, wobei die Verbindungsdaten in einer Frequenz auf der Grundlage der von Ihnen ausgewählten Snapshot-Richtlinie gespeichert werden.
+.. *FSx für ONTAP Dateisystem*: Wenn Sie einen neuen NetApp Connector für Amazon Q Business definieren, erstellt Workload Factory ein neues Amazon FSx for NetApp ONTAP -Volume zum Speichern der Connector-Informationen.  Wählen Sie ein vorhandenes Dateisystem und eine SVM (auch Speicher-VM genannt), auf der das neue Volume erstellt wird.
+.. *Snapshot-Richtlinie*: Wählen Sie eine Snapshot-Richtlinie aus der Liste der vorhandenen Richtlinien aus, die im Workload Factory-Speicherinventar definiert sind.  GenAI erstellt automatisch wiederkehrende Snapshots des Volumes, in denen die Connector-Informationen gespeichert sind, und zwar in einer Häufigkeit, die auf der von Ihnen ausgewählten Snapshot-Richtlinie basiert.
 +
 Wenn die benötigte Snapshot-Richtlinie nicht vorhanden ist, können Sie https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["Erstellen einer Snapshot-Richtlinie"^] auf der Storage-VM, die das Volume enthält, arbeiten.
 

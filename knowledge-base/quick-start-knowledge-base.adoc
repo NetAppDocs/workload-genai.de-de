@@ -13,9 +13,9 @@ summary: Beginnen Sie mit der Erstellung einer Wissensdatenbank unter Verwendung
 [role="lead"]
 Erste Schritte zum Erstellen einer Wissensdatenbank oder eines Amazon Q Business Connectors unter Verwendung der Daten Ihres Unternehmens, die auf Amazon FSX for NetApp ONTAP-Dateisystemen vorhanden sind. Eine Anwendung wie ein Chatbot greift auf diese Wissensdatenbank oder den Konnektor zu, um den Endbenutzern organisationsbezogene Antworten bereitzustellen.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] Melden Sie sich bei Workload Factory an
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]Melden Sie sich bei Workload Factory an
 [role="quick-margin-para"]
-Sie müssen https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Richten Sie ein Konto mit Workload Factory ein"^] sich mit einem der anmelden https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^].
+Sie müssen https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Einrichten eines Kontos bei Workload Factory"^] und melden Sie sich mit einem der https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] Richten Sie Ihre Umgebung so ein, dass sie die GenAI-Anforderungen erfüllt
 [role="quick-margin-para"]

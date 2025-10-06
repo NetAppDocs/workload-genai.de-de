@@ -45,7 +45,7 @@ Wenn Sie beispielsweise 10 Dateien (Datenquellen) in Ihre Wissensdatenbank integ
 
 == Unterstützte Datenquelldateiformate
 
-Die folgenden Datenquelldateiformate werden derzeit von den GenAI-Wissensdatenbanken für Workloads unterstützt.
+Die folgenden Datenquellendateiformate werden derzeit von Workload Factory GenAI-Wissensdatenbanken unterstützt.
 
 [cols="2*"]
 |===

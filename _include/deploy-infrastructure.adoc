@@ -58,7 +58,7 @@ Stellen Sie sicher, dass Ihre Umgebung die Anforderungen für Wissensdatenbanken
 
 
 .Schritte
-. Melden Sie sich bei Workload Factory mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich bei Workload Factory mit einem der folgendenlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] .
 . Wählen Sie in der Kachel AI-Workloads *Deploy & manage* aus.
 . Sehen Sie sich das Infrastrukturdiagramm an und wählen Sie *Weiter*.
 . Füllen Sie die Einträge im Abschnitt *AWS-Einstellungen* aus:
@@ -72,7 +72,7 @@ Die Implementierung von GenAI muss sich in einer AWS Region befinden, für die A
 
 . Füllen Sie die Einträge im Abschnitt *Infrastruktureinstellungen* aus:
 +
-.. *Tags*: Geben Sie alle Tag-Schlüssel/Wert-Paare ein, die Sie auf alle AWS-Ressourcen anwenden möchten, die Teil dieser Bereitstellung sind. Diese Tags werden in der AWS Management Console und im Infrastrukturinformationsbereich innerhalb der Workload Factory angezeigt und können Ihnen dabei helfen, die Betriebsressourcen der Workloads im Auge zu behalten.
+.. *Tags*: Geben Sie beliebige Tag-Schlüssel/Wert-Paare ein, die Sie auf alle AWS-Ressourcen anwenden möchten, die Teil dieser Bereitstellung sind.  Diese Tags sind in der AWS-Managementkonsole und im Infrastrukturinformationsbereich innerhalb von Workload Factory sichtbar und können Ihnen dabei helfen, den Überblick über die Workload Factory-Ressourcen zu behalten.
 
 
 . Füllen Sie den Abschnitt *Konnektivität* aus:
@@ -82,7 +82,7 @@ Die Implementierung von GenAI muss sich in einer AWS Region befinden, für die A
 
 . Füllen Sie den Abschnitt *AI Engine* aus:
 +
-.. *Instanzname*: Wählen Sie optional *Instanzname definieren* und geben Sie einen benutzerdefinierten Namen für die AI-Engine-Instanz ein. Der Instanzname wird in der AWS-Verwaltungskonsole und im Infrastrukturinformationsbereich in der Workload-Fabrik angezeigt. Er kann Ihnen dabei helfen, die Werkseinstellungen für Workloads zu verfolgen.
+.. *Instanzname*: Wählen Sie optional *Instanznamen definieren* aus und geben Sie einen benutzerdefinierten Namen für die KI-Engine-Instanz ein.  Der Instanzname wird in der AWS-Managementkonsole und im Infrastrukturinformationsbereich innerhalb von Workload Factory angezeigt und kann Ihnen dabei helfen, den Überblick über die Workload Factory-Ressourcen zu behalten.
 
 
 . Wählen Sie *Deploy*, um die Bereitstellung zu starten.
@@ -101,5 +101,5 @@ Während des Bereitstellungsprozesses werden die folgenden Elemente eingerichtet
 * Die IAM-Rolle, das Instanzprofil und die Sicherheitsgruppe werden erstellt.
 * Die Virtual Machine-Instanz für die GenAI-Engine wird bereitgestellt.
 * Amazon Bedrock ist so konfiguriert, dass Protokolle an Amazon CloudWatch Logs gesendet werden, wobei eine Protokollgruppe mit dem Präfix verwendet `/aws/bedrock/`wird.
-* Die GenAI-Engine ist so konfiguriert, dass sie Protokolle an Amazon CloudWatch-Protokolle sendet, wobei eine Protokollgruppe mit dem Namen verwendet `/netapp/wlmai/<tenancyAccountId>/randomId`wird, wobei `<tenancyAccountID>` dies der für den aktuellen Benutzer ist https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-account-identifier["BlueXP Konto-ID"^] .
+* Die GenAI-Engine ist so konfiguriert, dass sie Protokolle an Amazon CloudWatch Logs sendet, wobei eine Protokollgruppe mit dem Namen `/netapp/wlmai/<tenancyAccountId>/randomId` , Wo `<tenancyAccountID>` ist die https://docs.netapp.com/us-en/console-automation/platform/get_identifiers.html#get-the-account-identifier["NetApp -Konsolen-Konto-ID"^] für den aktuellen Benutzer.
 

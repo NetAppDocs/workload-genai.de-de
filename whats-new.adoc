@@ -2,16 +2,52 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, genai' 
-summary: Informieren Sie sich über die Neuerungen bei den KI-Workloads, die den Workload-Betrieb unterstützen. 
+summary: Erfahren Sie, was es Neues bei den KI-Workload-Funktionen von Workload Factory gibt. 
 ---
-= Neuerungen bei der BlueXP -Workload-Farm für GenAI
+= Was ist neu bei NetApp Workload Factory für GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Informieren Sie sich über die Neuerungen bei der Funktion Generative KI-Workloads der Workload-Farm.
+Informieren Sie sich über die Neuerungen bei der Funktion „Generative AI Workloads“ von Workload Factory.
+
+
+
+== 05. Oktober 2025
+
+
+
+=== BlueXP workload factory jetzt NetApp Workload Factory
+
+BlueXP wurde umbenannt und neu gestaltet, um seine Rolle bei der Verwaltung Ihrer Dateninfrastruktur besser widerzuspiegeln. Aus diesem Grund wurde die BlueXP workload factory in NetApp Workload Factory umbenannt.
+
+
+
+=== Unterstützung für das Hinzufügen generischer NFS/SMB-Datenquellen in NetApp -Konnektoren für Amazon Q Business
+
+Mithilfe der Workload Factory API können Sie jetzt eine Datenquelle aus einer generischen NFSv3-, NFSv4- oder SMB-Freigabe zu einem NetApp Connector für Amazon Q Business hinzufügen.  Dadurch können Sie Dateien einschließen, die auf Volumes gespeichert sind, die von anderen Dateisystemen als Amazon FSx for NetApp ONTAP gehostet werden.
+
+link:https://docs.netapp.com/us-en/workload-genai/connector/define-connector.html["Erstellen Sie einen NetApp Connector für Amazon Q Business"]
+
+link:https://docs.netapp.com/us-en/workload-genai/connector/define-connector.html#add-data-sources-to-the-connector["Hinzufügen von Datenquellen zu einem Connector"]
+
+
+
+=== Erweiterte Chat-Konfiguration für Wissensdatenbanken
+
+Sie können jetzt erweiterte Chat-Einstellungen konfigurieren, die auf das Chat-Modell für die Wissensdatenbank anwendbar sind, wie z. B. Antwortlänge, Temperatur, Argumentationseinstellungen und mehr.  Einige dieser Einstellungen, wie etwa Einstellungen für Aktualität und Änderungszeit, erweiterte Abrufeinstellungen und Systemaufforderungen, sind nur über die Workload Factory-API verfügbar.
+
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Einrichtung einer GenAI Knowledge Base"]
+
+
+
+=== Die Auswahl des Inferenztyps wird jetzt für Einbettungs-, Chat- und Neurangmodelle unterstützt.
+
+Wenn Ihr ausgewähltes Einbettungs-, Chat- oder Neurankingmodell über Inferenzeinstellungen verfügt, können Sie jetzt einen Inferenztyp auswählen.  Dadurch können Sie die Leistung und den Ressourcenbedarf des Chatbots besser auf Ihre Bedürfnisse abstimmen.
+
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Einrichtung einer GenAI Knowledge Base"]
 
 
 
@@ -29,7 +65,7 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledg
 
 === MCP-Serververfügbarkeit
 
-NetApp bietet jetzt einen Model Context Protocol (MCP)-Server mit BlueXP workload factory für GenAI.  Sie können den Server lokal installieren, um externen MCP-Clients das Ermitteln und Abrufen von Abfrageergebnissen aus einer GenAI-Wissensdatenbank zu ermöglichen.
+NetApp stellt jetzt einen Model Context Protocol (MCP)-Server mit NetApp Workload Factory für GenAI bereit. Sie können den Server lokal installieren, um externen MCP-Clients das Ermitteln und Abrufen von Abfrageergebnissen aus einer GenAI-Wissensdatenbank zu ermöglichen.
 
 link:https://github.com/NetApp/mcp/tree/main/NetApp-KnowledgeBase-MCP-server["NetApp Workload Factory GenAI MCP-Server"^]
 
@@ -57,7 +93,7 @@ https://docs.netapp.com/us-en/workload-genai/connector/define-connector.html#add
 
 Die Tracker-Überwachungsfunktion ist jetzt in GenAI verfügbar. Mit Tracker können Sie den Fortschritt und Status ausstehender, laufender und abgeschlossener Vorgänge überwachen und verfolgen, Details zu Vorgangsaufgaben und Unteraufgaben überprüfen, Probleme oder Fehler diagnostizieren, Parameter für fehlgeschlagene Vorgänge bearbeiten und fehlgeschlagene Vorgänge wiederholen.
 
-link:https://docs.netapp.com/us-en/workload-genai/general/monitor-operations.html["Überwachen Sie Workload-Vorgänge mit Tracker in der BlueXP-Workload-Factory"]
+link:https://docs.netapp.com/us-en/workload-genai/general/monitor-operations.html["Überwachen Sie Workload-Vorgänge mit Tracker in NetApp Workload Factory"]
 
 
 
@@ -101,7 +137,7 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledg
 
 === Terminologie für Berechtigungen wurde aktualisiert
 
-In der Benutzeroberfläche und Dokumentation der Workload Factory wird jetzt „schreibgeschützt“ für Leseberechtigungen und „Lesen/Schreiben“ für automatisierte Berechtigungen verwendet.
+In der Benutzeroberfläche und Dokumentation von Workload Factory wird jetzt „schreibgeschützt“ für Leseberechtigungen und „Lesen/Schreiben“ für automatisierte Berechtigungen verwendet.
 
 
 
@@ -178,7 +214,7 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledg
 
 GenAI kann jetzt die Relevanz und Genauigkeit von Suchergebnissen durch hybride Suche und Neubewertung der Ergebnisse deutlich verbessern. Die hybride Suche kombiniert die Stärken der herkömmlichen Keyword-basierten Suche mit erweiterten dichten vektorbasierten semantischen Suchtechniken. Die Standard-Keyword-Suchergebnisse werden durch enge Übereinstimmungen und sprachliche Nuance erweitert, was die Relevanz erhöht. GenAI verfeinert diese Ergebnisse dann weiter, indem er erweiterte Re-Ranking-Modelle wie Cohere Rerank und Amazon Rerank verwendet, und gibt die relevantesten Ergebnisse zurück. Diese Funktion ist für neu erstellte Wissensdatenbanken verfügbar.
 
-link:https://docs.netapp.com/us-en/workload-genai/general/ai-workloads-overview.html#benefits-of-using-genai-to-create-generative-ai-applications["Erfahren Sie mehr über die BlueXP -Workload-Fabrik für GenAI"]
+link:https://docs.netapp.com/us-en/workload-genai/general/ai-workloads-overview.html#benefits-of-using-genai-to-create-generative-ai-applications["Erfahren Sie mehr über NetApp Workload Factory für GenAI"]
 
 
 
@@ -204,7 +240,7 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/deploy-infrastr
 
 === Wiederherstellung beschädigter oder fehlender GenAI-Infrastruktur
 
-Wenn Ihre KI-Engine beschädigt wird oder irgendwie gelöscht wird, können Sie sie auf der Workload-Farm für Sie neu erstellen lassen. Die Workload Factory verbindet Ihre Wissensdatenbanken nach Abschluss der Neuerstellung automatisch mit der Infrastruktur, sodass sie einsatzbereit sind.
+Wenn Ihre KI-Engine-Instanz beschädigt oder irgendwie gelöscht wird, können Sie sie von Workload Factory für Sie neu erstellen lassen.  Workload Factory fügt Ihre Wissensdatenbanken nach Abschluss des Neuaufbaus automatisch wieder an die Infrastruktur an, sodass sie einsatzbereit sind.
 
 link:https://docs.netapp.com/us-en/workload-genai/general/troubleshooting.html["Fehlerbehebung"]
 
@@ -216,7 +252,7 @@ link:https://docs.netapp.com/us-en/workload-genai/general/troubleshooting.html["
 
 === Klonen Sie eine Wissensdatenbank aus einem Snapshot
 
-Die BlueXP  Workload-Farm für GenAI unterstützt jetzt das Klonen einer Knowledge Base aus einem Snapshot. Dies ermöglicht eine schnelle Wiederherstellung von Wissensdatenbanken und die Erstellung neuer Wissensdatenbanken mit vorhandenen Datenquellen. Außerdem hilft es bei der Wiederherstellung und Entwicklung von Daten.
+NetApp Workload Factory für GenAI unterstützt jetzt das Klonen einer Wissensdatenbank aus einem Snapshot.  Dies ermöglicht die schnelle Wiederherstellung von Wissensdatenbanken und die Erstellung neuer Wissensdatenbanken mit vorhandenen Datenquellen und hilft bei der Datenwiederherstellung und -entwicklung.
 
 link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#clone-a-knowledge-base["Klonen einer Wissensdatenbank"]
 
@@ -224,7 +260,7 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledg
 
 === Erkennung und Replizierung von lokalen ONTAP Clustern
 
-Ermitteln und replizieren Sie On-Premises-ONTAP-Cluster-Daten auf ein FSX for ONTAP-Filesystem, damit es für eine Erweiterung von KI-Knowledge-Basen verwendet werden kann. Alle lokalen Erkennungs- und Replikations-Workflows sind über die neue Registerkarte *On-Premises ONTAP* im Speicherbestand möglich.
+Entdecken und replizieren Sie lokale ONTAP Clusterdaten in ein FSx für ONTAP -Dateisystem, damit diese zur Anreicherung von KI-Wissensdatenbanken verwendet werden können.  Alle lokalen Erkennungs- und Replikations-Workflows sind über das neue Menü *On-Premises ONTAP* im Speicherinventar möglich.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-onprem-data.html["Ermitteln eines lokalen ONTAP Clusters"]
 
@@ -236,11 +272,11 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-onprem-data.html["Ermi
 
 === Maskieren Sie personenbezogene Daten mithilfe von Datengeländern
 
-Der generative KI-Workload bietet eine Data Guardrails-Funktion basierend auf einer BlueXP -Klassifizierung. Mithilfe der Funktion „Data Guardrails“ werden personenbezogene Daten identifiziert und maskiert. Auf diese Weise können Sie die Compliance aufrechterhalten und die Sicherheit Ihrer sensiblen Unternehmensdaten stärken.
+Die Generative AI-Workload führt die Datenleitplankenfunktion ein, die durch die NetApp Console-Klassifizierung unterstützt wird.  Die Datenleitplankenfunktion identifiziert und maskiert personenbezogene Daten (PII) und hilft Ihnen so, die Compliance aufrechtzuerhalten und die Sicherheit Ihrer sensiblen Unternehmensdaten zu erhöhen.
 
 link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Einrichtung einer GenAI Knowledge Base"]
 
-link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Mehr zur BlueXP Klassifizierung"^]
+link:https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die Klassifizierung der NetApp Konsole"^]
 
 
 
@@ -302,7 +338,7 @@ Generative KI-Workloads sind jetzt in Amazon CloudWatch Logs integriert, sodass 
 
 === Beispiel für eine Chatbot-Anwendung
 
-Mit der GenAI-Beispielanwendung für NetApp-Workload-Fabriken können Sie die Authentifizierung und den Abruf aus Ihrer veröffentlichten NetApp Workload Factory Knowledge Base testen, indem Sie direkt mit dieser in einer webbasierten Chatbot-Anwendung interagieren.
+Mit der NetApp Workload Factory GenAI-Beispielanwendung können Sie die Authentifizierung und den Abruf aus Ihrer veröffentlichten NetApp Workload Factory-Wissensdatenbank testen, indem Sie in einer webbasierten Chatbot-Anwendung direkt mit ihr interagieren.
 
 
 
@@ -310,6 +346,6 @@ Mit der GenAI-Beispielanwendung für NetApp-Workload-Fabriken können Sie die Au
 
 
 
-=== Erstversion der Workload-Fabrik für GenAI
+=== Erstveröffentlichung der Workload Factory für GenAI
 
 Die erste Version umfasst die Fähigkeit, eine Wissensdatenbank zu entwickeln, die durch die Einbettung der Unternehmensdaten angepasst wird. Auf die Wissensdatenbank kann über eine Chatbot-Anwendung für Ihre Benutzer zugegriffen werden. Diese Funktion gewährleistet präzise und relevante Antworten auf unternehmensspezifische Fragen und verbessert so die Zufriedenheit und Produktivität aller Benutzer.

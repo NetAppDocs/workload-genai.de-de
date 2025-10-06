@@ -2,19 +2,19 @@
 sidebar: sidebar 
 permalink: general/monitor-operations.html 
 keywords: monitor genai, monitor jobs, track jobs, tracker 
-summary: Verfolgen Sie Workload-Vorgänge und überwachen Sie den Job-Fortschritt mit Tracker in der BlueXP-Workload-Factory für GenAI. 
+summary: Verfolgen Sie Workload-Vorgänge und überwachen Sie den Job-Fortschritt mit Tracker in NetApp Workload Factory für GenAI. 
 ---
-= Überwachen Sie Workload-Vorgänge mit Tracker in der BlueXP-Workload-Factory
+= Überwachen Sie Workload-Vorgänge mit Tracker in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Mit Tracker in der BlueXP  Workload-Fabrik überwachen und verfolgen Sie die Ausführung von Workload-Vorgängen und überwachen den Aufgabenfortschritt.
+Überwachen und verfolgen Sie die Ausführung von Workload-Vorgängen und überwachen Sie den Aufgabenfortschritt mit Tracker in NetApp Workload Factory.
 
 .Über diese Aufgabe
-Workload Factory bietet Tracker, eine Überwachungsfunktion, mit der Sie den Fortschritt und Status des Workload-Betriebs überwachen und verfolgen können, Details für Betriebsaufgaben und untergeordnete Aufgaben überprüfen und Probleme oder Ausfälle diagnostizieren können.
+NetApp Workload Factory bietet Tracker, eine Überwachungsfunktion, mit der Sie den Fortschritt und Status von Workload-Vorgängen überwachen und verfolgen, Details zu Betriebsaufgaben und Unteraufgaben überprüfen und etwaige Probleme oder Fehler diagnostizieren können.
 
 In Tracker sind mehrere Aktionen verfügbar. Sie können Jobs nach Zeitrahmen (letzte 24 Stunden, 7 Tage, 14 Tage oder 30 Tage), Workload, Status und Benutzer filtern, Jobs mithilfe der Suchfunktion suchen und die Jobtabelle als CSV-Datei herunterladen. Sie können Tracker jederzeit aktualisieren und einen fehlgeschlagenen Vorgang schnell wiederholen oder Parameter für einen fehlgeschlagenen Vorgang bearbeiten und den Vorgang erneut versuchen.
 
@@ -42,15 +42,12 @@ Aufbewahrung von Ereignissen:: Ereignisse werden 30 Tage lang in der Benutzerobe
 
 == Verfolgen und überwachen Sie Vorgänge
 
-Überwachen und verfolgen Sie den Betrieb in BlueXP  mit Tracker.
+Verfolgen und überwachen Sie Vorgänge in der Workload Factory-Konsole mit Tracker.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie im Workload das Menü Kontoeinstellungen und dann *Tracker* aus.
-+
-image:screenshot-menu-tracker-option.png["Ein Screenshot des Menüs „Kontoeinstellungen“ mit markierter Tracker-Option."]
-
-. Verwenden Sie auf der Registerkarte Tracker die Filter oder die Suche, um die Jobergebnisse einzugrenzen. Sie können auch einen Jobbericht herunterladen.
+. Wählen Sie im Workload-Menü *Administration* und dann *Tracker* aus.
+. Verwenden Sie im Tracker die Filter oder die Suche, um die Jobergebnisse einzugrenzen. Sie können auch einen Stellenbericht herunterladen.
 
 
 
@@ -61,7 +58,7 @@ Zeigen Sie die API-Anforderung in der Codebox für eine Aufgabe in Tracker an.
 
 .Schritte
 . Wählen Sie in Tracker eine Aufgabe aus.
-. Wählen Sie das drei-Punkt-Menü aus und wählen Sie dann *API-Anforderung anzeigen*.
+. Wählen Sie das Aktionsmenü und dann *API-Anforderung anzeigen*.
 
 
 
@@ -75,7 +72,7 @@ NOTE: Sie können einen fehlgeschlagenen Vorgang bis zu 10 Mal wiederholen.
 
 .Schritte
 . Wählen Sie in Tracker einen fehlgeschlagenen Vorgang aus.
-. Wählen Sie das drei-Punkt-Menü und dann *Wiederholen*.
+. Wählen Sie das Aktionsmenü und dann *Wiederholen*.
 
 
 .Ergebnis
@@ -89,7 +86,7 @@ Bearbeiten Sie die Parameter des fehlgeschlagenen Vorgangs, und versuchen Sie de
 
 .Schritte
 . Wählen Sie in Tracker einen fehlgeschlagenen Vorgang aus.
-. Wählen Sie das drei-Punkt-Menü und dann *Bearbeiten und erneut versuchen*.
+. Wählen Sie das Aktionsmenü und dann *Bearbeiten und erneut versuchen*.
 +
 Sie werden zur Seite Operation weitergeleitet, auf der Sie die Parameter bearbeiten und den Vorgang wiederholen können.
 

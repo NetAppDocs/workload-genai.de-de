@@ -28,7 +28,7 @@ NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Spei
 +
 *** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
 +
-Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+Wenn Sie Bilder oder PDF-Dateien einschließen, analysiert NetApp Workload Factory für GenAI den Text in den Bildern (einschließlich Bildern in PDF-Dokumenten), was höhere Kosten verursacht.
 
 +
 Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
@@ -80,7 +80,7 @@ NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Spei
 +
 *** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
 +
-Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+Wenn Sie Bilder oder PDF-Dateien einschließen, analysiert NetApp Workload Factory für GenAI den Text in den Bildern (einschließlich Bildern in PDF-Dokumenten), was höhere Kosten verursacht.
 
 +
 Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
@@ -139,7 +139,7 @@ NOTE: Die Auswahl eines hohen Prozentsatzes für Überschneidungen kann den Spei
 +
 *** Wählen Sie im Abschnitt *Unterstützung für Dateitypen* entweder alle Dateitypen aus oder wählen Sie einzelne Dateitypen aus, um sie in die Datenquellprüfungen einzubeziehen.
 +
-Wenn Sie Bilder oder PDF-Dateien einfügen, analysiert BlueXP  Workload Factory for GenAI Text in den Bildern (einschließlich Bilder in PDF-Dokumenten) und verursacht dadurch höhere Kosten.
+Wenn Sie Bilder oder PDF-Dateien einschließen, analysiert NetApp Workload Factory für GenAI den Text in den Bildern (einschließlich Bildern in PDF-Dokumenten), was höhere Kosten verursacht.
 
 +
 Beim Einbeziehen von Textdaten aus Bildern ist GenAI nicht in der Lage, personenbezogene Daten (PII) aus dem Bild zu maskieren, wenn die gescannten Textdaten aus Ihrer Umgebung an AWS gesendet werden. Sobald die Daten jedoch gespeichert sind, werden alle PII in der GenAI-Datenbank maskiert.
